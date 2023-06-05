@@ -1,6 +1,6 @@
 EnfeeblingMax = S{"Frazzle","Frazzle II","Distract","Distract II","Poison","Poisonga","Dispel","Break","Silence",}
 EnfeeblingPot = S{"Frazzle III","Distract III","Poison II",}
-EnfeeblingDur = S{"Sleep","Sleep II","Sleepga","Gravity","Gravity II","Bind",}
+EnfeeblingDur = S{"Sleep","Sleep II","Sleepga","Gravity","Gravity II","Bind","Stun",}
 EnfeeblingMND = S{"Paralyze","Paralyze II","Slow","Slow II","Addle","Addle II",}
 EnfeeblingINT = S{"Blind","Blind II",}
 BarElements = S{"Barfire","Barfira","Barblizzard","Barblizzara","Baraero","Baraera","Barstone","Barstonra","Barthunder","Barthundra","Barwater","Barwatera"}
@@ -109,7 +109,8 @@ function get_sets()
 	right_ring="Menelaus's Ring",
 	waist="Bishop's Sash",
 	legs="Carmine Cuisses +1",
-	feet="Gendewitha Galoshes +1"
+	--feet="Gendewitha Galoshes +1",
+	feet="Vanya Clogs",
 	})
 	
 	sets.nuke.index = {'Free','MB'}
@@ -139,7 +140,9 @@ function get_sets()
 	head="Ea Hat",  -- +1
 	neck="Mizukage-no-Kubikazari",
 	body="Ea Houppelande", -- +1
+	hands="Bunzi's Gloves",
 	legs="Ea Slops", -- +1
+	feet="Bunzi's Sabots",
 	})
 	
 	sets.midcast.raise = set_combine(sets.midcast.conservemp, { --30(base)(8JP) +51  +21 haste
@@ -259,7 +262,7 @@ function get_sets()
 	})
 	
 	sets.midcast['Dark Magic'] = {
-	--main="Rubicundity",
+	main="Rubicundity",
 	sub="Ammurapi Shield",
 	range="Ullr",
 	head="Vitiation Chapeau +3",
@@ -380,7 +383,7 @@ function get_sets()
 	hands="Malignance Gloves",
 	left_ring="Petrov Ring",
 	right_ring="Hetairoi Ring",
-	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --DW?
 	waist="Reiki Yotai",
 	legs="Malignance Tights",
 	feet="Nyame Sollerets",
@@ -397,7 +400,7 @@ function get_sets()
 	left_ring="Chirich Ring +1",
 	right_ring="Ilabrat Ring",
 	--back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
-	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	waist="Orpheus's Sash",
 	legs="Malignance Tights",
 	feet="Nyame Sollerets"
@@ -411,7 +414,7 @@ function get_sets()
 		ear2="Eabani Earring",
 		ear1="Sherida Earring",
 		ring2="Hetairoi Ring",
-		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 		legs="Carmine Cuisses +1",	
 		--feet="Malignance Boots"
 	})
@@ -421,7 +424,7 @@ function get_sets()
 	neck="Rep. Plat. Medal",
 	body="Nyame Mail",
 	hands="Jhakri Cuffs +2",
-	right_ring="Epaminondas's Ring",
+	right_ring="Cornelia's Ring",
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	legs="Nyame Flanchard",
 	Feet="Nyame Sollerets",

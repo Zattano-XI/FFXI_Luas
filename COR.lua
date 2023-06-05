@@ -11,6 +11,7 @@
     Weaponskill mode, if set to 'Normal', is handled separately for melee and ranged weaponskills.
 --]]
 
+send_command('lua l Roller')
 
 -- Initialization function for this job file.
 function get_sets()
@@ -27,7 +28,7 @@ function job_setup()
     -- Whether a warning has been given for low ammo
     state.warned = M(false)
 	    state.AutoLockstyle = M(true, 'AutoLockstyle Mode')
-	    send_command('@wait 3; input /lockstyleset 16')
+	    send_command('@wait 3; input /lockstyleset 17')
 
     define_roll_values()
 end
@@ -480,7 +481,7 @@ function init_gear_sets()
         body="Malignance Tabard",
 		hands="Malignance Tabard",
 		ring1="Petrov Ring",
-		ring2="Mummu Ring",
+		ring2="Chirich Ring +1",
         back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		--waist="Gerdr Belt +1",
 		legs="Malignance Tights",
@@ -494,7 +495,7 @@ function init_gear_sets()
 		ear2="Suppanomimi",
         body="Malignance Tabard",
 		hands="Malignance Tabard",
-		ring1="Rajas Ring",
+		ring1="Chirich Ring +1",
 		ring2="Epona's Ring",
         back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		waist="Windbuffet Belt +1",
@@ -509,7 +510,7 @@ function init_gear_sets()
 		ear2="Suppanomimi",
         body="Malignance Tabard",
 		hands="Malignance Tabard",
-		ring1="Rajas Ring",
+		ring1="Chirich Ring +1",
 		ring2="Epona's Ring",
         back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		--waist="Gerdr Belt +1",

@@ -269,7 +269,7 @@ function init_gear_sets()
         head="Nyame Helm", --head="Hachiya Hatsu. +3",
         body="Nyame Mail",
         hands="Nyame Gauntlets",
-        legs="Nyame Flanchard",--legs="Hizamaru Hizayoroi +1",
+        legs="Nyame Flanchard",
         feet="Nyame Sollerets",
         neck="Fotia Gorget",
         ear1="Cessance Earring",
@@ -390,7 +390,6 @@ function init_gear_sets()
     sets.precast.WS['Blade: Yu'] = set_combine(sets.precast.WS, {
         ammo="Seeth. Bomblet +1",
         --head="Hachiya Hatsu. +3",
-        --body="Samnuha Coat",
         hands="Leyline Gloves",
         legs="Nyame Flanchard",
         feet="Nyame Sollerets",
@@ -415,7 +414,7 @@ function init_gear_sets()
 		ear2="Moonshade Earring",
 		ring1="Dingir Ring",
 		ring1="Gere Ring",
-		ring2="Epaminondas's Ring",
+		ring2="Cornelia's Ring",
 		back=gear.NIN_MAB_Cape,
 	}
 	
@@ -431,7 +430,7 @@ function init_gear_sets()
 		ear1="Lugra Earring +1",
 		right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		left_ring="Regal Ring",
-		right_ring="Epaminondas's Ring",
+		right_ring="Cornelia's Ring",
 		back={ name="Andartia's Mantle", augments={'STR+20','Mag. Acc+20 /Mag. Dmg.+20','STR+10','Weapon skill damage +10%',}},
 	}
 
@@ -450,7 +449,7 @@ function init_gear_sets()
 		ear2={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		ring1="Dingir Ring",
 		ring1="Gere Ring",
-		ring2="Epaminondas's Ring",
+		ring2="Cornelia's Ring",
 		back=gear.NIN_MAB_Cape,
 	}
     sets.Lugra = {ear2="Lugra Earring +1"}
@@ -627,7 +626,7 @@ function init_gear_sets()
         body="Mochi. Chainmail +3", --9
         hands="Adhemar Wristbands +1",
         legs="Ken. Hakama +1",
-        feet="Hiza. Sune-Ate +2", --8
+        --feet="Hiza. Sune-Ate +2", --8
         neck="Ninja Nodowa +2",
         ear1="Cessance Earring",
         ear2="Suppanomimi", --5

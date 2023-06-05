@@ -114,14 +114,14 @@ function get_sets()
 	
 	sets.ja["Provoke"] = sets.enmity
 	sets.ja["Warcry"] = sets.enmity
-	sets.ja["Invincible"] = {legs="Caballarius Breeches",}
+	sets.ja["Invincible"] = {legs="Caballarius Breeches +3",}
 	sets.ja["Holy Circle"] = {feet="Reverence Leggings +1"}
 	sets.ja["Shield Bash"] = {right_ear="Knightly Earring", hands="Caballarius Gauntlets +3",--[[left_ring="Fenian Ring",]]}
 	sets.ja["Weapon Bash"] = {right_ear="Knightly Earring",}
 	sets.ja["Sentinel"] = set_combine(sets.enmity, {feet="Caballarius Leggings +3"})
 	sets.ja["Cover"] = {--[[head="Reverence Coronet",]]}
-	sets.ja["Rampart"] = set_combine(sets.enmity, {head="Caballarius Coronet",})
-	sets.ja["Fealty"] = {body="Caballarius Surcoat",}
+	sets.ja["Rampart"] = set_combine(sets.enmity, {head="Caballarius Coronet +3",})
+	sets.ja["Fealty"] = {body="Caballarius Surcoat +3",}
 	sets.ja["Chivalry"] = {hands="Caballarius Gauntlets +3"}
 	sets.ja["Divine Emblem"] = {feet="Chevalier's Sabatons +3"}
 	
@@ -247,7 +247,7 @@ function get_sets()
 	body={name="Nyame Mail",priority=15}, --136
 	hands={name="Nyame Gauntlets",priority=12}, --91
 	left_ring="Regal Ring",
-	right_ring="Epaminondas's Ring",
+	right_ring="Cornelia's Ring",
 	back={ name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	waist="Fotia Belt",
 	legs={name="Nyame Flanchard",priority=14}, --114

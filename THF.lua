@@ -128,7 +128,7 @@ function init_gear_sets()
     sets.precast.JA['Accomplice'] = {head="Skulker's Bonnet +3"}
     sets.precast.JA['Flee'] = {feet="Pillager's Poulaines +1"}
     sets.precast.JA['Hide'] = {body="Pillager's Vest +3"}
-    sets.precast.JA['Conspirator'] = {body="Skulker's Vest +2"}
+    sets.precast.JA['Conspirator'] = {body="Skulker's Vest +3"}
     sets.precast.JA['Steal'] = {ammo="Barathrum", head="Plunderer's Bonnet +3", hands="Pillager's Armlets +1", legs="Pillager's Culottes +3", feet="Pillager's Poulaines +1"}
     sets.precast.JA['Despoil'] = {ammo="Barathrum", legs="Skulker's Culottes +2", feet="Skulker's Poulaines +3"}
     sets.precast.JA['Perfect Dodge'] = {hands="Plunderer's Armlets +3"}
@@ -194,14 +194,14 @@ function init_gear_sets()
 		--RUDRA'S STORM Sets
     sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {ammo="Seething Bomblet +1",
 		head="Plunderer's Bonnet +3",
-		body="Skulker's Vest +2", 
+		body="Skulker's Vest +3", 
 	})
 
     sets.precast.WS["Rudra's Storm"].AtkCapped = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Crepuscular Pebble",
 		head="Skulker's Bonnet +3",
 		ear2="Odr Earring",
 		body="Gleti's Cuirass",
-		ring1="Epaminondas's Ring",
+		ring1="Cornelia's Ring",
 	})
    
     sets.precast.WS["Rudra's Storm"].SA = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Yetshila +1",
@@ -295,7 +295,7 @@ function init_gear_sets()
 		head="Pillager's Bonnet +3",
 		body="Gleti's Cuirass",
 		hands="Nyame Gauntlets",
-		ring1="Epaminondas's Ring",
+		ring1="Cornelia's Ring",
 		legs="Gleti's Breeches",
 	})
     sets.precast.WS['Shark Bite'].SA = set_combine(sets.precast.WS['Shark Bite'], {ammo="Yetshila +1",
@@ -332,7 +332,7 @@ function init_gear_sets()
 		ear1="Friomisi Earring",
         body="Nyame Mail",
 		hands="Nyame Gauntlets",
-		ring1="Epaminondas's Ring",
+		ring1="Cornelia's Ring",
 		ring2="Dingir Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 		waist="Orpheus's Sash", 
@@ -355,7 +355,7 @@ function init_gear_sets()
 		--body="Gleti's Cuirass",
 		hands="Nyame Gauntlets",
 		ring1="Regal Ring",
-		ring2="Epaminondas's Ring",
+		ring2="Cornelia's Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 		waist="Fotia Belt",
 		legs="Nyame Flanchard",

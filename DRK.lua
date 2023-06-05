@@ -114,7 +114,7 @@ function get_sets()
 		left_ear="Telos Earring",
 		right_ear="Mache Earring +1",
 		left_ring="Chirich Ring",
-		right_ring="Flamma Ring",
+		right_ring="Chirich Ring +1",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
@@ -131,7 +131,7 @@ function get_sets()
     left_ear="Telos Earring",
     right_ear="Mache Earring +1",
     left_ring="Chirich Ring",
-    right_ring="Flamma Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
@@ -179,7 +179,7 @@ function get_sets()
     waist="Sailfi belt +1",
     right_ear="Thrud Earring",
 	left_ear="Moonshade Earring",
-    left_ring="Epaminondas's Ring",
+    left_ring="Cornelia's Ring",
     right_ring="Regal Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 	}

@@ -175,22 +175,17 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
 	right_ear="Odnowa earring +1",
 	left_ear="Odnowa earring",
 	right_ring="Moonlight ring",
-	left_ring="Epaminondas's ring",
+	left_ring="Cornelia's ring",
 	waist="Ioskeha belt +1",
 	back="Moonbeam cape",
 	})
 	
 	sets.regen = {
-	--head="Rao Kabuto",
 	neck="Sanctity Necklace",
 	--neck="Bathy Choker +1",
 	right_ear="Infused Earring",
-	--body="Hizamaru Haramaki +1",
-	--hands="Rao Kote",
 	left_ring="Chirich Ring",
 	--right_ring="Paguroidea Ring",
-	--legs="Rao Haidate",
-	--feet="Rao Sune-Ate",
 	}
 	
 	
@@ -207,7 +202,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
     left_ear="Thrud Earring",
     right_ear="Peltast's Earring +1",
     left_ring="Regal ring",
-    right_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring",
     back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 	
@@ -277,7 +272,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
     --right_ear="Thrud Earring",
     --left_ring="Metamorph ring +1",
 	left_ring="Regal Ring",
-    right_ring="Epaminondas's Ring",
+    right_ring="Cornelia's Ring",
 	})
 	
 	sets.ja['Provoke'] = {--set_combine(sets.enmity, {

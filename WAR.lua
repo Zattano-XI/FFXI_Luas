@@ -209,7 +209,7 @@ function init_gear_sets()
 		 body="Nyame Mail",
          --body="Pummeler's Lorica +3",
          hands="Nyame Gauntlets",
-         ring1="Epaminondas's Ring",
+         ring1="Cornelia's Ring",
          ring2="Regal Ring",
          back=Cichols.WS,
 		 waist="Sailfi Belt +1",
@@ -300,7 +300,7 @@ function init_gear_sets()
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear="Thrud Earring",
 		right_ear="Ishvara Earring",
-		right_ring="Epaminondas's Ring",
+		right_ring="Cornelia's Ring",
 		left_ring="Regal Ring",
 		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
@@ -315,7 +315,7 @@ function init_gear_sets()
 		body="Nyame Mail",
 		--body="Pumm. Lorica +3",
 		hands="Nyame Gauntlets",
-		right_ring="Epaminondas's Ring",
+		right_ring="Cornelia's Ring",
 		left_ring="Regal Ring",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -470,7 +470,7 @@ function init_gear_sets()
          --hands="Flamma Manopolas +2",
          hands="Sakpata's Gauntlets",
          ring1="Niqmaddu Ring",
-         ring2="Flamma Ring",
+         ring2="Chirich Ring +1",
          waist="Ioskeha Belt",
          legs="Tatenashi Haidate +1",
          feet="Tatenashi Sune-ate +1"
@@ -504,7 +504,7 @@ function init_gear_sets()
          legs="Tatenashi Haidate +1",
          feet="Tatenashi Sune-ate +1",
          --ring2="Hetairoi Ring"
-         ring2="Flamma Ring"
+         ring2="Chirich Ring +1"
         --ring1="Hetairoi Ring",
      })
      sets.engaged.OneHand.PDT = set_combine(sets.engaged.OneHand, sets.Defensive)

@@ -294,7 +294,8 @@ function init_gear_sets()
 
     Rosmerta = {}
     --Rosmerta.TP = {name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
-    --Rosmerta.WS = {name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+    --Rosmerta.WS = {name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+
 
 	-- WeaponSet Special Sets
 	sets.Tizona_Zantetsuken = {main="Tizona", sub="Zantetsuken",}
@@ -356,12 +357,12 @@ function init_gear_sets()
         waist="Sailfi Belt +1",
         legs="Nyame Flanchard",
         feet="Nyame Sollerets",
-		back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Damage taken-5%',}},
+        back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 		neck="Mirage Stole +2",
         ear1="Ishvara Earring",
         ear2="Moonshade Earring",
 		ring1="Epaminondas's ring",
-		ring2="Apate Ring",
+		ring2="Cornelia's Ring",
 }
 
     sets.precast.WS['Chant du Cygne'] = set_combine(sets.precast.WS, {
@@ -423,7 +424,7 @@ function init_gear_sets()
         body="Nyame Mail",
         hands="Jhakri Cuffs +2",
         ring1="Archon Ring",
-        ring2="Epaminondas's Ring",
+        ring2="Cornelia's Ring",
         back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%',}},
 		waist="Orpheus's Sash",
         legs="Luhlaza Shalwar +3",
@@ -461,7 +462,7 @@ function init_gear_sets()
         ear1="Friomisi Earring",
         ear2="Regal Earring",
         left_ring="Shiva Ring +1",
-        right_ring="Shiva Ring +1",
+        right_ring="Metamorph Ring +1",
         back="Aurist's Cape +1",
     }
     sets.midcast.Drain = set_combine(sets.midcast['Dark Magic'], {
@@ -480,7 +481,7 @@ function init_gear_sets()
     -- Physical Spells --
     
     sets.midcast['Blue Magic'].Physical = {
-        ammo="Ginsen",
+        ammo="Coiste Bodhar",
         head="Adhemar Bonnet",
         neck="Mirage Stole +2",
         --ear1="Flame Pearl",
@@ -488,8 +489,8 @@ function init_gear_sets()
         body="Adhemar Jacket +1",
         hands="Adhemar Wristbands +1",
         ring1="Ilabrat Ring",
-        ring2="Rajas Ring",
-        back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Damage taken-5%',}},
+        ring2="Apate Ring",
+        back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
         waist="Sailfi Belt +1",
         legs="Jhakri Slops +2",
         feet="Herculean Boots"
@@ -554,7 +555,7 @@ function init_gear_sets()
     sets.midcast['Blue Magic'].MagicalAgi = set_combine(sets.midcast['Blue Magic'].Magical, {
         head="Malignance Chapeau",
         --legs=HercLegs.MAB,
-        ring1="Rajas Ring",
+        ring1="Apate Ring",
         ring2="Ilabrat Ring",
         --feet=HercFeet.MAB
     })
@@ -739,7 +740,7 @@ function init_gear_sets()
     
     -- Normal melee group
     sets.engaged = {
-        ammo="Ginsen",
+        ammo="Aurgelmir Orb +1",
         head="Adhemar Bonnet +1",
         neck="Mirage Stole +2",
         ear1="Brutal Earring",
@@ -771,7 +772,8 @@ function init_gear_sets()
 		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Store TP"+10','Damage taken-5%',}}
     })
 
-	sets.engaged.DT = set_combine(sets.engaged, {ammo="Ginsen",
+	sets.engaged.DT = set_combine(sets.engaged, {
+		ammo="Aurgelmir Orb +1",
         head="Malignance Chapeau",
 		neck="Mirage Stole +2",
 		body="Malignance Tabard",
@@ -831,7 +833,7 @@ function init_gear_sets()
 		hands="Adhemar Wristbands +1",
 		Legs="Ayanmo Cosciales +2",
 		feet="Herculean Boots",
-        ear1="Dedition Earring",
+        ear1="Telos Earring",
         ear2="Suppanomimi",
         waist="Windbuffet Belt +1",
         ring1="Epona's Ring",
@@ -906,7 +908,7 @@ function init_gear_sets()
 		feet="Malignance Boots",
     })
     sets.engaged.Mid.PDT.Haste_35 = set_combine(sets.engaged.Mid.Haste_35, {
-        ammo="Ginsen",
+        ammo="Aurgelmir Orb +1",
 		head="Malignance Chapeau",
         neck="Loricate Torque +1",
         ring2="Defending Ring",
@@ -916,7 +918,7 @@ function init_gear_sets()
 		feet="Malignance Boots",
     })
     sets.engaged.Acc.PDT.Haste_35 = set_combine(sets.engaged.Acc.Haste_35, {
-        ammo="Ginsen",
+        ammo="Aurgelmir Rob +1",
 		head="Malignance Chapeau",
         neck="Loricate Torque +1",
         ring2="Defending Ring",
@@ -942,7 +944,6 @@ function init_gear_sets()
 		neck="Mirage Stole +2"
     })
     sets.engaged.Mid.Haste_30 = set_combine(sets.engaged.Mid.Haste_35, {
-        ammo="Ginsen",
 		ear2="Suppanomimi",
         --legs=HercLegs.TP
     })

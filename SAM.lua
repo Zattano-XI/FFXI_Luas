@@ -180,7 +180,7 @@ function get_sets()
 	body="Nyame Mail",
 	hands="Kasuga Kote +3",
 	left_ring="Niqmaddu Ring",
-	right_ring="Epaminondas's Ring",
+	right_ring="Cornelia's Ring",
 	back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	waist="Fotia Belt",
 	legs="Nyame Flanchard",
@@ -306,6 +306,9 @@ function get_sets()
 	sets.phalanx = {
 	head="Valorous Mask",
 	body="Valorous Mail",
+	--hands="Valorous Mitts",
+	--legs="Valorous Hose",
+	feet="Valorous Greaves",
 	}
 	
 	sets.enmity = {
@@ -356,7 +359,7 @@ function get_sets()
 	--Craft
 	sets.craft = {
 	main="Caduceus",
-	sub="Brewer's Shield",
+	sub="Br. Escutcheon",
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
 	ring1="Orvail ring", --+1

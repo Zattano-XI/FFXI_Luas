@@ -256,7 +256,7 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	})
 	
 	sets.midcast.quickmacc = {
-	head="Lanun Tricorne +1",
+	head="Lanun Tricorne +3",
 	neck="Commodore Charm +2",
 	left_ear="Telos Earring",
 	right_ear="Crepuscular Earring",
@@ -277,7 +277,7 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
 	left_ring="Regal Ring",
-	right_ring="Epaminondas's ring",
+	right_ring="Cornelia's ring",
 	back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	waist="Fotia Belt",
 	legs="Nyame Flanchard",
@@ -288,7 +288,8 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	body="Ikenga's Vest",
 	hands="Chasseur's Gants +3",
     back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%'}},
-	legs="Ikenga's Trousers",
+	--legs="Ikenga's Trousers",
+	legs="Chasseur's Culottes +3",
 	})
 	
 	sets.ws["Leaden Salute"] = set_combine(sets.ws.common, {
@@ -306,7 +307,7 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	sets.ws["Wildfire"] = set_combine(sets.ws["Leaden Salute"], {
 	head="Nyame Helm",
 	left_ear="Hecate's Earring",
-	right_ring="Epaminondas's ring",
+	right_ring="Cornelia's ring",
 	})
 	
 	sets.ws["Hot Shot"] = set_combine(sets.ws["Wildfire"], {
@@ -317,7 +318,7 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	sets.ws["Sniper Shot"] = {
 	head="Meghanada Visor +2",
 	neck="Iskur Gorget",
-	left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	left_ear="Moonshade Earring",
 	right_ear="Telos Earring",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",

@@ -45,7 +45,7 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
-    state.OffenseMode:options('Hybrid', 'DT', 'Acc','Normal', 'Capacity', 'Fodder')
+    state.OffenseMode:options('Hybrid', 'DT', 'Acc','Normal', 'Capacity', 'Fodder', 'Ngai')
     state.HybridMode:options('Normal', 'DT')
     state.WeaponskillMode:options('Normal', 'Acc', 'Fodder')
     state.PhysicalDefenseMode:options('PDT', 'Evasion')
@@ -104,11 +104,11 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-    head="Mpaca's Cap", --hiza?
-    body="Mpaca's Doublet", --hiza?
-    hands="Mpaca's Gloves", --hiza?
-    legs="Mpaca's Hose", -- hiza?
-    feet="Mpaca's Boots", --hiza?
+    head="Mpaca's Cap"
+    body="Mpaca's Doublet", 
+    hands="Mpaca's Gloves", 
+    legs="Mpaca's Hose", 
+    feet="Mpaca's Boots", 
     neck="Rep. Plat. Medal",
     waist="Eschan Stone",
     left_ear="Ishvara Earring",
@@ -118,22 +118,41 @@ function init_gear_sets()
     back="Shadow Mantle",}
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-    sets.precast.WS['Stringing Pummel'] = set_combine(sets.precast.WS, {neck="Rancor Collar",ear1="Brutal Earring",ear2="Moonshade Earring",
-        ring1="Spiral Ring",waist="Soil Belt"})
-    sets.precast.WS['Stringing Pummel'].Mod = set_combine(sets.precast.WS['Stringing Pummel'], {legs="Nahtirah Trousers"})
+    sets.precast.WS['Stringing Pummel'] = set_combine(sets.precast.WS, {
+		neck="Rancor Collar",
+		ear1="Brutal Earring",
+		ear2="Moonshade Earring",
+        ring1="Spiral Ring",
+		waist="Fotia Belt"
+		})
+		
+    sets.precast.WS['Stringing Pummel'].Mod = set_combine(sets.precast.WS['Stringing Pummel'], {
+		legs="Nahtirah Trousers"
+		})
 
-    sets.precast.WS['Victory Smite'] = set_combine(sets.precast.WS, {neck="Rancor Collar",ear1="Brutal Earring",ear2="Moonshade Earring",
-        waist="Thunder Belt"})
+    sets.precast.WS['Victory Smite'] = set_combine(sets.precast.WS, {
+		neck="Rancor Collar",
+		ear1="Brutal Earring",
+		ear2="Moonshade Earring",
+        waist="Fotia Belt"
+		})
 
-    sets.precast.WS['Shijin Spiral'] = set_combine(sets.precast.WS, {neck="Light Gorget",waist="Light Belt"})
+    sets.precast.WS['Shijin Spiral'] = set_combine(sets.precast.WS, {
+		neck="Fotia Gorget",
+		waist="Fotia Belt"
+		})
 
     
     -- Midcast Sets
 
     sets.midcast.FastRecast = {
-        head="Haruspex Hat",ear2="Loquacious Earring",
-        body="Otronif Harness +1",hands="Regimen Mittens",
-        legs="Manibozho Brais",feet="Otronif Boots +1"}
+        head="Haruspex Hat",
+		ear2="Loquacious Earring",
+        body="Otronif Harness +1",
+		hands="Regimen Mittens",
+        legs="Manibozho Brais",
+		feet="Otronif Boots +1"
+		}
         
 
     -- Midcast sets for pet actions
@@ -274,7 +293,7 @@ function init_gear_sets()
 		ear2="Steelflash Earring",
         body="Qaaxo Harness",
 		hands="Otronif Gloves",
-		ring1="Rajas Ring",
+		ring1="Chirich Ring +1",
 		ring2="Epona's Ring",
         back="Dispersal Mantle",
 		waist="Hurch'lan Sash",
@@ -313,6 +332,17 @@ function init_gear_sets()
 		feet="Malignance Boots"
 		}
     
+	sets.engaged.Ngai  = set_combine(sets.engaged.DT, {
+		head="Nyame Helm",
+		neck="Warder's Charm",
+		ear2="Mache Earring +1",
+		body="Mpaca's Doublet",
+		hands="Nyame Gauntlets",
+		--waist="Moonlight Belt",
+		legs="Mpaca's Hose",
+		feet="Nyame Sollerets",
+		
+	
 	sets.engaged.Acc.DT = {
         head="Whirlpool Mask",neck="Twilight Torque",ear1="Bladeborn Earring",ear2="Steelflash Earring",
         body="Otronif Harness +1",hands="Regimen Mittens",ring1="Defending Ring",ring2="Beeline Ring",
