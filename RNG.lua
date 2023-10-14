@@ -151,7 +151,7 @@ function user_setup()
                   ['Armageddon'] = "Devastating Bullet",
                   ['Gastraphetes'] = "Quelling Bolt",
                   ['Fomalhaut'] = "Devastating Bullet",
-				  ['anarchy +2'] = "Devastating Bullet",
+				  ['Anarchy +3'] = "Devastating Bullet",
                   }
 
     -- Additional local binds
@@ -461,13 +461,14 @@ function init_gear_sets()
     left_ring="Dingir Ring",
     back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},			
     })
+	
     sets.precast.WS['Evisceration'] = {
 	ammo="Hauksbok arrow",
     head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
     body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
     hands="Mummu Wrists +2",
     legs={ name="Herculean Trousers", augments={'Accuracy+23','"Triple Atk."+4','STR+3',}},
-    feet={ name="Herculean Boots", augments={'Accuracy+29','Crit. hit damage +3%','DEX+15','Attack+1',}},
+    --feet={ name="Herculean Boots", augments={'Accuracy+29','Crit. hit damage +3%','DEX+15','Attack+1',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Odr Earring",
@@ -476,6 +477,7 @@ function init_gear_sets()
     right_ring="Chirich Ring +1",
     back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}},
     }
+	
 	sets.precast.WS['Savage Blade'] = {
     ammo="Hauksbok arrow",
 	head={ name="Nyame Helm", augments={'Path: B',}},
@@ -1009,8 +1011,15 @@ function init_gear_sets()
     sets.buff.Camouflage = {body="Orion Jerkin +1"}
 
     sets.buff.Doom = {
-       
         }
+
+	sets.phalanx = {
+		head="Herculean Helm",
+		body="Herculean Vest",
+		hands="Herculean Gloves",
+		legs="Herculean Trousers",
+		feet="Herculean Boots",
+	}
 
    -- sets.FullTP = {ear1="Crematio Earring"}
     --sets.Obi = {waist="Hachirin-no-Obi"}

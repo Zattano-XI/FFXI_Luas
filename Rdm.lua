@@ -65,7 +65,7 @@ function get_sets()
 	neck="Baetyl Pendant", --4
 	left_ear="Malignance Earring", --4
 	right_ear="Loquacious Earring", --2
-	--body="Crepuscular Cloak",
+	body="Crepuscular Cloak",
 	hands="Leyline Gloves", --5
 	left_ring="Kishar Ring", --4
 	right_ring="Lebeche Ring", --2 qm
@@ -131,8 +131,8 @@ function get_sets()
 	right_ring="Freke Ring",
 	back="Aurist's Cape +1",
 	waist="Refoccilation Stone",
-	legs="Jhakri Slops +2",
-	feet="Amalric Nails +1"
+	legs="Lethargy Fusea +3",
+	feet="Lethargy Houseaux +3"
 	}
 	
 	sets.nuke['MB'] = set_combine(sets.nuke['Free'], {
@@ -420,10 +420,11 @@ function get_sets()
 	})
 	
 	sets.ws.common = {
+	ammo="Coiste Bodhar",
 	head="Nyame Helm",
 	neck="Rep. Plat. Medal",
 	body="Nyame Mail",
-	hands="Jhakri Cuffs +2",
+	hands="Nyame Gauntlets",
 	right_ring="Cornelia's Ring",
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	legs="Nyame Flanchard",
@@ -450,7 +451,7 @@ function get_sets()
 	left_ear="Malignance Earring",
 	right_ear="Regal Earring",
 	body="Nyame Mail",
-	hands="Jhakri Cuffs +2",
+	hands="Nyame Gauntlets",
 	left_ring="Archon Ring",
 	waist="Orpheus's Sash",
 	legs="Nyame Flanchard",
@@ -485,7 +486,7 @@ function get_sets()
 	idle_ind = 1
 	
 	sets.idle['Idle'] = {
-	--main="Daybreak",
+	--main="Sakpata's Sword",
 	sub="Genmei Shield",
 	ammo="Homiliary",
 	head="Vitiation Chapeau +3",
@@ -508,7 +509,7 @@ function get_sets()
 	neck="Loricate Torque +1",
 	left_ear="Etiolation Earring",
 	right_ear="Dominance Earring +1",
-	body="Jhakri Robe +2",
+	body="Lethargy Sayon +3",
 	hands="Volte Gloves",
 	left_ring="Stikini Ring +1",
 	right_ring="Defending Ring",
@@ -725,7 +726,7 @@ function aftercast(spell)
 	if player.mpp <= 35 then
 		equip({ammo="Homiliary",waist="Fucho-no-obi",})
 	elseif player.mpp <= 42 then
-		equip({waist="Flume Belt +1",})
+		equip({waist="Plat. Mog. Belt",})
 	end
 		if player.status == "Engaged" then
 		disable('main','sub','range')

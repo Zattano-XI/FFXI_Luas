@@ -20,11 +20,11 @@ function get_sets()
 	
 	sets.movement = {legs="Carmine Cuisses +1"}
 	
-	sets.fc.base = { --2+14+10+5+4+10+8+13=66
+	sets.fc.base = { --2+14+10+8+4+10+8+13=69
 	ammo="Sapience Orb", --2%
 	head={name="Carmine Mask +1",priority=12}, --14%
 	body={name="Reverence Surcoat +3",priority=15}, --10%
-	hands="Leyline Gloves", --5%
+	hands="Leyline Gloves", --8%
 	left_ring="Kishar ring", --4%
 	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Damage taken-5%',},priority=13}, --'HP+20'
 	waist="Plat. Mog. Belt",
@@ -39,7 +39,7 @@ function get_sets()
 	sets.fc.healing = set_combine(sets.fc.base, {})
 	
 	sets.fc["Enhancing Magic"] = set_combine(sets.fc.base, {
-	waist="Siegel Sash",
+	--waist="Siegel Sash",
 	})
 	
 	sets.hp = {
@@ -96,8 +96,11 @@ function get_sets()
 	ammo="Staunch Tathlum +1", --11
 	head={name="Souveran Schaller +1",priority=15}, --20
 	neck="Moonlight Necklace", --15
-	waist="Audumbla Sash", --10
-	legs={name="Founder's Hose",priority=14}, --20
+	ring1="Defending Ring", --DT+
+	ring2="Moonlight Ring", --DT+
+	waist="Plat. Mog. Belt",
+	--waist="Audumbla Sash", --10
+	legs={name="Founder's Hose",priority=14}, --30
 	feet="Odyssean Greaves" --20
 	}) --96
 	
@@ -141,11 +144,12 @@ function get_sets()
 	feet={name="Sakpata's Leggings",priority=5}
 	}
 	
-	sets.EnhancingDuration = {
+	-- Remove After Kalunga
+	--sets.EnhancingDuration = {
 	--sub="Ajax +1",
-	body="Shabti cuirass +1",
-	hands="Regal Gauntlets",
-	}
+	--body="Shabti cuirass +1",
+	--hands="Regal Gauntlets",
+	--}
 	
 	sets.protect = set_combine(sets.EnhancingDuration, {
 	main="Colada",
@@ -191,11 +195,11 @@ function get_sets()
 	legs="Souveran Diechlings +1",
 	}
 	
-	sets.sword.index = {'Burtgang', 'Sakpatas Sword','Naegling','Malevolence','Caladbolg', 'Malignance Sword',--[[,'Mafic Cudgel',]]}
-	sword_ind = 1 --Malignance Sword is the Default
+	sets.sword.index = {'Burtgang', 'Sakpatas Sword','Naegling','Malevolence','Caladbolg', 'Excalibur',--[[,'Mafic Cudgel',]]}
+	sword_ind = 1 --Burtgang is the Default
 	
 	sets.sword['Sakpatas Sword'] = {main="Sakpata's Sword"}
-	sets.sword['Malignance Sword'] = {main="Malignance Sword"}
+	sets.sword['Excalibur'] = {main="Excalibur"}
 	sets.sword['Naegling'] = {main="Naegling"}
 	sets.sword['Malevolence'] = {main="Malevolence"}
 	sets.sword['Burtgang'] = {main="Burtgang"}
@@ -206,8 +210,8 @@ function get_sets()
 	
 	sets.shield['Srivatsa'] = {sub="Srivatsa",waist="Asklepian Belt",}
 	sets.shield['Aegis'] = {sub="Aegis",neck="Warder's Charm +1",waist="Carrier's Sash",}
-	sets.shield['Duban'] = {sub="Duban",waist="Flume Belt +1",}
-	sets.shield['Priwen'] = {sub="Priwen",waist="Flume Belt +1",}
+	sets.shield['Duban'] = {sub="Duban",waist="Plat. Mog. Belt",} --Flume?
+	sets.shield['Priwen'] = {sub="Priwen",waist="Plat. Mog. Belt",} --Flume?
 	sets.shield['Blurred'] = {sub="Blurred Shield +1",waist="Sailfi Belt +1",}
 	
 	sets.TP.index = {'None','Standard','HighAcc'}
@@ -438,6 +442,7 @@ function buff_change(n, gain, buff_table)
 		end
 	end
 end
+
 
 send_command('bind @q gs equip dt') -- Hit cmd+q, equips dt set
 send_command('bind @w gs equip movement') -- Hit cmd+w, equips movement equipment

@@ -187,7 +187,7 @@ function init_gear_sets()
 		legs="Plunderer's Culottes +3",
 		feet="Nyame Sollerets"
 		}
-    sets.precast.WS.Acc = set_combine(sets.precast.WS, {ammo="Ginsen", back="Toutatis's Cape"})
+    sets.precast.WS.Acc = set_combine(sets.precast.WS, {})
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 
@@ -390,7 +390,6 @@ function init_gear_sets()
 		ear2="Loquacious Earring",
         body="Malignance Tabard",
 		hands="Leyline Gloves",
-		ring1="Beeline Ring",
         back="Canny Cape",
 		legs="Malignance Tights",
 		feet="Malignance Boots"}
@@ -403,8 +402,8 @@ function init_gear_sets()
 		ear2="Crepuscular Earring",
         body="Malignance Tabard",
 		hands="Malignance Gloves",
-		ring1="Beeline Ring",
-		ring2="Hajduk Ring",
+		ring1="Cacoethic Ring +1",
+		ring2="Dingir Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 		waist="Yemaya Belt",
 		legs="Malignance Tights",
@@ -418,8 +417,8 @@ function init_gear_sets()
 		ear2="Crepuscular Earring",
         body="Malignance Tabard",
 		hands="Buremte Gloves",
-		ring1="Beeline Ring",
-		ring2="Hajduk Ring",
+		ring1="Cacoethic Ring +1",
+		ring2="Dingir Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 		waist="Yemaya Belt",
 		legs="Malignance Tights",
@@ -451,7 +450,7 @@ function init_gear_sets()
 		ring1="Moonlight Ring",
 		ring2="Defending Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}}, 
-		waist="Flume Belt +1",
+		waist="Plat. Mog. Belt",
 		legs="Nyame Flanchard",
 		feet="Jute Boots +1"
 		}
@@ -466,7 +465,7 @@ function init_gear_sets()
 		ring1="Gelatinous Ring +1",
 		ring2="Defending Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}}, 
-		waist="Flume Belt +1",
+		waist="Plat. Mog. Belt",
 		legs="Nyame Flanchard",
 		feet="Jute Boots +1"
 		}
@@ -478,25 +477,39 @@ function init_gear_sets()
 		neck="Assassin's Gorget +2",
         body="Malignance Tabard",
 		hands="Pillager's Armlets +1",
-		ring1="Beeline Ring", 
+		ring1="Moonlight Ring +1", 
 		ring2="Defending Ring",
         back="Canny Cape",
-		waist="Flume Belt +1",
+		waist="Plat. Mog. Belt",
 		legs="Malignance Tights",
 		feet="Malignance Boots"
 	}
 
     sets.defense.PDT = {ammo="Staunch Tathlum +1",
-        head="Malignance Chapeau",neck="Loricate Torque +1",
-        body="Malignance Tabard",hands="Malignance Gloves",ring1="Hetairoi Ring",ring2="Defending Ring",
+        head="Malignance Chapeau",
+		neck="Loricate Torque +1",
+        body="Malignance Tabard",
+		hands="Malignance Gloves",
+		ring1="Hetairoi Ring",
+		ring2="Defending Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
-		waist="Flume Belt +1",legs="Malignance Tights",feet="Nyame Sollerets"}
+		waist="Plat. Mog. Belt",
+		legs="Malignance Tights",
+		feet="Nyame Sollerets"
+	}
 
     sets.defense.MDT = {ammo="Staunch Tathlum +1",
-        head="Pillager's Bonnet +3",neck="Loricate Torque +1",
-        body="Pillager's Vest +3",hands="Pillager's Armlets +1",ring1="Moonlight Ring",ring2="Defending Ring",
+        head="Pillager's Bonnet +3",
+		neck="Loricate Torque +1",
+        body="Pillager's Vest +3",
+		hands="Pillager's Armlets +1",
+		ring1="Moonlight Ring",
+		ring2="Defending Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
-		waist="Flume Belt +1",legs="Pillager's Culottes +3",feet="Malignance Boots"}
+		waist="Flume Belt +1",
+		legs="Pillager's Culottes +3",
+		feet="Malignance Boots"
+	}
 
 
     --------------------------------------
@@ -586,7 +599,7 @@ function init_gear_sets()
 		ear2="Heartseeker Earring",
         body="Malignance Tabard",
 		hands="Pillager's Armlets +1",
-		ring1="Beeline Ring",
+		ring1="Moonlight Ring +1",
 		ring2="Epona's Ring",
         back="Canny Cape",
 		waist="Windbuffet Belt +1",
@@ -610,11 +623,11 @@ function init_gear_sets()
     sets.CP = {back="Mecisto. Mantle"}
 	
 	sets.phalanx = {
-		head="Taeon Chapeau",
-		body="Taeon Tabard",
-		hands="Taeon Gloves",
-		legs="Taeon Tights",
-		feet="Taeon Boots",
+		head="Herculean Helm",
+		body="Herculean Vest",
+		hands="Herculean Gloves",
+		legs="Herculean Trousers",
+		feet="Herculean Boots",
 	}
 end
 

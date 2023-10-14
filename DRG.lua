@@ -145,7 +145,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
     left_ear="Digni. earring",
     right_ear="Telos Earring",
     left_ring="Varar Ring +1",
-    right_ring="Chirich Ring",
+    right_ring="Chirich Ring +1",
     back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
 	}
 	
@@ -160,7 +160,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
     right_ear="Telos Earring",
-    left_ring="Chirich Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Moonlight Ring",
     back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
 	}
@@ -184,8 +184,8 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
 	neck="Sanctity Necklace",
 	--neck="Bathy Choker +1",
 	right_ear="Infused Earring",
-	left_ring="Chirich Ring",
-	--right_ring="Paguroidea Ring",
+	left_ring="Chirich Ring +1",
+	right_ring="Chirich Ring +1",
 	}
 	
 	

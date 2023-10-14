@@ -205,9 +205,18 @@ function init_gear_sets()
     sets.midcast.Pet.DebuffBloodPactWard = {}
     
     sets.midcast.Pet.PhysicalBloodPactRage = {main="Nirvana",sub="Elan Strap +1",ammo="Epitaph",
-	head="C. Palug Crown",neck="Smn. Collar +2",ear1="Gelos Earring",ear2="Lugalbanda Earring",
-	body="Con. Doublet +3",hands={ name="Merlinic Dastanas", augments={'Pet: Mag. Acc.+18','Blood Pact Dmg.+10','Pet: INT+3',}},ring1="C. Palug Ring",ring2="Varar Ring +1",
-	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},waist="Incarnation Sash",legs={ name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4',}},feet="Convo. Pigaches +3"}
+	head="C. Palug Crown",
+	neck="Smn. Collar +2",
+	ear1="Gelos Earring",
+	ear2="Lugalbanda Earring",
+	body="Con. Doublet +3",
+	hands="Merlinic Dastanas",
+	ring1="C. Palug Ring",
+	ring2="Varar Ring +1",
+	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
+	waist="Incarnation Sash",
+	legs={ name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4',}},
+	feet="Convo. Pigaches +3"}
 
     sets.midcast.Pet.PhysicalBloodPactRage.Acc = {}
 

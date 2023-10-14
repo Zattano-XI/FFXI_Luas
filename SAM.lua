@@ -52,7 +52,7 @@ function get_sets()
 	sets.ja['Shikikoyo'] = {legs="Sakonji Haidate +3"}
 	sets.ja['Blade Bash'] = {hands="Sakonji Kote +3"}
 
-	sets.TP.index = {--[['Standard',]]'Hybrid','DT','MDT'}
+	sets.TP.index = {--[['Standard',]]'DT', 'Kalunga','Hybrid',} --,'MDT'
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = {
@@ -69,10 +69,11 @@ function get_sets()
 	--legs="Tatenashi Haidate +1",
 	--feet="Flamma Gambieras +2"
 	
+	ammo="Coiste Bodhar",
 	head="Flamma Zucchetto +2",
 	neck="Samurai's Nodowa +2",
 	left_ear="Schere Earring",
-	right_ear="Kasuga Earring +1",
+	right_ear="Kasuga Earring +2",
 	body="Tatenashi Haramaki +1",
 	hands="Tatenashi Gote +1",
 	left_ring="Niqmaddu Ring",
@@ -105,30 +106,35 @@ function get_sets()
 		--15dt, 23pdt
 })
 	
-	sets.TP['DT'] = set_combine(sets.TP['Standard'], {
+	sets.TP['DT'] = set_combine(sets.TP['Hybrid'], {
+		ammo="Coiste Bodhar",
 		head="Kasuga Kabuto +3", --10dt
-		--ear1="Telos Earring",
 		body="Kasuga Domaru +3", --14dt
 		hands="Mpaca's Gloves", --8pdt
 		ring2="Defending Ring", --10dt
-		back="Moonbeam Cape", --5dt
+		--back="Moonbeam Cape", --5dt
 		legs="Kasuga Haidate +3", --11dt
 		feet="Mpaca's Boots", --6pdt
 		--total 50dt 9pdt
-
-	--head="Mpaca's Cap", --7%
-	--body="Mpaca's Doublet", --10%
-	--right_ring="Defending Ring", --10%
-	--legs="Mpaca's Hose", --9%
-	--feet="Mpaca's Boots" --6%
-	
-	--head="Mpaca's Cap", --7%
-	--left_ear="Odnowa Earring +1", --3%
-	--body="Mpaca's Doublet", --10%
-	--right_ring="Defending Ring", --10%
-	--back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --10
 	})
-	
+
+	sets.TP['Kalunga'] = set_combine(sets.TP['Hybrid'], {
+		ammo="Coiste Bodhar",
+		head="Kasuga Kabuto +3",
+		--head="Mpaca's Cap", --7%
+		body="Kasuga Domaru +3",
+		--body="Mpaca's Doublet", --10%
+		hands="Nyame Gauntlets",
+		--hands="Mpaca's Gloves", --8pdt
+		ring1="Niqmaddu Ring",
+		ring2="Chirich Ring +1",
+		--ring2="Defending Ring", --10dt
+		--waist="Carrier's Sash",
+		legs="Kasuga Haidate +3",
+		feet="Nyame Sollerets",
+		--feet="Mpaca's Boots", --6pdt
+	})	
+		
 	sets.TP['MDT'] = set_combine(sets.TP['Standard'], {
 	head="Ken. Jinpachi +1",
 	body="Ken. Samue +1",
@@ -147,6 +153,8 @@ function get_sets()
 	})
 	
 	sets.TP['Subtle'] = set_combine(sets.TP['Standard'], {
+	ring1="Chirich Ring +1",
+	Ring2="Chirich Ring +1",
 	})
 	
 	sets.idle = set_combine(sets.TP['Standard'], {
@@ -176,7 +184,7 @@ function get_sets()
 	head="Nyame Helm",
 	neck="Samurai's Nodowa +2",
 	left_ear="Thrud Earring",
-	right_ear="Kasuga Earring +1",
+	right_ear="Kasuga Earring +2",
 	body="Nyame Mail",
 	hands="Kasuga Kote +3",
 	left_ring="Niqmaddu Ring",
@@ -205,6 +213,15 @@ function get_sets()
 	neck="Warder's Charm +1",
 	}
 	
+	--sets.ws['Tachi: Mumei'] = set_combine(sets.ws.common, {
+	--ammo="Crepuscular Pebble",
+	--head="Mpaca's Cap",
+	--body="Kasuga Domaru +3",
+	--waist="Sailfi Belt +1",
+	--legs="Mpaca's Hose",
+	--feet="Kasuga Sune-ate +3"
+	--})
+	
 	sets.ws['Tachi: Yukikaze'] = set_combine(sets.ws['Tachi: Ageha'], {})
 	
 	sets.ws['Empyreal Arrow'] = set_combine(sets.ws.common, {
@@ -218,7 +235,7 @@ function get_sets()
 	sets.ws['Namas Arrow'] = set_combine(sets.ws['Empyreal Arrow'], {})
 	
 	sets.ws['Tachi: Jinpu'] = set_combine(sets.ws['Empyreal Arrow'], {
-	right_ear="Friomisi Earring",
+	right_ear="Kasuga Earring +2",
 	waist="Orpheus's Sash",
 	legs="Nyame Flanchard",
 	})
@@ -234,17 +251,22 @@ function get_sets()
 	sets.ws['Stardiver'] = set_combine(sets.ws.common, {
 	--body="Tatenashi Haramaki +1",
 	right_ear="Schere Earring",
-	left_ring="Regal Ring",
-	right_ring="Niqmaddu Ring",
+	left_ring="Niqmaddu Ring",
+	right_ring="Regal Ring",
 	legs="Mpaca's Hose",
 	feet="Tatenashi Sune-ate +1"
 	})
 	
-	sets.WEAPON.index = {'Slashing','Piercing','Blunt'}
+	sets.WEAPON.index = {'Kusanagi','Piercing','Blunt','Masamune'}
 	WEAPON_ind = 1 --GK set is the Default
 	
-	sets.WEAPON['Slashing'] = {
+	sets.WEAPON['Masamune'] = {
 	main="Masamune",
+	sub="Utu Grip",
+	}
+	
+	sets.WEAPON['Kusanagi'] = {
+	main="Kusanagi-No-Tsurugi",
 	sub="Utu Grip",
 	}
 	
@@ -306,7 +328,7 @@ function get_sets()
 	sets.phalanx = {
 	head="Valorous Mask",
 	body="Valorous Mail",
-	--hands="Valorous Mitts",
+	hands="Valorous Mitts",
 	--legs="Valorous Hose",
 	feet="Valorous Greaves",
 	}
@@ -347,19 +369,20 @@ function get_sets()
 	neck="Samurai's Nodowa +2",
 	left_ear="Telos Earring",
 	right_ear="Enervating Earring",
-	body="Wakido Domaru +3",
-	hands="Volte Mittens",
+	body="Kasuga Domaru +3",
+	hands="Kasuga Kote +3",
 	left_ring="Regal Ring",
 	right_ring="Cacoethic Ring +1",
 	waist="Yemaya Belt",
-	legs="Wakido Haidate +3",
+	legs="Nyame Flanchard",
 	feet="Nyame Sollerets",
 	}
 	
-	--Craft
-	sets.craft = {
+	--Alchemy Craft
+	sets.alchemy = {
 	main="Caduceus",
 	sub="Br. Escutcheon",
+	head="Protective Specs.",
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
 	ring1="Orvail ring", --+1
@@ -528,6 +551,8 @@ function aftercast(spell)
 			equip(sets.TP['DT'],sets.movement)
 		elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['Hybrid'] then
 			equip(sets.TP['Hybrid'],sets.movement)
+		elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['Kalunga'] then
+			equip(sets.TP['Kalunga'],sets.movement)
 		elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['MDT'] then
 			equip(sets.TP['MDT'],sets.movement)
 		end
@@ -554,6 +579,8 @@ function status_change(new,old)
 			equip(sets.TP['DT'],sets.movement)
 		elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['Hybrid'] then
 			equip(sets.TP['Hybrid'],sets.movement)
+		elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['Kalunga'] then
+			equip(sets.TP['Kalunga'],sets.movement)
 		elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['MDT'] then
 			equip(sets.TP['MDT'],sets.movement)
 		end
@@ -617,7 +644,7 @@ send_command('bind @a gs c reequip;wait 1; input /lockstyle on') -- Hit win+a
 send_command('bind @u gs equip low_hp;wait 1; gs equip high_hp')
 send_command('bind @o gs equip sets.reraise')
 send_command('bind @k gs equip sets.refresh')
-send_command('alias food input /item "Grape Daifuku" <me>')
+send_command('alias food input /item "Grape Daifuku +1" <me>')
 send_command('alias fudo @input /ws "Tachi: Fudo" <t>')
 send_command('alias jinpu @input /ws "Tachi: Jinpu" <t>')
 send_command('bind @m //sendall /mount Ixion')
@@ -640,8 +667,9 @@ function self_command(command)
 	if command == 'toggle WEAPON set' then
 		WEAPON_ind = WEAPON_ind +1
 		if WEAPON_ind > #sets.WEAPON.index then WEAPON_ind = 1 end
+		windower.add_to_chat(1,'<----- Weapon Set changed to '..sets.WEAPON.index[WEAPON_ind]..' ----->')
 		equip(sets.WEAPON[sets.WEAPON.index[WEAPON_ind]])
-		if WEAPON_ind == 1 then
+		if WEAPON_ind == 1 and 4 then
 			send_command('alias fudo @input /ws "Tachi: Fudo" <t>')
 			send_command('alias jinpu @input /ws "Tachi: Jinpu" <t>')
 		elseif WEAPON_ind == 2 then

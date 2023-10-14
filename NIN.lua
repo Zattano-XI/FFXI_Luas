@@ -463,7 +463,6 @@ function init_gear_sets()
     sets.midcast.SpellInterrupt = {
         ammo="Staunch Tathlum +1", --11
         body=gear.Taeon_Phalanx_body, --10
-        hands="Rawhide Gloves", --15
         legs=gear.Taeon_Phalanx_legs, --10
         feet=gear.Taeon_Phalanx_feet, --10
         neck="Moonlight Necklace", --15
@@ -472,7 +471,7 @@ function init_gear_sets()
         ring1="Evanescence Ring", --5
         back=gear.NIN_FC_Cape, --10
         waist="Audumbla Sash", --10
-        }
+        } --104 sird with merits, add rawhide gloves if more is needed.
 
     -- Specific spells
     sets.midcast.Utsusemi = set_combine(sets.midcast.SpellInterrupt, {feet="Hattori Kyahan +1", back=gear.NIN_FC_Cape,})
@@ -563,8 +562,8 @@ function init_gear_sets()
         neck="Bathy Choker +1",
         ear1="Eabani Earring",
         ear2="Sanare Earring",
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring1="Chirich Ring +1",
+        ring2="Chirich Ring +1",
         back=gear.NIN_FC_Cape,
         waist="Engraved Belt",
         }
@@ -641,7 +640,7 @@ function init_gear_sets()
         body="Malignance Tabard", --9/9
 		hands="Malignance Gloves",
 		legs="Malignance Tights", --7/7
-        feet="Herculean Boots", --4/4
+        feet="Nyame Sollerets", --4/4
         ring2="Defending Ring", --10/10
 		Back="Mecistopins Mantle",
 		})
@@ -652,18 +651,18 @@ function init_gear_sets()
 
     sets.engaged.MidAcc = set_combine(sets.engaged.LowAcc, {
         ring2="Ilabrat Ring",
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
+        ring1="Chirich Ring +1",
         })
 
     sets.engaged.HighAcc = set_combine(sets.engaged.MidAcc, {
         ring1="Regal Ring",
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring2="Chirich Ring +1",
         })
 
     sets.engaged.STP = set_combine(sets.engaged, {
         legs="Samnuha Tights",
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring1="Chirich Ring +1",
+        ring2="Chirich Ring +1",
         })
 
     -- 15% Magic Haste (67% DW to cap)
@@ -688,19 +687,19 @@ function init_gear_sets()
         })
 
     sets.engaged.MidAcc.LowHaste = set_combine(sets.engaged.LowAcc.LowHaste, {
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
+        ring1="Chirich Ring +1",
         ring2="Ilabrat Ring",
         })
 
     sets.engaged.HighAcc.LowHaste = set_combine(sets.engaged.LowAcc.LowHaste, {
         ring1="Regal Ring",
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring2="Chirich Ring +1",
         })
 
     sets.engaged.STP.LowHaste = set_combine(sets.engaged.LowHaste, {
         legs="Samnuha Tights",
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring1="Chirich Ring +1",
+        ring2="Chirich Ring +1",
         })
 
     -- 30% Magic Haste (56% DW to cap)
@@ -725,19 +724,19 @@ function init_gear_sets()
         })
 
     sets.engaged.MidAcc.MidHaste = set_combine(sets.engaged.LowAcc.MidHaste, {
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
+        ring1="Chirich Ring +1",
         ring2="Ilabrat Ring",
         })
 
     sets.engaged.HighAcc.MidHaste = set_combine(sets.engaged.MidHaste.MidAcc, {
         ring1="Regal Ring",
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring2="Chirich Ring +1",
         })
 
     sets.engaged.STP.MidHaste = set_combine(sets.engaged.MidHaste, {
         legs="Samnuha Tights",
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring1="Chirich Ring +1",
+        ring2="Chirich Ring +1",
         })
 
     -- 35% Magic Haste (51% DW to cap)
@@ -768,13 +767,13 @@ function init_gear_sets()
 
     sets.engaged.HighAcc.HighHaste = set_combine(sets.engaged.MidAcc.HighHaste, {
         ring1="Regal Ring",
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring2="Chirich Ring +1",
         })
 
     sets.engaged.STP.HighHaste = set_combine(sets.engaged.HighHaste, {
         legs="Samnuha Tights",
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring1="Chirich Ring +1",
+        ring2="Chirich Ring +1",
         waist="Kentarch Belt +1",
         })
 
@@ -802,13 +801,13 @@ function init_gear_sets()
 
     sets.engaged.MidAcc.MaxHaste = set_combine(sets.engaged.LowAcc.MaxHaste, {
         ear1="Cessance Earring",
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
+        ring1="Chirich Ring +1",
         ring2="Ilabrat Ring",
         })
 
     sets.engaged.HighAcc.MaxHaste = set_combine(sets.engaged.MidAcc.MaxHaste, {
         ring1="Regal Ring",
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring2="Chirich Ring +1",
         waist="Olseni Belt",
         })
 
@@ -816,8 +815,8 @@ function init_gear_sets()
         legs="Samnuha Tights",
         ear1="Dedition Earring",
         ear2="Telos Earring",
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
-        ring2={name="Chirich Ring +1", bag="wardrobe4"},
+        ring1="Chirich Ring +1",
+        ring2="Chirich Ring +1",
         waist="Kentarch Belt +1",
         })
 
@@ -893,6 +892,14 @@ function init_gear_sets()
     sets.Heishi = {main="Heishi Shorinken", sub="Ternion Dagger +1"}
     sets.Hitaki = {main="Heishi Shorinken", sub="Hitaki"}
     sets.Tanking = {main="Fudo Masamune", sub="Ternion Dagger +1"}
+
+	sets.phalanx = {
+		head="Herculean Helm",
+		body="Herculean Vest",
+		hands="Herculean Gloves",
+		legs="Herculean Trousers",
+		feet="Herculean Boots",
+	}
 
 end
 

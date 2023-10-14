@@ -39,7 +39,7 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
-    state.OffenseMode:options('DT','Hybrid','Ranged') -- 'Acc','Capacity',
+    state.OffenseMode:options('DT','Nyame','Hybrid','Ranged') -- 'Acc','Capacity',
     state.RangedMode:options('Normal', 'Acc')
     state.WeaponskillMode:options('Normal', 'Acc', 'Att', 'Mod')
     state.CastingMode:options('Normal', 'Resistant')
@@ -167,9 +167,9 @@ function init_gear_sets()
     	ear1="Ishvara Earring",
 		ear2="Moonshade Earring",
         body="Nyame Mail",
-		hands="Meghanada Gloves +2",
+		hands="Chasseur's Gants +3",
 		ring1="Regal Ring",
-		ring2="Ilabrat Ring",
+		ring2="Cornelia's Ring",
         waist="Sailfi Belt +1",
 		back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 		legs="Nyame Flanchard",
@@ -246,7 +246,7 @@ function init_gear_sets()
     
     sets.precast.WS['Leaden Salute'] = {ammo=gear.MAbullet,
         head="Pixie Hairpin +1",
-		neck="Sanctity Necklace",
+		neck="Commodore Charm +2",
 		ear1="Friomisi Earring",
 		ear2="Moonshade Earring",
         body="Lanun Frac +3", --+3 
@@ -382,7 +382,7 @@ function init_gear_sets()
 		ring1="Crepuscular Ring",
 		ring2="Sheltered Ring",
         back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Damage taken-5%',}},
-		waist="Flume Belt +1",
+		waist="Plat. Mog. Belt",
 		legs="Carmine Cuisses +1",
 		feet="Skadi's Jambeaux +1"}
     
@@ -397,7 +397,7 @@ function init_gear_sets()
 		ring1="Defending Ring",
 		ring2="Gelatinous Ring +1",
         back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Damage taken-5%',}},
-		waist="Flume Belt +1",
+		waist="Plat. Mog. Belt",
 		legs="Malignance Tights",
 		feet="Malignance Boots"
 		}
@@ -412,7 +412,7 @@ function init_gear_sets()
 		ring1="Defending Ring",
 		--ring2="Shadow Ring",
         back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10','Damage taken-5%',}},
-		waist="Flume Belt +1",
+		waist="Plat. Mog. Belt",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets"
 	}
@@ -428,11 +428,11 @@ function init_gear_sets()
     -- EG: sets.engaged.Dagger.Accuracy.Evasion
     
     -- Normal melee group
-    sets.engaged.Hybrid = {main="Naegling", range="Anarchy +2", ammo=gear.RAbullet,
+    sets.engaged.Hybrid = {main="Naegling", range="Anarchy +3", ammo=gear.RAbullet,
         head="Adhemar Bonnet +1",
 		neck="Iskur Gorget",
-		ear1="Cessance Earring", --Telos
-		ear2="Suppanomimi",
+		ear1="Telos Earring", --Telos
+		ear2="Dedition Earring",
 		body="Malignance Tabard",
 		hands="Adhemar Wristbands +1",
 		ring1="Epona's Ring",
@@ -443,8 +443,8 @@ function init_gear_sets()
 		feet="Malignance Boots"
 	}
     
-	sets.engaged.Capacity = {main="Naegling", range="Anarchy +2", ammo=gear.RAbullet,
-        head="Malignance Chapeau",
+	sets.engaged.Capacity = {main="Naegling", range="Anarchy +3", ammo=gear.RAbullet,
+        head="Nyame Helm",
 		neck="Iskur Gorget",
 		ear1="Cessance Earring",
 		ear2="Brutal Earring",
@@ -455,22 +455,22 @@ function init_gear_sets()
         back="Mecistopins Mantle",
 		waist="Sailfi Belt +1",
 		legs="Malignance Tights",
-		feet="Herculean Boots"
+		feet="Nyame Sollerets"
 		}
 
-    sets.engaged.DT = {main="Naegling", range="Anarchy +2", ammo=gear.RAbullet,
-        head="Malignance Chapeau", --6dt
+    sets.engaged.DT = {main="Naegling", range="Anarchy +3", ammo=gear.RAbullet,
+        head="Nyame Helm", --6dt
 		neck="Iskur Gorget",
-		ear1="Cessance Earring",
-		ear2="Crepuscular Earring", --brutal
+		ear1="Telos Earring",
+		ear2="Dedition Earring",
         body="Malignance Tabard", --9dt
 		hands="Malignance Gloves", --5dt
 		ring1="Ilabrat ring",
 		ring2="Defending Ring", --10dt
         back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}, --5dt
 		waist="Sailfi Belt +1",
-		legs="Malignance Tights", --7dt
-		feet="Herculean Boots", --feet="Malignance Boots" --7dt
+		legs="Chas. Culottes +3", --7dt
+		feet="Nyame Sollerets", --feet="Malignance Boots" --7dt
 		}	--dt49
 		
     sets.engaged.Acc = {ammo=gear.RAbullet,
@@ -533,6 +533,14 @@ function init_gear_sets()
 		legs="Ikenga's Trousers",
 		feet="Malignance Boots",
 		}
+		
+	sets.phalanx = {
+		head="Herculean Helm",
+		body="Herculean Vest",
+		hands="Herculean Gloves",
+		legs="Herculean Trousers",
+		feet="Herculean Boots",
+	}
 		
 	sets.buff['Triple Shot'] = {body="Chasseur's Frac +3"}
 end

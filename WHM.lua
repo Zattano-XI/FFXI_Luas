@@ -319,7 +319,7 @@ function init_gear_sets()
         body="Vedic Coat",
         --hands="Shrieker's Cuffs",
         legs="Vanya Slops",
-        feet="Kaykaus Boots +1",
+        feet="Kaykaus Boots",
         ear1="Mendi. Earring",
         back="Solemnity Cape",
         waist="Shinjutsu-no-Obi +1",
@@ -331,16 +331,16 @@ function init_gear_sets()
         main="Raetic Rod +1", --23(+10)
         sub="Sors Shield", --3/(-5)
         ammo="Pemphredo Tathlum",
-        head="Ebers Cap +3", --head="Kaykaus Mitra +1", --11(+2)/(-6)
+        head="Kaykaus Mitra +1", --11(+2)/(-6)
         body="Ebers Bliaut +3",
         hands="Theophany Mitts +3", --(+4)/(-7)
         legs="Ebers Pant. +3",
-        feet="Kaykaus Boots", --kaykaus boots +1 11(+2)/(-12)
+        feet="Kaykaus Boots +1", -- 11(+2)/(-12)
         neck="Clr. Torque +2", --10/(-25)
-        ear1="Nourishing Earring +1",
-        ear2="Mendi. Earring", --Glorious Earring
+        ear1="Mendi. Earring",
+        ear2="Glorious Earring",
         ring1="Lebeche Ring", --3/(-5)
-        ring2="Kishar Ring",
+        ring2="Defending Ring",
         back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, --10
         waist="Shinjutsu-no-Obi +1",
       }
@@ -421,7 +421,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
     sets.midcast.CuragaWeather = {
         head="Ebers Cap +3",
 		neck="Clr. Torque +2",
-		ear1="Nourishing Earring +1", --Glorious
+		ear1="Glorious Earring",
 		ear2="Mendi. Earring",
 		body="Theo. Bliaut +3", --0(+6)/(-6)
         hands="Theophany Mitts +3", --11/(-6)

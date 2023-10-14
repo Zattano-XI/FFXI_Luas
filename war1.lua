@@ -30,14 +30,6 @@ function job_setup()
 
     get_combat_form()
     get_combat_weapon()
-	
-	state.CapacityMode = M(false, 'Capacity Point Mantle')
-	    if state.CapacityMode.value then
-        meleeSet = set_combine(meleeSet, sets.CapacityMantle)
-		end
-	--lockstyle
-	    state.AutoLockstyle = M(true, 'AutoLockstyle Mode')
-	    send_command('@wait 3; input /lockstyleset 1')
 end
  
  
@@ -105,7 +97,7 @@ function init_gear_sets()
     Valorous.Body.STP = { name="Valorous Mail", augments={'Accuracy+30','"Store TP"+6','DEX+3','Attack+14',}}
     Valorous.Body.DA = { name="Valorous Mail", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+4','VIT+4','Attack+6',}}
     
-    sets.TreasureHunter = { ammo="Perfect Lucky Egg",
+    sets.TreasureHunter = { 
         head="White rarab cap +1", 
         waist="Chaac Belt",
         feet=Valorous.Feet.TH
@@ -114,7 +106,7 @@ function init_gear_sets()
     sets.Organizer = {
         main="Chango",
         sub="Naegling", 
-        body="Agwu's Claymore",
+        body="Montante +1",
         hands="Shining One",
         ring1="Blurred Shield +1"
         --grip="Pearlsack",
@@ -139,7 +131,7 @@ function init_gear_sets()
 
      sets.CapacityMantle  = { back="Mecistopins Mantle" }
      --sets.Berserker       = { neck="Berserker's Torque" }
-     --sets.WSDayBonus      = { head="Gavialis Helm" }
+     sets.WSDayBonus      = { head="Gavialis Helm" }
      -- TP ears for night and day, AM3 up and down. 
      sets.BrutalLugra     = { ear1="Brutal Earring", ear2="Lugra Earring +1" }
      sets.Lugra           = { ear1="Lugra Earring +1" }
@@ -201,62 +193,60 @@ function init_gear_sets()
      -- General sets
      sets.precast.WS = {
          ammo="Knobkierrie",
-         head="Nyame Helm",
-		 neck="Rep. Plat. Medal",
-         --neck="Warrior's Bead Necklace +2",
+         head="Sakpata's Helm",
+         neck="Warrior's Bead Necklace +2",
          ear1="Thrud Earring",
          ear2="Moonshade Earring",
-		 body="Nyame Mail",
-         --body="Pummeler's Lorica +3",
-         hands="Nyame Gauntlets",
-         ring1="Cornelia's Ring",
+         body="Pummeler's Lorica +3",
+         hands="Sakpata's Gauntlets",
+         ring1="Niqmaddu Ring",
          ring2="Regal Ring",
          back=Cichols.WS,
-		 waist="Sailfi Belt +1",
-		 legs="Nyame Flanchard",
-         feet="Nyame Sollerets"
+         waist="Sailfi Belt +1",
+         legs=Odyssean.Legs.WS,
+         feet="Sulevia's Leggings +2"
      }
 
      sets.precast.WS.Mid = set_combine(sets.precast.WS, {
-         --hands="Odyssean Gauntlets",
+         hands="Odyssean Gauntlets",
         --  ammo="Ginsen",
          --body="Flamma Korazin +2",
         --  head="Valorous Mask",
          --body="Ravenous Breastplate",
      })
      sets.precast.WS.Acc = set_combine(sets.precast.WS.Mid, {
-         --ear1="Cessance Earring",
-         --waist="Olseni Belt",
+         ear1="Cessance Earring",
+         waist="Olseni Belt",
      })
     
     sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
-        neck="Fotia Gorget",
-        back=Cichols.VIT,
+         neck="Flame Gorget",
+         back=Cichols.VIT,
     	--body=Valorous.Body.DA, 
-        waist="Fotia Belt",
+        waist="Light Belt",
     })
     sets.precast.WS['Upheaval'].Mid = set_combine(sets.precast.WS['Upheaval'], {
         head="Stinger Helm +1",
-        back=Cichols.VIT,
+         back=Cichols.VIT,
     })
  
     sets.precast.WS["Ukko's Fury"] = set_combine(sets.precast.WS, {
         ammo="Knobkierrie",
     	body="Hjarrandi Breastplate",
-        neck="Fotia Gorget",
+        neck="Breeze Gorget",
         waist="Sailfi Belt +1",
-        --feet=Valorous.Feet.WS
+        feet=Valorous.Feet.WS
     })
      -- RESOLUTION
      -- 86-100% STR
      sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {
          head="Hjarrandi Helm",
-         neck="Fotia Gorget",
+         neck="Breeze Gorget",
          ear1="Schere Earring",
          hands="Sakpata's Gauntlets",
          legs="Sakpata's Cuisses",
-    	 body="Sakpata's Plate",
-         waist="Fotia Belt",
+    	 body="Sakpata's Plate'",
+         waist="Soil Belt",
          feet="Flamma Gambieras +2"
      })
      sets.precast.WS['Resolution'].Mid = set_combine(sets.precast.WS.Resolution, {
@@ -269,68 +259,55 @@ function init_gear_sets()
      -- TORCLEAVER 
      -- VIT 80%
      sets.precast.WS.Torcleaver = set_combine(sets.precast.WS, {
-         --head="Sakpata's Helm",
+         head="Sakpata's Helm",
          ammo="Knobkierrie",
-         neck="Fotia Gorget",
-         --legs=Odyssean.Legs.WS,
-         --waist="Caudata Belt"
+         neck="Aqua Gorget",
+         legs=Odyssean.Legs.WS,
+         waist="Caudata Belt"
      })
      sets.precast.WS.Torcleaver.Mid = set_combine(sets.precast.WS.Mid, {
         --  ammo="Ginsen",
-         neck="Fotia Gorget",
+         neck="Aqua Gorget",
      })
      sets.precast.WS.Torcleaver.Acc = set_combine(sets.precast.WS.Torcleaver.Mid, sets.precast.WS.Acc)
 
     sets.precast.WS.Stardiver = set_combine(sets.precast.WS, {
-        neck="Fotia Gorget",
-        waist="Fotia Belt",
+        neck="Shadow Gorget",
+        waist="Soil Belt",
         legs="Sakpata's Cuisses",
     })
     sets.precast.WS['Impulse Drive'] = set_combine(sets.precast.WS, {
+        head="Valorous Mask",
+        neck="Shadow Gorget",
+        ear1="Thrud Earring",
+        waist="Sailfi Belt +1",
+        feet=Valorous.Feet.WS
+    })
+    sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS['Impulse Drive'], {
             ammo="Knobkierrie",
 		head="Sakpata's Helm",
 		--head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
-		body="Sakpata's Plate",
-		--body="Pumm. Lorica +3",
-		hands="Sakpata's Gauntlets",
-		legs="Sakpata's Cuisses",
-		feet="Nyame Sollerets",
-		--feet="Pumm. Calligae +3",
-		neck="Rep. Plat. Medal", --JSE
-		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		left_ear="Thrud Earring",
-		right_ear="Ishvara Earring",
-		right_ring="Cornelia's Ring",
-		left_ring="Regal Ring",
-		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	})
-
-    sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS['Impulse Drive'], {
-        ammo="Knobkierrie",
-		head="Nyame Helm",
-		--head={ name="Agoge Mask +3", augments={'Enhances "Savagery" effect',}},
-		neck="Rep. Plat. Medal", --JSE
-		left_ear="Thrud Earring",
-		right_ear="Ishvara Earring",
-		body="Nyame Mail",
-		--body="Pumm. Lorica +3",
-		hands="Nyame Gauntlets",
-		right_ring="Cornelia's Ring",
-		left_ring="Regal Ring",
-		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		--feet="Pumm. Calligae +3",		
-	})
+    body="Sakpata's Plate",
+	--body="Pumm. Lorica +3",
+    hands="Sakpata's Gauntlets",
+    legs="Sakpata's Cuisses",
+    feet="Pumm. Calligae +3",
+    neck="Lacono Necklace +1", --JSE
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Thrud Earring",
+    right_ear="Ishvara Earring",
+    right_ring="Epaminondas's Ring",
+    left_ring="Regal Ring",
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	}
 
      -- Sword WS's
      -- SANGUINE BLADE
      -- 50% MND / 50% STR Darkness Elemental
      sets.precast.WS['Sanguine Blade'] = set_combine(sets.precast.WS, {
-        ear1="Friomisi Earring",
-        hands="Odyssean Gauntlets",
-        legs="Limbo Trousers",
+         ear1="Friomisi Earring",
+         hands="Odyssean Gauntlets",
+         legs="Limbo Trousers",
      })
      sets.precast.WS['Sanguine Blade'].Mid = set_combine(sets.precast.WS['Sanguine Blade'], sets.precast.WS.Mid)
      sets.precast.WS['Sanguine Blade'].Acc = set_combine(sets.precast.WS['Sanguine Blade'], sets.precast.WS.Acc)
@@ -338,9 +315,9 @@ function init_gear_sets()
      -- REQUISCAT
      -- 73% MND - breath damage
      sets.precast.WS.Requiescat = set_combine(sets.precast.WS, {
-         neck="Fotia Gorget",
+         neck="Shadow Gorget",
          back=Cichols.WS,
-         waist="Fotia Belt",
+         waist="Soil Belt",
      })
      sets.precast.WS.Requiescat.Mid = set_combine(sets.precast.WS.Requiscat, sets.precast.WS.Mid)
      sets.precast.WS.Requiescat.Acc = set_combine(sets.precast.WS.Requiscat, sets.precast.WS.Acc)
@@ -370,7 +347,7 @@ function init_gear_sets()
      }
      
      sets.idle.Field = set_combine(sets.idle.Town, {
-         ammo="Staunch Tathlum +1",
+         ammo="Staunch Tathlum",
          head="Sakpata's Helm",
          ear1="Etiolation Earring",
          ear2="Genmei Earring",
@@ -393,20 +370,18 @@ function init_gear_sets()
          head="Hjarrandi Helm",
          body="Tartarus Platemail",
          ring2="Paguroidea Ring",
-         waist="Plat. Mog. Belt",
+         waist="Flume Belt",
      })
 
      -- Defense sets
      sets.defense.PDT = {
-         ammo="Staunch Tathlum +1",
+         ammo="Staunch Tathlum",
          head="Sakpata's Helm", -- no haste
          body="Sakpata's Plate", -- 3% haste
          hands="Sakpata's Gauntlets",
          legs="Sakpata's Cuisses", -- 5% haste
          feet="Sakpata's Leggings", -- 3% haste
-         neck="Unmoving Collar +1",
-		 --neck="Agitator's Collar",
-		 ear1="Cessance Earring",
+         neck="Agitator's Collar",
          ring1="Niqmaddu Ring",
          ring2="Defending Ring",
          waist="Sailfi Belt +1",
@@ -424,18 +399,17 @@ function init_gear_sets()
 
      -- Defensive sets to combine with various weapon-specific sets below
      -- These allow hybrid acc/pdt sets for difficult content
-     sets.Defensive = set_combine(sets.engaged,{
+     sets.Defensive = {
          ammo="Crepuscular Pebble",
          head="Sakpata's Helm", -- no haste
          body="Sakpata's Plate", -- 3% haste
          hands="Sakpata's Gauntlets",
          legs="Sakpata's Cuisses", -- 5% haste
          feet="Sakpata's Leggings", -- 3% haste
-		 --neck="Agitator's Collar",
-         ring1="Moonlight Ring",
-		 ring2="Defending Ring",
+         neck="Agitator's Collar",
+         ring2="Defending Ring",
          waist="Sailfi Belt +1",
-     })
+     }
      sets.Defensive_Acc = set_combine(sets.Defensive, {
          neck="Warrior's Bead Necklace +2",
          ring2="Regal Ring",
@@ -445,10 +419,9 @@ function init_gear_sets()
      sets.engaged = {
          ammo="Coiste Bodhar",
          head="Flamma Zucchetto +2",
-         --neck="Warrior's Bead Necklace +2",
-		 neck="Vim Torque +1",
+         neck="Warrior's Bead Necklace +2",
          ear1="Schere Earring",
-         ear2="Telos Earring",
+         ear2="Dedition Earring",
     	 body="Tatenashi Haramaki +1", 
          hands="Tatenashi Gote +1",
          ring1="Niqmaddu Ring",
@@ -458,26 +431,26 @@ function init_gear_sets()
          waist="Sailfi Belt +1",
          --legs="Pummeler's Cuisses +2",
          legs=Odyssean.Legs.TP,
-         feet="Tatenashi Sune-ate +1"
+         feet="Flamma Gambieras +2"
      }
      sets.engaged.Mid = set_combine(sets.engaged, {
          head="Hjarrandi Helm",
          ammo="Coiste Bodhar",
-         --neck="Warrior's Bead Necklace +2",
+         neck="Warrior's Bead Necklace +2",
          ear1="Schere Earring",
-         ear2="Telos Earring",
+         ear2="Brutal Earring",
          body="Sakpata's Plate'",
          --hands="Flamma Manopolas +2",
          hands="Sakpata's Gauntlets",
          ring1="Niqmaddu Ring",
-         ring2="Chirich Ring +1",
+         ring2="Flamma Ring",
          waist="Ioskeha Belt",
          legs="Tatenashi Haidate +1",
          feet="Tatenashi Sune-ate +1"
     	 --body="Flamma Korazin +2"
      })
      sets.engaged.Acc = set_combine(sets.engaged.Mid, {
-         --ammo="Ginsen",
+         ammo="Ginsen",
          body="Sakpata's Plate",
          ear1="Telos Earring",
          hands="Sakpata's Gauntlets",
@@ -504,7 +477,7 @@ function init_gear_sets()
          legs="Tatenashi Haidate +1",
          feet="Tatenashi Sune-ate +1",
          --ring2="Hetairoi Ring"
-         ring2="Chirich Ring +1"
+         ring2="Flamma Ring"
         --ring1="Hetairoi Ring",
      })
      sets.engaged.OneHand.PDT = set_combine(sets.engaged.OneHand, sets.Defensive)
@@ -557,13 +530,13 @@ function job_post_precast(spell, action, spellMap, eventArgs)
     -- Make sure abilities using head gear don't swap 
 	if spell.type:lower() == 'weaponskill' then
         -- handle Gavialis Helm
-        --if is_sc_element_today(spell) then
-          --  if state.OffenseMode.current == 'Normal' and wsList:contains(spell.english) then
+        if is_sc_element_today(spell) then
+            if state.OffenseMode.current == 'Normal' and wsList:contains(spell.english) then
                 -- do nothing
-            --else
+            else
                 equip(sets.WSDayBonus)
-            --end
-        --end
+            end
+        end
         -- CP mantle must be worn when a mob dies, so make sure it's equipped for WS.
         if state.CapacityMode.value then
             equip(sets.CapacityMantle)
@@ -761,10 +734,10 @@ end
 function select_default_macro_book()
     -- Default macro set/book
 	if player.sub_job == 'DNC' then
-		set_macro_page(1, 1)
+		set_macro_page(2, 1)
 	elseif player.sub_job == 'SAM' then
-		set_macro_page(2, 1)
+		set_macro_page(1, 1)
 	else
-		set_macro_page(2, 1)
+		set_macro_page(1, 1)
 	end
 end

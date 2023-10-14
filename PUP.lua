@@ -104,18 +104,19 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-    head="Mpaca's Cap"
-    body="Mpaca's Doublet", 
-    hands="Mpaca's Gloves", 
-    legs="Mpaca's Hose", 
-    feet="Mpaca's Boots", 
-    neck="Rep. Plat. Medal",
-    waist="Eschan Stone",
-    left_ear="Ishvara Earring",
-    right_ear="Moonshade Earring",
-    left_ring="Niqmaddu Ring",
-    right_ring="Regal Ring",
-    back="Shadow Mantle",}
+		head="Mpaca's Cap",
+		body="Mpaca's Doublet", 
+		hands="Mpaca's Gloves", 
+		legs="Mpaca's Hose", 
+		feet="Mpaca's Boots", 
+		neck="Rep. Plat. Medal",
+		waist="Eschan Stone",
+		left_ear="Ishvara Earring",
+		right_ear="Moonshade Earring",
+		left_ring="Niqmaddu Ring",
+		right_ring="Regal Ring",
+		back="Shadow Mantle",
+	}
 
     -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
     sets.precast.WS['Stringing Pummel'] = set_combine(sets.precast.WS, {
@@ -244,12 +245,12 @@ function init_gear_sets()
 
     sets.defense.Evasion = {
         head="Whirlpool Mask",neck="Twilight Torque",
-        body="Otronif Harness +1",hands="Otronif Gloves",ring1="Defending Ring",ring2="Beeline Ring",
+        body="Otronif Harness +1",hands="Otronif Gloves",ring2="Defending Ring",
         back="Ik Cape",waist="Hurch'lan Sash",legs="Nahtirah Trousers",feet="Otronif Boots +1"}
 
     sets.defense.PDT = {
         head="Whirlpool Mask",neck="Twilight Torque",
-        body="Otronif Harness +1",hands="Otronif Gloves",ring1="Defending Ring",ring2=gear.DarkRing.physical,
+        body="Otronif Harness +1",hands="Otronif Gloves",ring2="Defending Ring",
         back="Shadow Mantle",waist="Hurch'lan Sash",legs="Nahtirah Trousers",feet="Otronif Boots +1"}
 
     sets.defense.MDT = {
@@ -274,7 +275,7 @@ function init_gear_sets()
 		legs="Mpaca's Hose",
 		feet="Mpaca's Boots",
 		neck="Shulmanu Collar",
-		waist="Windbuffet Belt", --Moonbow Belt
+		waist="Moonbow Belt +1", --Moonbow Belt
 		left_ear="Mache Earring +1",
 		right_ear="Karagoz Earring +1",
 		left_ring="Gere Ring",
@@ -341,12 +342,16 @@ function init_gear_sets()
 		--waist="Moonlight Belt",
 		legs="Mpaca's Hose",
 		feet="Nyame Sollerets",
-		
+	})
 	
-	sets.engaged.Acc.DT = {
-        head="Whirlpool Mask",neck="Twilight Torque",ear1="Bladeborn Earring",ear2="Steelflash Earring",
-        body="Otronif Harness +1",hands="Regimen Mittens",ring1="Defending Ring",ring2="Beeline Ring",
-        back="Iximulew Cape",waist="Hurch'lan Sash",legs="Manibozho Brais",feet="Otronif Boots +1"}
+	sets.phalanx = {
+		head="Herculean Helm",
+		body="Herculean Vest",
+		hands="Herculean Gloves",
+		legs="Herculean Trousers",
+		feet="Herculean Boots",
+	}
+
 end
 
 

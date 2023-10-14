@@ -41,7 +41,7 @@ function get_sets()
 	head="Ken. Jinpachi +1",
 	neck="Mnk. Nodowa +2",
 	left_ear="Sherida Earring",
-	right_ear="Mache Earring +1",
+	right_ear="Bhikku Earring +2",
 	body="Ken. Samue +1",
 	hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 	left_ring="Gere Ring",
@@ -83,7 +83,7 @@ function get_sets()
 	neck="Mnk. Nodowa +2",
     waist="Moonbow belt +1",
 	left_ear="Sherida Earring",
-	right_ear="Mache Earring +1",
+	right_ear="Bhikku Earring +2",
     left_ring="Defending Ring",
 	right_ring="Niqmaddu Ring",
     back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
@@ -99,7 +99,7 @@ function get_sets()
 	neck="Mnk. Nodowa +2",
     waist="Moonbow belt +1",
 	left_ear="Sherida Earring",
-	right_ear="Mache Earring +1",
+	right_ear="Bhikku Earring +2",
     left_ring="Gere Ring",
 	right_ring="Niqmaddu Ring",
     back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
@@ -113,7 +113,7 @@ function get_sets()
 	head="Ken. Jinpachi +1",
 	neck="Loricate Torque +1",
 	left_ear="Sherida Earring",
-	right_ear="Genmei Earring",
+	right_ear="Bhikku Earring +2",
 	body="Malignance Tabard",
 	hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 	left_ring="Defending Ring",
@@ -230,7 +230,7 @@ function get_sets()
 	neck="Fotia gorget",
 	waist="Moonbow belt +1",
 	left_ear="Sherida earring",
-	right_ear="Mache Earring +1",
+	right_ear="Bhikku Earring +2",
 	left_ring="Gere Ring",
 	right_ring="Niqmaddu ring",
 	back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
@@ -279,7 +279,7 @@ function get_sets()
 	neck="Fotia gorget",
 	waist="Fotia belt",
 	left_ear="Sherida earring",
-	right_ear="Telos earring",
+	right_ear="Bhikku earring +2",
 	left_ring="Gere Ring",
 	right_ring="Regal ring",
     back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
@@ -359,7 +359,7 @@ function get_sets()
     back={ name="Segomo's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','"Dbl.Atk."+10',}},
 	}
 	
-	sets.ws.Ngai = {
+	sets.ws.Ngai = {}
 	
 ---------------------------------------------------------------------------------------------------------------
 --------------------------------------------------- Misc ------------------------------------------------------
@@ -390,11 +390,11 @@ function get_sets()
 	}
 	
 	sets.phalanx = {
-    head={ name="Taeon Chapeau", augments={'Accuracy+16 Attack+16','"Counter"+3','Phalanx +2',}},
-    body={ name="Herculean Vest", augments={'VIT+7','Weapon Skill Acc.+14','Phalanx +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
-    hands={ name="Herculean Gloves", augments={'STR+4','Weapon Skill Acc.+15','Phalanx +2','Accuracy+18 Attack+18',}},
-	legs={ name="Herculean Trousers", augments={'Pet: DEX+2','AGI+8','Phalanx +4',}},
-    feet={ name="Taeon Boots", augments={'Accuracy+14','Weapon Skill Acc.+16','Phalanx +2',}},
+		head="Herculean Helm",
+		body="Herculean Vest",
+		hands="Herculean Gloves",
+		legs="Herculean Trousers",
+		feet="Herculean Boots",
 	}
 	
 	sets.misc.rest = {}

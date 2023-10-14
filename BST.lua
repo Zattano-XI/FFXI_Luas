@@ -443,7 +443,7 @@ function init_gear_sets()
 			legs="Gleti's Breeches",
 			feet="Gleti's Boots",
 			neck="Sanctity Necklace",
-			waist="Flume Belt",
+			waist="Plat. Mog. Belt",
 			left_ear="Odnowa Earring +1",
 			right_ear="Odnowa Earring",
 			left_ring="Defending Ring",
@@ -516,7 +516,7 @@ function init_gear_sets()
 			
 	sets.engaged.PetDT = {
 			--main="Odium",
-			ammo="Ginsen",
+			ammo="Hesperiidae",
 			--head={ name="Taeon Chapeau", augments={'Accuracy+23','"Triple Atk."+2',}},
 			neck="Asperity Necklace",
 			ear1="Handler's Earring",

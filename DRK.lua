@@ -52,7 +52,7 @@ function get_sets()
         --left_ring="Persis Ring", --5
         --right_ring="Prolix Ring", --3
 		--back={ name="Ankou's Mantle", augments={'HP+60','HP+20','Enmity-10','"Regen"+5',}},
-        waist="Flume Belt",
+        waist="Plat. Mog. Belt",
         legs="Sakpata's Cuisses",
 		feet="Fallen's Sollerets +3",
 	}
@@ -78,11 +78,11 @@ function get_sets()
 		legs="Sakpata's Cuisses",
 		feet="Flam. Gambieras +2",
 		neck="Vim Torque +1",
-		waist="Ioskeha Belt",
+		waist="Ioskeha Belt +1",
 		left_ear="Crepuscular Earring",
 		right_ear="Cessance Earring",
 		left_ring="Niqmaddu Ring",
-		right_ring="Chirich Ring",
+		right_ring="Chirich Ring +1",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
@@ -94,10 +94,10 @@ function get_sets()
 		legs="Sakpata's Cuisses", --9
 		feet="Sakpata's Leggings", --6
 		neck={ name="Abyssal Beads +1", augments={'Path: A',}},
-		waist="Flume Belt", --3
+		waist="Plat. Mog. Belt", --3
 		left_ear="Cessance Earring", --/3
 		right_ear="Telos earring", --/2
-		left_ring="Chirich Ring",
+		left_ring="Chirich Ring +1",
 		right_ring="Moonbeam Ring", --5
 		back="Moonbeam cape",
 	}
@@ -110,10 +110,10 @@ function get_sets()
 		legs="Sakpata's Cuisses",
 		feet="Flam. Gambieras +2",
 		neck={ name="Vim Torque +1", augments={'Path: A',}},
-		waist="Ioskeha Belt",
+		waist="Ioskeha Belt +1",
 		left_ear="Telos Earring",
 		right_ear="Mache Earring +1",
-		left_ring="Chirich Ring",
+		left_ring="Chirich Ring +1",
 		right_ring="Chirich Ring +1",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
@@ -127,10 +127,10 @@ function get_sets()
     feet="Flam. Gambieras +2",
     neck={ name="Vim Torque +1", augments={'Path: A',}},
 	waist="Reiki Yotai",
-    --waist="Ioskeha Belt",
+    --waist="Ioskeha Belt +1",
     left_ear="Telos Earring",
     right_ear="Mache Earring +1",
-    left_ring="Chirich Ring",
+    left_ring="Chirich Ring +1",
     right_ring="Chirich Ring +1",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
@@ -143,7 +143,7 @@ function get_sets()
     hands="Sakpata's Gauntlets",
     feet="Sakpata's leggings",
     neck="Abyssal Beads +1",
-    waist="Flume belt",
+    waist="Plat. Mog. Belt",
 	legs="Carmine Cuisses +1",
     left_ear="Ethereal Earring",
     right_ear="Etiolation earring",
@@ -163,7 +163,7 @@ function get_sets()
         --left_ring="Sheltered Ring", --1/0
         --right_ring="Paguroidea Ring", --2/0
 		--back={ name="Ankou's Mantle", augments={'HP+60','HP+20','Enmity-10','"Regen"+5',}},
-        waist="Flume Belt",
+        waist="Plat. Mog. Belt",
 		--legs={ name="Carmine Cuisses +1", augments={'Accuracy+12','DEX+12','MND+20',}},
         --feet="Sakpata's Leggings",
 	}
@@ -296,7 +296,7 @@ function get_sets()
 	
 	--sets.WEAPON['Great Sword'] = {
 	--main="Ragnarok",
-	--main="Montante +1",
+	--main="Caladbolg",
 	--sub="Utu Grip",
 	--}
 	
@@ -316,7 +316,7 @@ function get_sets()
 	}
 	
 	sets.high_hp = {
-        --main={ name="Montante +1", augments={'Path: A',}},
+        --main="Agwu's Claymore",
 		--sub="Utu Grip",
 		ammo="Coiste Bodhar",
 		head="Ratri Sallet",

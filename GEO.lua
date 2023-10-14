@@ -161,8 +161,7 @@ function init_gear_sets()
     sets.precast.JA.Bolster = {body="Bagua Tunic +3"}
     sets.precast.JA['Full Circle'] = {head="Azimuth Hood +1"}
     sets.precast.JA['Life Cycle'] = {head="Bagua Galero +3", body="Geomancy Tunic +3", back=gear.GEO_Idle_Cape,}
-	sets.precast.JA['Steal'] = sets.TreasureHunter
-	sets.precast.JA['Mug'] = sets.TreasureHunter
+
 
     sets.TreasureHunter = {ammo="Perfect Lucky Egg", head="White Rarab Cap +1", waist="Chaac Belt",}
 
@@ -171,10 +170,10 @@ function init_gear_sets()
     sets.precast.FC = {
     --  /RDM --15
         ranged="Dunna", --3
-        --main="Sucellus", --5
-        --sub="Chanter's Shield", --3
+        --main="Sucellus", --5 excluded
+        --sub="Chanter's Shield", --3 excluded
         head="Merlinic Hood", --14
-        body="Jhakri Robe +2", --6 Merlinic BodyMB
+        body="Merlinic Jubbah", --12
         hands="Merlinic Dastanas", --6
         legs="Geomancy Pants +2", --15
         feet="Regal Pumps +1", --5 Volte Gaiters
@@ -182,9 +181,9 @@ function init_gear_sets()
         ear1="Malignance Earring", --4
         ear2="Etiolation Earring", --1 
         ring1="Kishar Ring", --4
-        ring2="Weatherspoon Ring", --5
+        ring2="Prolix Ring", --2
         back="Nantosuelta's Cape", --10
-        waist="Witful Belt", --3
+        waist="Plat. Mog. Belt",
         } -- 80%
 
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {
@@ -197,7 +196,7 @@ function init_gear_sets()
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {
         ear1="Mendi. Earring", --5
         ring2="Lebeche Ring", 
-        back="Nantosuelta's Cape", --(4) Perimede Cape 
+        back="Perimede Cape", --(4) 
         legs="Vanya Slops",
 		feet="Vanya Clogs",
 		})
@@ -210,17 +209,18 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        head="Jhakri Coronal +2",
-        body="Jhakri Robe",
-        hands="Jhakri Cuffs +2",
-        legs="Jhakri Slops",
-        feet="Jhakri Pigaches +2",
-        neck="Fotia Gorget",
+        head="Nyame Helm",
+		neck="Fotia Gorget",
         ear1="Moonshade Earring",
         ear2="Brutal Earring",
+		body="Nyame Mail",
+        hands="Nyame Gauntlets",
         ring1="Petrov Ring",
         ring2="Hetairoi Ring",
-        waist="Fotia Belt",
+		--back?
+		waist="Fotia Belt",
+		legs="Nyame Flanchard",
+        feet="Nyame Sollerets",
         }
 
     sets.precast.WS['Hexastrike'] = set_combine(sets.precast.WS, {
@@ -291,7 +291,7 @@ function init_gear_sets()
 
     sets.midcast.Cure = {
         main="Daybreak", --30
-        sub="Sors Shield", --3/(-5) ***
+        sub="Genmei Shield", --3/(-5) ***
         head="Vanya Hood", --10
         body="Vanya Robe", --7/(-6)
         hands="Vanya Cuffs",
@@ -300,9 +300,9 @@ function init_gear_sets()
         neck="Incanter's Torque",
         ear1="Beatific Earring",
         ear2="Meili Earring",
-        ring1="Lebeche Ring", --3/(-5)
-        ring2={name="Haoma's Ring", bag="wardrobe3"},
-        back=gear.GEO_Cure_Cape, --0/(-10)
+        ring1="Stikini Ring +1", --3/(-5)
+        ring2="Stikini Ring +1",
+        back="Solemnity Cape", --0/(-10)
         waist="Bishop's Sash",
         }
 
@@ -401,6 +401,18 @@ function init_gear_sets()
 
     sets.midcast.Dispelga = set_combine(sets.midcast.IntEnfeebles, {main="Daybreak", sub="Ammurapi Shield"})
 
+	sets.midcast.Dia = set_combine(sets.midcast.MndEnfeebles, {
+		ammo="Per. Lucky Egg",
+		head="Wh. Rarab Cap +1",
+		body="Volte Jupon",
+		--hands={ name="Chironic Gloves", augments={'STR+4','INT+7','"Treasure Hunter"+2','Accuracy+3 Attack+3',}},
+		waist="Chaac Belt",
+		feet="Merlinic Crackows",
+		})
+
+	sets.midcast['Dia II'] = sets.midcast.Dia
+	
+
     sets.midcast['Dark Magic'] = {
         main="Rubicundity",
         sub="Ammurapi Shield",
@@ -438,11 +450,11 @@ function init_gear_sets()
         main="Bunzi's Rod",
         sub="Ammurapi Shield",
 		ammo="Ghastly Tathlum +1",
-        head="C. Palug Crown",
-        body="Amalric Doublet",
-        hands="Jhakri Cuffs +2",
-        legs="Jhakri Slops +2",
-        feet="Jhakri Pigaches +2",
+        head="Agwu's Cap",
+        body="Agwu's Robe",
+        hands="Agwu's Gages",
+        legs="Agwu's Slops",
+        feet="Agwu's Pigaches",
         neck="Saevus Pendant +1",
         ear1="Malignance Earring",
         ear2="Regal Earring",
@@ -456,8 +468,8 @@ function init_gear_sets()
         main="Idris",
         sub="Ammurapi Shield",
         hands="Bagua Mitaines +3",
-        legs=gear.Merl_MAB_legs,
-        feet=gear.Merl_MAB_feet,
+        --legs=gear.Merl_MAB_legs,
+        --feet=gear.Merl_MAB_feet,
         neck="Sanctity Necklace",
         ear2="Digni. Earring",
         waist="Acuity Belt +1",
@@ -492,7 +504,7 @@ function init_gear_sets()
         hands="Bagua Mitaines +3",
         legs="Volte Brais",
         feet="Geomancy Sandals +3",
-        neck="Bathy Choker +1",
+        neck="Bathy Choker +1",--windy?
         ear1="Lugalbanda Earring",
         ear2="Etiolation Earring",
         ring1="Stikini Ring +1",
@@ -532,7 +544,7 @@ function init_gear_sets()
         legs="Telchine Braconi", --0/0/0/3
         feet="Bagua Sandals +3", --0/0/0/5
         neck="Bagua Charm +2",
-        ear1="Lugalbanda Earring",
+        ear1="Enmerkar Earring",
         ear2="Odnowa Earring +1", --3/3/0/0
         ring1="Gelatinous Ring +1", --7/(-1)/0/0
         ring2="Defending Ring", --10/10/0/0
@@ -595,11 +607,11 @@ function init_gear_sets()
     sets.engaged = {
         main="Idris",
         sub="Genmei Shield",
-        head="Jhakri Coronal +2",
-        body="Jhakri Robe +2",
+        head="Nyame Helm",
+        body="Nyame Mail",
         hands="Gazu Bracelet +1",
-        legs="Jhakri Slops +2",
-        feet="Jhakri Pigaches +2",
+        legs="Nyame Flanchard",
+        feet="Nyame Sollerets",
         ear1="Cessance Earring",
         ear2="Brutal Earring",
         ring1="Petrov Ring",
@@ -610,17 +622,17 @@ function init_gear_sets()
 	sets.engaged.DT = {
         main="Idris",
         sub="Genmei Shield",
-        head="Jhakri Coronal +2",
+        head="Nyame Helm",
 		neck="Loricate Torque +1",
 		ear1="Cessance Earring",
         ear2="Brutal Earring",
-        body="Jhakri Robe",
-        hands="Jhakri Cuffs +2",
-        legs="Jhakri Slops",
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
+        legs="Nyame Flanchard",
         ring1="Petrov Ring",
         ring2="Defending Ring",
         waist="Cetl Belt",
-        feet="Jhakri Pigaches +2"
+        feet="Nyame Sollerets"
         }
 
     --------------------------------------
