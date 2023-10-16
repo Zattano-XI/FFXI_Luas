@@ -190,7 +190,7 @@ function get_sets()
 	left_ring="Niqmaddu Ring",
 	right_ring="Cornelia's Ring",
 	back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
-	waist="Fotia Belt",
+	waist="Sailfi Belt +1",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
 	}
@@ -325,13 +325,13 @@ function get_sets()
     right_ring="Stikini Ring +1",
 	}
 	
-	sets.phalanx = {
+	sets.phalanx = { 
 	head="Valorous Mask",
 	body="Valorous Mail",
 	hands="Valorous Mitts",
-	--legs="Valorous Hose",
+	legs="Valorous Hose",
 	feet="Valorous Greaves",
-	}
+	} --Phalanx+ on all pieces
 	
 	sets.enmity = {
 	head="Loess Barbuta +1",
@@ -669,7 +669,7 @@ function self_command(command)
 		if WEAPON_ind > #sets.WEAPON.index then WEAPON_ind = 1 end
 		windower.add_to_chat(1,'<----- Weapon Set changed to '..sets.WEAPON.index[WEAPON_ind]..' ----->')
 		equip(sets.WEAPON[sets.WEAPON.index[WEAPON_ind]])
-		if WEAPON_ind == 1 and 4 then
+		if WEAPON_ind == 1 or 4 then
 			send_command('alias fudo @input /ws "Tachi: Fudo" <t>')
 			send_command('alias jinpu @input /ws "Tachi: Jinpu" <t>')
 		elseif WEAPON_ind == 2 then
