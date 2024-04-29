@@ -26,20 +26,20 @@ function get_sets()
 -------------------------------------------------- Fast Cast ---------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------
 	
-	sets.fc.base = { --2+14+4+2+1+9+5+4+10+3+8+8=70
+	sets.fc.base = { --2+14+4+2+1+9+5+4+10+3+8+8=74 with Sakpata's sword
     ammo="Sapience Orb", --2
     head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, --14
 	neck="Baetyl Pendant", --4
 	left_ear="Loquac. Earring", --2
     right_ear="Etiolation Earring", --1
-    body="Taeon Tabard", --9
-    hands={ name="Leyline Gloves", augments={'Accuracy+4',}}, --5
+    body="Adamantite Armor",
+    hands="Leyline Gloves", --8
 	left_ring="Kishar Ring", --4
     right_ring="Lebeche Ring",
 	back={ name="Fi Follet Cape +1", augments={'Path: A',}}, --10
 	waist="Witful Belt", --3
-    legs="Enif Cosciales",
-    feet={ name="Carmine Greaves +1", augments={'HP+80','MP+80','Phys. dmg. taken -4',}}, --8
+    legs="Enif Cosciales", --8
+    feet="Carmine Greaves +1", --8
 	}
 	
 	sets.fc.cure = set_combine(sets.fc.base, {
@@ -86,25 +86,25 @@ function get_sets()
 	
 	sets.TP['Hybrid'] = {
 		ammo="Coiste Bodhar",
-		head="Adhemar Bonnet +1",
+		head="Nyame Helm",
+		neck="Mirage Stole +2",
 		left_ear="Eabani Earring",
-		--right_ear="Cessance Earring",
 		right_ear="Hashi. Earring +2",	
-		body="Malignance Tabard", 
+		body="Gleti's Cuirass", 
 		hands="Adhemar Wristbands +1",
-		left_ring="Chirich Ring +1",
-		--left_ring="Defending Ring",
-		right_ring="Chirich Ring +1",
-		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},		waist="Reiki Yotai",
+		left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},		
+		waist="Reiki Yotai",
 		legs="Malignance Tights",
-		feet="Malignance Boots",
+		feet="Nyame Sollerets",
     }
 	
 	sets.TP['Learning'] = {
 	--main={ name="Trainee Burin", priority=1,},
 	--main={ name="Blizzard Brand +1", priority=1,},
 	--sub={ name="Genmei Shield", priority=2,},
-	ammo="Staunch Tathlum +1",
+	ammo="Coiste Bodhar",
 	head="Carmine Mask +1",
 	neck="Combatant's Torque",
 	left_ear="Odr Earring",
@@ -120,10 +120,8 @@ function get_sets()
 	}
 	
 	sets.TP['DT'] = set_combine(sets.TP['Hybrid'], { --49
-	ammo="Staunch Tathlum +1", --3
 	head="Nyame Helm", --7
-	neck="Loricate Torque +1", --6
-	body="Nyame Mail", --9
+	--body="Nyame Mail", --9
 	hands="Nyame Gauntlets", --7
 	right_ring="Defending Ring", --10
 	legs="Carmine Cuisses +1",
@@ -154,7 +152,7 @@ function get_sets()
 	sets.idle.index = {'Refresh','DT'}--,'PDT','MDT'}
 	idle_ind = 1 --Refresh set is the Default
 	
-	sets.idle['Refresh'] = set_combine(sets.TP['Standard'], {
+	sets.idle['Refresh'] = set_combine(sets.TP['DT'], {
 	left_ring="Warp Ring",
 	legs="Carmine Cuisses +1",
 	})
@@ -203,12 +201,13 @@ function get_sets()
 		legs="Malignance Tights",
 		feet="Malignance Boots",
 		neck="Mirage Stole +2",
-		waist="Eschan Stone",
+		waist="Acuity Belt +1",
 		left_ear="Dignitary's Earring",
-		right_ear="Gwati Earring",
-		left_ring="Crepuscular Ring",
-		right_ring="Metamor. Ring +1",
-		back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%'}},
+		right_ear="Hashi. Earring +2",
+        ring1={name="Stikini Ring +1", bag="wardrobe2"},
+        ring2={name="Stikini Ring +1", bag="wardrobe5"},
+		--back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%'}},
+		back="Aurist's Cape +1",
 	}
 	
 	sets.midcast.dark = set_combine(sets.nuke['Free'], {
@@ -229,9 +228,10 @@ function get_sets()
 	sets.ws.common = {
 	head="Nyame Helm",
 	neck="Fotia Gorget",
+	ear2="Hashi. Earring +2",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
-	ring1="Epaminondas's Ring",
+	ring1="Beithir Ring",
 	ring2="Cornelia's Ring",
 	back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	--back="Aurist's Cape +1",
@@ -242,13 +242,14 @@ function get_sets()
 	
 	sets.ws['Savage Blade'] = {
     ammo="Aurgelmir Orb +1",
+	--head="Hashi. Kavuk +3",
 	head="Nyame Helm",
 	neck="Mirage Stole +2",
     ear1="Ishvara Earring",
-    ear2="Moonshade Earring",
+    ear2="Hashi. Earring +2",
 	body="Nyame Mail",
     hands="Nyame Gauntlets",
-	ring1="Epaminondas's ring",
+	ring1="Sroda ring",
 	ring2="Cornelia's Ring",
 	back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
     waist="Sailfi Belt +1",
@@ -257,10 +258,10 @@ function get_sets()
 	}
 	
 	sets.ws['Expiacion'] = set_combine(sets.ws['Savage Blade'], {
-        --body="Gleti's Cuirass",
-        waist="Fotia Belt",
+        body="Gleti's Cuirass",
+		ring1="Beithir Ring",	
+        waist="Kentarch Belt +1",
         --legs="Gleti's Breeches",
-        --ring2="Ilabrat Ring",
     })
 	
 	sets.ws['Sanguine Blade'] = set_combine(sets.ws.common, {
@@ -417,8 +418,8 @@ function buff_change(n, gain, buff_table)
 	name = string.lower(n)
 	if S{"silence"}:contains(name) then
 		if gain then
-			send_command('@input /item "Echo Drops" <me>')
-			--send_command('@input /item "Remedy" <me>')
+			--send_command('@input /item "Echo Drops" <me>')
+			send_command('@input /item "Remedy" <me>')
 		end
 	elseif S{"reraise"}:contains(name) then
 		if gain then
@@ -434,7 +435,7 @@ function buff_change(n, gain, buff_table)
 			if player.mpp <= 45 then
 				equip({waist="Fucho-no-Obi"})
 			else
-				equip({wait="Shinjutsu-no-obi"})
+				equip({waist="Shinjutsu-no-obi +1"})
 			end
 		end
 	end

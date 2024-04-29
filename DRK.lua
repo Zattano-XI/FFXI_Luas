@@ -97,7 +97,7 @@ function get_sets()
 		waist="Plat. Mog. Belt", --3
 		left_ear="Cessance Earring", --/3
 		right_ear="Telos earring", --/2
-		left_ring="Chirich Ring +1",
+		left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 		right_ring="Moonbeam Ring", --5
 		back="Moonbeam cape",
 	}
@@ -113,8 +113,8 @@ function get_sets()
 		waist="Ioskeha Belt +1",
 		left_ear="Telos Earring",
 		right_ear="Mache Earring +1",
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
+		left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
@@ -130,8 +130,8 @@ function get_sets()
     --waist="Ioskeha Belt +1",
     left_ear="Telos Earring",
     right_ear="Mache Earring +1",
-    left_ring="Chirich Ring +1",
-    right_ring="Chirich Ring +1",
+    left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+    right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
@@ -264,7 +264,7 @@ function get_sets()
 		--neck="Warder's Charm +1",
 		left_ear="Cryptic Earring",
 		--right_ear="Trux Earring",
-		body="Emet Harness",
+		body="Emet Harness +1",
 		--left_ring="Petrov Ring",
 		--right_ring="Pernicious Ring",
 		--back="Earthcry Mantle",

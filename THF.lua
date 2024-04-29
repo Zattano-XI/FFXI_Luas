@@ -126,10 +126,10 @@ function init_gear_sets()
     -- Precast sets to enhance JAs
     sets.precast.JA['Collaborator'] = {head="Skulker's Bonnet +3"}
     sets.precast.JA['Accomplice'] = {head="Skulker's Bonnet +3"}
-    sets.precast.JA['Flee'] = {feet="Pillager's Poulaines +1"}
+    sets.precast.JA['Flee'] = {feet="Pillager's Poulaines +3"}
     sets.precast.JA['Hide'] = {body="Pillager's Vest +3"}
     sets.precast.JA['Conspirator'] = {body="Skulker's Vest +3"}
-    sets.precast.JA['Steal'] = {ammo="Barathrum", head="Plunderer's Bonnet +3", hands="Pillager's Armlets +1", legs="Pillager's Culottes +3", feet="Pillager's Poulaines +1"}
+    sets.precast.JA['Steal'] = {ammo="Barathrum", head="Plunderer's Bonnet +3", hands="Pillager's Armlets +1", legs="Pillager's Culottes +3", feet="Pillager's Poulaines +3"}
     sets.precast.JA['Despoil'] = {ammo="Barathrum", legs="Skulker's Culottes +2", feet="Skulker's Poulaines +3"}
     sets.precast.JA['Perfect Dodge'] = {hands="Plunderer's Armlets +3"}
     sets.precast.JA['Feint'] =  {legs="Plunderer's Culottes +3"}
@@ -180,8 +180,8 @@ function init_gear_sets()
 		ear1="Sherida Earring",
         body="Nyame Mail",
 		hands="Nyame Gauntlets",
-		ring1="Ilabrat Ring",
-		ring2="Regal Ring",
+		ring1="Regal Ring",
+		ring2="Cornelia's Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 		waist="Kentarch Belt +1",
 		legs="Plunderer's Culottes +3",
@@ -193,16 +193,56 @@ function init_gear_sets()
 
 		--RUDRA'S STORM Sets
     sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {ammo="Seething Bomblet +1",
-		head="Plunderer's Bonnet +3",
+		head="Skulker's Bonnet +3", --plunderer's?
+		ear2="Dominance Earring +1", --test
 		body="Skulker's Vest +3", 
+		hands="Gleti's Gauntlets", --test
+		ring1="Epaminondas's Ring",
+		legs="Gleti's Breeches", --test
 	})
-
+	
+	--[[    main  Twashtar R25
+			sub  Crepuscular Knife
+			ranged  Empty
+			ammo  Crepuscular Pebble
+			head  Skulker's Bonnet +3
+			body  Skulker's Vest +3
+			hands  Gleti's Gauntlets R25
+			legs  Gleti's Breeches R25
+			feet  Nyame Sollerets R25B
+			neck  Assassin's Gorget +2 R25
+			waist  Kentarch Belt +1 R15
+			ear1  Moonshade Earring
+			ear2  Dominance Earring +1 R15
+			ring1  Epaminondas's Ring
+			ring2  Cornelia's ring
+			back  Toutatis's Cape DEX Weaponskill Damage
+	  ]]
+	  
     sets.precast.WS["Rudra's Storm"].AtkCapped = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Crepuscular Pebble",
 		head="Skulker's Bonnet +3",
 		ear2="Odr Earring",
 		body="Gleti's Cuirass",
-		ring1="Cornelia's Ring",
+		ring2="Cornelia's Ring",
 	})
+   
+    --[[    main  Twashtar R25
+			sub  Gleti's Knife R25
+			ranged  Empty
+			ammo  Coiste Bodhar R25
+			head  Nyame Helm R25B
+			body  Skulker's Vest +3
+			hands  Nyame Gauntlets R25B
+			legs  Nyame Flanchard R25B
+			feet  Nyame Sollerets R25B
+			neck  Assassin's Gorget +2 R25
+			waist  Kentarch Belt +1 R15
+			ear1  Moonshade Earring
+			ear2  Dominance Earring +1 R15
+			ring1  Regal Ring
+			ring2  Cornelia's ring
+			back  Toutatis's Cape DEX Weaponskill Damage
+   ]]
    
     sets.precast.WS["Rudra's Storm"].SA = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Yetshila +1",
 		head="Pillager's Bonnet +3",
@@ -295,7 +335,7 @@ function init_gear_sets()
 		head="Pillager's Bonnet +3",
 		body="Gleti's Cuirass",
 		hands="Nyame Gauntlets",
-		ring1="Cornelia's Ring",
+		ring2="Cornelia's Ring",
 		legs="Gleti's Breeches",
 	})
     sets.precast.WS['Shark Bite'].SA = set_combine(sets.precast.WS['Shark Bite'], {ammo="Yetshila +1",
@@ -332,8 +372,8 @@ function init_gear_sets()
 		ear1="Friomisi Earring",
         body="Nyame Mail",
 		hands="Nyame Gauntlets",
-		ring1="Cornelia's Ring",
-		ring2="Dingir Ring",
+		ring2="Cornelia's Ring",
+		ring1="Dingir Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
 		waist="Orpheus's Sash", 
 		legs="Nyame Flanchard",
@@ -398,7 +438,7 @@ function init_gear_sets()
     sets.midcast.RA = {
         head="Malignance Chapeau",
 		neck="Iskur Gorget",
-		ear1="Enervating Earring",
+		ear1="Telos Earring",
 		ear2="Crepuscular Earring",
         body="Malignance Tabard",
 		hands="Malignance Gloves",
@@ -413,7 +453,7 @@ function init_gear_sets()
     sets.midcast.RA.Acc = {
         head="Pillager's Bonnet +3",
 		neck="Iskur Gorget",
-		ear1="Enervating Earring",
+		ear1="Telos Earring",
 		ear2="Crepuscular Earring",
         body="Malignance Tabard",
 		hands="Buremte Gloves",
@@ -422,7 +462,7 @@ function init_gear_sets()
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
 		waist="Yemaya Belt",
 		legs="Malignance Tights",
-		feet="Pillager's Poulaines +1"
+		feet="Pillager's Poulaines +3"
 		}
 
 
@@ -477,7 +517,7 @@ function init_gear_sets()
 		neck="Assassin's Gorget +2",
         body="Malignance Tabard",
 		hands="Pillager's Armlets +1",
-		ring1="Moonlight Ring +1", 
+		ring1="Moonlight Ring", 
 		ring2="Defending Ring",
         back="Canny Cape",
 		waist="Plat. Mog. Belt",
@@ -599,7 +639,7 @@ function init_gear_sets()
 		ear2="Heartseeker Earring",
         body="Malignance Tabard",
 		hands="Pillager's Armlets +1",
-		ring1="Moonlight Ring +1",
+		ring1="Moonlight Ring",
 		ring2="Epona's Ring",
         back="Canny Cape",
 		waist="Windbuffet Belt +1",
@@ -629,6 +669,43 @@ function init_gear_sets()
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
 	}
+	
+	sets.alchemy = {
+	main="Caduceus",
+	sub="Br. Escutcheon",
+	head="Protective Specs.",
+	neck="Alchemist's Torque",
+	body="Alchemist's Smock",
+	ring1="Orvail Ring +1",
+	ring2="Confectioner's Ring",
+	waist="Alchemist's Belt",
+	}
+	
+		
+	sets.bonecraft = {
+	--main="Caduceus",
+	--sub="Br. Escutcheon",
+	head="Protective Specs.",
+	neck="boneworker's Torque",
+	body="Boneworker's Smock",
+	ring1="Orvail Ring +1",
+	ring2="Patissiere's Ring",
+	--ring2="Confectioner's Ring",
+	waist="Boneworker's Belt",
+	}
+	
+	sets.blacksmith = {
+	main="Caduceus",
+	--sub="Smythe's Escutcheon",
+	--head="Protective Specs.",
+	neck="Smithy's Torque",
+	body="blackmith's Apron",
+	ring1="Orvail Ring +1",
+	ring2="Confectioner's Ring",
+	waist="Blacksmith Belt",
+	}
+
+	
 end
 
 -------------------------------------------------------------------------------------------------------------------

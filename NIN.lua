@@ -536,7 +536,7 @@ function init_gear_sets()
         legs="Malignance Tights",
         feet="Malignance Boots",
         neck="Iskur Gorget",
-        ear1="Enervating Earring",
+        ear1="Crepuscular Earring",
         ear2="Telos Earring",
         ring1="Dingir Ring",
         ring2="Hajduk Ring +1",
@@ -761,7 +761,7 @@ function init_gear_sets()
         })
 
     sets.engaged.MidAcc.HighHaste = set_combine(sets.engaged.LowAcc.HighHaste, {
-        ring1={name="Chirich Ring +1", bag="wardrobe3"},
+        ring1={name="Chirich Ring +1", bag="wardrobe2"},
         ring2="Ilabrat Ring",
         })
 

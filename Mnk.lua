@@ -60,6 +60,7 @@ function get_sets()
 
 	sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], {
 	ammo="Crepuscular Pebble",
+	head="Malignance Chapeau",  --kenda?
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
     --legs="Malignance Tights",
@@ -683,7 +684,7 @@ function file_unload()
     send_command('unbind !q')
 	send_command('unbind !e')
 	send_command('unbind !u')
-	send_command('lua u Skillchains')
+	--send_command('lua u Skillchains')
 
 end
 
@@ -713,6 +714,6 @@ function set_style(sheet)
 end
  
 --Page, Book--
-set_macros(5,1)
+set_macros(1,2)
 --Use the Lockstyle Number--
-set_style(003)
+set_style(002)

@@ -80,7 +80,7 @@ function get_sets()
 	ammo="Sapience Orb", --2
 	head={name="Loess Barbuta +1",priority=12}, --9~14
 	neck="Moonlight Necklace", --15
-	right_ear="Cryptic Earring", --4
+	left_ear="Cryptic Earring", --4
 	body={name="Souveran cuirass +1",priority=14}, --20
 	hands={name="Souveran Handschuhs +1",priority=15}, --9
 	left_ring="Petrov Ring", --4
@@ -96,6 +96,8 @@ function get_sets()
 	ammo="Staunch Tathlum +1", --11
 	head={name="Souveran Schaller +1",priority=15}, --20
 	neck="Moonlight Necklace", --15
+	left_ear="Odnowa Earring +1",
+	right_ear="Chev. Earring +2",
 	ring1="Defending Ring", --DT+
 	ring2="Moonlight Ring", --DT+
 	waist="Plat. Mog. Belt",
@@ -139,7 +141,7 @@ function get_sets()
 	left_ring={name="Gelatinous Ring +1",priority=11},
 	right_ring={name="Moonlight Ring",priority=10},
 	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Damage taken-5%',},priority=6},
-	waist="Asklepian Belt",
+	waist="Plat. Mog. Belt",
 	legs={name="Sakpata's Cuisses",priority=12},
 	feet={name="Sakpata's Leggings",priority=5}
 	}
@@ -203,17 +205,17 @@ function get_sets()
 	sets.sword['Naegling'] = {main="Naegling"}
 	sets.sword['Malevolence'] = {main="Malevolence"}
 	sets.sword['Burtgang'] = {main="Burtgang"}
-	--sets.sword['Mafic Cudgel'] = {main="Mafic Cudgel"}
+	sets.sword['Mafic Cudgel'] = {main="Mafic Cudgel"}
 	sets.sword['Caladbolg'] = {main="Caladbolg", sub="Alber Strap",}
+	sets.sword['Reikiko'] = {main="Reikiko"}
+	
 	sets.shield.index = {'Duban','Aegis','Priwen','Blurred'} --'Srivatsa',
 	shield_ind = 1 --Srivatsa is the Default
-	
 	sets.shield['Srivatsa'] = {sub="Srivatsa",waist="Asklepian Belt",}
-	sets.shield['Aegis'] = {sub="Aegis",neck="Warder's Charm +1",waist="Carrier's Sash",}
-	sets.shield['Duban'] = {sub="Duban",waist="Plat. Mog. Belt",} --Flume?
-	sets.shield['Priwen'] = {sub="Priwen",waist="Plat. Mog. Belt",} --Flume?
+	sets.shield['Aegis'] = {sub="Aegis",neck="Warder's Charm +1",ring1="Shadow Ring",} --waist="Carrier's Sash",
+	sets.shield['Duban'] = {sub="Duban",} --Flume?
+	sets.shield['Priwen'] = {sub="Priwen",} --Flume?
 	sets.shield['Blurred'] = {sub="Blurred Shield +1",waist="Sailfi Belt +1",}
-	
 	sets.TP.index = {'None','Standard','HighAcc'}
 	TP_ind = 1 --None is the Default
 	
@@ -438,7 +440,7 @@ function buff_change(n, gain, buff_table)
 		end
 	elseif S{"stoneskin"}:contains(name) then
 		if gain then
-			send_command('cancel Stoneskin')
+			--send_command('cancel Stoneskin')
 		end
 	end
 end

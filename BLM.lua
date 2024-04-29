@@ -604,8 +604,8 @@ function buff_change(n, gain, buff_table)
 	name = string.lower(n)
 	if S{"silence"}:contains(name) then
 		if gain then
-			send_command('@input /item "Echo Drops" <me>')
-			--send_command('@input /item "Remedy" <me>')
+			--send_command('@input /item "Echo Drops" <me>')
+			send_command('@input /item "Remedy" <me>')
 		end
 	elseif S{"reraise"}:contains(name) then
 		if gain then
@@ -621,7 +621,7 @@ function buff_change(n, gain, buff_table)
 			if player.mpp <= 45 then
 				equip({waist="Fucho-no-Obi"})
 			else
-				equip({wait="Shinjutsu-no-obi"})
+				equip({waist="Shinjutsu-no-obi +1"})
 			end
 		end
 	end

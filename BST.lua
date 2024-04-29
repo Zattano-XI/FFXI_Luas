@@ -337,7 +337,7 @@ function init_gear_sets()
 		left_ear="Kyrene's Earring",
 		right_ear="Telos Earring",
 		left_ring="C. Palug Ring",
-		right_ring="Varar Ring +1",
+		right_ring={name="Varar ring +1", bag="wardrobe5"},
 		back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Attack+5 Pet: Rng.Atk.+5','Pet: "Regen"+10','Pet: "Regen"+5',}},
 		})
 			
@@ -355,7 +355,7 @@ function init_gear_sets()
 		left_ear="Kyrene's Earring",
 		right_ear="Telos Earring",
 		left_ring="C. Palug Ring",
-		right_ring="Varar Ring +1",
+		right_ring={name="Varar ring +1", bag="wardrobe5"},
 		back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Attack+5 Pet: Rng.Atk.+5','Pet: "Regen"+10','Pet: "Regen"+5',}},
 			})
 
@@ -374,7 +374,7 @@ function init_gear_sets()
 		left_ear="Kyrene's Earring",
 		right_ear="Telos Earring",
 		left_ring="C. Palug Ring",
-		right_ring="Varar Ring +1",
+		right_ring={name="Varar ring +1", bag="wardrobe5"},
 		back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Attack+5 Pet: Rng.Atk.+5','Pet: "Regen"+10','Pet: "Regen"+5',}},
 			})
 	
@@ -486,8 +486,8 @@ function init_gear_sets()
 			waist="Incarnation Sash",
 			left_ear="Telos Earring",
 			right_ear="Sherida Earring",
-			left_ring="Varar Ring +1",
-			right_ring="Varar Ring +1",
+			left_ring={name="Varar ring +1", bag="wardrobe2"},
+			right_ring={name="Varar ring +1", bag="wardrobe5"},
 			back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Attack+5 Pet: Rng.Atk.+5','Pet: "Regen"+10','Pet: "Regen"+5',}},
 			
 			

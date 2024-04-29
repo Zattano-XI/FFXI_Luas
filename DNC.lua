@@ -84,8 +84,8 @@ function get_sets()
 	right_ear="Telos earring",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
-	left_ring={name="Chirich Ring +1", bag="wardrobe6"},
-	right_ring={name="Chirich Ring +1", bag="wardrobe8"},
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Malignance Tights",
@@ -530,7 +530,7 @@ send_command('alias reequip gs equip ')
 function file_unload()
     send_command('unbind !q')
 	send_command('unbind !w')
-	send_command('lua u Skillchains')
+	--send_command('lua u Skillchains')
 	send_command('lua u Steps')
 end
 

@@ -54,8 +54,9 @@ function get_sets()
     --hands="Vis. Fng. Gaunt. +3",
 	hands="Crusher's gauntlets",
     legs="Pteroslaver brais +3",
-    feet="Ostro Greaves",
-    neck="Vim Torque +1",
+    --feet="Ostro Greaves",
+    feet="Maenadic gambieras"
+	neck="Vim Torque +1",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
     back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Store TP"+10',}},
@@ -184,8 +185,8 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
 	neck="Sanctity Necklace",
 	--neck="Bathy Choker +1",
 	right_ear="Infused Earring",
-	left_ring="Chirich Ring +1",
-	right_ring="Chirich Ring +1",
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	}
 	
 	

@@ -91,7 +91,7 @@ function init_gear_sets()
 
     Cichols = {}
     Cichols.TP = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
-    Cichols.WS = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
+    Cichols.WS = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
     Cichols.VIT = { name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
 
     Valorous = {}
@@ -211,7 +211,7 @@ function init_gear_sets()
          hands="Nyame Gauntlets",
          ring1="Cornelia's Ring",
          ring2="Regal Ring",
-         back=Cichols.WS,
+         back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 		 waist="Sailfi Belt +1",
 		 legs="Nyame Flanchard",
          feet="Nyame Sollerets"
@@ -302,7 +302,7 @@ function init_gear_sets()
 		right_ear="Ishvara Earring",
 		right_ring="Cornelia's Ring",
 		left_ring="Regal Ring",
-		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	})
 
     sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS['Impulse Drive'], {
@@ -318,7 +318,7 @@ function init_gear_sets()
 		right_ring="Cornelia's Ring",
 		left_ring="Regal Ring",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+		back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
 		--feet="Pumm. Calligae +3",		
@@ -541,7 +541,7 @@ end
 function job_pretarget(spell, action, spellMap, eventArgs)
     if spell.type:endswith('Magic') and buffactive.silence then
         eventArgs.cancel = true
-        send_command('input /item "Echo Drops" <me>')
+			--send_command('input /item "Echo Drops" <me>')
     --elseif spell.target.distance > 8 and player.status == 'Engaged' then
     --    eventArgs.cancel = true
     --    add_to_chat(122,"Outside WS Range! /Canceling")

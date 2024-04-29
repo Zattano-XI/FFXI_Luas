@@ -322,7 +322,7 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged = {ammo="Epitaph",
 	head="Blistering Sallet +1",neck="Shulmanu Collar",ear1="Brutal Earring",ear2="Crep. Earring",
-	body="Glyphic Doublet +3",hands="Bunzi's Gloves",ring1="C. Palug Ring",ring2={ name="Chirich Ring +1",bag="Wardrobe 2"},
+	body="Glyphic Doublet +3",hands="Bunzi's Gloves",ring1="C. Palug Ring",right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','Phys. dmg. taken-10%',}},waist="Windbuffet Belt +1",legs="Nyame Flanchard",feet="Battlecast Gaiters"}
 end
 

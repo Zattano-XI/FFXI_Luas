@@ -208,7 +208,7 @@ function init_gear_sets()
 		body="Mpaca's Doublet",
 		hands="Mpaca's Gloves",
 		ring1="C. Palug Ring",
-		ring2="Varar Ring +1",
+		right_ring={name="Varar ring +1", bag="wardrobe5"},
         back="Visucius's Mantle",
 		waist="Incarnation Sash",
 		--legs="Kara. Pantaloni +3",
@@ -219,7 +219,7 @@ function init_gear_sets()
     sets.idle.Pet.Engaged.Ranged = set_combine(sets.idle.Pet.Engaged, {
 		--head="Pitre Taj +3",
 		ear2="Crep. Earring",
-		ring1="Varar Ring +1",
+		left_ring={name="Varar ring +1", bag="wardrobe2"},
 		--waist="Klouskap Sash +1",
 		}) 
 	
@@ -275,7 +275,7 @@ function init_gear_sets()
 		legs="Mpaca's Hose",
 		feet="Mpaca's Boots",
 		neck="Shulmanu Collar",
-		waist="Moonbow Belt +1", --Moonbow Belt
+		waist="Moonbow Belt +1",
 		left_ear="Mache Earring +1",
 		right_ear="Karagoz Earring +1",
 		left_ring="Gere Ring",

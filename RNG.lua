@@ -606,7 +606,7 @@ function init_gear_sets()
     --right_ear="Telos Earring",
 	right_ear="Odr Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
-	right_ring={name="Chirich Ring +1", bag="wardrobe1"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
         }
 
@@ -622,7 +622,7 @@ function init_gear_sets()
     --right_ear="Telos Earring",
 	right_ear="Odr Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
-	right_ring={name="Chirich Ring +1", bag="wardrobe1"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
         })
 
@@ -664,7 +664,7 @@ function init_gear_sets()
     left_ear="Dedition Earring",
     right_ear="Telos Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
-	right_ring={name="Chirich Ring +1", bag="wardrobe1"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	
 	--no kc
@@ -726,7 +726,7 @@ function init_gear_sets()
     left_ear="Dedition Earring",
     right_ear="Telos Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
-	right_ring={name="Chirich Ring +1", bag="wardrobe1"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	
 	--nokc extra pieces
@@ -734,7 +734,7 @@ function init_gear_sets()
 	--right_ear="Crep. Earring",
 	--neck="Combatant's Torque",
 	--left_ring={name="Chirich Ring +1", bag="wardrobe2"},
-	--right_ring={name="Chirich Ring +1", bag="wardrobe1"},
+	--right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     --head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 	--body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
     --hands={ name="Tatena. Gote +1", augments={'Path: A',}},
@@ -783,7 +783,7 @@ function init_gear_sets()
     left_ear="Dedition Earring",
     right_ear="Telos Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
-	right_ring={name="Chirich Ring +1", bag="wardrobe1"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
         } -- 42%
 
@@ -820,7 +820,7 @@ function init_gear_sets()
     left_ear="Dedition Earring",
     right_ear="Telos Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
-	right_ring={name="Chirich Ring +1", bag="wardrobe1"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
       } -- 31%
 
@@ -857,7 +857,7 @@ function init_gear_sets()
     left_ear="Dedition Earring",
     right_ear="Telos Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
-	right_ring={name="Chirich Ring +1", bag="wardrobe1"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
       } -- 27%
 
@@ -894,7 +894,7 @@ function init_gear_sets()
     left_ear="Dedition Earring",
     right_ear="Telos Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
-	right_ring={name="Chirich Ring +1", bag="wardrobe1"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
         } -- 11%
 
@@ -941,7 +941,7 @@ function init_gear_sets()
     right_ear="Telos Earring",
     left_ear="Crep. Earring",
     left_ring="Defending Ring",
-    right_ring="Chirich Ring +1",
+    right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
         }
 
@@ -1000,7 +1000,7 @@ function init_gear_sets()
     feet="Malignance Boots",
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist="Kwahu Kachina Belt +1",
-    left_ear="Enervating Earring",
+    left_ear="Crepuscular Earring",
     right_ear="Telos Earring",
     left_ring="Regal Ring",
     right_ring="Crepuscular Ring",

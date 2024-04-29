@@ -387,15 +387,17 @@ function init_gear_sets()
     sets.midcast.EnhancingDuration = {
         --main="Musa",
         main="Gada",
-		sub="Khonsu",
+		sub="Ammurapi Shield",
+		--sub="Khonsu",
 		head="Telchine Cap", --augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		--body={ name="Peda. Gown +3", augments={'Enhances "Enlightenment" effect',}},
 		Body="Telchine Chas.",
+		--hands="Arbatel Gloves +3",
 		hands="Telchine Gloves", --augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		legs="Telchine Braconi", --augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		feet="Telchine Pigaches", --augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
 		neck="Incanter's Torque",
-        waist="Embla Sash",
+        waist="Embla Sash", --Argate Stole +2
 		left_ear="Mimir Earring",		
         }
 
@@ -747,7 +749,7 @@ function init_gear_sets()
 		waist="Grunfeld Rope",
 		left_ear="Mache Earring +1",
 		right_ear="Telos Earring",
-		left_ring="Chirich Ring +1",
+		left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 		right_ring="Cacoethic Ring +1",
 		back="Solemnity Cape",
         }
@@ -1117,7 +1119,7 @@ function buff_change(n, gain, buff_table)
 			if player.mpp <= 45 then
 				equip({waist="Fucho-no-Obi"})
 			else
-				equip({wait="Shinjutsu-no-obi"})
+				equip({waist="Shinjutsu-no-obi +1"})
 			end
 		end
 	elseif S{"afflatus solace"}:contains(name) then

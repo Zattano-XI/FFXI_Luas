@@ -107,14 +107,14 @@ end
 function user_setup()
     state.OffenseMode:options('DT', 'Nyame', 'ResistDeath', 'Hybrid') --,'Normal','STP',
     state.WeaponskillMode:options('Normal', 'Acc')
-    state.HybridMode:options('Normal', 'DT')
+    state.HybridMode:options('DT', 'Normal')
     state.CastingMode:options('Normal', 'Resistant')
     state.IdleMode:options('Normal', 'DT', 'Refresh')
     state.PhysicalDefenseMode:options('PDT', 'Parry', 'HP')
     state.MagicalDefenseMode:options('MDT')
 
     state.Knockback = M(false, 'Knockback')
-    state.WeaponSet = M{['description']='Weapon Set', 'Agwu', 'Aettir', 'GreatAxe'} --'Epeolatry', 'Lionheart'
+    state.WeaponSet = M{['description']='Weapon Set', 'Epeolatry', 'Agwu', 'Reikiko', 'GreatAxe'} -- 'Lionheart'
     state.AttackMode = M{['description']='Attack', 'Uncapped', 'Capped'}
     state.CP = M(false, "Capacity Points Mode")
     state.WeaponLock = M(false, 'Weapon Lock')
@@ -267,9 +267,9 @@ function init_gear_sets()
 		 neck="Unmoving Collar +1", --10
 		 ear1="Odnowa Earring +1", 
 		 ear2="Cryptic Earring", --4
-	     body="Emet Harness +1", --10
+	     body="Adamantite Armor", --10
 		 hands="Futhark Mitons +3", --6 Kurys Gloves?
-		 ring1="Petrov Ring", --4
+		 ring1="Eihwaz Ring", --4
 		 ring2="Begrudging Ring", --5
 		 back="Reiki Cloak", --6
 		 waist="Plat. Mog. Belt", --
@@ -285,7 +285,7 @@ function init_gear_sets()
 		neck="Unmoving Collar +1",
 		ear1="Odnowa Earring +1",
 		ear2="Cryptic Earring",
-        body="Runeist Coat +2",
+        body="Runeist Coat +3",
 		hands="Futhark Mitons +3",
 		ring1="Moonlight Ring",
 		ring2="Moonlight Ring",
@@ -295,7 +295,7 @@ function init_gear_sets()
 		feet="Erilaz Greaves +3"
 	}	
 
-    sets.precast.JA['Vallation'] = set_combine(sets.Enmity,{body="Runeist Coat +2",legs="Futhark Trousers +3"})
+    sets.precast.JA['Vallation'] = set_combine(sets.Enmity,{body="Runeist Coat +3",legs="Futhark Trousers +3"})
     sets.precast.JA['Valiance'] = sets.precast.JA['Vallation']
     sets.precast.JA['Pflug'] = set_combine(sets.Enmity,{feet="Runeist Bottes +2"})
     sets.precast.JA['Battuta'] = set_combine(sets.Enmity,{head="Futhark Bandeau +3"})
@@ -314,7 +314,7 @@ function init_gear_sets()
 	sets.precast.JA['Aggressor'] = set_combine(sets.Enmity, {})
 	sets.precast.JA['Animated Flourish'] = set_combine(sets.Enmity, {})
 
-    sets.precast.JA['Vallation'].DT = set_combine(sets.Enmity.HP,{body="Runeist Coat +2", legs="Futhark Trousers +3"})
+    sets.precast.JA['Vallation'].DT = set_combine(sets.Enmity.HP,{body="Runeist Coat +3", legs="Futhark Trousers +3"})
     sets.precast.JA['Valiance'].DT = sets.precast.JA['Vallation'].DT
     sets.precast.JA['Pflug'].DT = set_combine(sets.Enmity.HP,{feet="Runeist Bottes +2"})
     sets.precast.JA['Battuta'].DT = set_combine(sets.Enmity.HP,{head="Futhark Bandeau +3"})
@@ -443,7 +443,7 @@ function init_gear_sets()
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear="Moonshade Earring",
-		right_ear="Ishvara Earring",
+		right_ear="Erilaz Earring +2",
 		left_ring="Regal Ring",
 		right_ring="Cornelia's Ring",
 		--back={ name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, 
@@ -512,15 +512,15 @@ function init_gear_sets()
     sets.precast.WS['Herculean Slash'] = sets.precast.JA['Lunge']
 
     sets.precast.WS['Shockwave'] = set_combine(sets.precast.WS, {
-        ammo="Hydrocera",
-		head={ name="Nyame Helm", augments={'Path: B',}},
+        ammo="Perfect Lucky Egg",
+		head="Volte Cap",
 		body={ name="Nyame Mail", augments={'Path: B',}},
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
-		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		feet="Volte Boots",
 		--neck={ name="Futhark Torque +2", augments={'Path: A',}},
 		neck="Fotia Gorget",
-		waist="Eschan Stone",
+		waist="Chaac Belt",
 		right_ear="Sherida Earring",
 		left_ring="Regal Ring",
 		right_ring="Niqmaddu Ring",
@@ -548,7 +548,7 @@ function init_gear_sets()
 		neck="Moonlight Necklace", --15%
 		ear1="Odnowa Earring +1",
 		ear2="Cryptic Earring",
-		body="Emet Harness +1",
+		body="Adamantite Armor",
 		hands="Regal Gauntlets", --10%
 		ring1="Moonlight Ring",
 		ring2="Defending Ring",
@@ -712,7 +712,7 @@ function init_gear_sets()
     sets.idle.Refresh = set_combine(sets.idle, {
         ammo="Homiliary",
 		head="Rawhide Mask",
-        body="Runeist Coat +2",
+        body="Runeist Coat +3",
         hands="Regal Gauntlets",
         --legs="Rawhide Trousers",
         ring1="Stikini Ring +1",
@@ -846,8 +846,8 @@ function init_gear_sets()
 		hands={ name="Adhemar Wrist. +1", augments={'STR+12','DEX+12','Attack+20',}},
 		legs="Samnuha Tights",
 		feet="Nyame Sollerets",
-		neck="Anu Torque",
-		waist="Windbuffet Belt +1",
+		neck="Combatant's Torque",
+		waist="Ioskeha Belt +1",
 		left_ear="Brutal Earring",
 		right_ear="Sherida Earring",
 		left_ring="Epona's Ring",
@@ -879,7 +879,7 @@ function init_gear_sets()
 		--neck="Futhark Torque +2", is this necessary?
 		left_ear="Odnowa Earring +1",
 		right_ear="Erilaz Earring +2",
-		--body="Runeist Coat +3",
+		--body="Runeist Coat +3", No
 		--body="Nyame Mail",
 		body="Erilaz Surcoat +3",
 		--body="Futhark Coat +3",
@@ -909,7 +909,7 @@ function init_gear_sets()
         body="Ashera Harness",
         --feet="Carmine Greaves +1",
         right_ear="Telos Earring",
-        ring1={name="Chirich Ring +1", bag="wardrobe5"},
+        ring1={name="Chirich Ring +1", bag="wardrobe2"},
         ring2={name="Chirich Ring +1", bag="wardrobe5"},
         waist="Kentarch Belt +1",
         })
@@ -917,14 +917,12 @@ function init_gear_sets()
     sets.engaged.Aftermath = set_combine(sets.engaged,{
 		--head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
 		--body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
-		--legs="Samnuha Tights",
+		legs="Erilaz Leg Guards +3",
         body="Ashera Harness",
-        neck="Anu Torque",
         left_ear="Sherida Earring",
-        right_ear="Telos Earring",
-		ring2="Ilabrat Ring",
-        ring1={name="Chirich Ring +1", bag="wardrobe5"},
-        ring2={name="Chirich Ring +1", bag="wardrobe5"},
+        right_ear="Erilaz Earring +2",
+        ring1={name="Chirich Ring +1", bag="wardrobe2"},
+        ring2={name="Moonlight Ring", bag="wardrobe5"},
         --waist="Kentarch Belt +1",
 		--waist="Windbuffet Belt",
         })
@@ -971,17 +969,6 @@ function init_gear_sets()
 
     sets.engaged.STP.DT = set_combine(sets.engaged.STP, sets.Hybrid)
 	sets.engaged.PDT = set_combine(sets.defense.PDT)
---[[
-    sets.engaged.Aftermath.DT = {
-        head="Aya. Zucchetto +2",
-        feet="Carmine Greaves +1",
-        left_ear="Sherida Earring",
-        right_ear="Telos Earring",
-        ring1={name="Moonbeam Ring", bag="wardrobe4"},
-        ring2="Defending Ring",
-        waist="Kentarch Belt +1",
-        }
-]]
 
     sets.engaged.Aftermath.DT = set_combine(sets.engaged.DT,{
         --head="Aya. Zucchetto +2",
@@ -1020,7 +1007,7 @@ function init_gear_sets()
     sets.Aettir = {main="Aettir",sub="Utu Grip"}
     sets.GreatAxe = {main="Lycurgos",sub="Utu Grip"}
 	sets.Agwu = {main="Agwu's Claymore",sub="Utu Grip"}
-	
+	sets.Reikiko = {main="Reikiko", sub="Chanter's Shield"}
 	
 	sets.TreasureHunter = { 
         --head="White rarab cap +1", 
@@ -1042,7 +1029,7 @@ function init_gear_sets()
 	head="Protective Specs.",
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
-	ring1="Orvail ring", --+1
+	ring1="Orvail ring +1", --+1
 	ring2="Confectioner's Ring",
 	waist="Alchemist's Belt",
 	}
