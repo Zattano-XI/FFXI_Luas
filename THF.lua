@@ -79,7 +79,7 @@ function init_gear_sets()
     -- Special sets (required by rules)
     --------------------------------------
 
-    sets.TreasureHunter = {hands="Plunderer's Armlets +3", feet="Skulker's Poulaines +3"}
+    sets.TreasureHunter = {ammo="Perfect Lucky Egg", head="Volte Cap", hands="Plunderer's Armlets +3", waist="Chaac Belt", legs="Volte Hose", feet="Skulker's Poulaines +3"}
     sets.ExtraRegen = {}
     sets.Kiting = {feet="Jute Boots +1"}
 
@@ -226,39 +226,33 @@ function init_gear_sets()
 		ring2="Cornelia's Ring",
 	})
    
-    --[[    main  Twashtar R25
-			sub  Gleti's Knife R25
-			ranged  Empty
-			ammo  Coiste Bodhar R25
-			head  Nyame Helm R25B
-			body  Skulker's Vest +3
-			hands  Nyame Gauntlets R25B
-			legs  Nyame Flanchard R25B
-			feet  Nyame Sollerets R25B
-			neck  Assassin's Gorget +2 R25
-			waist  Kentarch Belt +1 R15
-			ear1  Moonshade Earring
-			ear2  Dominance Earring +1 R15
-			ring1  Regal Ring
-			ring2  Cornelia's ring
-			back  Toutatis's Cape DEX Weaponskill Damage
-   ]]
-   
     sets.precast.WS["Rudra's Storm"].SA = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Yetshila +1",
 		head="Pillager's Bonnet +3",
 		ear2="Odr Earring",
 	}) 
-	
     sets.precast.WS["Rudra's Storm"].TA = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Yetshila +1",
 		head="Pillager's Bonnet +3",
 		ear2="Odr Earring",
 	}) 
-	
     sets.precast.WS["Rudra's Storm"].SATA = set_combine(sets.precast.WS["Rudra's Storm"], {ammo="Yetshila +1",
 		head="Pillager's Bonnet +3",    
 		ear2="Odr Earring",
 	})  
 
+	sets.precast.WS["Ruthless Stroke"] = set_combine(sets.precast.WS, {ammo="Cath Palug Stone",	
+		--ear2="Dominance Earring +1", --test
+		body="Skulker's Vest +3", 
+		--hands="Gleti's Gauntlets", --test
+		--legs="Gleti's Breeches", --test
+		legs="Nyame Flanchard",
+	})
+	sets.precast.WS["Ruthless Stroke"].AtkCapped = set_combine(sets.precast.WS["Ruthless Stroke"], {
+		head="Skulker's Bonnet +3",
+	})
+	sets.precast.WS["Ruthless Stroke"].SA = set_combine(sets.precast.WS["Ruthless Stroke"], {ammo="Yetshila +1",})
+	sets.precast.WS["Ruthless Stroke"].TA = set_combine(sets.precast.WS["Ruthless Stroke"], {ammo="Yetshila +1",})
+	sets.precast.WS["Ruthless Stroke"].SATA = set_combine(sets.precast.WS["Ruthless Stroke"], {ammo="Yetshila +1",})
+	
 		--Evisceration Sets
     sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {ammo="Yetshila +1",
         head="Adhemar Bonnet", --+1 B path
@@ -573,7 +567,7 @@ function init_gear_sets()
 }
 	
 	sets.engaged.Hybrid = {ammo="Coiste Bodhar",
-        head="Malignance Chapeau",
+        head="Skulker's Bonnet +3",
 		neck="Assassin's Gorget +2",
 		ear1="Sherida Earring",
 		ear2="Skulk. Earring +1",
@@ -588,11 +582,11 @@ function init_gear_sets()
 		}
 		
 	sets.engaged.DT = {ammo="Staunch Tathlum +1",
-        head="Malignance Chapeau",
+        head="Skulker's Bonnet +3",
 		neck="Assassin's Gorget +2",
 		ear1="Sherida Earring",
 		ear2="Odnowa earring +1", --ear2="Telos Earring",
-        body="Malignance Tabard",
+        body="Gleti's Cuirass",
 		hands="Malignance Gloves",
 		ring1="Moonlight Ring",
 		ring2="Defending Ring",

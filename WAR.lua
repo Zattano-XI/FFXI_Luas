@@ -82,16 +82,10 @@ function init_gear_sets()
     --------------------------------------
     -- Augmented gear
     
-    Odyssean = {}
-    Odyssean.Legs = {}
-    Odyssean.Legs.TP = { name="Odyssean Cuisses", augments={'"Triple Atk."+2','"Mag.Atk.Bns."+5','Quadruple Attack +1','Accuracy+17 Attack+17',}}
-    Odyssean.Legs.WS = { name="Odyssean Cuisses", augments={'Accuracy+25','DEX+1','Weapon skill damage +7%','Accuracy+10 Attack+10',}}
-    --Odyssean.Feet = {}
-    --Odyssean.Feet.FC = { name="Odyssean Greaves", augments={'Attack+20','"Fast Cast"+4','Accuracy+15',}}
 
     Cichols = {}
     Cichols.TP = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
-    Cichols.WS = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+    Cichols.WS = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}}
     Cichols.VIT = { name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
 
     Valorous = {}
@@ -329,9 +323,8 @@ function init_gear_sets()
      -- 50% MND / 50% STR Darkness Elemental
      sets.precast.WS['Sanguine Blade'] = set_combine(sets.precast.WS, {
         ear1="Friomisi Earring",
-        hands="Odyssean Gauntlets",
-        legs="Limbo Trousers",
      })
+	 
      sets.precast.WS['Sanguine Blade'].Mid = set_combine(sets.precast.WS['Sanguine Blade'], sets.precast.WS.Mid)
      sets.precast.WS['Sanguine Blade'].Acc = set_combine(sets.precast.WS['Sanguine Blade'], sets.precast.WS.Acc)
 
@@ -444,21 +437,21 @@ function init_gear_sets()
      -- Engaged set, assumes Liberator
      sets.engaged = {
          ammo="Coiste Bodhar",
-         head="Flamma Zucchetto +2",
+         head="Sakpata's Helm",
          --neck="Warrior's Bead Necklace +2",
 		 neck="Vim Torque +1",
          ear1="Schere Earring",
          ear2="Telos Earring",
-    	 body="Tatenashi Haramaki +1", 
-         hands="Tatenashi Gote +1",
+    	 body="Sakpata's Breastplate", 
+         hands="Sakpata's Gauntlets",
          ring1="Niqmaddu Ring",
          ring2="Petrov Ring",
          back=Cichols.TP,
          --waist="Ioskeha Belt",
          waist="Sailfi Belt +1",
          --legs="Pummeler's Cuisses +2",
-         legs=Odyssean.Legs.TP,
-         feet="Tatenashi Sune-ate +1"
+         legs="Sakpata's cuisses",
+         feet="Sakpata's Leggings"
      }
      sets.engaged.Mid = set_combine(sets.engaged, {
          head="Hjarrandi Helm",

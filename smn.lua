@@ -145,6 +145,7 @@ function init_gear_sets()
 		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+21','"Fast Cast"+6','"Mag.Atk.Bns."+4',}},
 		ring1="Kishar Ring",
 		ring2="Lebeche Ring",
+		back="Fi Follet Cape +1",
         waist="Witful Belt",
 		legs="Psycloth Lappas",
 		feet={ name="Merlinic Crackows", augments={'"Fast Cast"+6','"Mag.Atk.Bns."+12',}}}
@@ -168,10 +169,24 @@ function init_gear_sets()
 
     sets.midcast.FastRecast = {}
 
-	sets.midcast['Summoning Magic'] = {main="Espiritus",sub="Vox Grip",ammo="Epitaph",
-	head="Beckoner's Horn +1",neck="Incanter's Torque",ear1="C. Palug Earring",ear2="Lodurr Earring",
-	body="Baayami Robe",hands="Baayami Cuffs +1",ring1="Evoker's Ring",ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
-	back="Conveyance Cape",waist="Kobo Obi",legs="Baayami Slops +1",feet="Baaya. Sabots +1"}
+	sets.midcast['Summoning Magic'] = {
+	main="Espiritus",
+	sub="Vox Grip",
+	ammo="Epitaph",
+	head="Beckoner's Horn +1",
+	neck="Incanter's Torque",
+	ear1="C. Palug Earring",
+	ear2="Beck. Earring +1",
+	body="Baayami Robe",
+	hands="Baayami Cuffs +1",
+	ring1="Evoker's Ring",
+	ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	back="Campestres's Cape",
+	--back="Conveyance Cape",
+	waist="Kobo Obi",
+	legs="Baayami Slops +1",
+	feet="Bunzi's Sabots"
+	}
 
     sets.midcast.Cure = {
 	main="Daybreak",
@@ -257,7 +272,7 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {main="Nirvana",sub="Khonsu",ammo="Epitaph",
 	head="Beckoner's Horn +1",neck="Loricate Torque +1",ear1="C. Palug Earring",ear2="Tuisto Earring",
-	body="Shomonjijoe +1",hands="Asteria Mitts +1",ring1={name="Stikini Ring +1",bag="Wardrobe"},ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	body="Shomonjijoe +1",hands="Asteria Mitts +1",ring1={name="Stikini Ring +1",bag="Wardrobe2"},ring2={name="Stikini Ring +1",bag="Wardrobe5"},
 	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},waist="Fucho-no-Obi",legs="Assid. Pants +1",feet="Crier's Gaiters"}
 
     sets.idle.PDT = {}

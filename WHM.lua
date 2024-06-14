@@ -104,7 +104,7 @@ end
 function user_setup()
     state.OffenseMode:options('Normal', 'Acc')
     state.CastingMode:options('Normal', 'Resistant', 'SIRD')
-    state.IdleMode:options('Normal', 'DT', 'MEva')
+    state.IdleMode:options('DT', 'Normal', 'MEva')
 
     state.BarElement = M{['description']='BarElement', 'Barfira', 'Barblizzara', 'Baraera', 'Barstonra', 'Barthundra', 'Barwatera'}
     state.BarStatus = M{['description']='BarStatus', 'Baramnesra', 'Barvira', 'Barparalyzra', 'Barsilencera', 'Barpetra', 'Barpoisonra', 'Barblindra', 'Barsleepra'}
@@ -281,7 +281,7 @@ function init_gear_sets()
         }
 
     sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS, {
-        neck="Caro Necklace",
+        neck="Rep. Plat. Medal",
         })
 
     sets.precast.WS['Hexa Strike'] = set_combine(sets.precast.WS, {
@@ -699,38 +699,35 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
     sets.idle = {
         main="Daybreak",
-        sub="Genmei Shield",
+        sub="Genmei Shield", --10pdt
         ammo="Homiliary",
         head="Inyanga Tiara +2",
-        body="Ebers Bliaut +3",
-        hands="Ebers Mitts +3", --raetic bangles +1
-        legs="Ebers Pant. +3",
-        feet="Inyan. Crackows +2",
-        neck="Bathy Choker +1",
+		neck="Sibyl Scarf",
         ear1="Etiolation Earring",
-        ear2="Ebers Earring +1",
+        ear2="Ebers Earring +1", --4
+        body="Ebers Bliaut +3",
+        hands="Ebers Mitts +3", --11 raetic bangles +1 
         ring1={name="Stikini Ring +1", bag="wardrobe2"},
         ring2={name="Stikini Ring +1", bag="wardrobe5"},
-        back="Moonlight Cape",
+        back="Solemnity Cape", --4
         waist="Carrier's Sash",
-        }
-
+        legs="Ebers Pant. +3", --13
+        feet="Inyan. Crackows +2",
+        } --DT 32+10PDT
+		
     sets.idle.DT = set_combine(sets.idle, {
-        main="Daybreak",
-        sub="Genmei Shield", --10/0
-        ammo="Staunch Tathlum", --3/3
+        --ammo="Staunch Tathlum", --3/3
         head="Bunzi's Hat", --7/7
-        neck="Loricate Torque +1", --6/6
-        ear1="Odnowa Earring +1", --3/5
-		hands="Ebers Mitts +3", --11/11
-		legs="Bunzi's Pants", --9/9
-		feet="Bunzi's Sabots", --6/6
-        ring1="Gelatinous Ring +1", --7/(-1)
-        ring2="Defending Ring", --10/10
-        back="Moonlight Cape", --6/6
+        --neck="Loricate Torque +1", --6/6
+        --ear1="Odnowa Earring +1", --3/5		
+		feet="Ebers Duckbills +3", --11/11
+        --ring1="Gelatinous Ring +1", --7/(-1)
+        --ring2="Defending Ring", --10/10
+        --back="Moonlight Cape", --6/6
         waist="Carrier's Sash",
-        })
+        }) 
 		--total 62+
+		
     sets.idle.MEva = set_combine(sets.idle.DT, {
         main="Daybreak",
         sub="Genmei Shield",
@@ -782,7 +779,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
         hands="Bunzi's Gloves",
         legs="Aya. Cosciales +2",
         feet="Aya. Gambieras +2",
-        neck="Lissome Necklace", 
+        neck="Lissome Necklace", --combatant's torque
         ear1="Cessance Earring",
         ear2="Telos	Earring",
         left_ring={name="Chirich Ring +1", bag="wardrobe2"},

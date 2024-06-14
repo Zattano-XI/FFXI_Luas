@@ -1,7 +1,11 @@
 res = require 'resources'
 require('vectors')
 
+include('SendCommands.lua')
+
+--Ageha/Mumei > Mumei > Shoha > > Mumei > >Kasha > Rana > Mumei
 --Fudo > Kasha > Rana > Shoha
+--Ageha > Gekko > Rana > Gekko > Mumei
 WEAPON_ind = 1
 
 function get_sets()
@@ -19,12 +23,12 @@ function get_sets()
 	sets.mode = {}
 	ammo = {}
 	
-	--ammo.melee = {ammo="Coiste Bodhar"}
-	ammo.melee = {ammo="Aurgelmir Orb +1"}
+	ammo.melee = {ammo="Coiste Bodhar"}
+	--ammo.melee = {ammo="Aurgelmir Orb +1"}
 	ammo.ws = {ammo="Knobkierrie"}
 	ammo.DT = {ammo="Staunch Tathlum +1"}
 	ammo.fc = {ammo="Sapience Orb"}
-	ammo.macc = {ammo="Hydrocera"}
+	ammo.macc = {ammo="Phemphredo Tathlum"}
 	ammo.shooty = {ammo="Yoichi's Arrow"}
 	
 	sets.movement = {feet="Danzo Sune-Ate"}
@@ -69,7 +73,7 @@ function get_sets()
 	--legs="Tatenashi Haidate +1",
 	--feet="Flamma Gambieras +2"
 	
-	ammo="Coiste Bodhar",
+	--ammo="Coiste Bodhar",
 	head="Flamma Zucchetto +2",
 	neck="Samurai's Nodowa +2",
 	left_ear="Schere Earring",
@@ -93,7 +97,7 @@ function get_sets()
 	})
 	
 	sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --37dt
-		ammo="Coiste Bodhar", --Aurgelmir +1?
+		--ammo="Coiste Bodhar", --Aurgelmir +1?
         head="Mpaca's Cap", --7pdt
         body="Mpaca's Doublet", --10pdt
         hands="Wakido Kote +3",
@@ -107,7 +111,7 @@ function get_sets()
 })
 	
 	sets.TP['DT'] = set_combine(sets.TP['Hybrid'], {
-		ammo="Coiste Bodhar",
+		--ammo="Coiste Bodhar",
 		head="Kasuga Kabuto +3", --10dt
 		body="Kasuga Domaru +3", --14dt
 		hands="Mpaca's Gloves", --8pdt
@@ -119,7 +123,7 @@ function get_sets()
 	})
 
 	sets.TP['Subtle DT'] = set_combine(sets.TP['Hybrid'], {
-		ammo="Coiste Bodhar",
+		--ammo="Coiste Bodhar",
 		head="Kasuga Kabuto +3",
 		body="Kasuga Domaru +3",
 		hands="Nyame Gauntlets",
@@ -203,7 +207,6 @@ function get_sets()
 	head="Kasuga Kabuto +3",
 	neck="Sanctity Necklace",
 	left_ear="Crepuscular Earring",
-	right_ear="Dignitary's earring",
 	body="Kasuga Domaru +3",
 	hands="Kasuga Kote +3",
 	left_ring="Stikini Ring +1",
@@ -214,9 +217,22 @@ function get_sets()
 	})
 	
 	sets.ws['Tachi: Ageha'].Capped = {
-	--neck="Warder's Charm +1",
-	
+	--neck="Warder's Charm +1",	
 	}
+	
+	sets.ws['Tachi: Fudo'] = set_combine(sets.ws.common, {
+	})
+	
+	sets.ws['Tachi: Fudo'].Capped = set_combine(sets.ws['Tachi: Fudo'], {
+	right_ring="Chirich Ring +1",
+	})
+	
+	sets.ws['Tachi: Shoha'] = set_combine(sets.ws.common, {
+	})
+	
+	sets.ws['Tachi: Shoha'].Capped = set_combine(sets.ws['Tachi: Shoha'], {
+	right_ring="Chirich Ring +1",
+	})
 	
 	sets.ws['Tachi: Mumei'] = set_combine(sets.ws.common, {
 	--left_ring="Regal Ring",
@@ -263,13 +279,13 @@ function get_sets()
 	feet="Tatenashi Sune-ate +1"
 	})
 	
-	sets.WEAPON.index = {'Kusanagi','Piercing','Blunt','Masamune'}
+	sets.WEAPON.index = {'Kusanagi','Piercing','Blunt',} --'Masamune',
 	WEAPON_ind = 1 --GK set is the Default
 	
-	sets.WEAPON['Masamune'] = {
-	main="Masamune",
-	sub="Utu Grip",
-	}
+	--sets.WEAPON['Masamune'] = {
+	--main="Masamune",
+	--sub="Utu Grip",
+	--}
 	
 	sets.WEAPON['Kusanagi'] = {
 	main="Kusanagi-No-Tsurugi",
@@ -327,8 +343,8 @@ function get_sets()
 	
 	sets.refresh = {
 	body="Crepuscular Mail",
-	left_ring="Stikini Ring +1",
-    right_ring="Stikini Ring +1",
+	ring1={name="Stikini Ring +1", bag="wardrobe2"},
+	ring2={name="Stikini Ring +1", bag="wardrobe5"},
 	}
 	
 	sets.phalanx = { 
@@ -654,11 +670,7 @@ send_command('bind @k gs equip sets.refresh')
 send_command('alias food input /item "Grape Daifuku +1" <me>')
 send_command('alias fudo @input /ws "Tachi: Fudo" <t>')
 send_command('alias jinpu @input /ws "Tachi: Jinpu" <t>')
-send_command('bind @m send @all /mount Ixion')
-send_command('bind @l send @all /lightshot zattano')
-send_command('bind @d send @all /darkshot <bt>')
-send_command('bind @t send tigertale /dia2 <bt>')
-send_command('bind @b send @all /Bolters roll')
+
 
 function self_command(command)
 	if command == 'toggle TP set' then

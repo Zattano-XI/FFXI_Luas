@@ -111,7 +111,7 @@ function user_setup()
     send_command('bind ^numpad6 input /ws "Exudation" <t>')
     send_command('bind ^numpad1 input /ws "Flash Nova" <t>')
 
-    send_command('bind #- input /follow <t>')
+	include('SendCommands.lua')
 
     select_default_macro_book()
 
@@ -293,8 +293,8 @@ function init_gear_sets()
         ear1="Mendi. earring",
 		ear2="Azimuth Earring +2",
         neck="Incanter's Torque",
-        ring1="Stikini Ring +1",
-        ring2="Stikini Ring +1",
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
         back="Fi Follet Cape +1",
         waist="Shinjutsu-no-Obi +1",
         }
@@ -317,8 +317,8 @@ function init_gear_sets()
         neck="Incanter's Torque",
         ear1="Beatific Earring",
         ear2="Meili Earring",
-        ring1="Stikini Ring +1", --3/(-5)
-        ring2="Stikini Ring +1",
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
         back="Solemnity Cape", --0/(-10)
         waist="Bishop's Sash",
         }
@@ -347,8 +347,8 @@ function init_gear_sets()
         neck="Incanter's Torque",
         ear1="Mimir Earring",
         ear2="Andoaa Earring",
-        ring1="Stikini Ring +1",
-        ring2="Stikini Ring +1",
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
         back="Fi Follet Cape +1",
         waist="Olympus Sash",
         }
@@ -533,8 +533,8 @@ function init_gear_sets()
         neck="Bathy Choker +1",--windy?
         ear1="Lugalbanda Earring",
         ear2="Etiolation Earring",
-        ring1="Stikini Ring +1",
-        ring2="Stikini Ring +1",
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
         back="Nantosuelta's Cape",
         waist="Slipor Sash",
         }
@@ -573,8 +573,8 @@ function init_gear_sets()
         neck="Bagua Charm +2",
         ear1="Odnowa Earring +1", 
         ear2="Azimuth Earring +2", priority=14, --6/6/0/0
-        ring1="Stikini Ring +1",
-        ring2="Stikini Ring +1",
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
         back="Nantosuelta's Cape", --0/0/0/15
         waist="Isa Belt" --0/0/3/1
         }) --58/48/28/29

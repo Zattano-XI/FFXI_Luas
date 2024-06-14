@@ -129,8 +129,8 @@ function user_setup()
 
     send_command('bind ^` input //gs c rune')
     send_command('bind !` input /ma "Temper" <me>')
-	send_command('bind !- gs c cycleback runes')
-    send_command('bind != gs c cycle runes')
+	send_command('bind @- gs c cycleback runes')
+    send_command('bind @= gs c cycle runes')
     send_command('bind ^f11 gs c cycle MagicalDefenseMode')
     send_command('bind @a gs c cycle AttackMode')
     --send_command('bind @c gs c toggle CP')
@@ -352,7 +352,7 @@ function init_gear_sets()
 
     sets.precast.JA['Swipe'] = sets.precast.JA['Lunge']
     
-	sets.precast.JA['Vivacious Pulse'] = {head="Erilaz Galea +3",neck="Incanter's Torque",ring1="Stikini Ring +1",ring2="Stikini Ring +1",legs="Rune. Trousers +2"}
+	sets.precast.JA['Vivacious Pulse'] = {head="Erilaz Galea +3",neck="Incanter's Torque",ring1={name="Stikini Ring +1", bag="wardrobe2"},ring2={name="Stikini Ring +1", bag="wardrobe5"},legs="Rune. Trousers +2"}
     sets.precast.JA['Vivacious Pulse']['Ignis'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
 	sets.precast.JA['Vivacious Pulse']['Gelus'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
 	sets.precast.JA['Vivacious Pulse']['Flabra'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
@@ -583,8 +583,8 @@ function init_gear_sets()
 		waist="Olympus Sash",
 		left_ear="Andoaa Earring",
 		right_ear="Mimir Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
 		back={name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 		})
 
@@ -606,8 +606,8 @@ function init_gear_sets()
 			head="Fu. Bandeau +3", 
 			body="Herculean Vest",
 			hands="herculean Gloves",
-			legs="Taeon Tights", --augments={'Spell interruption rate down -8%','Phalanx +3',}},
-			feet="Taeon Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},	   
+			legs="Herculean Trousers", --augments={'Spell interruption rate down -8%','Phalanx +3',}},
+			feet="Herculean Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},	   
         })
 
 	sets.phalanx = sets.phalanx2
@@ -632,8 +632,8 @@ function init_gear_sets()
         --legs="Rune. Trousers +2",--15
         --neck="Incanter's Torque",
 		--left_ear="Divine Earring",--3
-		ring1="Stikini Ring +1",--5
-        ring2="Stikini Ring +1",--5
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
 		left_ear="Beatific Earring",--4
         waist="Bishop's Sash",
 		---------   Total Divine = 34   ---------- 
@@ -715,8 +715,8 @@ function init_gear_sets()
         body="Runeist Coat +3",
         hands="Regal Gauntlets",
         --legs="Rawhide Trousers",
-        ring1="Stikini Ring +1",
-        ring2="Stikini Ring +1",
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
 		waist="Fucho-no-obi",
         })
 

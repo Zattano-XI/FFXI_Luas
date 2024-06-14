@@ -340,7 +340,7 @@ function init_gear_sets()
     sets.precast.WS['Blade: Shun'] = set_combine(sets.precast.WS, {
         ammo="Seething Bomblet +1",
         --head="Adhemar Bonnet",
-        --body="Adhemar Jacket",
+        --body="Adhemar Jacket +1",
         --hands="Adhemar Wrists +1",
         legs="Ken. Hakama +1", --Rao Haidate +1
         --feet="Ken. Sune-Ate +1", --Mochi. Sune-ate +3
@@ -495,8 +495,8 @@ function init_gear_sets()
     sets.midcast.ElementalNinjutsu.Resistant = set_combine(sets.midcast.Ninjutsu, {
         ammo="Pemphredo Tathlum",
         neck="Sanctity Necklace",
-        ring1={name="Stikini Ring +1", bag="wardrobe3"},
-        ring2={name="Stikini Ring +1", bag="wardrobe4"},
+        ring1={name="Stikini Ring +1", bag="wardrobe2"},
+        ring2={name="Stikini Ring +1", bag="wardrobe5"},
         ear1="Enchntr. Earring +1",
         })
 
@@ -510,8 +510,8 @@ function init_gear_sets()
         neck="Sanctity Necklace",
         ear1="Enchntr. Earring +1",
         ear2="Digni. Earring",
-        ring1={name="Stikini Ring +1", bag="wardrobe3"},
-        ring2={name="Stikini Ring +1", bag="wardrobe4"},
+        ring1={name="Stikini Ring +1", bag="wardrobe2"},
+        ring2={name="Stikini Ring +1", bag="wardrobe5"},
         back=gear.NIN_MAB_Cape,
         waist="Eschan Stone",
         }
@@ -521,8 +521,8 @@ function init_gear_sets()
         feet="Mochi. Kyahan +3",
         neck="Incanter's Torque",
         ear1="Stealth Earring",
-        ring1={name="Stikini Ring +1", bag="wardrobe3"},
-        ring2={name="Stikini Ring +1", bag="wardrobe4"},
+        ring1={name="Stikini Ring +1", bag="wardrobe2"},
+        ring2={name="Stikini Ring +1", bag="wardrobe5"},
         back="Astute Cape",
         waist="Cimmerian Sash",
         }

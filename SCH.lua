@@ -475,8 +475,8 @@ function init_gear_sets()
 		waist="Obstin. Sash",
         left_ear="Vor Earring",
 		right_ear="Regal Earring",
-        ring1={name="Stikini Ring +1", bag="wardrobe5"},
-        ring2={name="Stikini Ring +1", bag="wardrobe1"},
+        ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
 		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}},
 		--back={ name="Aurist's Cape +1", augments={'Path: A',}},
         }
@@ -505,8 +505,8 @@ function init_gear_sets()
 		neck="Argute Stole +2",
         left_ear="Malignance Earring",
         right_ear="Regal earring",
-        ring1={name="Stikini Ring +1", bag="wardrobe5"},
-        ring2={name="Stikini Ring +1", bag="wardrobe1"},
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
         waist="Acuity Belt +1",
 		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}},
         }
@@ -683,8 +683,8 @@ function init_gear_sets()
         sub="Genmei Shield", --10/0
 		head="Befouled crown",
 		neck="Sibyl scarf",
-        ring1={name="Stikini Ring +1", bag="wardrobe5"},
-        ring2={name="Stikini Ring +1", bag="wardrobe1"},
+		ring1={name="Stikini Ring +1", bag="wardrobe2"},
+		ring2={name="Stikini Ring +1", bag="wardrobe5"},
 		feet="Herald's Gaiters"
         })
 

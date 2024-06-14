@@ -27,7 +27,7 @@ function get_sets()
 	neck="Baetyl Pendant",
 	left_ear="Etiolation Earring",
 	right_ear="Loquacious Earring",
-	--body="Taeon Tabard", volte
+	body="Adamantite Armor",
 	hands="Leyline Gloves",
 	left_ring="Kishar Ring",
 	right_ring="Lebeche Ring",
@@ -75,7 +75,7 @@ function get_sets()
 	range="Fomalhaut",
 	}
 	
-	sets.Gun.index = {'DeathPenalty','Anarchy','Fomalhaut','Armageddon'}
+	sets.Gun.index = {'Anarchy','DeathPenalty','Fomalhaut','Armageddon'}
 	Gun_ind = 1 --Standard set is the Default
 	
 	sets.Gun['DeathPenalty'] = {range="Death Penalty"}
@@ -88,7 +88,7 @@ function get_sets()
 	
 	--Sets.Gun['Prime'] = {range="Earp"}
 	
-	sets.TP.index = {'DT','Foxie','Nyame','Aminon','Standard','HighAcc'}
+	sets.TP.index = {'Foxie','DT','Nyame','Aminon','Standard','HighAcc'}
 	TP_ind = 1 --DT set is the Default
 	
 	sets.TP['Standard'] = {
@@ -431,7 +431,7 @@ function check_height()
 end
 
 function precast(spell)
-	if buffactive['Stun'] or buffactive['Petrify'] or ((spell.action_type == "WeaponSkill" or spell.action_type == "JobAbility") and buffactive['Amnesia']) or (spell.action_type == 'Magic' and buffactive['Silence']) or (buffactive[spell.name] and not spell.action_type == 'Magic') or (spell.name == "Snake Eye" and not buffactive['Double-Up Chance']) or (spell.name == "Fold" and not buffactive['Bust']) then
+	if buffactive['Stun'] or buffactive['Petrify'] or ((spell.action_type == "WeaponSkill" or spell.action_type == "JobAbility") and buffactive['Amnesia']) or (spell.action_type == 'Magic' and buffactive['Silence']) or (buffactive[spell.name] and not spell.action_type == 'Magic') or (spell.name == "Snake Eye" and not buffactive['Double-Up Chance']) then
 		cancel_spell()
 	elseif (sets.ja[spell.english]) then
 		equip(sets.ja[spell.english])

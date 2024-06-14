@@ -47,8 +47,8 @@ function get_sets()
 	--ammo="Egoist's Tathlum",
 	head={name="Souveran Schaller +1",priority=15}, --280
 	neck={name="Unmoving Collar +1",priority=11}, --200
-	left_ear={name="Tuisto Earring",priority=9}, --150
-	right_ear={name="Odnowa Earring +1",priority=6}, --110
+	left_ear={name="Odnowa Earring +1",priority=9}, --150
+	right_ear={name="Tuisto Earring",priority=6}, --110
 	body={name="Reverence Surcoat +3",priority=14}, --254
 	hands="Regal Gauntlets",
 	hands={name="Souveran Handschuhs +1",priority=13}, --239
@@ -134,8 +134,8 @@ function get_sets()
 	ammo={name="Staunch Tathlum +1",priority=1},
 	head={name="Sakpata's Helm",priority=8},
 	neck={name="Unmoving Collar +1",priority=15},
-	left_ear={name="Tuisto Earring",priority=14},
-	right_ear={name="Odnowa Earring +1",priority=9},
+	left_ear={name="Odnowa Earring",priority=14},
+	right_ear={name="Chev. Earring +2",priority=9},
 	body={name="Sakpata's Breastplate",priority=13},
 	hands={name="Sakpata's Gauntlets",priority=7},
 	left_ring={name="Gelatinous Ring +1",priority=11},
@@ -174,8 +174,8 @@ function get_sets()
 	right_ear="Friomisi Earring",
 	body={name="Cohort Cloak +1",priority=11}, --91
 	hands={name="Nyame Gauntlets",priority=12}, --91
-	left_ring={name="Stikini Ring +1", bag="wardrobe1"},
-    right_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+    right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back={name="Reiki Cloak",priority=15}, --130
 	waist={name="Eschan Stone",priority=8}, --20
 	legs={name="Nyame Flanchard",priority=14}, --114
@@ -186,8 +186,8 @@ function get_sets()
 	ammo="Homiliary",
 	body="Crepuscular Mail",
 	hands="Regal Gauntlets",
-	left_ring={name="Stikini Ring +1", bag="wardrobe1"},
-    right_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+    right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	waist="Fucho-no-obi",
 	}
 	

@@ -172,13 +172,13 @@ function get_sets()
 	--ammo="Mavi Tathlum",
 	neck="Incanter's Torque",
 	ear2="Hashishin Earring",
-	left_ring="Stikini Ring +1",
-    right_ring="Stikini Ring +1",
+	ring1={name="Stikini Ring +1", bag="wardrobe2"},
+	ring2={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Cornflower Cape",
 	}
 	
 	sets.midcast.cure = { --Stack healing skill
-	ammo="Hydrocera",
+	ammo="Pemphredo Tathlum",
 	head="Nyame Helm",
 	neck="Incanter's Torque",
 	left_ear="Beatific Earring",
@@ -390,7 +390,7 @@ function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle[sets.idle.index[idle_ind]])
 		if player.mpp <= 25 then
-			equip({head="Rawhide Mask",body="Jhakri Robe +2",left_ring={name="Stikini Ring +1", bag="wardrobe1"},right_ring={name="Stikini Ring +1", bag="wardrobe2"},waist="Fucho-no-Obi"})
+			equip({head="Rawhide Mask",body="Jhakri Robe +2",left_ring={name="Stikini Ring +1", bag="wardrobe2"},right_ring={name="Stikini Ring +1", bag="wardrobe5"},waist="Fucho-no-Obi"})
 		end
 	elseif player.status == "Engaged" then
 		equip(sets.TP[sets.TP.index[TP_ind]])
