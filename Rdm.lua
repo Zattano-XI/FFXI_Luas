@@ -290,7 +290,7 @@ function get_sets()
 	range="Ullr",
 	head="Leth. Chappel +3",
 	neck="Erra Pendant",
-	left_ear="Regal Earring",
+	left_ear="Malignance Earring",
 	right_ear="Lethargy Earring +2",
 	body="Lethargy Sayon +3",
 	hands="Leth. Ganth. +3",
@@ -318,9 +318,6 @@ function get_sets()
 	
 	 sets.midcast.absorb = set_combine(sets.midcast['Dark Magic'], {
     main="Crocea Mors",
-    sub="Ammurapi Shield",
-    ammo="Regal Gem",
-	head="Atrophy Chapeau +3",
 	back="Aurist's Cape +1",
     })
 	--body="Vitiation Tabard +3",
@@ -582,27 +579,13 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	right_ring="Defending Ring",
 	back="Solemnity Cape",
 	waist="Shinjutsu-no-obi +1",
-	legs="Carmine Cuisses +1",
+	legs="Bunzi's Pants",
 	feet="Volte Gaiters"
 	}
 	
 	sets.idle['Flans'] = sets.TP['EnSpell']
 	
-	sets.idle['DW'] = {
-	ammo="Homiliary",
-	head="Vitiation Chapeau +3",
-	neck="Loricate Torque +1",
-	left_ear="Etiolation Earring",
-	right_ear="Dominance Earring +1",
-	body="Lethargy Sayon +3",
-	hands="Volte Gloves",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-	right_ring="Defending Ring",
-	back="Solemnity Cape",
-	waist="Shinjutsu-no-obi +1",
-	legs="Carmine Cuisses +1",
-	feet="Volte Gaiters"
-	}
+	sets.idle['DW'] = sets.idle['Idle']
 	
 	sets.resting = {}
 	
@@ -806,11 +789,13 @@ function midcast(spell)
 			else
 				equip(sets.midcast.dia)
 			end
-		elseif spell.skill == 'Dark Magic' then
-			if string.find(spell.english,'Bio') then
-				equip(sets.midcast['Dark Magic'])
-			elseif spell.english:startswith('Drain') or spell.english:startswith('Aspir') then
+		elseif spell.skill == 'Dark Magic' and not spell.english:contains("Tractor") then
+			if spell.english:startswith('Drain') or spell.english:startswith('Aspir') then
 				weathercheck(spell.element,sets.midcast.drain)
+			elseif spell.english:startswith('Absorb') then
+				equip(sets.midcast.absorb)
+			else
+				equip(sets.midcast['Dark Magic'])
 			end
 		elseif spell.skill == 'Divine Magic' then
 			if spell.name == "Flash" then
