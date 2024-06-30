@@ -217,8 +217,9 @@ function get_sets()
 	
 	sets.ws["Ruthless Stroke"].Capped = set_combine(sets.ws["Ruthless Stroke"], {
 	ammo="Crepuscular Pebble",
+	head="Skulker's Bonnet +3",
 	ear1="Ishvara Earring",
-	ring1="Epaminonda's Ring",
+	ring1="Epaminondas's Ring",
 	})
 	
 	sets.ws["Savage Blade"] = set_combine(sets.ws.common, {
@@ -472,13 +473,15 @@ function precast(spell)
 			add_to_chat(123, spell.name..' Canceled: [Out of Range]')
 		elseif player.tp >= 1000 then
 			if sets.ws[spell.name] then
-				if player.equipment.range ~= 'empty' and player.equipment.ammo == 'empty' then
-					equip(ammo.shooty)
-				end
 				if sets.mode.index[mode_ind] == 'Capped' and sets.ws[spell.name].Capped ~= nil then
 					equip(sets.ws[spell.name].Capped)
 				else
 					equip(sets.ws[spell.name])
+				end
+				if spell.name == "Aeolian Edge" and (sets.TH[sets.TH.index[TH_ind]] == sets.TH['TH']) or (sets.TH[sets.TH.index[TH_ind]] == sets.TH['Full']) then
+					equip({hands="Plunderer's Armlets +3",waist="Chaac Belt"})
+				--elseif (player.equipment.sub == "Fusetto +2" or player.equipment.sub == "Fusetto +3" or player.equipment.sub == "Centovente") then
+				--	equip(sets.ws[spell.name].capped,ammo.capped)
 				end
 			else
 				equip(sets.ws.common)
@@ -518,14 +521,6 @@ function precast(spell)
 				end
 			elseif player.equipment.range == 'Ullr' and player.equipment.ammo == 'empty' then
 				equip(ammo.shooty)
-			end
-			if sets.ws[spell.name] then
-				equip(sets.ws[spell.name])
-				if spell.name == "Aeolian Edge" and (sets.TH[sets.TH.index[TH_ind]] == sets.TH['TH']) or (sets.TH[sets.TH.index[TH_ind]] == sets.TH['Full']) then
-					equip({hands="Plunderer's Armlets +3",waist="Chaac Belt"})
-				end
-			else
-				equip(sets.ws.common)
 			end
 		end
 	elseif spell.action_type == 'Magic' then
