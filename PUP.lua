@@ -290,8 +290,8 @@ function init_gear_sets()
     sets.engaged.Acc = {
         head="Whirlpool Mask",
 		neck="Ej Necklace",
-		ear1="Bladeborn Earring",
-		ear2="Steelflash Earring",
+		ear1="Telos Earring",
+		ear2="Crepuscular Earring",
         body="Qaaxo Harness",
 		hands="Otronif Gloves",
 		ring1="Chirich Ring +1",

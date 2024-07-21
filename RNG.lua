@@ -68,7 +68,7 @@ function job_setup()
               "Era. Bul. Pouch", "Dev. Bul. Pouch", "Chr. Bul. Pouch", "Quelling B. Quiver",
               "Yoichi's Quiver", "Artemis's Quiver", "Chrono Quiver"}
 
-    lockstyleset = 21
+    lockstyleset = 11
 end
 
 -------------------------------------------------------------------------------------------------------------------
@@ -356,7 +356,7 @@ function init_gear_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Ishvara Earring",
     right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-    left_ring="regal Ring",
+    left_ring="Regal Ring",
     right_ring="Cornelia's Ring",
     back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
@@ -381,11 +381,11 @@ function init_gear_sets()
     })
 
     sets.precast.WS["Last Stand"] = set_combine(sets.precast.WS, {
-	head="Orion Beret +3",
+	--head="Orion Beret +3",
 	body="Ikenga's Vest",
     --body="Nyame Mail",
 	hands="Nyame Gauntlets",
-    legs="Arcadian braccae +3",
+    --legs="Arcadian braccae +3",
     feet="Nyame Sollerets",
     neck="Scout's Gorget +2",
     waist="Fotia Belt",
@@ -543,7 +543,6 @@ function init_gear_sets()
         })
 
     sets.midcast.RA.Critical = set_combine(sets.midcast.RA, {
-  --  head="Meghanada Visor +2",
     head={ name="Blistering Sallet +1", augments={'Path: A',}},
     body="Nisroch Jerkin",
     hands="Mummu Wrists +2",

@@ -292,7 +292,7 @@ function init_gear_sets()
         --head="Adhemar Bonnet",
         --body="Ken. Samue +1", 
         --hands="Mummu Wrists +2", --Ryou tekko +1 dex, acc, dbl.atk
-        --feet="Mummu Gamash. +2", --Adhemar Gamashes +1 str, dex, atk
+        --feet="Adhemar Gamashes +1", 
         --neck="Ninja Nodowa +2",
 		waist="Sailfi Belt +1",
         ear2="Odr Earring",
@@ -503,9 +503,9 @@ function init_gear_sets()
     sets.midcast.EnfeeblingNinjutsu = {
         ammo="Yamarang",
         head="Hachiya Hatsu. +3",
-        body="Mummu Jacket +2",
-        hands="Mummu Wrists +2",
-        legs="Mummu Kecks +2",
+        body="Mpaca's Doublet",
+        hands="Mpaca's Gloves",
+        legs="Mpaca's Hose",
         feet="Hachiya Kyahan +3",
         neck="Sanctity Necklace",
         ear1="Enchntr. Earring +1",
@@ -555,7 +555,8 @@ function init_gear_sets()
     sets.idle = {
         ammo="Seki Shuriken",
         head="Malignance Chapeau",
-        body="Hiza. Haramaki +2",
+        body="Mpaca's Doublet",
+		--body="Hiza. Haramaki +2",
         hands="Malignance Gloves",
         legs="Malignance Tights",
         feet="Danzo Sune-ate",

@@ -102,21 +102,20 @@ function get_sets()
 	
 	sets.TP['Learning'] = {
 	--main={ name="Trainee Burin", priority=1,},
-	--main={ name="Blizzard Brand +1", priority=1,},
-	--sub={ name="Genmei Shield", priority=2,},
-	ammo="Coiste Bodhar",
-	head="Carmine Mask +1",
-	neck="Combatant's Torque",
-	left_ear="Odr Earring",
-	right_ear="Telos Earring",
-	body="Malignance Tabard",
-	hands="Magus Bazubands",
-	left_ring="Cacoethic Ring",
-	right_ring="Cacoethic Ring +1",
-	back="Aurist's Cape +1",
-	waist="Kentarch Belt +1",
-	legs="Malignance Tights",
-	feet="Gleti's Boots"
+	--main="Twinned Blade",
+    --sub="Aern Dagger II",
+    ammo="Mavi Tathlum",
+    head="Hashishin Kavuk +3",
+    body="Hashishin Mintan +3",
+    hands="Hashi. Bazu. +3",
+    legs="Hashishin Tayt +3",
+    feet="Hashi. Basmak +3",
+    neck="Incanter's Torque",
+    waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+    left_ear="Telos Earring",
+    right_ear={ name="Hashi. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Dbl.Atk."+6','STR+7 INT+7',}},
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},    back={ name="Cornflower Cape", augments={'MP+26','DEX+3','Blue Magic skill +9',}},
 	}
 	
 	sets.TP['DT'] = set_combine(sets.TP['Hybrid'], { --49
@@ -139,25 +138,31 @@ function get_sets()
 	neck="Baetyl Pendant",
 	left_ear="Regal Earring",
 	right_ear="Friomisi Earring",
-	body="Cohort Cloak +1",
-	hands="Amalric Gages +1",
+	head="Hashishin Kavuk +3",
+	body="Hashishin Mintan +3",
+	hands="Hashishin Bazubands +3",
 	left_ring="Stikini Ring +1",
 	right_ring="Metamorph Ring +1",
 	back="Aurist's Cape +1",
 	waist="Orpheus's Sash",
-	legs="Amalric Slops +1",
-	feet="Amalric Nails +1"
+	legs="Hashishin Tayt +3",
+	feet="Hashishin Basmak +3"
 	}
 	
 	sets.idle.index = {'Refresh','DT'}--,'PDT','MDT'}
 	idle_ind = 1 --Refresh set is the Default
 	
 	sets.idle['Refresh'] = set_combine(sets.TP['DT'], {
+	body="Hashishin Mintan +3",
 	left_ring="Warp Ring",
 	legs="Carmine Cuisses +1",
 	})
 	
-	sets.idle['DT'] = sets.TP['DT']
+	sets.idle['DT'] = set_combine(sets.TP['DT'], {
+	body="Hashishin Mintan +3",
+	left_ring="Warp Ring",
+	legs="Carmine Cuisses +1",
+	})
 	
 	sets.midcast.enhancing = {}
 	sets.midcast.enhancingduration = set_combine(sets.enhancing, {
@@ -171,10 +176,11 @@ function get_sets()
 	sets.midcast.blueskill = {
 	--ammo="Mavi Tathlum",
 	neck="Incanter's Torque",
-	ear2="Hashishin Earring",
+	ear2="Hashi. Earring +2",
 	ring1={name="Stikini Ring +1", bag="wardrobe2"},
 	ring2={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Cornflower Cape",
+	legs="Hashishin Tayt +3",
 	}
 	
 	sets.midcast.cure = { --Stack healing skill
@@ -195,11 +201,11 @@ function get_sets()
 	
 	sets.midcast.magicacc = {
 		ammo="Mavi Tathlum",
-		head="Malignance Chapeau",
-		body="Malignance Tabard",
-		hands="Malignance Gloves",
-		legs="Malignance Tights",
-		feet="Malignance Boots",
+		head="Hashishin Kavuk +3",
+		body="Hashishin Mintan +3",
+		hands="Hashishin Bazubands +3",
+		legs="Hashishin Tayt +3",
+		feet="Hashishin BAsmak +3",
 		neck="Mirage Stole +2",
 		waist="Acuity Belt +1",
 		left_ear="Dignitary's Earring",
@@ -212,7 +218,7 @@ function get_sets()
 	
 	sets.midcast.dark = set_combine(sets.nuke['Free'], {
 	head="Pixie Hairpin +1",
-	body="Jhakri Robe +2",
+	body="Shamash Robe",
 	left_ring="Archon Ring",
 	})
 	
@@ -242,7 +248,7 @@ function get_sets()
 	
 	sets.ws['Savage Blade'] = {
     ammo="Aurgelmir Orb +1",
-	--head="Hashi. Kavuk +3",
+	head="Hashi. Kavuk +3",
 	head="Nyame Helm",
 	neck="Mirage Stole +2",
     ear1="Ishvara Earring",
@@ -390,12 +396,12 @@ function aftercast(spell)
 	if player.status == "Idle" then
 		equip(sets.idle[sets.idle.index[idle_ind]])
 		if player.mpp <= 25 then
-			equip({head="Rawhide Mask",body="Jhakri Robe +2",left_ring={name="Stikini Ring +1", bag="wardrobe2"},right_ring={name="Stikini Ring +1", bag="wardrobe5"},waist="Fucho-no-Obi"})
+			equip({head="Rawhide Mask",body="Shamash Robe",left_ring={name="Stikini Ring +1", bag="wardrobe2"},right_ring={name="Stikini Ring +1", bag="wardrobe5"},waist="Fucho-no-Obi"})
 		end
 	elseif player.status == "Engaged" then
 		equip(sets.TP[sets.TP.index[TP_ind]])
 		--if player.mpp <= 45 then
-		--	equip({body="Jhakri Robe +2",left_ring="Stikini Ring +1",waist="Fucho-no-Obi"})
+		--	equip({body="Shamash Robe",left_ring="Stikini Ring +1",waist="Fucho-no-Obi"})
 		--end
 	end
 end

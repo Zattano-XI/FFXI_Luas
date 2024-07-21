@@ -340,18 +340,18 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	})
 	
 	sets.ws["Sniper Shot"] = {
-	head="Meghanada Visor +2",
-	neck="Iskur Gorget",
-	left_ear="Moonshade Earring",
-	left_ear="Telos Earring",
-	body="Malignance Tabard",
-	hands="Malignance Gloves",
-	left_ring="Regal Ring",
-	right_ring="Petrov Ring",
+	head="Nyame Helm", --check this
+	neck="Fotia Gorget",
+	left_ear="Ishvara Earring",
+	left_ear="Telos Earring", --Chasseurs +2
+	body="Nyame Mail",
+	hands="Chasseur's Gants +3",
+	left_ring="Sroda Ring",
+	right_ring="Cornelia's Ring",
 	back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
-	waist="Yemaya Belt",
-	legs="Malignance Tights",
-	feet="Meg. Jam. +2"
+	waist="Fotia Belt",
+	legs="Nyame Flanchard",
+	feet="Lanun Bottes +3"
 	}
 	
 	sets.ws["Savage Blade"] = set_combine(sets.ws.common, {
@@ -362,18 +362,18 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	})
 	
 	sets.ws["Evisceration"] = {
-	head="Blistering Sallet +1",
+	head="Adhemar Bonnet +1",
 	neck="Fotia Gorget",
 	left_ear="Mache Earring +1",
 	right_ear="Odr Earring",
-	body="Ikenga's Vest",
-	hands="Mummu Wrists +2",
+	body="Malignance Tabard",
+	hands="Malignance Gloves",
 	left_ring="Regal Ring",
 	right_ring="Epona's Ring",
 	back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	waist="Fotia Belt",
-	legs="Meg. Chausses +2",
-	feet="Mummu Gamashes +2"
+	legs="Nyame Flanchard",
+	feet="Nysme sollerets"
 	}
 	
 	sets.ws["Circle Blade"] = sets.ws["Savage Blade"]

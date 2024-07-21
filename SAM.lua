@@ -60,19 +60,6 @@ function get_sets()
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = {
-	--head="Flamma Zucchetto +2",
-	--neck="Samurai's Nodowa +2",
-	--left_ear="Dedition Earring",
-	--right_ear="Schere Earring",
-	--body="Tatenashi Haramaki +1",
-	--hands="Tatenashi Gote +1",
-	--left_ring="Niqmaddu Ring",
-	--right_ring="Chirich Ring +1",
-	--back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-	--waist="Ioskeha Belt +1",
-	--legs="Tatenashi Haidate +1",
-	--feet="Flamma Gambieras +2"
-	
 	--ammo="Coiste Bodhar",
 	head="Flamma Zucchetto +2",
 	neck="Samurai's Nodowa +2",
@@ -666,7 +653,7 @@ send_command('bind @r gs equip sets.regen') -- Hit win+r, toggles the sets
 send_command('bind @a gs c reequip;wait 1; input /lockstyle on') -- Hit win+a
 send_command('bind @u gs equip low_hp;wait 1; gs equip high_hp')
 send_command('bind @o gs equip sets.reraise')
-send_command('bind @k gs equip sets.refresh')
+--send_command('bind @k gs equip sets.refresh')
 send_command('alias food input /item "Grape Daifuku +1" <me>')
 send_command('alias fudo @input /ws "Tachi: Fudo" <t>')
 send_command('alias jinpu @input /ws "Tachi: Jinpu" <t>')

@@ -26,20 +26,22 @@ function get_sets()
 	--}
 	
 	 sets.fc.base = { --68
-    ammo="Knobkierrie",
+    ammo="Sapience Orb",
     head="Carmine Mask +1",
-    body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
-    hands="Leyline Gloves",
-    legs="Fall. Flanchard +3",
-    feet={ name="Odyssean Greaves", augments={'"Fast Cast"+5','"Mag.Atk.Bns."+15',}},
-	--feet="Ratri Sollerets",
-    neck={ name="Abyssal Beads +1", augments={'Path: A',}},
-    waist="Baetyl Pendant",
     left_ear="Odnowa Earring +1",
     right_ear="Etiolation Earring",
+    neck="Baetyl Pendant",
+	--neck={ name="Abyssal Beads +1", augments={'Path: A',}},
+	body="Sacro Breastplate",
+	--body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
+    hands="Leyline Gloves",
     left_ring="Kishar Ring",
     right_ring="Rahab Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	legs="Enif Cosciales",
+	--legs="Fall. Flanchard +3",
+    --feet={ name="Odyssean Greaves", augments={'"Fast Cast"+5','"Mag.Atk.Bns."+15',}},
+	feet="Carmine Greaves +1",
 	}
 	
 	sets.ja['Last Resort'] = {
@@ -70,37 +72,32 @@ function get_sets()
 	
 	sets.TP['Standard'] = {
 		ammo="Coiste Bodhar",
-		--ammo="Knobkierrie",
 		head="Sakpata's Helm",
 		body="Sakpata's Plate",
 		hands="Sakpata's Gauntlets",
 		--legs="Ignominy flanchard +3",
 		legs="Sakpata's Cuisses",
-		feet="Flam. Gambieras +2",
+		feet="Sakpata's Leggings",
 		neck="Vim Torque +1",
 		waist="Ioskeha Belt +1",
-		left_ear="Crepuscular Earring",
+		left_ear="Telos Earring",
 		right_ear="Cessance Earring",
 		left_ring="Niqmaddu Ring",
-		right_ring="Chirich Ring +1",
+		right_ring="Moonlight Ring",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
-	sets.TP['DT'] = { --54/56%
-        ammo="Staunch Tathlum +1", --3
-		head="Hjarrandi Helm", --10
-		body="Sakpata's Plate", --10
-		hands="Sakpata's Gauntlets", --8
-		legs="Sakpata's Cuisses", --9
-		feet="Sakpata's Leggings", --6
-		neck={ name="Abyssal Beads +1", augments={'Path: A',}},
-		waist="Plat. Mog. Belt", --3
-		left_ear="Cessance Earring", --/3
-		right_ear="Telos earring", --/2
+	sets.TP['DT'] = set_combine(sets.TP['Standard'], { --54/56%
+		--body="Sakpata's Plate", --10
+		--hands="Sakpata's Gauntlets", --8
+		--legs="Sakpata's Cuisses", --9
+		--feet="Sakpata's Leggings", --6
+		--neck={ name="Abyssal Beads +1", augments={'Path: A',}},
+		--waist="Plat. Mog. Belt", --3
 		left_ring={name="Chirich Ring +1", bag="wardrobe2"},
-		right_ring="Moonbeam Ring", --5
-		back="Moonbeam cape",
-	}
+		--right_ring="Moonlight Ring", --5
+		--back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	})
 	
 	sets.TP['High Acc'] = { 
         ammo="Coiste Bodhar",
@@ -170,30 +167,33 @@ function get_sets()
 	
 	sets.ws.common = {
     ammo="Knobkierrie",
-    head="Ratri Sallet",
-    body="Ignominy Cuirass +3",
-    hands="Ratri Gadlings",
-    legs="Fall. Flanchard +3",
-    feet="Sulev. Leggings +2",
-    neck="Abyssal Beads +1",
-    waist="Sailfi belt +1",
-    right_ear="Thrud Earring",
-	left_ear="Moonshade Earring",
+    head="Nyame Helm",
+    neck="Rep. plat. medal",
+    left_ear="Moonshade Earring",
+	right_ear="Thrud Earring",
+    body="Nyame Mail",
+	--body="Ignominy Cuirass +3",
+    hands="Nyame Gauntlets",
     left_ring="Cornelia's Ring",
     right_ring="Regal Ring",
+    waist="Sailfi belt +1",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+	legs="Nyame Flanchard",
+    --legs="Fall. Flanchard +3",
+    feet="Nyame Sollerets",
+	--neck="Abyssal Beads +1",
 	}
 	
 	sets.ws['Catastrophe'] = set_combine(sets.ws.common, {
 		head="Ratri Sallet",
         hands={ name="Odyssean Gauntlets", augments={'STR+8','Mag. Acc.+8 "Mag.Atk.Bns."+8','Weapon skill damage +7%',}},
         --left_ring="Beithir Ring",
-		feet="Ratri Sollerets",
+		feet="Ratri Sollerets +1",
 	})
 	
 	sets.ws['Cross Reaper'] = set_combine(sets.ws.common, {
-		legs="Ratri cuisses",
-		feet="Ratri Sollerets",
+		--legs="Ratri cuisses",
+		--feet="Ratri Sollerets",
 		--feet="Sulev. leggings +2",
 		right_ring="Niqmaddu ring",
 	})
@@ -214,7 +214,7 @@ function get_sets()
 		body="Nyame mail",
 		hands="Nyame Gauntlets",
         legs="Nyame Flanchard",
-		--left_ring="Beithir Ring",
+		right_ring="Beithir Ring",
         left_ear="Moonshade Earring",
         back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Damage taken-5%',}},
         feet="Nyame Sollerets",
@@ -235,7 +235,6 @@ function get_sets()
 	})
 	
 	sets.ws['Shadow of Death'] = set_combine(sets.ws.common, {
-		head="Ratri Sallet",
 		body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
 		hands="Fall. fin. Gauntlets +3",
 		waits="Orpheus's sash",
@@ -323,7 +322,7 @@ function get_sets()
 		body="Heath. Cuirass +1",
 		hands="Ratri Gadlings",
 		legs="Ratri Cuisses",
-		feet="Ratri Sollerets",
+		feet="Ratri Sollerets +1",
 		neck="Sanctity Necklace",
 		waist="Eschan Stone",
 		left_ear="Odnowa Earring +1",
@@ -347,7 +346,7 @@ function get_sets()
 		body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
 		hands={ name="Fall. Fin. Gaunt. +3", augments={'Enhances "Diabolic Eye" effect',}},
 		legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
-		feet="Ratri Sollerets",
+		feet="Ratri Sollerets +1",
 		neck="Erra Pendant",
 		waist="Eschan Stone",
 		left_ear="Etiolation Earring",
@@ -401,7 +400,7 @@ function get_sets()
 		hands="Fallen's finger gauntlets +3",
 		left_ring="Evanescence Ring",
 		right_ring="Stikini Ring +1",
-        feet="Ratri Sollerets",
+        feet="Ratri Sollerets +1",
 		back="Niht Mantle",
         })
 		

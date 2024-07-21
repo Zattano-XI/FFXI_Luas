@@ -84,8 +84,8 @@ function init_gear_sets()
     
 
     Cichols = {}
-    Cichols.TP = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}}
-    Cichols.WS = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}}
+    Cichols.TP = { name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
+    Cichols.WS = { name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
     Cichols.VIT = { name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
 
     Valorous = {}
@@ -460,7 +460,6 @@ function init_gear_sets()
          ear1="Schere Earring",
          ear2="Telos Earring",
          body="Sakpata's Plate'",
-         --hands="Flamma Manopolas +2",
          hands="Sakpata's Gauntlets",
          ring1="Niqmaddu Ring",
          ring2="Chirich Ring +1",

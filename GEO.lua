@@ -394,8 +394,8 @@ function init_gear_sets()
     sets.midcast.MndEnfeebles = {
         main="Idris",
         sub="Ammurapi Shield",
-        head=empty,
-        body="Cohort Cloak +1",
+        head="Azimuth Hood +3",
+        body="Azimuth Coat +3",
         hands="Geo. Mitaines +2",
         legs="Geomancy Pants +3",
         feet="Bagua Sandals +3",

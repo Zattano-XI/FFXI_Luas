@@ -129,15 +129,15 @@ function user_setup()
 
     send_command('bind ^` input //gs c rune')
     send_command('bind !` input /ma "Temper" <me>')
-	send_command('bind @- gs c cycleback runes')
-    send_command('bind @= gs c cycle runes')
+	send_command('bind !- gs c cycleback runes')
+    send_command('bind != gs c cycle runes')
     send_command('bind ^f11 gs c cycle MagicalDefenseMode')
     send_command('bind @a gs c cycle AttackMode')
     --send_command('bind @c gs c toggle CP')
     send_command('bind @e gs c cycleback WeaponSet')
     send_command('bind @r gs c cycle WeaponSet')
     send_command('bind @w gs c toggle WeaponLock')
-    send_command('bind @k gs c toggle Knockback')
+	--send_command('bind @k gs c toggle Knockback')
     send_command('bind !q input /ma "Temper" <me>')
 
 --custom binds by me	
@@ -207,6 +207,8 @@ end
 function user_unload()
     send_command('unbind ^`')
     send_command('unbind !`')
+	send_command('unbind !-')
+	send_command('unbind !=')
     send_command('unbind ^f11')
     send_command('unbind ^insert')
     send_command('unbind ^delete')
@@ -934,7 +936,7 @@ function init_gear_sets()
 
 --PDT based Hybrid Tanking Set 
     sets.Hybrid = {
-		head="Nyame helm",
+		head="Nyame Helm",
 		--body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 		body="Ayanmo Corazza +2",
 		hands="Turms Mittens +1",
@@ -950,22 +952,7 @@ function init_gear_sets()
 		right_ring="Niqmaddu Ring",
 		left_ring="Epona's Ring",
 		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-	
-    --    --head=gear.Adhemar_D_head,
-	--	head="Ayanmo Zucchetto +2", --3
-    --    --body="Futhark Coat +3", --9
-	--	body="Ayanmo Corazza +2", --6
-	 -- 0
-    --    neck="Futhark Torque +2", --6/6
-	--	legs="Meghanada Chausses +2",--6
-    --    ring1={name="Moonbeam Ring", bag="wardrobe4"}, --7
-    --    ring2="Defending Ring", --10
-	--	--possible changes
-	--	ammo="Staunch Tathlum +1", --2
-	--	neck="Anu Torque", 
-	--	feet="Meghanada Jambeaux +2", --3
-	--	--right_ear="Odnowa Earring +1", -- not much of a point if weaponskilling
-        }
+	}
 
     sets.engaged.STP.DT = set_combine(sets.engaged.STP, sets.Hybrid)
 	sets.engaged.PDT = set_combine(sets.defense.PDT)

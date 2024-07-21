@@ -59,8 +59,8 @@ function get_sets()
 	neck="Vim Torque +1",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
-    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Store TP"+10',}},
-        }
+    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}, --stp?
+    }
 	
 	sets.ja['High Jump'] = sets.ja['Jump']
 	sets.ja['Spirit Jump'] = set_combine(sets.ja['Jump'], 
@@ -96,7 +96,8 @@ function get_sets()
     right_ear="Telos Earring", --3
     left_ring="Niqmaddu Ring",  
     right_ring="Chirich Ring +1",
-    back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}}, --10
+    --back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}}, --10
+	 back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
 sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
@@ -114,7 +115,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
     right_ear="Telos Earring", --telos?
     left_ring="Niqmaddu Ring",
     right_ring="Moonlight Ring",
-    back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
+    --back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
 	})
 
 	sets.TP['DT'] = set_combine(sets.TP['Standard'], { --51%
@@ -131,7 +132,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
     right_ear="Telos Earring",
     left_ring="Defending Ring",
     right_ring="Moonlight Ring",
-    back="Moonbeam Cape",
+    --back="Moonbeam Cape",
 	})
 	
 	sets.TP['High Acc'] = {
@@ -163,7 +164,8 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
     right_ear="Telos Earring",
     left_ring="Chirich Ring +1",
     right_ring="Moonlight Ring",
-    back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
+    --back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
+	 back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 		
 	sets.idle = set_combine(sets.TP['Standard'], {
@@ -204,7 +206,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
     right_ear="Peltast's Earring +1",
     left_ring="Regal ring",
     right_ring="Cornelia's Ring",
-    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.ws['Camlann\'s Torment'] = set_combine(sets.ws.common, {
@@ -331,7 +333,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
 	left_ear="Odnowa Earring",
 	right_ear="Odnowa Earring +1",
 	body="Hjarrandi Breastplate",
-	hands="Flamma Manopolas +2",
+	hands="Gleti's Gauntlets",
 	left_ring="Regal Ring",
 	right_ring="Moonlight Ring",
 	back="Moonbeam cape",

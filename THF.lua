@@ -1,5 +1,6 @@
 res = require 'resources'
 require('vectors')
+include('SendCommands.lua')
 
 function get_sets()
 	sets.fc = {}
@@ -65,17 +66,18 @@ function get_sets()
 	
 	sets.TP['Standard'] = {
 	head="Skulker's Bonnet +3",
-	neck="Assassin's Gorget +2",
-	left_ear="Telos Earring",
+	neck="Anu Torque",
+	--neck="Assassin's Gorget +2",
+	left_ear="Sherida Earring",
 	right_ear="Skulker's Earring +1",
 	body="Pillager's Vest +3",
-	hands="Gleti's Gauntlets",
+	hands="Adhemar Wristbands +1",
 	left_ring="Gere Ring",
-	right_ring="Hetairoi Ring",
+	right_ring="Epona's Ring",
 	back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Reiki Yotai",
-	--legs="Samnuha Tights",
-	legs="Pillager's Culottes +3",
+	legs="Samnuha Tights",
+	--legs="Gleti's Breeches",
 	feet="Plunderer's Poulaines +3"
 	}
 	
@@ -151,13 +153,13 @@ function get_sets()
 	sets.ws.common = {ammo="Coiste Bodhar",
     head="Nyame Helm",
 	neck="Assassin's Gorget +2", 
-	ear1="Moonshade Earring",
-	ear2="Sherida Earring",
+	ear1="Sherida Earring",
+	ear2="Skulker's Earring +1",
     body="Nyame Mail",
 	hands="Nyame Gauntlets",
 	ring1="Regal Ring",
 	ring2="Cornelia's Ring",
-    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}},
+    back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	waist="Kentarch Belt +1",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
@@ -202,11 +204,10 @@ function get_sets()
 	})
 	
 	sets.ws["Exenterator"] = set_combine(sets.ws.common, {
-	right_ear="Sherida Earring",
 	hands="Malignance Gloves",
 	left_ring="Regal Ring",
 	right_ring="Ilabrat Ring",
-	legs="Meghanada Chausses +2",
+	legs="Meghanada Chausses +2", --check this
 	feet="Plunderer's Poulaines +3"
 	})
 	
@@ -224,7 +225,6 @@ function get_sets()
 	
 	sets.ws["Savage Blade"] = set_combine(sets.ws.common, {
 	neck="Fotia Gorget",
-	right_ear="Sherida Earring",
 	waist="Sailfi Belt +1",
 	})
 	
@@ -299,13 +299,13 @@ function get_sets()
 	sets.ja['Sneak Attack'] = {ammo="Cath Palug Stone",
         head="Pillager's Bonnet +3",
 		neck="Assassin's Gorget +2",
-		ear2="Odr Earring",
-		ear1="Sherida Earring",
+		ear1="Odr Earring",
+		ear2="Sherida Earring",
         body="Pillager's Vest +3",
 		hands="Skulker's Armlets +3",
 		ring1="Ilabrat Ring",
 		ring2="Regal Ring",
-        back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
+        back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 		waist="Kentarch Belt +1",
 		legs="Pillager's Culottes +3",
 		feet="Plunderer's Poulaines +3"
@@ -320,7 +320,7 @@ function get_sets()
 		hands="Pillager's Armlets +1",
 		ring1="Ilabrat Ring",
 		ring2="Regal Ring",
-        back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},
+        back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 		waist="Sveltesse Gouriz +1",
 		legs="Pillager's Culottes +3",
 		feet="Plunderer's Poulaines +3"

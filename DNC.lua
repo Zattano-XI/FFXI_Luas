@@ -265,7 +265,6 @@ function get_sets()
 	--head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
 	neck="Fotia gorget",
 	left_ear="Odr Earring",
-    --body="Meg. Cuirie +2",
 	hands="Nyame gauntlets",
     --hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 	right_ring="Mummu ring",
@@ -299,7 +298,7 @@ function get_sets()
 	})
 	
 	sets.ws["Pyrrhic Kleos"] = set_combine(sets.ws.common, {
-	body="Meg. Cuirie +2",
+	--body="Meg. Cuirie +2", --NO!
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	waist="Grunfeld Rope",
 	})

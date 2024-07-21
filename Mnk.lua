@@ -141,7 +141,8 @@ function get_sets()
 	sets.idle = set_combine(sets.TP['Standard'], {
 	--ammo="Coiste Bodhar",
 	head="Bhikku Crown +3",
-	body="Hiza. Haramaki +2",
+	body="Mpaca's Doublet",
+	--body="Hiza. Haramaki +2",
 	neck="Bathy Choker +1",
 	hands={ name="Hes. Gloves +3", augments={'Enhances "Invigorate" effect',}},
 	left_ear="Cryptic earring",

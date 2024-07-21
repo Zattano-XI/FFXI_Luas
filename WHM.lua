@@ -222,7 +222,7 @@ function init_gear_sets()
         main="C. Palug Hammer", --7
         --sub="Chanter's Shield", --3
         ammo="Impatiens", --2
-        head="Vanya Hood", --6 volte beret
+        head="Ebers Cap +3", --6 volte beret
         body="Inyanga Jubbah +2", --14
         --hands="Gende. Gages +1", --7
         legs="Ayanmo Cosciales +2", --8
@@ -272,7 +272,7 @@ function init_gear_sets()
         ear2="Ishvara Earring",
         body="Piety Bliaut +3",
         hands="Piety Mitts +3",
-		ring1="Shukuyu Ring",
+		ring1="Cornelia's Ring",
         ring2="Metamorph Ring +1",
         back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
         waist="Fotia Belt",
@@ -295,7 +295,6 @@ function init_gear_sets()
 		ear2="Regal Earring",
 		body="Nyame Mail",
 		Hands="Nyame Gauntlets",
-		ring1="Rufescent ring",
 		waist="Grunfeld Rope",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
@@ -732,7 +731,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
         main="Daybreak",
         sub="Genmei Shield",
         ammo="Staunch Tathlum",
-        head="Inyanga Tiara +2",
+        head="Bunzi's Hat",
         --hands="Raetic Bangles +1",
         feet="Inyan. Crackows +2",
         neck="Warder's Charm +1",
@@ -774,12 +773,12 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
     sets.engaged = {ammo="Amar Cluster",
         main="Yagrush",
         sub="Genmei Shield",
-        head="Ayanmo Zucchetto +2",
+        head="Bunzi's Hat",
         body="Ayanmo Corazza +2",
         hands="Bunzi's Gloves",
         legs="Aya. Cosciales +2",
-        feet="Aya. Gambieras +2",
-        neck="Lissome Necklace", --combatant's torque
+        feet="Bunzi's Sabots",
+        neck="Combatant's Torque", --combatant's torque
         ear1="Cessance Earring",
         ear2="Telos	Earring",
         left_ring={name="Chirich Ring +1", bag="wardrobe2"},

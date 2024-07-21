@@ -273,7 +273,7 @@ function get_sets()
 	neck="Loricate Torque +1",
 	left_ear="Etiolation Earring",
 	right_ear="Lugalbanda Earring",
-	body="Jhakri Robe +2",
+	body="Shamash Robe",
 	hands="Volte Gloves",
 	ring1={name="Stikini Ring +1", bag="wardrobe2"},
 	ring2={name="Stikini Ring +1", bag="wardrobe5"},
@@ -316,7 +316,7 @@ function get_sets()
 	head="Pixie Hairpin +1",
 	neck="Incanter's Torque",
 	left_ear=empty,
-	body="Jhakri Robe +2",
+	body="Shamash Robe",
 	hands="Volte Gloves",
 	left_ring="Metamorph Ring +1",
 	right_ring="Mephitas's Ring +1",
@@ -392,7 +392,7 @@ function get_sets()
 	ammo="Ghastly Tathlum +1",
 	hands="Volte Gloves",
 	back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-	legs="Jhakri Slops +2",
+	legs="Shamash Robe",
 	}
 
 end
