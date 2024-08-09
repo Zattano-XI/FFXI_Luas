@@ -4,6 +4,7 @@ require('vectors')
 send_command('lua l Skillchains')
 send_command('lua l Steps')
 AbysseaWS = S{"Red Lotus Blade","Seraph Blade","Cyclone","Energy Drain","Blade: Ei","Seraph Strike","Freezebite","Shadow of Death","Raiden Thrust","Tachi: Jinpu","Tachi: Koki","Earth Crusher","Sunburst"}
+MOVEMENT_SPEED_BUFFS =  S{"Bolter's Roll","Mazurka","quickening",} -- lowercase on purpose
 
 
 function get_sets()
@@ -15,19 +16,21 @@ function get_sets()
 	sets.ws = {}
 	sets.buff = {}
 	sets.TP = {}
+	sets.idle = {}
 	ammo = {}
-	sets.step = {}
+	sets.steps = {}
 	
 	ammo.melee = {ammo="Coiste Bodhar"}
 	ammo.ws = {ammo="Crepuscular Pebble"}
 	ammo.dt = {ammo="Crepuscular Pebble"}
-	--ammo.fc = {ammo="Sapience Orb"}
+	ammo.fc = {ammo="Sapience Orb"}
 	ammo.acc = {ammo="Yamarang"}
 	ammo.matk = {ammo="Pemphredo Tathlum"}
 	
-	sets.movement = {}--feet="Jute Boots +1"}
+	sets.movement = {feet="Tandava crackows"}
 	
 	sets.fc.base = { --27
+	ammo="Sapience Orb",
     head={ name="Herculean Helm", augments={'Mag. Acc.+12','"Fast Cast"+6','MND+7',}}, --13
 	neck="Baetyl Pendant", --4
 	left_ear="Loquac. Earring", --2
@@ -39,10 +42,11 @@ function get_sets()
     legs="Rawhide Trousers", --5
 	}
 	
-	sets.TP.index = {'Def', 'STP','Standard','High Acc'} --'Hybird',
+	sets.TP.index = {'Arebati', 'DT', 'STP', 'STP2', 'Aminon'}--'Standard','High Acc','Hybird',
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = {
+	ammo="Coiste Bodhar",
 	head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
 	neck="Etoile Gorget +2",
 	left_ear="Sherida Earring",
@@ -62,7 +66,8 @@ function get_sets()
 	head="Nyame Helm",
 	})
 	
-	sets.TP['Hybird'] = { --Crep. pebble --3
+	sets.TP['Hybird'] = { 
+	ammo="Crepuscular Pebble", --3
 	head="Nyame Helm",  --7
 	neck="Etoile Gorget +2",
 	left_ear="Sherida Earring",
@@ -78,21 +83,59 @@ function get_sets()
 	}
 	
 	sets.TP['STP'] = {
+	ammo="Coiste Bodhar",
 	head="Malignance chapeau",
 	neck="Etoile Gorget +2",
 	left_ear="Sherida Earring",
 	right_ear="Telos earring",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
-	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
-	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
+	--left_ring={name="Chirich Ring +1", bag="wardrobe6"},
+	left_ring="Moonlight Ring",
+	right_ring={name="Chirich Ring +1", bag="wardrobe8"},
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Malignance Tights",
 	feet="Maculele toe shoes +3",
 	}
+	
+	sets.TP['STP2'] = {
+	ammo="Coiste Bodhar",
+	head="Maculele Tiara +3",
+	neck="Etoile Gorget +2",
+	left_ear="Sherida Earring",
+	right_ear="Telos earring",
+	body="Gleti's Cuirass",
+	hands="Malignance Gloves",
+	left_ring={name="Chirich Ring +1", bag="wardrobe6"},
+	--right_ring={name="Chirich Ring +1", bag="wardrobe8"},
+	right_ring="Defending ring",
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	waist="Sailfi Belt +1",
+	legs="Malignance Tights",
+	feet="Maculele toe shoes +3",
+	}
+	
+	sets.TP['Arebati'] = {
+	ammo="Coiste Bodhar",
+	head="Malignance chapeau",
+	neck="Warder's charm +1",
+	left_ear="Sherida Earring",
+	right_ear="Telos earring",
+	body="Malignance Tabard",
+	hands="Malignance Gloves",
+	left_ring="Moonlight Ring",
+	--left_ring={name="Chirich Ring +1", bag="wardrobe6"},
+	--right_ring={name="Chirich Ring +1", bag="wardrobe8"},
+	right_ring="Shadow ring",
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	waist="Reiki yotai",
+	legs="Malignance Tights",
+	feet="Maculele toe shoes +3",
+	}
 
-	sets.TP['Def'] = {
+	sets.TP['DT'] = {
+	ammo="Crepuscular Pebble",
 	head="Nyame Helm",
 	--neck="Etoile Gorget +2",
 	neck="Warder's charm +1",
@@ -110,7 +153,39 @@ function get_sets()
 	feet="Nyame sollerets",
 	}	
 	
+	sets.TP['Aminon'] = {
+    ammo="Crepuscular Pebble",
+    head="Turms Cap",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    --hands="Gleti's Gauntlets",
+	hands="Regal gloves",
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
+    --feet="Macu. Toe Sh. +3",
+	feet="Gleti's Boots",
+    neck="Etoile Gorget +2",
+    waist="Plat. Mog. Belt",
+    left_ear="Dedition Earring",
+    right_ear="Odnowa Earring +1",
+    left_ring="Moonlight Ring",
+    right_ring="Shadow Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 	
+	sets.TP['Parrying'] = {
+    ammo="Staunch Tathlum +1",
+    head={ name="Nyame Helm", augments={'Path: B',}},
+    body="Adamantite Armor",
+    hands="Turms Mittens +1",
+    legs="Maculele Tights +1",
+    feet="Macu. Toe Sh. +3",
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    left_ear="Sherida Earring",
+    right_ear="Telos Earring",
+    left_ring="Chirich Ring +1",
+    right_ring="Chirich Ring +1",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	}
 	sets.enmity = {
 	neck="Unmoving Collar +1",
 	left_ear="Cryptic Earring",
@@ -132,16 +207,17 @@ function get_sets()
 	sets.ja['No Foot Rise'] = {body="Horos Casaque +3",}
 	
 	sets.step = {
-	head="Maxixi Tiara +2",
-	--body="Maxixi Casaque +3",
-	body="Malignance tabard",
-	hands="Malignance gloves",
+	ammo="Yamarang",
+	head="Maxixi Tiara +3",
+	body="Gleti's Cuirass",
+	--body="Malignance tabard",
+	hands="Maxixi Bangles +3",
 	legs="Malignance Tights",
 	feet="Horos T. Shoes +3",
 	neck="Etoile Gorget +2",
-	waist="Olseni Belt",
-	left_ear="Telos Earring",
-	right_ear="Mache Earring +1",
+	waist="Kentarch Belt +1",
+	left_ear="Odr Earring",
+	right_ear="Maculele Earring +1",
 	left_ring="Moonlight ring",
 	right_ring="Defending Ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
@@ -177,46 +253,114 @@ function get_sets()
 	sets.ja['Striking Flourish'] = {body="Maculele casaque +1"}
 	
 	sets.ja.samba = {
-	head="Maxixi Tiara +2",
+	head="Maxixi Tiara +3",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.ja.jig = {legs="Horos Tights +3",}
 	
 	sets.ja.waltz = {
-    ammo="Yamarang",
+    ammo="Yamarang", --5%
     head="Nyame helm",
-    body="Maxixi Casaque +3",
+    body="Maxixi Casaque +3",  --19%, 8% received
     hands="Nyame gauntlets",
-    legs="Dashing Subligar",
+    legs="Dashing Subligar", --10%
     feet="Maculele Toe Shoes +3",
-    neck={ name="Etoile Gorget +2", augments={'Path: A',}},
+    neck={ name="Etoile Gorget +2", augments={'Path: A',}}, --10%
     waist="Flume belt +1",
     left_ear="Genmei Earring",
     right_ear="Odnowa Earring +1",
-    --left_ring="Gelatinous Ring +1",
     right_ring="Defending Ring",
-    --back={ name="Toetapper Mantle", augments={'"Store TP"+3','"Dual Wield"+2','"Rev. Flourish"+28',}},
+    --back="Toetapper Mantle", --5
 	}
 	
-	sets.idle = sets.TP['Def']
-	sets.idle2 = {
-	head="Oce. Headpiece +1",
+	sets.ja['Jump'] ={
+	ammo="Coiste Bodhar",
+	head="Maculele Tiara +3",
+	neck="Etoile Gorget +2",
+	left_ear="Sherida Earring",
+	right_ear="Telos earring",
+	body="Malignance Tabard",
+	hands="Malignance Gloves",
+	left_ring={name="Chirich Ring +1", bag="wardrobe6"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe8"},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	waist="Kentarch Belt +1",
+	legs="Malignance Tights",
+	feet="Maculele toe shoes +3",
+	}
+	
+	sets.ja['High Jump'] = sets.ja['Jump']
+	sets.ja['Super Jump'] = sets.ja['Jump']
+	
+	sets.idle.index = {'Regain','DT','Regen','AminonIdle'} 
+	idle_ind = 1
+	
+	sets.idle['DT'] = {
+	ammo="Crepuscular Pebble",
+	head="Nyame Helm",
+	--neck="Etoile Gorget +2",
+	neck="Warder's charm +1",
+	left_ear="Sherida Earring",
+	right_ear="Telos earring",
+	body="Nyame mail",
+	hands="Nyame gauntlets",
+	left_ring="Moonlight Ring",
+	right_ring="Shadow ring",
+	--right_ring="Moonlight Ring",
+	--right_ring="Defending ring",
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	waist="Sailfi Belt +1",
+	legs="Nyame flanchard",
+	feet="Nyame sollerets",
+	}
+	
+	sets.idle['Regen'] = {
+	head="Turms cap",
 	neck="Bathy choker +1",
 	left_ear="Sherida Earring",
     right_ear="Infused Earring",
     body="Turms harness",
+	hands="Turms Mittens +1",
 	right_ring="Paguroidea Ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
     legs="Turms subligar",
+	feet="Tandava crackows",
+	}
+	
+	sets.idle['Regain'] = set_combine(sets.idle['DT'],{
+	head="Turms cap",
+	body="Gleti's Cuirass",
+	hands="Gleti's Gauntlets",
+	legs="Gleti's Breeches",
+	--feet="Maculele Toe Shoes +3",
+	feet="Tandava crackows",
+	})
+	
+	sets.idle['AminonIdle'] = {
+    ammo="Crepuscular Pebble",
+    head="Turms Cap",
+    body={ name="Gleti's Cuirass", augments={'Path: A',}},
+    --hands="Gleti's Gauntlets",
+	hands="Regal gloves",
+    legs={ name="Gleti's Breeches", augments={'Path: A',}},
+    --feet="Macu. Toe Sh. +3",
+	feet="Gleti's Boots",
+    neck="Etoile Gorget +2",
+    waist="Plat. Mog. Belt",
+    left_ear="Dedition Earring",
+    right_ear="Odnowa Earring +1",
+    left_ring="Moonlight Ring",
+    right_ring="Shadow Ring",
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.phalanx = {
-		head="Herculean Helm",
-		body="Herculean Vest",
-		hands="Herculean Gloves",
-		legs="Herculean Trousers",
-		feet="Herculean Boots",
+	head={ name="Taeon Chapeau", augments={'Accuracy+16 Attack+16','"Counter"+3','Phalanx +2',}},
+    body={ name="Herculean Vest", augments={'VIT+7','Weapon Skill Acc.+14','Phalanx +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
+	hands={ name="Herculean Gloves", augments={'STR+4','Weapon Skill Acc.+15','Phalanx +2','Accuracy+18 Attack+18',}},
+	legs={ name="Herculean Trousers", augments={'Pet: DEX+2','AGI+8','Phalanx +4',}},
+	feet={ name="Taeon Boots", augments={'Accuracy+14','Weapon Skill Acc.+16','Phalanx +2',}},
 	}
 	
 	sets.low_hp = {
@@ -245,13 +389,15 @@ function get_sets()
 	
 	------Weaponskills------
 	sets.ws.common = {
-	head="Nyame Helm",
+	--head="Nyame Helm",
+	head="Maculele Tiara +3",
 	neck="Etoile Gorget +2",
-	left_ear="Sherida Earring",
+	left_ear="Odr Earring",
+	right_ear="Maculele earring +1",
 	body="Nyame mail",
 	--hands="Maxixi Bangles +3",
 	hands="Nyame gauntlets",
-	left_ring="Regal Ring",
+	left_ring="Epaminondas's Ring",
 	right_ring="Cornelia's ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	waist="Fotia Belt",
@@ -265,6 +411,7 @@ function get_sets()
 	--head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
 	neck="Fotia gorget",
 	left_ear="Odr Earring",
+    --body="Meg. Cuirie +2",
 	hands="Nyame gauntlets",
     --hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 	right_ring="Mummu ring",
@@ -272,6 +419,7 @@ function get_sets()
 	})
 	
 	sets.ws["Aeolian Edge"] = set_combine(sets.ws.common, {
+	ammo="Pemphredo Tathlum",
 	hands="Nyame gauntlets",
 	neck="Baetyl pendant",
 	left_ear="Friomisi Earring",
@@ -287,26 +435,39 @@ function get_sets()
 	})
 	
 	sets.ws["Rudra's Storm"] = set_combine(sets.ws.common, {
-	ammo="Coiste Bodhar",
+	ammo="Crepuscular Pebble",
 	head="Maculele Tiara +3",
-	neck="Loricate torque +1",
+	--neck="Loricate torque +1",
+	--hands="Maxixi Bangles +3",
 	left_ear="Odr Earring",
 	--right_ring="Ilabrat Ring",
 	--left_ring="Moonlight Ring",
 	--right_ring="Regal Ring",
-	waist="Grunfeld Rope",
+	waist="Kentarch belt +1",
+	})
+	
+	sets.ws["Ruthless Stroke"] = set_combine(sets.ws.common, {
+	ammo="Crepuscular Pebble",
+	head="Maculele Tiara +3",
+	--neck="Loricate torque +1",
+	--hands="Maxixi Bangles +3",
+	left_ear="Sherida earring",
+	--left_ear="Odr Earring",
+	--right_ring="Ilabrat Ring",
+	--left_ring="Moonlight Ring",
+	--right_ring="Regal Ring",
+	waist="Kentarch belt +1",
 	})
 	
 	sets.ws["Pyrrhic Kleos"] = set_combine(sets.ws.common, {
-	--body="Meg. Cuirie +2", --NO!
+	body="Gleti's Cuirass",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-	waist="Grunfeld Rope",
 	})
 	
 	sets.ws["Shark Bite"] = set_combine(sets.ws.common, {
 	left_ear="Odr Earring",
 	hands="Nyame Gauntlets",
-	waist="Grunfeld Rope",
+	waist="Kentarch belt +1",
 	feet="Nyame Sollerets"
 	})
 end
@@ -342,11 +503,13 @@ function precast(spell)
 		--if (spell.name == "Provoke" or spell.name == "Animated Flourish") and player.equipment.range == 'empty' then
 		--	equip(ammo.fc)
 		--end
-	elseif string.find(spell.english,'Waltz') then
+	elseif string.find(spell.english,'Waltz') and buffactive['Saber Dance'] then		
+			send_command('cancel Saber Dance')
+			cast_delay(0.2)
 		equip(sets.ja.waltz)
-		if spell.target.type == 'SELF' then
-			--equip({head="Mummu Bonnet +2",})
-		end
+		--if spell.target.type == 'SELF' then
+		--	equip({head="Mummu Bonnet +2",})
+		--end
 	elseif string.find(spell.english,'Jig') then
 		equip(sets.ja.jig)
 	elseif string.find(spell.english,'Samba') then
@@ -410,7 +573,7 @@ function precast(spell)
 				equip(sets.ws.common)
 			end
 			if buffactive["Climactic Flourish"] then
-				equip({head="Maculele Tiara +3"})
+				equip({head="Maculele Tiara +3",ammo="Charis Feather"})
 			elseif buffactive["Striking Flourish"] then
 				equip({body="Maculele casaque +1"})
 			end
@@ -442,16 +605,16 @@ end
 function aftercast(spell)
 	if player.status == 'Engaged' then
 		equip(sets.TP[sets.TP.index[TP_ind]])
-		if check_facing() == true and (sets.TP[sets.TP.index[TP_ind]] ~= sets.TP['Hybrid'] or sets.TP[sets.TP.index[TP_ind]] ~= sets.TP['DT']) then
-			--equip({feet="Horos Toe Shoes +3"})
-		end
-	elseif player.status == "Idle" then
+		--if check_facing() == true and (sets.TP[sets.TP.index[TP_ind]] ~= sets.TP['Hybrid'] or sets.TP[sets.TP.index[TP_ind]] ~= sets.TP['DT']) then
+		--	equip({feet="Horos Toe Shoes +3"})
+		--end
+	else
 		if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
 			equip(sets.TP['DT'],sets.movement)
-		elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['Hybird'] then
-			equip(sets.TP['Hybird'],sets.movement)
+		--elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['Hybird'] then
+		--	equip(sets.TP['Hybird'],sets.movement)
 		else
-			equip(sets.idle,sets.movement)
+			equip(sets.idle[sets.idle.index[idle_ind]])--,sets.movement
 		end
 	end
 	if player.equipment.range == 'empty' then
@@ -465,13 +628,13 @@ end
 
 function status_change(new,old)
 	if new == 'Idle' then
-		equip(sets.idle)
+		equip(sets.idle[sets.idle.index[idle_ind]])
 		if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
 			equip(sets.TP['DT'],sets.movement)
-		elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['Hybird'] then
-			equip(sets.TP['Hybird'],sets.movement)
-		else
-			equip(sets.idle,sets.movement)
+		--elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['Hybird'] then
+		--	equip(sets.TP['Hybird'],sets.movement)
+		--else
+		--	equip(sets.idle[sets.idle.index[idle_ind]])--,sets.movement
 		end
 	elseif new == 'Engaged' then
 		equip(sets.TP[sets.TP.index[TP_ind]])
@@ -495,6 +658,14 @@ function buff_change(n, gain, buff_table)
 		else
 			send_command('@input /p Doom - Off')
 		end
+	elseif MOVEMENT_SPEED_BUFFS:contains(name) then
+		if gain then
+			equip(sets.movement)
+		else
+			if player.status == 'Engaged' then
+				equip(sets.TP[sets.TP.index[TP_ind]])
+			end
+		end
 	end
 end
 
@@ -504,32 +675,42 @@ function self_command(command)
 		if TP_ind > #sets.TP.index then TP_ind = 1 end
 		windower.add_to_chat(1,'<----- TP Set changed to '..sets.TP.index[TP_ind]..' ----->')
 		equip(sets.TP[sets.TP.index[TP_ind]])
-		if check_facing() == true and sets.TP[sets.TP.index[TP_ind]] ~= sets.TP['DT'] and player.status == "Engaged" then
-			--equip({feet="Horos Toe Shoes +3"})
-		end
+		--if check_facing() == true and sets.TP[sets.TP.index[TP_ind]] ~= sets.TP['DT'] and player.status == "Engaged" then
+		--	equip({feet="Horos Toe Shoes +3"})
+		--end
 		if player.status == 'Idle' then
-			equip(sets.movement)
+			--equip(sets.movement)
+			equip(sets.idle[sets.idle.index[idle_ind]])
 		end
+	end
+	if command == 'toggle idle set' then
+		idle_ind = idle_ind +1
+		if idle_ind > #sets.idle.index then idle_ind = 1 end
+		windower.add_to_chat(1,'<----- idle Set changed to '..sets.idle.index[idle_ind]..' ----->')
+		equip(sets.idle[sets.idle.index[idle_ind]])
 	end
 	if command == 'reequip' then
 		equip(sets.TP[sets.TP.index[TP_ind]])
 	end
 end
 
-
 send_command('bind !q gs c toggle TP set') -- Hit alt+q, toggles the sets
 send_command('bind !w gs c toggle Buff set') -- Hit alt+w, toggles the sets
+send_command('bind !e gs c toggle idle set') -- Hit alt+e, toggles the sets
 send_command('alias 500hp gs equip low_hp;wait 1; gs equip high_hp')
 send_command('alias food input /item "Grape Daifuku" <me>')
-send_command('alias idle gs equip sets.idle')
 send_command('alias mount input /mount Fenrir')
-send_command('alias reequip gs equip ')
-
+send_command('alias reequip gs c reequip;wait 1; input /lockstyle on') -- Hit alt+a
+send_command('alias trust exec trust.txt')
+send_command('alias pana input /item "Panacea" <me>')
+send_command('alias jig input /ja "Spectral Jig" <me>')
+send_command('equip(sets.idle[\'Regain\'],sets.movement)')
 
 function file_unload()
     send_command('unbind !q')
 	send_command('unbind !w')
-	--send_command('lua u Skillchains')
+	send_command('unbind !e')
+	send_command('lua u Skillchains')
 	send_command('lua u Steps')
 end
 
