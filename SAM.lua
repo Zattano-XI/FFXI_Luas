@@ -29,7 +29,7 @@ function get_sets()
 	ammo.DT = {ammo="Staunch Tathlum +1"}
 	ammo.fc = {ammo="Sapience Orb"}
 	ammo.macc = {ammo="Phemphredo Tathlum"}
-	ammo.shooty = {ammo="Yoichi's Arrow"}
+	ammo.shooty = {ammo="Eminent Arrow"}
 	
 	sets.movement = {feet="Danzo Sune-Ate"}
 	
@@ -61,18 +61,22 @@ function get_sets()
 	
 	sets.TP['Standard'] = {
 	--ammo="Coiste Bodhar",
-	head="Flamma Zucchetto +2",
+	head="Mpaca's Cap", --7pdt
+	--head="Flamma Zucchetto +2",
 	neck="Samurai's Nodowa +2",
 	left_ear="Schere Earring",
 	right_ear="Kasuga Earring +2",
-	body="Tatenashi Haramaki +1",
-	hands="Tatenashi Gote +1",
+	body="Mpaca's Doublet",
+	--body="Tatenashi Haramaki +1",
+	hands="Wakido Kote +3",
+	--hands="Tatenashi Gote +1",
 	left_ring="Niqmaddu Ring",
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}, --5dt
 	waist="Sailfi Belt +1",
-	legs="Tatenashi Haidate +1",
-	feet="Tatenashi Sune-Ate +1"
+	legs="Kasuga Haidate +3", --10
+	--legs="Tatenashi Haidate +1",
+	feet="Mpaca's Boots"
 	--feet="Ryuo Sune-Ate +1"
 	}
 	
@@ -91,9 +95,7 @@ function get_sets()
         ring1="Niqmaddu Ring", 
         ring2="Defending Ring", --10dt
         --back=Smertrios.TP, 5dt
-        waist="Ioskeha Belt +1",
-        legs="Kasuga Haidate +3", --Ryuo +1
-        feet="Tatenashi Sune-ate +1" --6pdt
+        waist="Ioskeha Belt +1",        
 		--15dt, 23pdt
 })
 	
@@ -174,7 +176,7 @@ function get_sets()
 	head="Nyame Helm",
 	neck="Samurai's Nodowa +2",
 	--left_ear="Thrud Earring",
-	left_ear="Schere Earring", --Mboze
+	left_ear="Schere Earring", 
 	right_ear="Kasuga Earring +2",
 	body="Nyame Mail",
 	hands="Kasuga Kote +3",
@@ -234,14 +236,15 @@ function get_sets()
 	sets.ws['Tachi: Yukikaze'] = set_combine(sets.ws['Tachi: Ageha'], {})
 	
 	sets.ws['Empyreal Arrow'] = set_combine(sets.ws.common, {
-	head="Nyame Helm",
-	body="Nyame Mail",
-	hands="Nyame Gauntlets",
+		ammo="Eminent Arrow",
+	left_ear="Thrud Earring",
 	left_ring="Regal Ring",
-	feet="Nyame Sollerets"
 	})
 	
 	sets.ws['Namas Arrow'] = set_combine(sets.ws['Empyreal Arrow'], {})
+	sets.ws['Refulgent Arrow'] = set_combine(sets.ws['Empyreal Arrow'], {})
+	sets.ws['Sidewinder'] = set_combine(sets.ws['Empyreal Arrow'], {})
+	sets.ws['Apex Arrow'] = set_combine(sets.ws['Empyreal Arrow'], {})
 	
 	sets.ws['Tachi: Jinpu'] = set_combine(sets.ws['Empyreal Arrow'], {
 	right_ear="Kasuga Earring +2",
@@ -347,7 +350,7 @@ function get_sets()
 	neck="Unmoving Collar +1",
 	left_ear="Cryptic Earring",
 	right_ear="Friomisi Earring",
-	left_ring="Petrov Ring",
+	left_ring="Pernicious Ring",
 	right_ring="Begrudging Ring",
 	back="Reiki Cloak",
 	waist="Chaac Belt",
@@ -365,12 +368,17 @@ function get_sets()
 	--waist="Acerbic Sash +1", --8
 	}
 	
-	--Snapshot > Rapid Shot
-	sets.precast.RA = {
+	--Snapshot > Rapid Shot [
+	--[[sets.precast.RA = [{
+	head="Volte Tiara",
+	body="Volte Harness",
 	hands="Volte Mittens",
 	left_ring="Crepuscular Ring",
 	waist="Yemaya Belt",
+	legs="Volte Tights",
+	feet="Volte Spats",
 	}
+	]] --This is not ideal, but for the off-chance it's needed...
 	
 	--r.acc/stp/crit/agi/recycle
 	sets.midcast.RA = {
@@ -455,7 +463,7 @@ function precast(spell)
 			--add_to_chat(123, spell.name..' Canceled: [Out of Range]')
 		elseif player.tp >= 1000 then
 			if sets.ws[spell.name] then
-				if player.equipment.range ~= 'empty' and player.equipment.ammo == 'empty' then
+				if player.equipment.range ~= 'Yoichinoyumi' and player.equipment.ammo == 'empty' then
 					equip(ammo.shooty)
 				end
 				if sets.mode.index[mode_ind] == 'Capped' and sets.ws[spell.name].Capped ~= nil then
@@ -543,7 +551,7 @@ function aftercast(spell)
 	if player.status == 'Engaged' and player.equipment.main == "Soboro Sukehiro" then
 		disable('range','ammo','head','neck','left_ear','right_ear','body','hands','left_ring','right_ring','back','waist','legs','feet')
 	elseif player.status == "Engaged" and (player.equipment.main ~= "Soboro Sukehiro" or player.equipment.main ~= "Quint Spear") then
-		enable('range','ammo','head','neck','left_ear','right_ear','body','hands','left_ring','right_ring','back','waist','legs','feet')
+		--enable('range','ammo','head','neck','left_ear','right_ear','body','hands','left_ring','right_ring','back','waist','legs','feet')
 		equip(sets.TP[sets.TP.index[TP_ind]])
 		--if (spell.name == 'Seigan' and buffactive['Hasso']) or buffactive['Seigan'] then
 		--	equip({hands="Tatenashi Gote +1"})
@@ -551,7 +559,7 @@ function aftercast(spell)
 		--	equip({hands="Wakido Kote +3"})
 		--end
 	elseif (player.status == 'Idle' and (player.equipment.main ~= "Soboro Sukehiro" or player.equipment.main ~= "Quint Spear")) or player.status == "Idle" then
-		enable('range','ammo','head','neck','left_ear','right_ear','body','hands','left_ring','right_ring','back','waist','legs','feet')
+		--enable('range','ammo','head','neck','left_ear','right_ear','body','hands','left_ring','right_ring','back','waist','legs','feet')
 		equip(sets.idle)
 		if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
 			equip(sets.TP['DT'],sets.movement)
@@ -581,7 +589,7 @@ end
 
 function status_change(new,old)
 	if new == 'Idle' and player.equipment.main ~= "Soboro Sukehiro" or player.status == "Idle" then
-		enable('range','ammo','head','neck','left_ear','right_ear','body','hands','left_ring','right_ring','back','waist','legs','feet')
+		--enable('range','ammo','head','neck','left_ear','right_ear','body','hands','left_ring','right_ring','back','waist','legs','feet')
 		equip(sets.idle)
 		if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
 			equip(sets.TP['DT'],sets.movement)
@@ -709,14 +717,14 @@ function self_command(command)
 end
 
 function file_unload()
-    send_command('unbind !`')
-	send_command('unbind !q')
-	send_command('unbind !w')
-	send_command('unbind !e')
-	send_command('unbind !r')
-	send_command('unbind !a')
-	send_command('unbind !s')
-	send_command('unbind !p')
+    send_command('unbind @`')
+	send_command('unbind @q')
+	send_command('unbind @w')
+	send_command('unbind @e')
+	send_command('unbind @r')
+	send_command('unbind @a')
+	send_command('unbind @s')
+	send_command('unbind @p')
 	send_command('unbind fudo')
 	send_command('unbind jinpu')
 end

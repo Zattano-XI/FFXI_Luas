@@ -264,7 +264,7 @@ function get_sets()
 		left_ear="Cryptic Earring",
 		--right_ear="Trux Earring",
 		body="Emet Harness +1",
-		--left_ring="Petrov Ring",
+		--left_ring="Eihwaz Ring",
 		--right_ring="Pernicious Ring",
 		--back="Earthcry Mantle",
 		--waist="Chaac Belt",

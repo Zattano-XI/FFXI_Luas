@@ -83,7 +83,7 @@ function get_sets()
 	left_ear="Cryptic Earring", --4
 	body={name="Souveran cuirass +1",priority=14}, --20
 	hands={name="Souveran Handschuhs +1",priority=15}, --9
-	left_ring="Petrov Ring", --4
+	left_ring="Pernicious Ring", --5
 	right_ring="Apeile Ring +1", --5
 	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Damage taken-5%',},priority=10},
 	waist={name="Creed Baudrier",priority=9}, --5
@@ -168,7 +168,7 @@ function get_sets()
 	sets.divinedmg = {
 	main={name="Sakpata's Sword",priority=13}, --100
 	sub={name="Forfend +1",priority=9}, --22
-	ammo="Ghastly Tathlum +1",
+	ammo="Pemphredo Tathlum",
 	neck="Baetyl Pendant",
 	left_ear="Dignitary's Earring",
 	right_ear="Friomisi Earring",
@@ -269,7 +269,7 @@ function get_sets()
 	})
 	
 	sets.ws['Aeolian Edge'] = set_combine(sets.ws.common, {
-	ammo="Ghastly Tathlum +1",
+	ammo="Pemphredo Tathlum",
 	neck="Sibyl Scarf",
 	left_ring="Metamorph Ring +1",
 	waist="Orpheus's Sash",

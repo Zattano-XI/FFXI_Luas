@@ -301,7 +301,7 @@ function init_gear_sets()
 	})
 	
     sets.precast.WS['Flash Nova'] = set_combine(sets.precast.WS, {
-        ammo="Ghastly Tathlum +1",
+        ammo="Pemphredo Tathlum",
         body="Cohort Cloak +1",
         --legs="Kaykaus Tights +1",
         })
@@ -590,7 +590,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
     sets.midcast['Divine Magic'] = {
         main="Yagrush",
         sub="Ammurapi Shield",
-        ammo="Ghastly Tathlum +1",
+        ammo="Pemphredo Tathlum",
         head="Theophany Cap +3",
         body="Theo. Bliaut +3",
         hands="Piety Mitts +3",
@@ -782,7 +782,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
         ear1="Cessance Earring",
         ear2="Telos	Earring",
         left_ring={name="Chirich Ring +1", bag="wardrobe2"},
-        ring2="Petrov Ring",
+        right_ring={name="Chirich Ring +1", bag="wardrobe5"},
         back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
         waist="Windbuffet Belt +1",
         }

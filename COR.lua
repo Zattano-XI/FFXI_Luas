@@ -290,6 +290,22 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	feet="Nyame Sollerets",
 	}
 	
+	sets.midcast["Dark Magic"] = {
+	ammo="Living Bullet",
+    head="Chass. Tricorne +3",
+    body="Chasseur's Frac +3",
+    hands="Chasseur's Gants +3",
+    legs="Chas. Culottes +3",
+    feet="Chass. Bottes +3",
+    neck={ name="Comm. Charm +2", augments={'Path: A',}},
+    waist="K. Kachina Belt +1",
+    left_ear="Digni. Earring",
+    right_ear="Crep. Earring",
+    left_ring="Crepuscular Ring",
+    right_ring="Kishar Ring",
+    back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
+	}
+	
 	sets.ws.common = {
 	head="Nyame Helm",
 	neck="Fotia Gorget",
@@ -576,6 +592,7 @@ function midcast(spell)
 		else
 			equip(sets.midcast.RA)
 		end
+	
 	end
 	if (spell.name == 'Sneak' or spell.english == 'Spectral Jig' or spell.english:contains('Monomi')) and spell.target.name == player.name and buffactive["Sneak"] then
 		send_command('cancel Sneak')
@@ -585,6 +602,17 @@ function midcast(spell)
 		elseif buffactive['Copy Image (2)'] then
 			windower.send_command('wait 1;cancel 444')
 		end
+	end
+	if spell.action_type == 'Magic' and not spell.type:contains('Trust') then
+		if sets.midcast[spell.name] then
+		weathercheck(spell.element,sets.midcast[spell.name])
+		elseif spell.skill == 'Dark Magic' and not spell.english:contains("Tractor") then
+			if spell.english:startswith('Drain') or spell.english:startswith('Aspir') then
+				weathercheck(spell.element,sets.midcast.drain)
+			else
+				equip(sets.midcast['Dark Magic'])
+			end
+		end	
 	end
 end
 

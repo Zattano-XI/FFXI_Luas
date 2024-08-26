@@ -600,7 +600,8 @@ function init_gear_sets()
     sets.midcast.Helix = {
 		main="Bunzi's rod",
 		sub="Ammurapi shield",
-        ammo="Ghastly tathlum +1",
+        --ammo="Ghastly tathlum +1",
+		ammo="Pemphredo Tathlum",
 		--head="Arbatel bonnet +3",
 		head="Agwu's Cap",
 		--body="Arbatel gown +3",

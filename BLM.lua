@@ -173,7 +173,7 @@ function get_sets()
 	nuke_ind = 1 --Free set is the Default
 	
 	sets.nuke['Free'] = {
-	ammo="Ghastly Tathlum +1",
+	ammo="Pemphredo Tathlum",
 	head=empty,
 	neck="Baetyl Pendant",
 	left_ear="Regal Earring",
@@ -389,7 +389,7 @@ function get_sets()
 	sets.vagary = {
 	main="Marin Staff +1",
 	sub="Enki Strap",
-	ammo="Ghastly Tathlum +1",
+	ammo="Pemphredo Tathlum",
 	hands="Volte Gloves",
 	back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	legs="Shamash Robe",

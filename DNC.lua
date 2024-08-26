@@ -27,7 +27,7 @@ function get_sets()
 	ammo.acc = {ammo="Yamarang"}
 	ammo.matk = {ammo="Pemphredo Tathlum"}
 	
-	sets.movement = {feet="Tandava crackows"}
+	sets.movement = {feet="Skadi's Jambeaux +1"}
 	
 	sets.fc.base = { --27
 	ammo="Sapience Orb",
@@ -56,7 +56,7 @@ function get_sets()
 	hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 	left_ring="Gere Ring",
 	right_ring="Epona's Ring",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Meg. Chausses +2",
 	feet={ name="Herculean Boots", augments={'Accuracy+20','"Triple Atk."+3','Attack+9',}},
@@ -76,7 +76,7 @@ function get_sets()
 	hands="Malignance Gloves",  --5
 	left_ring="Gere Ring",
 	right_ring="Defending ring", --10
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},  --5
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Malignance Tights", --7
 	feet="Malignance Boots",  --4
@@ -90,10 +90,10 @@ function get_sets()
 	right_ear="Telos earring",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
-	--left_ring={name="Chirich Ring +1", bag="wardrobe6"},
+	--left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 	left_ring="Moonlight Ring",
-	right_ring={name="Chirich Ring +1", bag="wardrobe8"},
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Malignance Tights",
 	feet="Maculele toe shoes +3",
@@ -107,10 +107,10 @@ function get_sets()
 	right_ear="Telos earring",
 	body="Gleti's Cuirass",
 	hands="Malignance Gloves",
-	left_ring={name="Chirich Ring +1", bag="wardrobe6"},
-	--right_ring={name="Chirich Ring +1", bag="wardrobe8"},
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	--right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	right_ring="Defending ring",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Malignance Tights",
 	feet="Maculele toe shoes +3",
@@ -125,10 +125,10 @@ function get_sets()
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
 	left_ring="Moonlight Ring",
-	--left_ring={name="Chirich Ring +1", bag="wardrobe6"},
-	--right_ring={name="Chirich Ring +1", bag="wardrobe8"},
+	--left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	--right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	right_ring="Shadow ring",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Reiki yotai",
 	legs="Malignance Tights",
 	feet="Maculele toe shoes +3",
@@ -147,7 +147,7 @@ function get_sets()
 	right_ring="Shadow ring",
 	--right_ring="Moonlight Ring",
 	--right_ring="Defending ring",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Nyame flanchard",
 	feet="Nyame sollerets",
@@ -168,7 +168,7 @@ function get_sets()
     right_ear="Odnowa Earring +1",
     left_ring="Moonlight Ring",
     right_ring="Shadow Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.TP['Parrying'] = {
@@ -182,9 +182,9 @@ function get_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
     right_ear="Telos Earring",
-    left_ring="Chirich Ring +1",
-    right_ring="Chirich Ring +1",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 	sets.enmity = {
 	neck="Unmoving Collar +1",
@@ -217,10 +217,10 @@ function get_sets()
 	neck="Etoile Gorget +2",
 	waist="Kentarch Belt +1",
 	left_ear="Odr Earring",
-	right_ear="Maculele Earring +1",
+	right_ear="Maculele Earring +2",
 	left_ring="Moonlight ring",
 	right_ring="Defending Ring",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.ja['Quickstep'] = sets.step
@@ -254,7 +254,7 @@ function get_sets()
 	
 	sets.ja.samba = {
 	head="Maxixi Tiara +3",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.ja.jig = {legs="Horos Tights +3",}
@@ -282,12 +282,12 @@ function get_sets()
 	right_ear="Telos earring",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
-	left_ring={name="Chirich Ring +1", bag="wardrobe6"},
-	right_ring={name="Chirich Ring +1", bag="wardrobe8"},
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Kentarch Belt +1",
 	legs="Malignance Tights",
-	feet="Maculele toe shoes +3",
+	feet="Maculele Toe shoes +3",
 	}
 	
 	sets.ja['High Jump'] = sets.ja['Jump']
@@ -309,7 +309,7 @@ function get_sets()
 	right_ring="Shadow ring",
 	--right_ring="Moonlight Ring",
 	--right_ring="Defending ring",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Nyame flanchard",
 	feet="Nyame sollerets",
@@ -323,7 +323,7 @@ function get_sets()
     body="Turms harness",
 	hands="Turms Mittens +1",
 	right_ring="Paguroidea Ring",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
     legs="Turms subligar",
 	feet="Tandava crackows",
 	}
@@ -352,7 +352,7 @@ function get_sets()
     right_ear="Odnowa Earring +1",
     left_ring="Moonlight Ring",
     right_ring="Shadow Ring",
-    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
+    back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.phalanx = {
@@ -393,7 +393,7 @@ function get_sets()
 	head="Maculele Tiara +3",
 	neck="Etoile Gorget +2",
 	left_ear="Odr Earring",
-	right_ear="Maculele earring +1",
+	right_ear="Maculele earring +2",
 	body="Nyame mail",
 	--hands="Maxixi Bangles +3",
 	hands="Nyame gauntlets",
@@ -575,7 +575,7 @@ function precast(spell)
 			if buffactive["Climactic Flourish"] then
 				equip({head="Maculele Tiara +3",ammo="Charis Feather"})
 			elseif buffactive["Striking Flourish"] then
-				equip({body="Maculele casaque +1"})
+				equip({body="Maculele Casaque +1"})
 			end
 		end
 	elseif spell.action_type == 'Magic' then
@@ -694,11 +694,11 @@ function self_command(command)
 	end
 end
 
-send_command('bind !q gs c toggle TP set') -- Hit alt+q, toggles the sets
-send_command('bind !w gs c toggle Buff set') -- Hit alt+w, toggles the sets
-send_command('bind !e gs c toggle idle set') -- Hit alt+e, toggles the sets
+send_command('bind @s gs c toggle TP set') -- Hit alt+q, toggles the sets
+send_command('bind @w gs c toggle Buff set') -- Hit alt+w, toggles the sets
+send_command('bind @e gs c toggle idle set') -- Hit alt+e, toggles the sets
 send_command('alias 500hp gs equip low_hp;wait 1; gs equip high_hp')
-send_command('alias food input /item "Grape Daifuku" <me>')
+send_command('alias food input /item "Grape Daifuku +1" <me>')
 send_command('alias mount input /mount Fenrir')
 send_command('alias reequip gs c reequip;wait 1; input /lockstyle on') -- Hit alt+a
 send_command('alias trust exec trust.txt')
@@ -707,10 +707,10 @@ send_command('alias jig input /ja "Spectral Jig" <me>')
 send_command('equip(sets.idle[\'Regain\'],sets.movement)')
 
 function file_unload()
-    send_command('unbind !q')
-	send_command('unbind !w')
-	send_command('unbind !e')
-	send_command('lua u Skillchains')
+    send_command('unbind @q')
+	send_command('unbind @w')
+	send_command('unbind @e')
+	--send_command('lua u Skillchains')
 	send_command('lua u Steps')
 end
 
@@ -731,6 +731,6 @@ function set_style(sheet)
 end
  
 --Page, Book--
-set_macros(10,10)
+set_macros(1,19)
 --Use the Lockstyle Number--
-set_style(009)
+set_style(019)

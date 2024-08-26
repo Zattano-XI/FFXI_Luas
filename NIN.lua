@@ -477,7 +477,7 @@ function init_gear_sets()
     sets.midcast.Utsusemi = set_combine(sets.midcast.SpellInterrupt, {feet="Hattori Kyahan +1", back=gear.NIN_FC_Cape,})
 
     sets.midcast.ElementalNinjutsu = {
-        ammo="Ghastly Tathlum +1",
+        ammo="Pemphredo Tathlum",
         head="Mochi. Hatsuburi +3",
         body="Samnuha Coat",
         hands="Leyline Gloves",

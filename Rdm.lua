@@ -131,7 +131,7 @@ function get_sets()
 	sets.nuke['Free'] = {
 	main="Bunzi's Rod",
 	sub="Ammurapi Shield",
-	ammo="Ghastly Tathlum +1",
+	ammo="Pemphredo Tathlum",
 	head="Lethargy Chappel +3",
 	neck="Sibyl Scarf",
 	left_ear="Regal Earring",
@@ -167,7 +167,7 @@ function get_sets()
     left_ear="Crep. Earring", --6 STP
     right_ear="Telos Earring", --5 STP
     left_ring="Crepuscular Ring", --6 STP
-    right_ring="Petrov Ring", --5 STP
+    right_ring="Chirich Ring +1", --5 STP
 	})
 	
 	sets.midcast.raise = set_combine(sets.midcast.conservemp, { --30(base)(8JP) +51  +21 haste
@@ -506,7 +506,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	})
 		
 	sets.ws["Sanguine Blade"] = set_combine(sets.ws.common, { --Crocea Mors/Bunzi's Rod
-	ammo="Ghastly Tathlum +1",
+	ammo="Pemphredo Tathlum",
 	head="Pixie Hairpin +1",
 	neck="Baetyl Pendant",
 	left_ear="Malignance Earring",
@@ -532,7 +532,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	})
 	
 	sets.ws["Aeolian Edge"] = set_combine(sets.ws.common, {
-	ammo="Ghastly Tathlum +1",
+	ammo="Pemphredo Tathlum",
 	head="Nyame Helm",
 	neck="Sibyl Scarf",
 	right_ear="Malignance Earring",

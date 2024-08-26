@@ -70,7 +70,7 @@ function get_sets()
 	body="Malignance Tabard",
 	hands="Adhemar Wristbands +1",
 	left_ring="Ilabrat Ring",
-	right_ring="Petrov Ring",
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},	waist="Reiki Yotai",
 	legs="Malignance Tights",
 	feet="Gleti's Boots",
@@ -111,11 +111,12 @@ function get_sets()
     legs="Hashishin Tayt +3",
     feet="Hashi. Basmak +3",
     neck="Incanter's Torque",
-    waist={ name="Kentarch Belt +1", augments={'Path: A',}},
+    waist="Reiki Yotai",
     left_ear="Telos Earring",
     right_ear={ name="Hashi. Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','"Dbl.Atk."+6','STR+7 INT+7',}},
-	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
-	right_ring={name="Chirich Ring +1", bag="wardrobe5"},    back={ name="Cornflower Cape", augments={'MP+26','DEX+3','Blue Magic skill +9',}},
+	left_ring="Epona's Ring",
+	right_ring="Hetairoi Ring",    
+	back={ name="Cornflower Cape", augments={'MP+26','DEX+3','Blue Magic skill +9',}},
 	}
 	
 	sets.TP['DT'] = set_combine(sets.TP['Hybrid'], { --49
@@ -133,7 +134,7 @@ function get_sets()
 	sets.nuke['Free'] = {
 	--main={ name="Bunzi's Rod", priority=2,},
 	--sub={ name="Maxentius", priority=1,},
-	ammo="Ghastly Tathlum +1",
+	ammo="Pemphredo Tathlum",
 	head=empty,
 	neck="Baetyl Pendant",
 	left_ear="Regal Earring",
@@ -302,12 +303,39 @@ function get_sets()
 		ring2="Ilabrat Ring",
     })
 	
+	sets.buff['Diffusion'] = {feet="Luhlaza Charuqs +3"}
+
+	sets.th = {
+		ammo="Per. Lucky Egg",
+		head="Volte Cap",
+		body="Volte Jupon", --keep
+		hands="Volte Bracers", --keep
+		waist="Chaac Belt",
+		legs="Volte Hose",
+		feet="Volte Boots", --keep
+	}
+	
 	sets.phalanx = {
 		head="Herculean Helm",
 		body="Herculean Vest",
 		hands="Herculean Gloves",
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
+	}
+	
+	sets.lowdmg = {
+		main="Twinned Blade",
+		sub="Aern Dagger",
+	}
+	
+	sets.clubs = {
+		main="Maxentius",
+		sub="Bunzi's Rod",
+	}
+	
+	sets.tizona = {
+		main="Tizona",
+		sub="Bunzi's Rod",
 	}
 end
 
@@ -365,6 +393,8 @@ function midcast(spell)
 		if spell.skill == 'Blue Magic' then
 			if Blue_SkillBasedBuff:contains(spell.name) then
 				equip(sets.midcast.blueskill)
+			elseif Blue_Buff:contains(spell.name) or Unbridled_spells:contains(spell.name) and buffactive["Diffusion"] then
+				equip({feet="Luhlaza Charuqs +3",})
 			elseif Blue_Healing:contains(spell.name) then
 				equip(sets.midcast.cure)
 			elseif Blue_MagicalStat:contains(spell.name) then
@@ -415,7 +445,7 @@ function status_change(new,old)
 		equip(sets.idle[sets.idle.index[idle_ind]])
 		if player.mpp <= 45 then
 			equip({waist="Fucho-no-Obi"})
-		end
+		end	
 	end
 end
 

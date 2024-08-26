@@ -467,7 +467,7 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {
         main="Bunzi's Rod",
         sub="Ammurapi Shield",
-		ammo="Ghastly Tathlum +1",
+		ammo="Pemphredo Tathlum",
         head="Azimuth Hood +3",
         body="Azimuth Coat +3",
         hands="Agwu's Gages",
@@ -636,7 +636,7 @@ function init_gear_sets()
         ear2="Brutal Earring",
         body="Nyame Mail",
         hands="Nyame Gauntlets",
-        ring1="Petrov Ring",
+        ring1="Chirich Ring +1",
         ring2="Defending Ring",
         back="Nantosuelta's Cape",
 		waist="Cetl Belt",
@@ -665,7 +665,7 @@ function init_gear_sets()
 	sets.vagary = {    
 	main="Idris",
     sub="Genmei Shield",
-    ammo={ name="Ghastly Tathlum +1", augments={'Path: A',}},
+    ammo="Pemphredo Tathlum",
     head="Volte Beret",
 	ear1=empty,
 	ear2=empty,
