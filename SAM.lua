@@ -187,7 +187,7 @@ function get_sets()
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
 	}
-	
+		
 	sets.ws.common.Capped = set_combine(sets.ws.common, {
 	right_ring="Chirich Ring +1",
 	})
@@ -232,7 +232,11 @@ function get_sets()
 	right_ring="Chirich Ring +1",
 	})
 	
-	
+	sets.ws['Tachi: Rana'] = set_combine(sets.ws.common, {
+	ammo="Coiste Bodhar",
+	feet="Kasuga Sune-Ate +3",
+	})
+
 	sets.ws['Tachi: Yukikaze'] = set_combine(sets.ws['Tachi: Ageha'], {})
 	
 	sets.ws['Empyreal Arrow'] = set_combine(sets.ws.common, {
@@ -240,6 +244,7 @@ function get_sets()
 	left_ear="Thrud Earring",
 	left_ring="Regal Ring",
 	})
+	
 	
 	sets.ws['Namas Arrow'] = set_combine(sets.ws['Empyreal Arrow'], {})
 	sets.ws['Refulgent Arrow'] = set_combine(sets.ws['Empyreal Arrow'], {})

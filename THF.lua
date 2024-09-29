@@ -321,7 +321,7 @@ function get_sets()
 		ring1="Ilabrat Ring",
 		ring2="Regal Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
-		waist="Sveltesse Gouriz +1",
+		waist="Yemaya Belt",
 		legs="Pillager's Culottes +3",
 		feet="Plunderer's Poulaines +3"
 	}

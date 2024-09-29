@@ -545,7 +545,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	
 	sets.ws["Ruthless Stroke"] = set_combine(sets.ws.common, {
 	ammo="Aurgelmir Orb +1",
-	left_ring="Regal Ring",
+	left_ring="Ilabrat Ring",
 	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --DW?
 	})
 	
@@ -1030,6 +1030,16 @@ function self_command(command)
 		weaponlock = not weaponlock
 		windower.add_to_chat(1,'<----- Weapon Locked: '..tostring(weaponlock)..' ----->')
 	end	
+	if command == 'reequip' then
+		equip(sets.TP[sets.TP.index[TP_ind]],sets.main[sets.main.index[main_ind]],sets.sub[sets.sub.index[sub_ind]])
+		--equip(sets.TP[sets.TP.index[TP_ind]],sets.TH[sets.TH.index[TH_ind]])
+		if player.status == 'Idle' then
+			equip(sets.TP[sets.TP.index[TP_ind]],sets.idle)
+			if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
+				equip({right_ring="Defending Ring",})
+			end
+		end
+	end
 	if command == 'toggle runspeed' then
 		runspeed = not runspeed
 		updateRunspeedGear(runspeed)

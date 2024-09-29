@@ -56,7 +56,7 @@ function job_setup()
 	breath_delay = 1.2
 end
 
-
+ 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
 	-- Options: Override default values

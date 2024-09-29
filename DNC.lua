@@ -22,7 +22,7 @@ function get_sets()
 	
 	ammo.melee = {ammo="Coiste Bodhar"}
 	ammo.ws = {ammo="Crepuscular Pebble"}
-	ammo.dt = {ammo="Crepuscular Pebble"}
+	ammo.dt = {ammo="Coiste Bodhar"}
 	ammo.fc = {ammo="Sapience Orb"}
 	ammo.acc = {ammo="Yamarang"}
 	ammo.matk = {ammo="Pemphredo Tathlum"}
@@ -50,7 +50,7 @@ function get_sets()
 	head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
 	neck="Etoile Gorget +2",
 	left_ear="Sherida Earring",
-	right_ear="Telos earring",
+	right_ear="Maculele Earring +2",
 	body="Gleti's Cuirass",
 	--body="Malignance Tabard",
 	hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
@@ -71,7 +71,7 @@ function get_sets()
 	head="Nyame Helm",  --7
 	neck="Etoile Gorget +2",
 	left_ear="Sherida Earring",
-	right_ear="Telos earring",
+	right_ear="Maculele Earring +2",
 	body="Malignance Tabard",  --9
 	hands="Malignance Gloves",  --5
 	left_ring="Gere Ring",
@@ -87,7 +87,7 @@ function get_sets()
 	head="Malignance chapeau",
 	neck="Etoile Gorget +2",
 	left_ear="Sherida Earring",
-	right_ear="Telos earring",
+	right_ear="Maculele Earring +2",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
 	--left_ring={name="Chirich Ring +1", bag="wardrobe2"},
@@ -104,7 +104,7 @@ function get_sets()
 	head="Maculele Tiara +3",
 	neck="Etoile Gorget +2",
 	left_ear="Sherida Earring",
-	right_ear="Telos earring",
+	right_ear="Maculele Earring +2",
 	body="Gleti's Cuirass",
 	hands="Malignance Gloves",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
@@ -121,7 +121,7 @@ function get_sets()
 	head="Malignance chapeau",
 	neck="Warder's charm +1",
 	left_ear="Sherida Earring",
-	right_ear="Telos earring",
+	right_ear="Maculele Earring +2",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
 	left_ring="Moonlight Ring",
@@ -135,14 +135,14 @@ function get_sets()
 	}
 
 	sets.TP['DT'] = {
-	ammo="Crepuscular Pebble",
+	ammo="Coiste Bodhar",
 	head="Nyame Helm",
 	--neck="Etoile Gorget +2",
 	neck="Warder's charm +1",
 	left_ear="Sherida Earring",
-	right_ear="Telos earring",
+	right_ear="Maculele Earring +2",
 	body="Nyame mail",
-	hands="Nyame gauntlets",
+	hands="Macu. Bangles +3",
 	left_ring="Moonlight Ring",
 	right_ring="Shadow ring",
 	--right_ring="Moonlight Ring",
@@ -150,7 +150,7 @@ function get_sets()
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Nyame flanchard",
-	feet="Nyame sollerets",
+	feet="Macu. Toe Sh. +3",
 	}	
 	
 	sets.TP['Aminon'] = {
@@ -164,8 +164,8 @@ function get_sets()
 	feet="Gleti's Boots",
     neck="Etoile Gorget +2",
     waist="Plat. Mog. Belt",
-    left_ear="Dedition Earring",
-    right_ear="Odnowa Earring +1",
+    left_ear="Odnowa Earring +1",
+    right_ear="Maculele Earring +2",
     left_ring="Moonlight Ring",
     right_ring="Shadow Ring",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
@@ -181,11 +181,12 @@ function get_sets()
     neck={ name="Etoile Gorget +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
-    right_ear="Telos Earring",
+    right_ear="Maculele Earring +2",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
+	
 	sets.enmity = {
 	neck="Unmoving Collar +1",
 	left_ear="Cryptic Earring",
@@ -240,7 +241,7 @@ function get_sets()
 	neck="Etoile Gorget +2",
 	waist="Eschan Stone",
 	left_ear="Dignitary's earring",
-	right_ear="Telos earring",
+	right_ear="Maculele Earring +2",
 	left_ring="Stikini Ring +1",
 	right_ring="Weather. Ring",
 	}
@@ -279,7 +280,7 @@ function get_sets()
 	head="Maculele Tiara +3",
 	neck="Etoile Gorget +2",
 	left_ear="Sherida Earring",
-	right_ear="Telos earring",
+	right_ear="Maculele Earring +2",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
@@ -302,7 +303,7 @@ function get_sets()
 	--neck="Etoile Gorget +2",
 	neck="Warder's charm +1",
 	left_ear="Sherida Earring",
-	right_ear="Telos earring",
+	right_ear="Maculele Earring +2",
 	body="Nyame mail",
 	hands="Nyame gauntlets",
 	left_ring="Moonlight Ring",
@@ -356,11 +357,11 @@ function get_sets()
 	}
 	
 	sets.phalanx = {
-	head={ name="Taeon Chapeau", augments={'Accuracy+16 Attack+16','"Counter"+3','Phalanx +2',}},
-    body={ name="Herculean Vest", augments={'VIT+7','Weapon Skill Acc.+14','Phalanx +2','Accuracy+16 Attack+16','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
-	hands={ name="Herculean Gloves", augments={'STR+4','Weapon Skill Acc.+15','Phalanx +2','Accuracy+18 Attack+18',}},
-	legs={ name="Herculean Trousers", augments={'Pet: DEX+2','AGI+8','Phalanx +4',}},
-	feet={ name="Taeon Boots", augments={'Accuracy+14','Weapon Skill Acc.+16','Phalanx +2',}},
+	head="Herculean Helm",
+    body="Herculean Vest",
+	hands="Herculean Gloves",
+	legs="Herculean Trousers",
+	feet="Herculean Boots",
 	}
 	
 	sets.low_hp = {
@@ -396,14 +397,14 @@ function get_sets()
 	right_ear="Maculele earring +2",
 	body="Nyame mail",
 	--hands="Maxixi Bangles +3",
-	hands="Nyame gauntlets",
+	hands="Nyame Gauntlets",
 	left_ring="Epaminondas's Ring",
 	right_ring="Cornelia's ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	waist="Fotia Belt",
 	--legs={ name="Horos Tights +3", augments={'Enhances "Saber Dance" effect',}},
-	legs="Nyame flanchard",
-	feet="Nyame sollerets"
+	legs="Nyame Flanchard",
+	feet="Nyame Sollerets"
 	}
 	
 	sets.ws["Evisceration"] = set_combine(sets.ws.common, {
