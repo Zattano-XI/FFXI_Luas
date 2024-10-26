@@ -1,6 +1,8 @@
 res = require 'resources'
 require('vectors')
 
+include('SendCommands.lua')
+
 send_command('lua l Skillchains')
 send_command('lua l Steps')
 AbysseaWS = S{"Red Lotus Blade","Seraph Blade","Cyclone","Energy Drain","Blade: Ei","Seraph Strike","Freezebite","Shadow of Death","Raiden Thrust","Tachi: Jinpu","Tachi: Koki","Earth Crusher","Sunburst"}
@@ -263,6 +265,7 @@ function get_sets()
 	sets.ja.waltz = {
     ammo="Yamarang", --5%
     head="Nyame helm",
+    head="Nyame helm",
     body="Maxixi Casaque +3",  --19%, 8% received
     hands="Nyame gauntlets",
     legs="Dashing Subligar", --10%
@@ -349,8 +352,8 @@ function get_sets()
 	feet="Gleti's Boots",
     neck="Etoile Gorget +2",
     waist="Plat. Mog. Belt",
-    left_ear="Dedition Earring",
-    right_ear="Odnowa Earring +1",
+    left_ear="Odnowa Earring +1",
+    right_ear="Macu. Earring +2",
     left_ring="Moonlight Ring",
     right_ring="Shadow Ring",
     back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},

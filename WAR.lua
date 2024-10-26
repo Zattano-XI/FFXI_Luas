@@ -41,7 +41,7 @@ function get_sets()
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring={ name="Moonlight Ring", bag="wardrobe1"},
     right_ring="Niqmaddu Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	
 	
@@ -58,7 +58,7 @@ function get_sets()
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring={name="Moonlight Ring", bag="wardrobe1"},
     right_ring="Niqmaddu Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.idle = {
@@ -74,7 +74,7 @@ function get_sets()
     --right_ear="Tuisto Earring",
     left_ring="Defending Ring",
     right_ring="Shneddick Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 	
 	sets.TP['Empy']= {
@@ -90,7 +90,7 @@ function get_sets()
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring={name="Moonlight Ring", bag="wardrobe1"},
     right_ring={name="Moonlight Ring", bag="wardrobe2"},
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.TP['DADmg']= {
@@ -106,7 +106,7 @@ function get_sets()
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring={name="Moonlight Ring", bag="wardrobe1"},
     right_ring={name="Moonlight Ring", bag="wardrobe2"},
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
+    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	}
 	
 	sets.ws.common = {
@@ -527,6 +527,6 @@ function set_style(sheet)
 end
 
 --Page, Book--
-set_macros(1,20)
+set_macros(6,1)
 --Use the Lockstyle Number--
 set_style(199) 

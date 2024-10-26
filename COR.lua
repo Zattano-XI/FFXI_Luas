@@ -301,8 +301,8 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
     waist="K. Kachina Belt +1",
     left_ear="Digni. Earring",
     right_ear="Crep. Earring",
-    left_ring="Crepuscular Ring",
-    right_ring="Kishar Ring",
+	ring1={name="Stikini Ring +1", bag="wardrobe2"},
+    ring2={name="Stikini Ring +1", bag="wardrobe5"},
     back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
 	}
 	
