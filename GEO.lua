@@ -33,6 +33,9 @@
 -------------------------------------------------------------------------------------------------------------------
 
 -- Initialization function for this job file.
+
+include('SendCommands.lua')
+
 function get_sets()
     mote_include_version = 2
 

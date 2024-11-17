@@ -32,6 +32,7 @@ function get_sets()
 	include('organizer-lib')
 end
 
+include('SendCommands.lua')
 
 BarElements = S{"Barfira","Barblizzara","Baraera","Barstonra","Barthundra","Barwatera"}
 BarAilments = S{"Barsleepra","Barpoisonra","Barparalyzra","Barblindra","Barsilencera","Barpetra","Barvira","Baramnesra"}

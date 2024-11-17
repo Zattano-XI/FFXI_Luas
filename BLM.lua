@@ -2,6 +2,8 @@ target_distance = 8
 
 res = require 'resources'
 
+include('SendCommands.lua')
+
 Ailments = S{"Burn","Frost","Choke","Rasp","Shock","Drown",}
 EnfeeblingMND = S{"Paralyze","Slow"}
 EnfeeblingINT = S{"Blind","Bind","Dispel","Sleep","Sleep II","Sleepga","Sleepga II","Poison","Poison II","Poisonga"}

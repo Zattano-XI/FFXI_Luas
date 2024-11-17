@@ -6,6 +6,7 @@
 --Gun toggle now functional -Zattano
 
 res = require 'resources'
+
 send_command('lua l Skillchains')
 
 elemental_ws = S{"Aeolian Edge","Leaden Salute","Wildfire"}

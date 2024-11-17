@@ -1,5 +1,8 @@
 SIRDspells = S{"Cure IV","Raise","Banishga",--[["Crusade","Reprisal",]]"Cocoon","Chaotic Eye","Sheep Song","Blank Gaze","Geist Wall","Jettatura","Sound Blast","Sandspin","Soporific","Awful Eye","Stinking Gas","Bomb Toss",}
 res = require 'resources'
+
+include('SendCommands.lua')
+
 --Healing Breeze + Sheep Song = Auto-regen
 --Cocoon
 --Bomb Toss (wave3 fetter pull)

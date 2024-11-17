@@ -2,6 +2,8 @@ target_distance = 8
 
 res = require 'resources'
 
+include('SendCommands.lua')
+
 BarElements = S{"Barfira","Barblizzara","Baraera","Barstonra","Barthundra","Barwatera"}
 BarAilments = S{"Barsleepra","Barpoisonra","Barparalyzra","Barblindra","Barsilencera","Barpetra","Barvira","Baramnesra"}
 NaSpells = S{"Blindna","Erase","Paralyna","Poisona","Silena","Stona","Viruna"}

@@ -1,4 +1,7 @@
 res = require 'resources'
+	
+include('SendCommands.lua')
+	
 	sets.ja = {}
 	sets.ws = {}
 	sets.Obis = {}

@@ -445,7 +445,7 @@ function precast(spell)
 			equip(ammo.fc)
 		end
 	elseif string.find(spell.english,'Jump') then
-		equip({hands="Crusher's Gauntlets", feet="Maenadic gambieras"})
+		equip(sets.TP['DT'])
 	elseif spell.type == "WeaponSkill" then
 		local range_mult = {
 			[2] = 1.55,
@@ -481,11 +481,11 @@ function precast(spell)
 			end
 			if player.equipment.main == "Dojikiri Yasutsuna" then
 				if spell.name == "Tachi: Jinpu" or spell.name == "Tachi: Koki" or spell.name == "Tachi: Kagero" then
-					equip({head="Nyame Helm", right_ear="Moonshade Earring"})
+					equip({head="Nyame Helm", left_ear="Moonshade Earring"})
 				elseif (player.tp >= 1000 and player.tp < 2250) or buffactive['Sekkanoki'] then
-					equip({head="Mpaca's Capc", right_ear="Moonshade Earring"})
+					equip({left_ear="Moonshade Earring"})
 				elseif player.tp < 2500 then
-					equip({right_ear="Moonshade Earring"})
+					equip({left_ear="Thrud Earring"})
 				elseif world.time >= (17*60) or world.time <= (7*60) then
 					equip({left_ear="Lugra Earring +1"})
 				else
@@ -493,11 +493,11 @@ function precast(spell)
 				end
 			else
 				if spell.name == "Tachi: Jinpu" or spell.name == "Tachi: Koki" or spell.name == "Tachi: Kagero" then
-					equip({head="Nyame Helm", right_ear="Moonshade Earring"})
+					equip({head="Nyame Helm", left_ear="Thrud Earring"})
 				elseif (player.tp >= 1000 and player.tp < 2750) or buffactive['Sekkanoki'] then
-					equip({head="Mpaca's Cap", right_ear="Moonshade Earring"})
+					equip({left_ear="Moonshade Earring"}) --head="Mpaca's Cap", 
 				elseif player.tp < 3000 then
-					equip({right_ear="Moonshade Earring"})
+					equip({left_ear="Thrud Earring"})
 				elseif world.time >= (17*60) or world.time <= (7*60) then
 					equip({left_ear="Lugra Earring +1"})
 				else

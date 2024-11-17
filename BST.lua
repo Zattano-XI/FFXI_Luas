@@ -19,6 +19,8 @@
 
 -- IMPORTANT: Make sure to also get the Mote-Include.lua file (and its supplementary files) to go with this.
 
+include('SendCommands.lua')
+
 -- Initialization function for this job file.
 function get_sets()
     mote_include_version = 2

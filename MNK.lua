@@ -1,5 +1,7 @@
 res = require 'resources'
 
+include('SendCommands.lua')
+
 function get_sets()
 	sets.fc = {}
 	sets.ja = {}

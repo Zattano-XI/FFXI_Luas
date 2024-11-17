@@ -64,6 +64,9 @@
 
 -- Initialization function for this job file.
 res = require 'resources'
+
+include('SendCommands.lua')
+
 target_distance = 8
 
 BarElements = S{"Barfira","Barblizzara","Baraera","Barstonra","Barthundra","Barwatera"}

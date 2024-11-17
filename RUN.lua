@@ -63,6 +63,8 @@
 -- Setup functions for this job.  Generally should not be modified.
 -------------------------------------------------------------------------------------------------------------------
 
+include('SendCommands.lua')
+
 -- Initialization function for this job file.
 function get_sets()
     mote_include_version = 2

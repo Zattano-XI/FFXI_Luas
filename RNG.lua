@@ -42,6 +42,8 @@
 -------------------------------------------------------------------------------------------------------------------
 
 -- Initialization function for this job file.
+include('SendCommands.lua')
+
 function get_sets()
     mote_include_version = 2
 
@@ -77,11 +79,11 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
-    state.OffenseMode:options('Hybrid', 'STP', 'Normal', 'LowAcc', 'MidAcc', 'HighAcc')
+    state.OffenseMode:options('DT', 'STP', 'Normal') --, 'LowAcc', 'MidAcc', 'HighAcc'
     state.HybridMode:options('Normal', 'DT')
     state.RangedMode:options('STP', 'Normal', 'Acc', 'HighAcc', 'Critical')
     state.WeaponskillMode:options('Normal', 'Acc')
-    state.IdleMode:options('Normal', 'DT')
+    state.IdleMode:options('DT','Normal')
 	state.WeaponLock = M(false, 'Weapon Lock')
 
     state.WeaponSet = M{['description']='Weapon Set', 
@@ -286,15 +288,18 @@ function init_gear_sets()
 
     -- (10% Snapshot, 5% Rapid from Merits)
     sets.precast.RA = {
-	body="Amini Caban +1",
-	waist="Impulse Belt", --3/0
-    hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},--8
-	head={ name="Taeon Chapeau", augments={'"Snapshot"+5','"Snapshot"+5',}},--10
-	feet="Meg. Jam. +2",--10
-	legs="Orion Braccae +2",--12
+	--head="Amini Gapette +3,--10
+	head="Ikenga's Hat",
 	neck="Scout's Gorget +2",--3
+	body="Amini Caban +3",
+    hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},--8
 	right_ring="Crepuscular Ring",
 	back={ name="Belenus's Cape", augments={'"Snapshot"+10',}},--10
+	waist="Yamaya Belt",
+	--waist="Impulse Belt", --3/0
+	--legs="Orion Braccae +2",--12
+	legs="Ikenga's Trousers",
+	feet="Meg. Jam. +2",--10
     } --61/26
 
     sets.precast.RA.Flurry1 = set_combine(sets.precast.RA, {
@@ -354,11 +359,11 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Ishvara Earring",
-    right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+    left_ear="Moonshade Earring",
+    right_ear="Amini Earring +2",
     left_ring="Regal Ring",
     right_ring="Cornelia's Ring",
-    back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 		
 
@@ -380,6 +385,15 @@ function init_gear_sets()
         
     })
 
+    sets.precast.WS['Sarv'] = set_combine(sets.precast.WS, { --STR65%/AGL65%
+    --head="Orion's Beret +3",
+	body="Ikenga's Vest",
+	feet="Amini Bottillons +3",
+    --back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Atk.+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+	})
+	
+
+
     sets.precast.WS["Last Stand"] = set_combine(sets.precast.WS, {
 	--head="Orion Beret +3",
 	body="Ikenga's Vest",
@@ -389,11 +403,11 @@ function init_gear_sets()
     feet="Nyame Sollerets",
     neck="Scout's Gorget +2",
     waist="Fotia Belt",
-    left_ear="moonshade Earring",
-    right_ear="Ishvara Earring",
+    left_ear="Moonshade Earring",
+    right_ear="Amini Earring +2",
     left_ring="Regal Ring",
     right_ring="Cornelia's Ring",
-    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Atk.+10','Weapon skill damage +10%',}},  	   
+    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Atk.+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},  	   
     })
 
     sets.precast.WS['Last Stand'].Acc = set_combine(sets.precast.WS['Last Stand'], {
@@ -420,14 +434,16 @@ function init_gear_sets()
     })
 
     sets.precast.WS["Trueflight"] = { 
-    body={ name="Cohort Cloak +1", augments={'Path: A',}},
+    head="Nyame Helm",
+	body="Nyame Mail",
+	--body={ name="Cohort Cloak +1", augments={'Path: A',}},
     hands="Nyame Gauntlets",
-    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+29','"Cure" potency +3%','Accuracy+5 Attack+5','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
+    legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist="Orpheus's Sash",
-    left_ear="Friomisi Earring",
-    right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+    left_ear="Moonshade Earring",
+    right_ear="Amini Earring +2",
     left_ring="Dingir Ring",
     right_ring="Cornelia's Ring",
     back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},  
@@ -436,7 +452,7 @@ function init_gear_sets()
 
 	
 	    sets.precast.WS["Wildfire"] = set_combine(sets.precast.WS["Trueflight"], {
-	right_ear="Novio Earring",
+	--right_ear="Novio Earring",
 	})
 	sets.precast.WS["Empyreal Arrow"] = set_combine(sets.precast.WS['Last Stand'], {
 	
@@ -456,8 +472,8 @@ function init_gear_sets()
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
-    left_ear="Ishvara Earring",
-    right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+    left_ear="Moonshade Earring",
+    right_ear="Amini Earring +2",
     left_ring="Dingir Ring",
     back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},			
     })
@@ -472,7 +488,7 @@ function init_gear_sets()
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Odr Earring",
-    right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+    right_ear="Amini Earring +2",
     left_ring="Regal Ring",
     right_ring="Chirich Ring +1",
     back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}},
@@ -487,8 +503,8 @@ function init_gear_sets()
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Ishvara Earring",
-    right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+    left_ear="Moonshade Earring",
+	right_ear="Amini Earring +2",
     left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     right_ring="Cornelia's Ring",
     back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -521,13 +537,13 @@ function init_gear_sets()
     sets.midcast.RA = {	
     head={ name="Arcadian Beret +3", augments={'Enhances "Recycle" effect',}},
     body="Nisroch Jerkin",
-    hands="Malignance Gloves",
+    hands="Amini Glove. +3",
     legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},
     feet="Malignance Boots",
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist="Kwahu Kachina Belt +1",
-    left_ear="Dedition Earring",
-    right_ear="Telos Earring",
+    left_ear="Telos Earring",
+    right_ear="Amini Earring +2",
     left_ring="Regal Ring",
     right_ring="Ilabrat Ring",
     back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10',}},
@@ -535,7 +551,7 @@ function init_gear_sets()
 
     sets.midcast.RA.Acc = set_combine(sets.midcast.RA, {
        	body="Malignance Tabard",
-		right_ear="Telos Earring",
+		--right_ear="Telos Earring",
         })
 
     sets.midcast.RA.HighAcc = set_combine(sets.midcast.RA.Acc, {
@@ -594,32 +610,31 @@ function init_gear_sets()
 
     -- Idle sets
     sets.idle = {
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
+    head="Nyame Helm",
+    body="Adamantite Armor",
+    hands="Amini Glove. +3",
     Legs="Carmine Cuisses +1",
-    feet="Malignance Boots",
+    feet="Nyame Sollerets",
     neck="Iskur Gorget",
     waist="Windbuffet Belt +1",
-    left_ear="Dedition Earring",
-    --right_ear="Telos Earring",
-	right_ear="Odr Earring",
+    left_ear="Telos Earring",
+	right_ear="Amini Earring +2",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
         }
 
     sets.idle.DT = set_combine(sets.idle, {
-    head="Malignance Chapeau",
-    body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
+    head="Nyame Helm",
+    body="Adamantite Armor",
+    hands="Amini Glove. +3",
+    legs="Amini Bragues +3",
+    feet="Nyame Sollerets",
     neck="Iskur Gorget",
     waist="Windbuffet Belt +1",
-    left_ear="Dedition Earring",
-    --right_ear="Telos Earring",
-	right_ear="Odr Earring",
+    left_ear="Telos Earring",
+    --right_ear="Crepuscular Earring",
+	right_ear="Amini Earring +2",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -655,13 +670,13 @@ function init_gear_sets()
     --KC set
     head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
+    hands="Amini Glove. +3",
+    legs="Amini Bragues +3",
     feet="Malignance Boots",
     neck="Iskur Gorget",
-    waist="Olseni Belt",
-    left_ear="Dedition Earring",
-    right_ear="Telos Earring",
+    waist="Windbuffet Belt +1",
+    left_ear="Telos Earring",
+	right_ear="Crepuscular Earring",	
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -686,7 +701,7 @@ function init_gear_sets()
 
     sets.engaged.LowAcc = set_combine(sets.engaged, {
     neck="Combatant's Torque",
-    left_ear="Crep. Earring",
+    left_ear="Amini Earring +2",
 
 			
        })
@@ -717,13 +732,14 @@ function init_gear_sets()
 	--KC set
 	head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
+    hands="Amini Glove. +3",
+    legs="Carmine Cuisses +1",
+	--legs="Malignance Tights",
     feet="Malignance Boots",
     neck="Iskur Gorget",
-    waist="Olseni Belt",
-    left_ear="Dedition Earring",
-    right_ear="Telos Earring",
+    waist="Windbuffet Belt +1",
+    left_ear="Telos Earring",
+    right_ear="Amani Earring +2",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -774,13 +790,13 @@ function init_gear_sets()
     sets.engaged.DW.LowHaste = {
     head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
+    hands="Amini Glove. +3",
+    legs="Carmine Cuisses +1",
     feet="Malignance Boots",
     neck="Iskur Gorget",
-    waist="Olseni Belt",
-    left_ear="Dedition Earring",
-    right_ear="Telos Earring",
+    waist="Windbuffet Belt +1",
+    left_ear="Suppanomimi",
+	right_ear="Eabani Earring",	
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -811,13 +827,13 @@ function init_gear_sets()
     sets.engaged.DW.MidHaste = {
     head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
+    hands="Amini Glove. +3",
+    legs="Amini Bragues +3",
     feet="Malignance Boots",
     neck="Iskur Gorget",
-    waist="Olseni Belt",
-    left_ear="Dedition Earring",
-    right_ear="Telos Earring",
+    waist="Windbuffet Belt +1",
+    left_ear="Telos Earring",
+	right_ear="Eabani Earring",	
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -825,12 +841,12 @@ function init_gear_sets()
 
     sets.engaged.DW.LowAcc.MidHaste = set_combine(sets.engaged.DW.MidHaste, {
     neck="Combatant's Torque",
-    left_ear="Crep. Earring",
+    left_ear="Eabani Earring",
         })
 
     sets.engaged.DW.MidAcc.MidHaste = set_combine(sets.engaged.DW.LowAcc.MidHaste, {
     hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
-    left_ear="Odr Earring",       
+    left_ear="Eabani Earring",       
         })
 
     sets.engaged.DW.HighAcc.MidHaste = set_combine(sets.engaged.DW.MidAcc.MidHaste, {
@@ -848,12 +864,12 @@ function init_gear_sets()
     sets.engaged.DW.HighHaste = {
     head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
+    hands="Amini Glove. +3",
+    legs="Amini Bragues +3",
     feet="Malignance Boots",
     neck="Iskur Gorget",
-    waist="Olseni Belt",
-    left_ear="Dedition Earring",
+    waist="Windbuffet Belt +1",
+    left_ear="Eabani Earring",
     right_ear="Telos Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
@@ -885,13 +901,13 @@ function init_gear_sets()
     sets.engaged.DW.MaxHaste = {
       head="Malignance Chapeau",
     body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
+    hands="Amini Glove. +3",
+    legs="Amini Bragues +3",
     feet="Malignance Boots",
     neck="Iskur Gorget",
-    waist="Olseni Belt",
-    left_ear="Dedition Earring",
-    right_ear="Telos Earring",
+    waist="Windbuffet Belt +1",
+    left_ear="Telos Earring",
+	right_ear="Crepuscular Earring",	
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -899,12 +915,10 @@ function init_gear_sets()
 
     sets.engaged.DW.LowAcc.MaxHaste = set_combine(sets.engaged.DW.MaxHaste, {
 	neck="Combatant's Torque",
-    left_ear="Crep. Earring",
         })
 
     sets.engaged.DW.MidAcc.MaxHaste = set_combine(sets.engaged.DW.LowAcc.MaxHaste, {
     hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
-    left_ear="Odr Earring",       
         })
 
     sets.engaged.DW.HighAcc.MaxHaste = set_combine(sets.engaged.DW.MidAcc.MaxHaste, {
@@ -930,15 +944,15 @@ function init_gear_sets()
     ------------------------------------------------------------------------------------------------
 
     sets.engaged.Hybrid = {
-    head="Malignance Chapeau",
+    head="Nyame Helm",
     body="Malignance Tabard",
-    hands="Malignance Gloves",
-    legs="Malignance Tights",
-    feet="Malignance Boots",
+    hands="Amini Glove. +3",
+    legs="Amini Bragues +3",
+    feet="Nyame Sollerets",
     neck="Combatant's Torque",
-    waist="Olseni Belt",
-    right_ear="Telos Earring",
-    left_ear="Crep. Earring",
+    waist="Windbuffet Belt +1",
+    left_ear="Telos Earring",
+	right_ear="Crepuscular Earring",	
     left_ring="Defending Ring",
     right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -999,8 +1013,8 @@ function init_gear_sets()
     feet="Malignance Boots",
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist="Kwahu Kachina Belt +1",
-    left_ear="Crepuscular Earring",
-    right_ear="Telos Earring",
+    left_ear="Telos Earring",
+	right_ear="Amini Earring +2",	
     left_ring="Regal Ring",
     right_ring="Crepuscular Ring",
     back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10',}},
