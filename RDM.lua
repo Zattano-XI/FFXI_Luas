@@ -553,7 +553,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	ammo="Crepuscular Pebble",
 	head="Nyame Helm",
 	neck="Duelist's Torque +2",
-	right_ear="Lethargy Earring +2",
+	right_ear="Leth. Earring +2",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
 	left_ring="Sroda Ring",
@@ -597,7 +597,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	sets.main['Mpu Gandring'] = {main="Mpu Gandring"}
 	sets.main['Maxentius'] = {main="Maxentius"}
 	
-	sets.sub.index = {'Gleti\'s Knife','Daybreak','Bunzi\'s Rod', 'Thibron', 'Crepuscular Knife'}
+	sets.sub.index = {'Gleti\'s Knife','Daybreak','Bunzi\'s Rod',} --'Thibron', 'Crepuscular Knife'
 	sub_ind = 1 --Gleti's Knife is the Default
 	
 	sets.sub['Gleti\'s Knife'] = {sub="Gleti's Knife"}
@@ -700,15 +700,17 @@ function precast(spell)
 			cancel_spell()
 			add_to_chat(123, spell.name..' Canceled: [Out of Range]')
 		elseif player.tp >= 1000 then
-			if (player.tp >= 1000 and player.tp < 3000) and spell.name ~= "Sanguine Blade" then
-				equip({left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}})
-			else
-				equip({left_ear="Sherida Earring"})
-			end
 			if sets.ws[spell.name] then
-				equip(sets.ws[spell.name])
-			else
 				equip(sets.ws.common)
+			end
+			if (player.tp >= 1000 and player.tp < 2750) then
+				equip({left_ear="Moonshade Earring"})  
+			elseif player.tp < 3000 then
+				equip({left_ear="Regal Earring"})
+			elseif spell.name == "Ruthless Stroke" then --or spell.name == "Savage Blade" 
+				equip({left_ear="Sherida Earring"})
+			else
+				equip({left_ear="Regal Earring"})
 			end
 		end
 	end
