@@ -328,7 +328,6 @@ function get_sets()
 	feet="Bunzi's Sabots",
     })
 	
-	--[[
 	sets.midcast.impact = {
 	sub="Ammurapi Shield",
 	range="Ullr",
@@ -346,9 +345,9 @@ function get_sets()
 	legs="Chironic Hose",
 	feet="Vitiation Boots +3",
 	}
-	]]
+	
 	--Occult Acumen
-	sets.midcast.impact =  {
+	sets.midcast.impact.Occult =  {
 	ammo="Aurgelmir Orb +1",
 	neck="Combatant's Torque", --4 STP
 	left_ear="Crep. Earring", --6 STP
@@ -731,8 +730,10 @@ function midcast(spell)
 				equip(sets.midcast.raise)
 			end
 		elseif spell.skill == 'Elemental Magic' then
-			if spell.name == "Impact" then
-				equip(sets.midcast.impact) 
+				if spell.name == "Impact" and sets.nuke.index[nuke_ind] == 'Occult' then 
+				equip(sets.midcast.impact.Occult)
+				elseif spell.name == "Impact" then
+				equip(sets.midcast.impact)
 			else
 				if spell.english == "Fire" or spell.english == "Stone" or spell.english == "Blizzard" or spell.english == "Thunder" or spell.english == "Water" or spell.english == "Aero" then
 					equip(sets.TP['DT'])
