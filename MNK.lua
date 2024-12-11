@@ -209,9 +209,9 @@ function get_sets()
 	}
 	
 	sets.ja['Chi Blast'] = {
+	ammo="Per. Lucky Egg",
 	head={ name="Hes. Crown", augments={'Enhances "Penance" effect',}},
-    body={ name="Herculean Vest", augments={'Weapon skill damage +2%','Crit. hit damage +3%','"Treasure Hunter"+2','Accuracy+6 Attack+6','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
-    hands={ name="Herculean Gloves", augments={'Accuracy+3','Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','"Treasure Hunter"+2',}},
+    body="Volte Jupon",
     legs={ name="Tatena. Haidate +1", augments={'Path: A',}},
 	feet="Shukuyu Sune-Ate",
 	neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},

@@ -89,7 +89,7 @@ function job_setup()
     blue_magic_maps.Buffs = S{'Sheep Song', 'Soporific'}
 	blue_magic_maps.Buff = S{'Sheep Song', 'Soporific'}
 
-    rayke_duration = 35
+    rayke_duration = 45
     gambit_duration = 96
 
     --lockstyleset = 1
@@ -116,8 +116,8 @@ function user_setup()
     state.MagicalDefenseMode:options('MDT')
 
     state.Knockback = M(false, 'Knockback')
-    state.WeaponSet = M{['description']='Weapon Set', 'Epeolatry', 'Agwu', 'Reikiko', 'GreatAxe'} -- 'Lionheart'
-    state.AttackMode = M{['description']='Attack', 'Uncapped', 'Capped'}
+    state.WeaponSet = M{['description']='Weapon Set', 'Epeolatry', 'Axe' , 'Reikiko', 'GreatAxe'} -- 'Lionheart' 'Agwu'
+    state.AttackMode = M{['description']='Attack','Capped','Uncapped',}
     state.CP = M(false, "Capacity Points Mode")
     state.WeaponLock = M(false, 'Weapon Lock')
 
@@ -455,15 +455,24 @@ function init_gear_sets()
 	}
 
     sets.precast.WS.Acc = set_combine(sets.precast.WS, {
-        --[[ammo="Seeth. Bomblet +1",
-        body=gear.Adhemar_B_body,
-        legs="Meg. Chausses +2",
-        right_ear="Telos Earring",]]
+        --ammo="Seeth. Bomblet +1",
+        --body=gear.Adhemar_B_body,
+		ear1="Telos Earring",
+        hands="Gazu Bracelets +1",
+		ring1="Moonlight Ring",
+        ring2={name="Chirich Ring +1", bag="wardrobe5"},
+		--legs="Meg. Chausses +2",
+        --right_ear="Telos Earring",]]
         })
 
     sets.precast.WS.Uncapped = set_combine(sets.precast.WS, {
         --ammo="Seeth. Bomblet +1",
         })
+
+    sets.precast.WS.Uncapped.Acc = set_combine(sets.precast.WS.Acc, {
+        --ammo="Seeth. Bomblet +1",
+        })
+
 
     sets.precast.WS['Resolution'] = set_combine(sets.precast.WS, {
 		ammo="Coiste Bodhar",
@@ -995,14 +1004,15 @@ function init_gear_sets()
     sets.Lionheart = {main="Lionheart",sub="Utu Grip"}
     sets.Aettir = {main="Aettir",sub="Utu Grip"}
     sets.GreatAxe = {main="Lycurgos",sub="Utu Grip"}
+	sets.Axe = {main="Dolichenus",sub="Chanter's Shield",}
 	sets.Agwu = {main="Agwu's Claymore",sub="Utu Grip"}
 	sets.Reikiko = {main="Reikiko", sub="Chanter's Shield"}
 	
 	sets.TreasureHunter = { 
-        --head="White rarab cap +1", 
+        ammo="Per. Lucky Egg", 
+		body="Volte Jupon",
+        waist="Chaac Belt",
 		--legs="Volte Hose",
-        --waist="Chaac Belt",
-		--body={ name="Herculean Vest", augments={'STR+2','Attack+1','"Treasure Hunter"+2','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
 		}
 	
 	sets.death = {

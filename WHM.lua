@@ -108,7 +108,6 @@ function user_setup()
     state.OffenseMode:options('Normal', 'Acc')
     state.CastingMode:options('Normal', 'Resistant', 'SIRD')
     state.IdleMode:options('DT', 'Normal', 'MEva')
-
     state.BarElement = M{['description']='BarElement', 'Barfira', 'Barblizzara', 'Baraera', 'Barstonra', 'Barthundra', 'Barwatera'}
     state.BarStatus = M{['description']='BarStatus', 'Baramnesra', 'Barvira', 'Barparalyzra', 'Barsilencera', 'Barpetra', 'Barpoisonra', 'Barblindra', 'Barsleepra'}
     state.BoostSpell = M{['description']='BoostSpell', 'Boost-STR', 'Boost-INT', 'Boost-AGI', 'Boost-VIT', 'Boost-DEX', 'Boost-MND', 'Boost-CHR'}
@@ -346,7 +345,7 @@ function init_gear_sets()
         waist="Shinjutsu-no-Obi +1",
       }
 
-	sets.midcast.CureSolace.SIRD = set_combine(sets.midcast.CureSolace, {
+	sets.midcast.CureSolace.SIRD = set_combine(sets.midcast.CureSolace, { 
 		ammo="Staunch Tathlum", --10
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
 		feet="Theo. Duckbills +3", --29
@@ -628,7 +627,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
 
 	sets.midcast.Dia = set_combine(sets.midcast.MndEnfeebles, {
 		ammo="Per. Lucky Egg",
-		hands={ name="Chironic Gloves", augments={'STR+4','INT+7','"Treasure Hunter"+2','Accuracy+3 Attack+3',}},
+		body="Volte Jupon",
 		waist="Chaac Belt",
 })
 

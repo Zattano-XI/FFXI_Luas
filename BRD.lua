@@ -347,13 +347,13 @@ function init_gear_sets()
 	}
 
     -- Other general spells and classes.
-    sets.midcast.Cure = { --51 CP 9 CP2 57 ConMP
+    sets.midcast.Cure = { --53CP 9CP2 57ConMP
 	--main="Daybreak",
     --sub="Ammurapi Shield",
 	ammo="Pemphredo Tathlum", --4 ConMP
     head="Kaykaus Mitra +1",-- augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}}, --11 CP 2 CP2
     --body={ name="Kaykaus Bliaut +1", augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}},
-    body="Adamantite Armor",
+    body="Bunzi's Robe", --15cp
 	hands="Kaykaus Cuffs +1",-- augments={'MP+80','MND+12','Mag. Acc.+20',}}, --11 CP 2 CP2
     --legs={ name="Kaykaus Tights +1", augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}}, --11 CP 2 CP2
     legs="Bunzi's Slops",

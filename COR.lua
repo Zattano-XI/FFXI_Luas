@@ -67,7 +67,7 @@ function get_sets()
 	
 	sets.stp = {
 	main={ name="Naegling", priority=2,},
-    range={ name="Anarchy +3", priority=1,},
+    range={ name="Ataktos", priority=1,},
 	}
 	
 	sets.sortie = {
@@ -76,12 +76,12 @@ function get_sets()
 	range="Fomalhaut",
 	}
 	
-	sets.Gun.index = {'Anarchy','DeathPenalty','Fomalhaut','Armageddon'}
+	sets.Gun.index = {'Ataktos','DeathPenalty','Fomalhaut','Armageddon'}
 	Gun_ind = 1 --Standard set is the Default
 	
 	sets.Gun['DeathPenalty'] = {range="Death Penalty"}
 	
-	sets.Gun['Anarchy'] = {range="Anarchy +3"}
+	sets.Gun['Ataktos'] = {range="Ataktos"}
 	
 	sets.Gun['Fomalhaut'] = {range="Fomalhaut"}	
 	
@@ -390,7 +390,7 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 	waist="Fotia Belt",
 	legs="Nyame Flanchard",
-	feet="Nysme sollerets"
+	feet="Nyame sollerets"
 	}
 	
 	sets.ws["Circle Blade"] = sets.ws["Savage Blade"]
@@ -500,7 +500,7 @@ function precast(spell)
 								equip({left_ear="",})
 							end
 						end
-					elseif (player.equipment.range == "Anarchy +2" or player.equipment.range == "Anarchy +3" or player.equipment.range == "Ataktos") then
+					elseif (player.equipment.range == "Anarchy +3" or player.equipment.range == "Ataktos" or player.equipment.range == "Ataktos") then
 						if player.tp >= 1000 and player.tp < 2000 then
 							equip({left_ear="Moonshade Earring",})
 						else
@@ -523,7 +523,7 @@ function precast(spell)
 					end
 				end
 			else
-				if (player.equipment.range == "Anarchy +2" or player.equipment.range == "Anarchy +3" or player.equipment.range == "Ataktos") then
+				if (player.equipment.range == "Anarchy +3" or player.equipment.range == "Ataktos" or player.equipment.range == "Ataktos") then
 					if player.tp >= 1000 and player.tp < 2000 then
 						equip({left_ear="Moonshade Earring",})
 					else

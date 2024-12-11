@@ -423,9 +423,7 @@ function init_gear_sets()
 
 	sets.midcast.Dia = set_combine(sets.midcast.MndEnfeebles, {
 		ammo="Per. Lucky Egg",
-		head="Wh. Rarab Cap +1",
 		body="Volte Jupon",
-		--hands={ name="Chironic Gloves", augments={'STR+4','INT+7','"Treasure Hunter"+2','Accuracy+3 Attack+3',}},
 		waist="Chaac Belt",
 		feet="Merlinic Crackows",
 		})

@@ -368,7 +368,11 @@ function get_sets()
 	
 	sets.buff.selfphalanx = set_combine(sets.buff['Phalanx'], {
 	main="Sakpata's Sword",
-	--hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	--head="Chironic Hat",
+	--body="Chironic Doublet",
+	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	legs="Chironic Hose",
+	feet="Chironic Slippers",
 	})
 	
 	sets.buff['Refresh III'] = set_combine(sets.midcast.EnhancingDuration, {

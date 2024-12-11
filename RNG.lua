@@ -90,11 +90,12 @@ function user_setup()
 	
 		
 		--KC sets
-	'NaeglingKC', 
-	'GastraphetesKC',
-	'TauretKC', 
+	--'NaeglingKC', 
+	--'GastraphetesKC',
+	--'TauretKC', 
 	--'ArmageddonKC',
-	'FomalhautKC',
+	--'FomalhautKC',
+	--'PinakaKC',
 	
 		--RAsets
 	--'GastraphetesRA', 
@@ -106,12 +107,13 @@ function user_setup()
 	--'FailNot',
 	
 		--non kc sets
-	--'Naegling', 
+	'Naegling', 
+	'Pinaka',
 	--'Gastraphetes', 
 	--'Annihilator', 
-	--'Fomalhaut', 
+	'Fomalhaut', 
 	--'tauret', 
-	--'Armageddon',
+	'Armageddon',
 	
 	
 	}
@@ -119,13 +121,16 @@ function user_setup()
 
    DefaultAmmo = {['Sparrowhawk +2'] = "Chrono Arrow",
                   ['Fail-Not'] = "Chrono Arrow",
+				  ['Pinaka'] = "Chrono Arrow",
                   ['Annihilator'] = "Chrono Bullet",
                 ['Armageddon'] = "Chrono Bullet",
                   ['Gastraphetes'] = "Quelling Bolt",
                   ['Fomalhaut'] = "Chrono Bullet",
-                  }
+                  ['Ataktos'] = "Chrono Bullet",
+				  }
 
  AccAmmo = {    ['Yoichinoyumi'] = "Yoichi's Arrow",
+				['Pinaka'] = "Chrono Arrow",
 				['Sparrowhawk +2'] = "Chrono Arrow",
    --           ['Gandiva'] = "Yoichi's Arrow",
                 ['Fail-Not'] = "Yoichi's Arrow",
@@ -136,6 +141,7 @@ function user_setup()
                   }
 
    WSAmmo = {    ['Yoichinoyumi'] = "Chrono Arrow",
+				 ['Pinaka'] = "Bayeux Arrow",
    			     ['Sparrowhawk +2'] = "Chrono Arrow",
   --                 ['Gandiva'] = "Chrono Arrow",
                  ['Fail-Not'] = "Chrono Arrow",
@@ -143,6 +149,8 @@ function user_setup()
                    ['Armageddon'] = "Chrono Bullet",
                  ['Gastraphetes'] = "Quelling Bolt",
                  ['Fomalhaut'] = "Chrono Bullet",
+				 ['Ataktos'] = "Chrono Bullet",
+				 
                   }
 
    MagicAmmo = {  --['Yoichinoyumi'] = "stone arrow",
@@ -153,7 +161,7 @@ function user_setup()
                   ['Armageddon'] = "Devastating Bullet",
                   ['Gastraphetes'] = "Quelling Bolt",
                   ['Fomalhaut'] = "Devastating Bullet",
-				  ['Anarchy +3'] = "Devastating Bullet",
+				  ['Ataktos'] = "Devastating Bullet",
                   }
 
     -- Additional local binds
@@ -288,10 +296,9 @@ function init_gear_sets()
 
     -- (10% Snapshot, 5% Rapid from Merits)
     sets.precast.RA = {
-	--head="Amini Gapette +3,--10
-	head="Ikenga's Hat",
+	head="Amini Gapette +2",--9
 	neck="Scout's Gorget +2",--3
-	body="Amini Caban +3",
+	body="Amini Caban +2",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},--8
 	right_ring="Crepuscular Ring",
 	back={ name="Belenus's Cape", augments={'"Snapshot"+10',}},--10
@@ -304,7 +311,7 @@ function init_gear_sets()
 
     sets.precast.RA.Flurry1 = set_combine(sets.precast.RA, {
     head="Orion Beret +3",
-    body="Amini Caban +1",
+    body="Amini Caban +2",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}},
     feet="Meg. Jam. +2",
@@ -315,7 +322,7 @@ function init_gear_sets()
 
     sets.precast.RA.Flurry2 = set_combine(sets.precast.RA.Flurry1, {
     head="Orion Beret +3",
-    body="Amini Caban +1",
+    body="Amini Caban +2",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}},
     feet="Arcadian Socks +3",
@@ -326,7 +333,7 @@ function init_gear_sets()
 
     sets.precast.RA.Gastra = {
 	head="Orion Beret +3",
-	body="Amini Caban +1",
+	body="Amini Caban +2",
 	waist="Impulse Belt", --3/0
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},--8
 	feet="Meg. Jam. +2",--10
@@ -371,50 +378,46 @@ function init_gear_sets()
     left_ring="Regal Ring",
     })
 
-    sets.precast.WS['Apex Arrow'] = sets.precast.WS
+    sets.precast.WS["Apex Arrow"] = sets.precast.WS
 
-    sets.precast.WS['Apex Arrow'].Acc = set_combine(sets.precast.WS['Apex Arrow'], {
+    sets.precast.WS["Apex Arrow"].Acc = set_combine(sets.precast.WS["Apex Arrow"], {
        
     })
 
-    sets.precast.WS['Jishnu\'s Radiance'] = set_combine(sets.precast.WS, {
+    sets.precast.WS["Jishnu\'s Radiance"] = set_combine(sets.precast.WS, {
         
     })
 
-    sets.precast.WS['Jishnu\'s Radiance'].Acc = set_combine(sets.precast.WS['Jishnu\'s Radiance'], {
+    sets.precast.WS["Jishnu\'s Radiance"].Acc = set_combine(sets.precast.WS['Jishnu\'s Radiance'], {
         
     })
 
-    sets.precast.WS['Sarv'] = set_combine(sets.precast.WS, { --STR65%/AGL65%
-    --head="Orion's Beret +3",
-	body="Ikenga's Vest",
-	feet="Amini Bottillons +3",
-    --back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Atk.+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-	})
+    sets.precast.WS["Sarv"] = sets.precast.WS["Last Stand"]--STR65%/AGL65%
 	
 
 
     sets.precast.WS["Last Stand"] = set_combine(sets.precast.WS, {
 	--head="Orion Beret +3",
-	body="Ikenga's Vest",
+	--body="Ikenga's Vest",
     --body="Nyame Mail",
 	hands="Nyame Gauntlets",
     --legs="Arcadian braccae +3",
-    feet="Nyame Sollerets",
+	feet="Amini Bottillons +3",
+    --feet="Nyame Sollerets",
     neck="Scout's Gorget +2",
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
     right_ear="Amini Earring +2",
     left_ring="Regal Ring",
     right_ring="Cornelia's Ring",
-    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Atk.+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},  	   
+    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},  	   
     })
 
-    sets.precast.WS['Last Stand'].Acc = set_combine(sets.precast.WS['Last Stand'], {
+    sets.precast.WS["Last Stand"].Acc = set_combine(sets.precast.WS["Last Stand"], {
        
     })
 
-    sets.precast.WS["Coronach"] = set_combine(sets.precast.WS['Last Stand'], {
+    sets.precast.WS["Coronach"] = set_combine(sets.precast.WS["Last Stand"], {
     head="Orion Beret +3",
 	body="Nyame Mail",
     hands="Nyame Gauntlets",
@@ -454,7 +457,7 @@ function init_gear_sets()
 	    sets.precast.WS["Wildfire"] = set_combine(sets.precast.WS["Trueflight"], {
 	--right_ear="Novio Earring",
 	})
-	sets.precast.WS["Empyreal Arrow"] = set_combine(sets.precast.WS['Last Stand'], {
+	sets.precast.WS["Empyreal Arrow"] = set_combine(sets.precast.WS["Last Stand"], {
 	
 	})
 	
@@ -1020,7 +1023,7 @@ function init_gear_sets()
     back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10',}},
 
 	}
-    sets.buff['Velocity Shot'] = set_combine(sets.midcast.RA, {body="Amini Caban +1",})
+    sets.buff['Velocity Shot'] = set_combine(sets.midcast.RA, {body="Amini Caban +2",})
     sets.buff.Camouflage = {body="Orion Jerkin +1"}
 
     sets.buff.Doom = {
@@ -1042,50 +1045,78 @@ function init_gear_sets()
 	------KC weapon sets
 	sets.NaeglingKC = { 
 	main="Naegling",
-	sub="kraken club",
-    range={ name="Sparrowhawk +2", augments={'TP Bonus +1000',}},
+	--sub="Kraken Club",
+    range="Ataktos",
+	Ammo="Chrono Bullet",
 	}
    sets.TauretKC = {
-	main={ name="Tauret",bag="wardrobe3"},
-    	sub="kraken club",
+	--main="Tauret",
+    --sub="Kraken Club",
 	range={ name="Sparrowhawk +2", augments={'TP Bonus +1000',}},
+	ammo="Hauksbok Arrow",
 	}
-	sets.ArmageddonKC = {--ranged="Armageddon"
-	main={ name="Tauret",bag="wardrobe3"},
-    sub="kraken club",
+	sets.ArmageddonKC = {
+	--main="Tauret",
+    --sub="Kraken Club",
 	ranged="Armageddon",
+	ammo="Chrono Bullet",
 	}
     sets.GastraphetesKC = {
 	ranged="Gastraphetes",
-	main={ name="Tauret",bag="wardrobe3"},
-	sub="kraken club",
+	--main="Tauret",
+	--sub="Kraken Club",
 	ammo="Quelling Bolt"
 	}
 	sets.FomalhautKC = {
-	main={ name="Ternion Dagger +1", augments={'Path: A',}},
-	sub="kraken club",
+	--main={ name="Ternion Dagger +1", augments={'Path: A',}},
+	--sub="kraken club",
 	ranged="Fomalhaut",
+	ammo="Chrono Bullet",
 	}
-	
+	sets.PinakaKC = {
+	--main={ name="Ternion Dagger +1", augments={'Path: A',}},
+	--sub="kraken club",
+	ranged="Pinaka",
+	ammo="Chrono Arrow",
+	}
+
 	
 	--------weapon sets
 	sets.Tauret = {
-	main={ name="Tauret",bag="wardrobe3"},
-    sub={ name="Malevolence",bag="wardrobe3"},
-	range={ name="Sparrowhawk +2", augments={'TP Bonus +1000',}},
+	main="Tauret",
+    sub="Malevolence",
+	range="Sparrowhawk +2",
+	ammo="Hauksbok Arrow",
+	}
+	sets.Fomalhaut = {
+	--main={ name="Ternion Dagger +1", augments={'Path: A',}},
+	--sub="kraken club",
+	ranged="Fomalhaut",
+	ammo="Chrono Bullet",
+	}
+	sets.Armageddon = {
+	--main="Tauret",
+    --sub="Kraken Club",
+	ranged="Armageddon",
+	ammo="Chrono Bullet",
 	}
 	sets.Naegling = { 
 	main="Naegling",
     sub={ name="Ternion Dagger +1", augments={'Path: A',}},
-    range={ name="Sparrowhawk +2", augments={'TP Bonus +1000',}},
+    range="Ataktos",
+	Ammo="Chrono Bullet",
 	}
 	sets.Gastraphetes = {
 	ranged="Gastraphetes",
-	main={ name="Malevolence",bag="wardrobe2"},
-    sub={ name="Malevolence",bag="wardrobe3"},
+	main={ name="Malevolence",bag="wardrobe7"},
+    sub={ name="Malevolence",bag="wardrobe8"},
 	ammo="Quelling Bolt"
 	}
-	
+	sets.Pinaka = {
+	ranged="Pinaka",
+	ammo="Chrono Arrow",
+	}
+
 	
 	-----------ranged sets
     sets.AnnihilatorRA = {

@@ -271,11 +271,9 @@ function init_gear_sets()
 		
 		}
     sets.TreasureHunter = { 
-        --head="White rarab cap +1", 
-		legs="Volte Hose",--1
-		body={ name="Valorous Mail", augments={'"Conserve MP"+6','"Resist Silence"+4','"Treasure Hunter"+2','Accuracy+11 Attack+11','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},--2
-        --waist="Chaac Belt",
-		ammo="Perfect Lucky Egg", --1
+        ammo="Per. Lucky Egg", --1
+		body="Volte Jupon",
+        waist="Chaac Belt",
      }
 
 	sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
