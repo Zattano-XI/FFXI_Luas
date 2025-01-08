@@ -1,5 +1,7 @@
 res = require 'resources'
 
+include('SendCommands.lua')
+
 function get_sets()
 	sets.fc = {}
 	sets.precast = {}
@@ -80,12 +82,12 @@ function get_sets()
     sets.ja['Angon'] = {ammo="Angon", hands="Ptero. Fin. G. +3"}
 	
 	
-	sets.TP.index = {'Standard','Hybrid', 'DT','High ACC','Pet'}
+	sets.TP.index = {'Hybrid', 'DT','High ACC',} --'Pet','Standard',
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = { --sub war +27% + 56% gear = 83%
 	ammo={ name="Coiste Bodhar", augments={'Path: A',}}, --3
-    head="Nyame Helm", --6
+    head="Nyame Helm", --7
     body={ name="Gleti's Cuirass", augments={'Path: A',}}, --5
     hands="Sulev. Gauntlets +2", --6
     legs={ name="Valorous Hose", augments={'Attack+17','"Dbl.Atk."+4','AGI+1',}}, --7
@@ -100,13 +102,13 @@ function get_sets()
 	 back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	}
 	
-sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
+sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	ammo="Coiste Bodhar", 
     --head="Hjarrandi Helm", --10DT
-    body="Nyame Mail", --9DT
+    body="Gleti's Cuirass", --9PDT
     --hands={ name="Emi. Gauntlets +1", augments={'Accuracy+25','"Dual Wield"+6','Pet: Accuracy+25',}},
-    hands="Nyame Gauntlets", --7DT
-	legs={ name="Nyame Flanchard", augments={'Path: B',}}, --8DT
+    hands="Gleti's Gauntlets", --7PDT
+	legs="Gleti's Breeches", --8PDT
     feet={ name="Nyame Sollerets", augments={'Path: B',}}, --7DT
     --neck={ name="Dgn. Collar +1", augments={'Path: A',}},
     neck="Vim Torque +1",
@@ -118,13 +120,13 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
     --back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
 	})
 
-	sets.TP['DT'] = set_combine(sets.TP['Standard'], { --51%
+	sets.TP['DT'] = set_combine(sets.TP['Standard'], { --48%
 	ammo="Staunch Tathlum +1",
-    head="Hjarrandi Helm",
-    body="Hjarrandi Breast.",
-    hands="Nyame Gauntlets",
+    head="Nyame Helm", --7
+    body="Nyame Mail", --9
+    hands="Gleti's Gauntlets",
     legs="Gleti's Breeches",
-    feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    feet={ name="Nyame Sollerets", augments={'Path: B',}}, --7
     --neck={ name="Dgn. Collar +1", augments={'Path: A',}},
     neck="Vim Torque +1",
 	waist="Ioskeha Belt +1",
@@ -170,7 +172,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --49%
 		
 	sets.idle = set_combine(sets.TP['Standard'], {
 	ammo="Staunch tathlum +1",
-	head="Crepuscular helm",
+	head="Crepuscular Helm",
 	body="Crepuscular Mail",
 	legs="Gleti's breeches",
 	feet="Gleti's boots",

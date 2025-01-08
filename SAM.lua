@@ -29,7 +29,7 @@ function get_sets()
 	ammo.DT = {ammo="Staunch Tathlum +1"}
 	ammo.fc = {ammo="Sapience Orb"}
 	ammo.macc = {ammo="Phemphredo Tathlum"}
-	ammo.shooty = {ammo="Eminent Arrow"}
+	ammo.shooty = {ammo="Yoichi's Arrow"}
 	
 	sets.movement = {feet="Danzo Sune-Ate"}
 	
@@ -172,7 +172,6 @@ function get_sets()
 	mode_ind = 1 --Uncapped set is the Default
 	
 	sets.ws.common = {
-	ammo="Knobkierrie",
 	head="Nyame Helm",
 	neck="Samurai's Nodowa +2",
 	--left_ear="Thrud Earring",

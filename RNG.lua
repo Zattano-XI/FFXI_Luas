@@ -205,7 +205,7 @@ function user_setup()
     send_command('bind ^numpad2 input /ws "Sniper Shot" <t>')
     send_command('bind ^numpad3 input /ws "Numbing Shot" <t>')
 
-    send_command('bind numpad0 input /ra <t>')
+    --send_command('bind numpad0 input /ra <t>')
 
     select_default_macro_book()
     set_lockstyle()
@@ -274,7 +274,7 @@ function init_gear_sets()
    sets.precast.JA['Camouflage'] = {}
    sets.precast.JA['Scavenge'] = {}
     sets.precast.JA['Shadowbind'] = {}
-   sets.precast.JA['Sharpshot'] = {"Arcadian jerkin +3"}
+   sets.precast.JA['Sharpshot'] = {"Arcadian Jerkin +3"}
 
 
     -- Fast cast sets for spells
@@ -296,13 +296,13 @@ function init_gear_sets()
 
     -- (10% Snapshot, 5% Rapid from Merits)
     sets.precast.RA = {
-	head="Amini Gapette +2",--9
+	head="Amini Gapette +3",--9
 	neck="Scout's Gorget +2",--3
-	body="Amini Caban +2",
+	body="Amini Caban +3",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},--8
 	right_ring="Crepuscular Ring",
 	back={ name="Belenus's Cape", augments={'"Snapshot"+10',}},--10
-	waist="Yamaya Belt",
+	waist="Yemaya Belt",
 	--waist="Impulse Belt", --3/0
 	--legs="Orion Braccae +2",--12
 	legs="Ikenga's Trousers",
@@ -311,18 +311,18 @@ function init_gear_sets()
 
     sets.precast.RA.Flurry1 = set_combine(sets.precast.RA, {
     head="Orion Beret +3",
-    body="Amini Caban +2",
+    body="Amini Caban +3",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}},
     feet="Meg. Jam. +2",
     neck="Scout's Gorget +2",
-    waist="Impulse Belt",
+    --waist="Impulse Belt",
     back={ name="Belenus's Cape", augments={'"Snapshot"+10',}},
     }) --43/39
 
     sets.precast.RA.Flurry2 = set_combine(sets.precast.RA.Flurry1, {
     head="Orion Beret +3",
-    body="Amini Caban +2",
+    body="Amini Caban +3",
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
     legs={ name="Adhemar Kecks +1", augments={'AGI+12','"Rapid Shot"+13','Enmity-6',}},
     feet="Arcadian Socks +3",
@@ -333,7 +333,7 @@ function init_gear_sets()
 
     sets.precast.RA.Gastra = {
 	head="Orion Beret +3",
-	body="Amini Caban +2",
+	body="Amini Caban +3",
 	waist="Impulse Belt", --3/0
     hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},--8
 	feet="Meg. Jam. +2",--10
@@ -392,16 +392,26 @@ function init_gear_sets()
         
     })
 
-    sets.precast.WS["Sarv"] = sets.precast.WS["Last Stand"]--STR65%/AGL65%
-	
+    sets.precast.WS['Sarv'] = set_combine(sets.precast.WS, {
+	--head="Orion Beret +3",
+	body="Ikenga's Vest",
+    --body="Nyame Mail",
+	hands="Nyame Gauntlets",
+	feet="Amini Bottillons +3",
+    neck="Scout's Gorget +2",
+    waist="Fotia Belt",
+    left_ear="Moonshade Earring",
+    right_ear="Amini Earring +2",
+    left_ring="Regal Ring",
+    right_ring="Cornelia's Ring",
+    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},  	   
+    })
 
-
-    sets.precast.WS["Last Stand"] = set_combine(sets.precast.WS, {
+    sets.precast.WS['Last Stand'] = set_combine(sets.precast.WS, {
 	--head="Orion Beret +3",
 	--body="Ikenga's Vest",
     --body="Nyame Mail",
 	hands="Nyame Gauntlets",
-    --legs="Arcadian braccae +3",
 	feet="Amini Bottillons +3",
     --feet="Nyame Sollerets",
     neck="Scout's Gorget +2",
@@ -413,7 +423,7 @@ function init_gear_sets()
     back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},  	   
     })
 
-    sets.precast.WS["Last Stand"].Acc = set_combine(sets.precast.WS["Last Stand"], {
+    sets.precast.WS['Last Stand'].Acc = set_combine(sets.precast.WS['Last Stand'], {
        
     })
 
@@ -421,15 +431,14 @@ function init_gear_sets()
     head="Orion Beret +3",
 	body="Nyame Mail",
     hands="Nyame Gauntlets",
-    legs="Arcadian braccae +3",
     feet="Nyame Sollerets",
     neck="Scout's Gorget +2",
     waist="Fotia Belt",
     left_ear="Sherida Earring",
     right_ear="Ishvara Earring",
-    left_ring="Regal Ring",
+    left_ring="Epaminondas's Ring",
     right_ring="Cornelia's Ring",
-    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Atk.+10','Weapon skill damage +10%',}},
+    --back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Atk.+10','Weapon skill damage +10%',}},
     })
 
     sets.precast.WS["Coronach"].Acc = set_combine(sets.precast.WS['Coronach'], {
@@ -449,12 +458,12 @@ function init_gear_sets()
     right_ear="Amini Earring +2",
     left_ring="Dingir Ring",
     right_ring="Cornelia's Ring",
-    back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},  
+    --back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},  
     }
 
 
 	
-	    sets.precast.WS["Wildfire"] = set_combine(sets.precast.WS["Trueflight"], {
+	sets.precast.WS["Wildfire"] = set_combine(sets.precast.WS["Trueflight"], {
 	--right_ear="Novio Earring",
 	})
 	sets.precast.WS["Empyreal Arrow"] = set_combine(sets.precast.WS["Last Stand"], {
@@ -478,7 +487,7 @@ function init_gear_sets()
     left_ear="Moonshade Earring",
     right_ear="Amini Earring +2",
     left_ring="Dingir Ring",
-    back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},			
+    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},  	   
     })
 	
     sets.precast.WS['Evisceration'] = {
@@ -486,7 +495,7 @@ function init_gear_sets()
     head={ name="Adhemar Bonnet +1", augments={'STR+12','DEX+12','Attack+20',}},
     body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
     hands="Mummu Wrists +2",
-    legs={ name="Herculean Trousers", augments={'Accuracy+23','"Triple Atk."+4','STR+3',}},
+    legs="Nyame Flanchard",
     --feet={ name="Herculean Boots", augments={'Accuracy+29','Crit. hit damage +3%','DEX+15','Attack+1',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
@@ -494,7 +503,7 @@ function init_gear_sets()
     right_ear="Amini Earring +2",
     left_ring="Regal Ring",
     right_ring="Chirich Ring +1",
-    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}},
+    --back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}},
     }
 	
 	sets.precast.WS['Savage Blade'] = {
@@ -504,13 +513,14 @@ function init_gear_sets()
     hands="Nyame Gauntlets",
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Scout's Gorget +2", augments={'Path: A',}},
+    neck="Rep. Plat. Medal",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Moonshade Earring",
+    left_ring="Sherida Earring",
+	--left_ear="Moonshade Earring",
 	right_ear="Amini Earring +2",
-    left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    left_ring="Sroda Ring",
     right_ring="Cornelia's Ring",
-    back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     }
 
     sets.precast.WS['Evisceration'].Acc = set_combine(sets.precast.WS['Evisceration'], {
@@ -541,7 +551,7 @@ function init_gear_sets()
     head={ name="Arcadian Beret +3", augments={'Enhances "Recycle" effect',}},
     body="Nisroch Jerkin",
     hands="Amini Glove. +3",
-    legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},
+    legs="Amini Bragues +3",
     feet="Malignance Boots",
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist="Kwahu Kachina Belt +1",
@@ -710,7 +720,7 @@ function init_gear_sets()
        })
 
     sets.engaged.MidAcc = set_combine(sets.engaged.LowAcc, {
-	hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
+	hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
     left_ear="Odr Earring",
 
         })
@@ -742,7 +752,7 @@ function init_gear_sets()
     neck="Iskur Gorget",
     waist="Windbuffet Belt +1",
     left_ear="Telos Earring",
-    right_ear="Amani Earring +2",
+    right_ear="Amini Earring +2",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},  
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
@@ -774,7 +784,7 @@ function init_gear_sets()
         })
 
     sets.engaged.DW.MidAcc = set_combine(sets.engaged.DW.LowAcc, {
-	hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
+	hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
     left_ear="Odr Earring",
         })
 
@@ -811,7 +821,7 @@ function init_gear_sets()
         })
 
     sets.engaged.DW.MidAcc.LowHaste = set_combine(sets.engaged.DW.LowAcc.LowHaste, {
-    hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
+    hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
     left_ear="Odr Earring",       
         })
 
@@ -848,7 +858,7 @@ function init_gear_sets()
         })
 
     sets.engaged.DW.MidAcc.MidHaste = set_combine(sets.engaged.DW.LowAcc.MidHaste, {
-    hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
+    hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
     left_ear="Eabani Earring",       
         })
 
@@ -885,7 +895,7 @@ function init_gear_sets()
         })
 
     sets.engaged.DW.MidAcc.HighHaste = set_combine(sets.engaged.DW.LowAcc.HighHaste, {
-    hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
+    hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
     left_ear="Odr Earring",       
         })
 
@@ -921,7 +931,7 @@ function init_gear_sets()
         })
 
     sets.engaged.DW.MidAcc.MaxHaste = set_combine(sets.engaged.DW.LowAcc.MaxHaste, {
-    hands={ name="Gazu Bracelet +1", augments={'Path: A',}},
+    hands={ name="Gazu Bracelets +1", augments={'Path: A',}},
         })
 
     sets.engaged.DW.HighAcc.MaxHaste = set_combine(sets.engaged.DW.MidAcc.MaxHaste, {
@@ -1012,7 +1022,7 @@ function init_gear_sets()
     head="Orion Beret +3",
     body={ name="Ikenga's Vest", augments={'Path: A',}},
     hands="Orion Bracers +3",
-    legs={ name="Adhemar Kecks +1", augments={'AGI+12','Rng.Acc.+20','Rng.Atk.+20',}},
+    legs="Amini Bragues +3",
     feet="Malignance Boots",
     neck={ name="Scout's Gorget +2", augments={'Path: A',}},
     waist="Kwahu Kachina Belt +1",
@@ -1023,7 +1033,7 @@ function init_gear_sets()
     back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10',}},
 
 	}
-    sets.buff['Velocity Shot'] = set_combine(sets.midcast.RA, {body="Amini Caban +2",})
+    sets.buff['Velocity Shot'] = set_combine(sets.midcast.RA, {body="Amini Caban +3",})
     sets.buff.Camouflage = {body="Orion Jerkin +1"}
 
     sets.buff.Doom = {
@@ -1046,8 +1056,8 @@ function init_gear_sets()
 	sets.NaeglingKC = { 
 	main="Naegling",
 	--sub="Kraken Club",
-    range="Ataktos",
-	Ammo="Chrono Bullet",
+    range="Sparrowhawk +2",
+	Ammo="Chrono Arrow",
 	}
    sets.TauretKC = {
 	--main="Tauret",
@@ -1103,8 +1113,8 @@ function init_gear_sets()
 	sets.Naegling = { 
 	main="Naegling",
     sub={ name="Ternion Dagger +1", augments={'Path: A',}},
-    range="Ataktos",
-	Ammo="Chrono Bullet",
+    range="Sparrowhawk +2",
+	Ammo="Chrono Arrow",
 	}
 	sets.Gastraphetes = {
 	ranged="Gastraphetes",
