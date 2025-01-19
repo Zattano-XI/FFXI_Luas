@@ -24,7 +24,7 @@ function get_sets()
 	ammo = {}
 	
 	ammo.melee = {ammo="Coiste Bodhar"}
-	--ammo.melee = {ammo="Aurgelmir Orb +1"}
+	--ammo.melee = {ammo="Coiste Bodhar"}
 	ammo.ws = {ammo="Knobkierrie"}
 	ammo.DT = {ammo="Staunch Tathlum +1"}
 	ammo.fc = {ammo="Sapience Orb"}
@@ -32,6 +32,7 @@ function get_sets()
 	ammo.shooty = {ammo="Yoichi's Arrow"}
 	
 	sets.movement = {feet="Danzo Sune-Ate"}
+	sets.TH = {ammo="Per. Lucky Egg", waist="Chaac Belt", legs="Volte Hose", feet="Volte Boots",} 
 	
 	sets.fc.base = {
 	neck="Baetyl Pendant",
@@ -60,7 +61,6 @@ function get_sets()
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = {
-	--ammo="Coiste Bodhar",
 	head="Mpaca's Cap", --7pdt
 	--head="Flamma Zucchetto +2",
 	neck="Samurai's Nodowa +2",
@@ -72,7 +72,7 @@ function get_sets()
 	--hands="Tatenashi Gote +1",
 	left_ring="Niqmaddu Ring",
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-	back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}, --5dt
+	back={ name="Smertrios's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --5dt
 	waist="Sailfi Belt +1",
 	legs="Kasuga Haidate +3", --10
 	--legs="Tatenashi Haidate +1",
@@ -88,7 +88,6 @@ function get_sets()
 	})
 	
 	sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --37dt
-		--ammo="Coiste Bodhar", --Aurgelmir +1?
         head="Mpaca's Cap", --7pdt
         body="Mpaca's Doublet", --10pdt
         hands="Wakido Kote +3",
@@ -100,7 +99,6 @@ function get_sets()
 })
 	
 	sets.TP['DT'] = set_combine(sets.TP['Hybrid'], {
-		--ammo="Coiste Bodhar",
 		head="Kasuga Kabuto +3", --10dt
 		body="Kasuga Domaru +3", --14dt
 		hands="Mpaca's Gloves", --8pdt
@@ -112,7 +110,6 @@ function get_sets()
 	})
 
 	sets.TP['Subtle DT'] = set_combine(sets.TP['Hybrid'], {
-		--ammo="Coiste Bodhar",
 		head="Kasuga Kabuto +3",
 		body="Kasuga Domaru +3",
 		hands="Nyame Gauntlets",
@@ -155,7 +152,7 @@ function get_sets()
 	
 	sets.regen = {
 	head="Crepuscular Helm",
-	neck="Sanctity Necklace",
+	neck="Bathy Choker +1",
 	--neck="Bathy Choker +1",
 	right_ear="Infused Earring",
 	body="Hizamaru Haramaki +2",
@@ -181,7 +178,7 @@ function get_sets()
 	hands="Kasuga Kote +3",
 	left_ring="Niqmaddu Ring",
 	right_ring="Cornelia's Ring",
-	back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+	back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
@@ -193,13 +190,13 @@ function get_sets()
 	
 	sets.ws['Tachi: Ageha'] = set_combine(sets.ws.common, {
 	head="Kasuga Kabuto +3",
-	neck="Sanctity Necklace",
+	neck="Null Loop",
 	left_ear="Crepuscular Earring",
 	body="Kasuga Domaru +3",
 	hands="Kasuga Kote +3",
 	left_ring="Stikini Ring +1",
     right_ring="Metamorph Ring +1",
-	waist="Eschan Stone",
+	waist="Null Belt",
 	legs="Kasuga Haidate +3",
 	feet="Kasuga Sune-ate +3"
 	})
@@ -232,14 +229,12 @@ function get_sets()
 	})
 	
 	sets.ws['Tachi: Rana'] = set_combine(sets.ws.common, {
-	ammo="Coiste Bodhar",
 	feet="Kasuga Sune-Ate +3",
 	})
 
 	sets.ws['Tachi: Yukikaze'] = set_combine(sets.ws['Tachi: Ageha'], {})
 	
 	sets.ws['Empyreal Arrow'] = set_combine(sets.ws.common, {
-		ammo="Eminent Arrow",
 	left_ear="Thrud Earring",
 	left_ring="Regal Ring",
 	})
@@ -444,7 +439,7 @@ function precast(spell)
 			equip(ammo.fc)
 		end
 	elseif string.find(spell.english,'Jump') then
-		equip(sets.TP['DT'])
+		equip(sets.TP['DT'],sets.TH)
 	elseif spell.type == "WeaponSkill" then
 		local range_mult = {
 			[2] = 1.55,

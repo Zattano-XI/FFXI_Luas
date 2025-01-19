@@ -186,7 +186,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	})
 	
 	sets.regen = {
-	neck="Sanctity Necklace",
+	neck="Bathy Choker +1",
 	--neck="Bathy Choker +1",
 	right_ear="Infused Earring",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
@@ -243,7 +243,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	body="Nyame Mail",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets",
-	waist="Eschan Stone",
+	waist="Null Belt",
 	--right_ear="Thrud earring",
 	--left_ear="Moonshade earring",
 	right_ring="Niqmaddu ring",
@@ -332,7 +332,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	
 	sets.high_hp = {
 	head="Nyame helm",
-	neck="Sanctity Necklace",
+	neck="Unmoving Collar +1",
 	left_ear="Odnowa Earring",
 	right_ear="Odnowa Earring +1",
 	body="Hjarrandi Breastplate",

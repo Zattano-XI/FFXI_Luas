@@ -14,7 +14,7 @@ function get_sets()
 	sets.mode = {}
 	ammo = {}
 	
-	ammo.melee = {ammo="Aurgelmir Orb +1"}
+	ammo.melee = {ammo="Coiste Bodhar"}
 	ammo.ws = {ammo="Coiste Bodhar"}
 	ammo.dt = {ammo="Staunch Tathlum +1"}
 	ammo.th = {ammo="Perfect Lucky Egg"}
@@ -35,7 +35,7 @@ function get_sets()
 	
 	sets.regen = {
 	head="Gleti's Mask",
-	neck="Sanctity Necklace",
+	neck="Bathy Choker +1",
 	left_ear="Infused Earring",
 	--body="Turms Harness",
 	hands="Turms Mittens +1",
@@ -249,7 +249,7 @@ function get_sets()
 	hands="Malignance Gloves",
 	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
     right_ring={name="Stikini Ring +1", bag="wardrobe5"},
-	waist="Eschan Stone",
+	waist="Null Belt",
 	legs="Malignance Tights",
 	feet="Nyame Sollerets"
 	}

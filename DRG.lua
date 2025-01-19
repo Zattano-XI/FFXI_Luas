@@ -602,7 +602,7 @@ function init_gear_sets()
 		--feet={ name="Founder's Greaves", augments={'VIT+10','Accuracy+15','"Mag.Atk.Bns."+15','Mag. Evasion+15',}},
 		--neck="Deviant Necklace",
 		neck="Fotia Gorget",
-		--waist="Eschan Stone",
+		--waist="Null Belt",
 		--waist="Anrin Obi",
 		waist="Orpheus's Sash",
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},

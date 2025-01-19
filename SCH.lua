@@ -246,7 +246,7 @@ function init_gear_sets()
         })
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
-    --sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty, body="Twilight Cloak"})
+    --sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty, body="Crepuscular Cloak"})
     sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak", sub="Ammurapi Shield"})
     --sets.precast.Storm = set_combine(sets.precast.FC, {ring2={name="Stikini Ring +1", bag="wardrobe4"},})
 
@@ -288,7 +288,7 @@ function init_gear_sets()
 		hands="Kaykaus cuffs +1",
 		legs="Kaykaus tights +1",
 		feet="Kaykaus boots +1",
-		neck="Sanctity Necklace",
+		neck="Null Loop",
 		waist="Shinjutsu-no-Obi +1",
 		left_ear="Gifted Earring",
 		right_ear="Etiolation Earring",
@@ -546,6 +546,7 @@ function init_gear_sets()
     sets.midcast.Aspir = sets.midcast.Drain
 
     sets.midcast.Stun = set_combine(sets.midcast['Dark Magic'], {
+		waist="Null Belt",
 		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}},
         })
 
@@ -586,7 +587,7 @@ function init_gear_sets()
 		main="Bunzi's rod",
 		sub="Ammurapi shield",
         --head=empty,
-        --body="Twilight Cloak",
+        --body="Crepuscular Cloak",
         ring1="Archon Ring",
         })
 
@@ -748,7 +749,7 @@ function init_gear_sets()
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
-		neck="Sanctity Necklace",
+		neck="Null Loop",
 		waist="Grunfeld Rope",
 		left_ear="Mache Earring +1",
 		right_ear="Telos Earring",

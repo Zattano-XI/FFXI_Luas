@@ -50,7 +50,7 @@ function get_sets()
 		--neck="Yngvi Earring", --5
         --left_ear="Halasz Earring", --3
         --right_ear="Novia Earring", --7
-		--body="Twilight Cloak", --15
+		--body="Crepuscular Cloak", --15
         hands="Sakpata's Gauntlets",
         --left_ring="Persis Ring", --5
         --right_ring="Prolix Ring", --3
@@ -153,7 +153,7 @@ function get_sets()
 	sets.regen = {
         ammo="Staunch Tathlum +1",
         --head="Baghere Salade", --2/0
-        neck="Sanctity Necklace",
+        neck="Bathy Choker +1",
         left_ear="Odnowa Earring +1",
 		--right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','Latent effect: "Refresh"+1',}}, --0/1
         --body="Sacro Breastplate", --13/0
@@ -324,8 +324,8 @@ function get_sets()
 		hands="Ratri Gadlings",
 		legs="Ratri Cuisses",
 		feet="Ratri Sollerets +1",
-		neck="Sanctity Necklace",
-		waist="Eschan Stone",
+		neck="Unmoving Collar +1",
+		waist="Plat. Mog. Belt",
 		left_ear="Odnowa Earring +1",
 		right_ear="Etiolation Earring",
 		left_ring="Regal Ring",
@@ -349,7 +349,7 @@ function get_sets()
 		legs={ name="Fall. Flanchard +3", augments={'Enhances "Muted Soul" effect',}},
 		feet="Ratri Sollerets +1",
 		neck="Erra Pendant",
-		waist="Eschan Stone",
+		waist="Null Belt",
 		left_ear="Etiolation Earring",
 		right_ear="Odnowa Earring +1",
 		left_ring="Evanescence Ring",
@@ -382,8 +382,8 @@ function get_sets()
 		hands="Nyame Gauntlets",
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
-		neck="Sanctity Necklace",
-		waist="Eschan Stone",
+		neck="Null Loop",
+		waist="Orpheus's Sash",
 		left_ear="Etiolation Earring",
 		right_ear="Odnowa Earring +1",
 		left_ring="Metamor. Ring +1",

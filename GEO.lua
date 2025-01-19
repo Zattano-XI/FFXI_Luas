@@ -309,14 +309,14 @@ function init_gear_sets()
         back="Lifestream Cape",
         })
 
-    sets.midcast.Cure = {
-        main="Daybreak", --30
+    sets.midcast.Cure = { --50
+        main="Daybreak", --30CP
         sub="Genmei Shield", --3/(-5) ***
-        head="Vanya Hood", --10
-        body="Vanya Robe", --7/(-6)
-        hands="Vanya Cuffs",
-        legs="Vanya Slops",
-        feet="Vanya Clogs", --5
+        head="Vanya Hood", --10CP
+        body="Agwu's Robe", --7/(-6)?
+        hands="Telchine Gloves", --10CP
+        legs="Vanya Slops", --12CMP
+        feet="Vanya Clogs", --5CP
         neck="Incanter's Torque",
         ear1="Beatific Earring",
         ear2="Meili Earring",
@@ -489,7 +489,7 @@ function init_gear_sets()
         --hands="Bagua Mitaines +3",
         --legs=gear.Merl_MAB_legs,
         --feet=gear.Merl_MAB_feet,
-        neck="Sanctity Necklace",
+        neck="Null Loop",
         ear2="Digni. Earring",
         waist="Acuity Belt +1",
         })

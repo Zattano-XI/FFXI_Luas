@@ -354,7 +354,7 @@ function get_sets()
 	hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Malignance Boots",
-	neck="Sanctity necklace",
+	neck="Null Loop",
 	waist="Luminary sash",
 	left_ear="Digni. Earring",
 	right_ear="Crep. Earring",

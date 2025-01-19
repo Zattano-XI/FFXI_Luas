@@ -110,7 +110,7 @@ function user_setup()
 	'Naegling', 
 	'Pinaka',
 	--'Gastraphetes', 
-	--'Annihilator', 
+	'Annihilator', 
 	'Fomalhaut', 
 	--'tauret', 
 	'Armageddon',
@@ -119,7 +119,7 @@ function user_setup()
 	}
     state.CP = M(false, "Capacity Points Mode")
 
-   DefaultAmmo = {['Sparrowhawk +2'] = "Chrono Arrow",
+   DefaultAmmo = {['Accipiter'] = "Chrono Arrow",
                   ['Fail-Not'] = "Chrono Arrow",
 				  ['Pinaka'] = "Chrono Arrow",
                   ['Annihilator'] = "Chrono Bullet",
@@ -131,7 +131,7 @@ function user_setup()
 
  AccAmmo = {    ['Yoichinoyumi'] = "Yoichi's Arrow",
 				['Pinaka'] = "Chrono Arrow",
-				['Sparrowhawk +2'] = "Chrono Arrow",
+				['Accipiter'] = "Chrono Arrow",
    --           ['Gandiva'] = "Yoichi's Arrow",
                 ['Fail-Not'] = "Yoichi's Arrow",
               ['Annihilator'] = "Eradicating Bullet",
@@ -142,7 +142,7 @@ function user_setup()
 
    WSAmmo = {    ['Yoichinoyumi'] = "Chrono Arrow",
 				 ['Pinaka'] = "Bayeux Arrow",
-   			     ['Sparrowhawk +2'] = "Chrono Arrow",
+   			     ['Accipiter'] = "Chrono Arrow",
   --                 ['Gandiva'] = "Chrono Arrow",
                  ['Fail-Not'] = "Chrono Arrow",
                  ['Annihilator'] = "Chrono Bullet",
@@ -154,7 +154,7 @@ function user_setup()
                   }
 
    MagicAmmo = {  --['Yoichinoyumi'] = "stone arrow",
-				  ['Sparrowhawk +2'] = "Chrono Arrow",
+				  ['Accipiter'] = "Chrono Arrow",
   --               ['Gandiva'] = "Chrono Arrow",
                   ['Fail-Not'] = "Chrono Arrow",
                   ['Annihilator'] = "Devastating Bullet",
@@ -966,8 +966,8 @@ function init_gear_sets()
     waist="Windbuffet Belt +1",
     left_ear="Telos Earring",
 	right_ear="Crepuscular Earring",	
-    left_ring="Defending Ring",
-    right_ring={name="Chirich Ring +1", bag="wardrobe5"},
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
     back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
         }
 
@@ -1056,13 +1056,13 @@ function init_gear_sets()
 	sets.NaeglingKC = { 
 	main="Naegling",
 	--sub="Kraken Club",
-    range="Sparrowhawk +2",
+    range="Accipiter",
 	Ammo="Chrono Arrow",
 	}
    sets.TauretKC = {
 	--main="Tauret",
     --sub="Kraken Club",
-	range={ name="Sparrowhawk +2", augments={'TP Bonus +1000',}},
+	range={ name="Accipiter", augments={'TP Bonus +1000',}},
 	ammo="Hauksbok Arrow",
 	}
 	sets.ArmageddonKC = {
@@ -1095,7 +1095,7 @@ function init_gear_sets()
 	sets.Tauret = {
 	main="Tauret",
     sub="Malevolence",
-	range="Sparrowhawk +2",
+	range="Accipiter",
 	ammo="Hauksbok Arrow",
 	}
 	sets.Fomalhaut = {
@@ -1110,10 +1110,16 @@ function init_gear_sets()
 	ranged="Armageddon",
 	ammo="Chrono Bullet",
 	}
+	sets.Annihilator = {
+	--main="Tauret",
+    --sub="Kraken Club",
+	ranged="Annihilator",
+	ammo="Chrono Bullet",
+	}
 	sets.Naegling = { 
 	main="Naegling",
     sub={ name="Ternion Dagger +1", augments={'Path: A',}},
-    range="Sparrowhawk +2",
+    range="Accipiter",
 	Ammo="Chrono Arrow",
 	}
 	sets.Gastraphetes = {

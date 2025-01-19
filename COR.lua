@@ -286,7 +286,7 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	left_ring="Regal Ring",
 	right_ring="Stikini Ring +1",
 	back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
-	waist="Eschan Stone",
+	waist="Null Belt",
 	legs="Malignance Tights",
 	feet="Nyame Sollerets",
 	}
@@ -298,13 +298,13 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
     hands="Chasseur's Gants +3",
     legs="Chas. Culottes +3",
     feet="Chass. Bottes +3",
-    neck={ name="Comm. Charm +2", augments={'Path: A',}},
-    waist="K. Kachina Belt +1",
+    neck="Null Loop",
+    waist="Null Belt",
     left_ear="Digni. Earring",
     right_ear="Crep. Earring",
 	ring1={name="Stikini Ring +1", bag="wardrobe2"},
     ring2={name="Stikini Ring +1", bag="wardrobe5"},
-    back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%','Damage taken-5%',}},
+    back="Null Shawl",
 	}
 	
 	sets.ws.common = {

@@ -257,7 +257,7 @@ function init_gear_sets()
 
     sets.precast.FC.Curaga = sets.precast.FC.Cure
     sets.precast.FC.CureSolace = sets.precast.FC.Cure
-    sets.precast.FC.Impact = set_combine(sets.precast.FC, {body="Twilight Cloak", waist="Shinjutsu-no-Obi +1"})
+    sets.precast.FC.Impact = set_combine(sets.precast.FC, {body="Crepuscular Cloak", waist="Shinjutsu-no-Obi +1"})
     sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak", sub="Ammurapi Shield"})
 
     -- Precast sets to enhance JAs
@@ -611,7 +611,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
         main="Daybreak",
         sub="Ammurapi Shield",
         head="Cath Palug Crown",
-		neck="Sanctity Necklace",
+		neck="Baetyl Pendant",
         ear1="Malignance Earring",
 		ear2="Regal Earring",
         body="Bunzi's Robe", --Cohort +1
@@ -678,7 +678,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
     sets.midcast.Impact = {
         main="Yagrush",
         sub="Ammurapi Shield",
-        body="Twilight Cloak",
+        body="Crepuscular Cloak",
         hands="Raetic Bangles +1",
         legs="Th. Pant. +3",
         feet="Theo. Duckbills +3",

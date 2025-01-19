@@ -241,7 +241,7 @@ function get_sets()
 	legs="Malignance Tights",
 	feet="Maculele Toe Shoes +3",
 	neck="Etoile Gorget +2",
-	waist="Eschan Stone",
+	waist="Null Belt",
 	left_ear="Dignitary's earring",
 	right_ear="Maculele Earring +2",
 	left_ring="Stikini Ring +1",

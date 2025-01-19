@@ -197,7 +197,7 @@ function init_gear_sets()
 	head="Vanya Hood",
 	neck="Incanter's Torque",
 	ear1="Mendi. Earring",
-	body="Vanya Robe",
+	body="Bunzi's Robe",
 	hands="Inyan. Dastanas +2",
 	ring1="Sirona's Ring",
 	ring2="Janniston Ring",

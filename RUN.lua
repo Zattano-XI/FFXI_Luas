@@ -344,7 +344,7 @@ function init_gear_sets()
     hands="Agwu's Gages",
     legs="Agwu's Slops",
     feet="Agwu's Pigaches",
-    neck="Sanctity Necklace", -- Baetyl?
+    neck="Baetyl Pendant",
     waist="Orpheus's Sash",
     left_ear="Hermetic Earring",
     right_ear="Friomisi Earring",

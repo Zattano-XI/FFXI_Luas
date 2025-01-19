@@ -112,7 +112,7 @@ function init_gear_sets()
 		legs="Mpaca's Hose", 
 		feet="Mpaca's Boots", 
 		neck="Rep. Plat. Medal",
-		waist="Eschan Stone",
+		waist="Moonbow Belt +1",
 		left_ear="Ishvara Earring",
 		right_ear="Moonshade Earring",
 		left_ring="Niqmaddu Ring",

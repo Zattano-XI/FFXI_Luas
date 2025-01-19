@@ -309,7 +309,7 @@ function get_sets()
 	left_ring="Chirich Ring +1",
 	right_ring="Cacoethic Ring +1",
 	back="Aurist's Cape +1",
-	waist="Eschan Stone",
+	waist="Null Belt",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
 	}
@@ -361,7 +361,7 @@ function get_sets()
 	
 	sets.ws['Myrkr'] = {
 	head="Pixie Hairpin +1",
-	neck="Sanctity Necklace",
+	neck="Null Loop",
 	left_ear="Etiolation Earring",
 	right_ear="Gifted Earring",
 	body="Nyame Mail",

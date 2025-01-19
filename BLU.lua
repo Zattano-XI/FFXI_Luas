@@ -250,7 +250,7 @@ function get_sets()
 	}
 	
 	sets.ws['Savage Blade'] = {
-    ammo="Aurgelmir Orb +1",
+    ammo="Coiste Bodhar",
 	head="Hashi. Kavuk +3",
 	head="Nyame Helm",
 	neck="Mirage Stole +2",
@@ -290,7 +290,7 @@ function get_sets()
 
 
     sets.ws['Chant du Cygne'] = set_combine(sets.ws.common, {
-        ammo="Aurgelmir Orb +1",
+        ammo="Coiste Bodhar",
 		head="Adhemar Bonnet +1",
 		body="Gleti's Cuirass",
         hands="Gleti's Gauntlets",

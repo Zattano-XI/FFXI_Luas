@@ -267,7 +267,7 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        ammo="Aurgelmir Orb +1",
+        ammo="Coiste Bodhar",
         head="Nyame Helm", --head="Hachiya Hatsu. +3",
         body="Nyame Mail",
         hands="Nyame Gauntlets",
@@ -400,7 +400,7 @@ function init_gear_sets()
         ear2="Friomisi Earring",
         ring1="Dingir Ring",
         back=gear.NIN_MAB_Cape,
-        waist="Eschan Stone",
+        waist="Orpheus's Sash",
         })
 	
 	sets.precast.WS['Blade: Chi'] = {
@@ -491,12 +491,12 @@ function init_gear_sets()
         ring1="Shiva Ring +1",
         ring2="Metamor. Ring +1",
         back=gear.NIN_MAB_Cape,
-        waist="Eschan Stone",
+        waist="Orpheus's Sash",
         }
 
     sets.midcast.ElementalNinjutsu.Resistant = set_combine(sets.midcast.Ninjutsu, {
         ammo="Pemphredo Tathlum",
-        neck="Sanctity Necklace",
+        neck="Null Loop",
         ring1={name="Stikini Ring +1", bag="wardrobe2"},
         ring2={name="Stikini Ring +1", bag="wardrobe5"},
         ear1="Enchntr. Earring +1",
@@ -509,13 +509,13 @@ function init_gear_sets()
         hands="Mpaca's Gloves",
         legs="Mpaca's Hose",
         feet="Hachiya Kyahan +3",
-        neck="Sanctity Necklace",
+        neck="Null Loop",
         ear1="Enchntr. Earring +1",
         ear2="Digni. Earring",
         ring1={name="Stikini Ring +1", bag="wardrobe2"},
         ring2={name="Stikini Ring +1", bag="wardrobe5"},
         back=gear.NIN_MAB_Cape,
-        waist="Eschan Stone",
+        waist="Null Belt",
         }
 
     sets.midcast.EnhancingNinjutsu = {
@@ -585,7 +585,7 @@ function init_gear_sets()
         })
 
     sets.idle.Town = set_combine(sets.idle, {
-        ammo="Aurgelmir Orb +1",
+        ammo="Coiste Bodhar",
         head="Ken. Jinpachi +1",
         body="Ken. Samue +1",
         hands="Ken. Tekko +1",

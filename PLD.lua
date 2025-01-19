@@ -180,7 +180,7 @@ function get_sets()
 	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
     right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back={name="Reiki Cloak",priority=15}, --130
-	waist={name="Eschan Stone",priority=8}, --20
+	waist={name="Null Belt",priority=8}, --20
 	legs={name="Nyame Flanchard",priority=14}, --114
 	feet={name="Nyame Sollerets",priority=10}, --68
 	}
@@ -242,7 +242,7 @@ function get_sets()
 	sets.TP['HighAcc'] = set_combine(sets.TP['Standard'], {})
 	
 	sets.TP['Sword'] = set_combine(sets.TP['Standard'], {
-	ammo="Aurgelmir Orb +1",
+	ammo="Coiste Bodhar",
 	head="Hjarrandi Helm",
 	body="Hjarrandi Breastplate",
 	})
