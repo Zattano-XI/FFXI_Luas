@@ -129,13 +129,13 @@ function user_setup()
                   ['Ataktos'] = "Chrono Bullet",
 				  }
 
- AccAmmo = {    ['Yoichinoyumi'] = "Yoichi's Arrow",
+ AccAmmo = {    ['Yoichinoyumi'] = "Chrono Arrow",
 				['Pinaka'] = "Chrono Arrow",
 				['Accipiter'] = "Chrono Arrow",
    --           ['Gandiva'] = "Yoichi's Arrow",
                 ['Fail-Not'] = "Yoichi's Arrow",
-              ['Annihilator'] = "Eradicating Bullet",
-                  ['Armageddon'] = "Eradicating Bullet",
+              ['Annihilator'] = "Devastating Bullet",
+                  ['Armageddon'] = "Devastating Bullet",
                 ['Gastraphetes'] = "Quelling Bolt",
                    ['Fomalhaut'] = "Devastating Bullet",
                   }
@@ -428,14 +428,12 @@ function init_gear_sets()
     })
 
     sets.precast.WS["Coronach"] = set_combine(sets.precast.WS["Last Stand"], {
-    head="Orion Beret +3",
+    --head="Orion Beret +3",
 	body="Nyame Mail",
     hands="Nyame Gauntlets",
     feet="Nyame Sollerets",
     neck="Scout's Gorget +2",
-    waist="Fotia Belt",
     left_ear="Sherida Earring",
-    right_ear="Ishvara Earring",
     left_ring="Epaminondas's Ring",
     right_ring="Cornelia's Ring",
     --back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Atk.+10','Weapon skill damage +10%',}},
@@ -643,8 +641,8 @@ function init_gear_sets()
     hands="Amini Glove. +3",
     legs="Amini Bragues +3",
     feet="Nyame Sollerets",
-    neck="Iskur Gorget",
-    waist="Windbuffet Belt +1",
+    neck="Loricate Torque +1",
+    waist="Null Belt",
     left_ear="Telos Earring",
     --right_ear="Crepuscular Earring",
 	right_ear="Amini Earring +2",

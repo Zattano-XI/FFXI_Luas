@@ -298,7 +298,7 @@ function init_gear_sets()
 		hands="Otronif Gloves",
 		ring1="Chirich Ring +1",
 		ring2="Epona's Ring",
-        back="Dispersal Mantle",
+        back="Null Shawl",
 		waist="Hurch'lan Sash",
 		legs="Manibozho Brais",
 		feet="Otronif Boots +1"
