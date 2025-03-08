@@ -301,7 +301,10 @@ function init_gear_sets()
     sets.idle.Spirit = {main="Gridarvor",sub="Vox Grip",ammo="Epitaph",
 	head="Beckoner's Horn +1",neck="Loricate Torque +1",ear1="C. Palug Earring",ear2="Tuisto Earring",
 	body="Shomonjijoe +1",hands="Asteria Mitts +1",ring1="Evoker's Ring",ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
-	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},waist="Fucho-no-Obi",legs="Inyanga Shalwar +2",feet="Beck. Pigaches +1"}
+	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
+	waist="Fucho-no-Obi",
+	legs="Inyanga Shalwar +2",
+	feet="Beck. Pigaches +1"}
 
     -- Favor uses Caller's Horn instead of Convoker's Horn for refresh
     sets.idle.Avatar.Favor = {main="Espiritus",sub="Vox Grip",ammo="Epitaph",

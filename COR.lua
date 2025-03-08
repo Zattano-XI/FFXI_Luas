@@ -8,6 +8,7 @@
 res = require 'resources'
 
 send_command('lua l Skillchains')
+include('SendCommands.lua')
 
 elemental_ws = S{"Aeolian Edge","Leaden Salute","Wildfire"}
 no_shoot_ammo = S{"Hauksbok Bullet"}
@@ -101,7 +102,8 @@ function get_sets()
 	hands="Adhemar Wristbands +1",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-	back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	back="Null Shawl",
+	--back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	legs="Samnuha Tights",
 	feet="Malignance Boots"
 	}
@@ -135,7 +137,7 @@ function get_sets()
 	head="Nyame Helm",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
-	back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	right_ring="Defending Ring",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
 	})
@@ -438,6 +440,28 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	
 	sets.subjobnin = {left_ear="Eabani Earring",waist="Reiki Yotai"}
 	sets.subjobdnc = set_combine(sets.subjobnin, {back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+18 Attack+18','Accuracy+10','"Dual Wield"+10','Damage taken-5%',}},})
+	
+	--Crafting Sets
+		sets.alchemy = {
+	main="Caduceus",
+	sub="Br. Escutcheon",
+	head="Protective Specs.",
+	neck="Alchemist's Torque",
+	body="Alchemist's Smock",
+	hands="Smithy's Mitts",
+	ring1="Orvail ring +1", --+1
+	ring2="Confectioner's Ring",
+	waist="Alchemist's Belt",
+	}
+	
+	sets.smithing = {
+		neck="Smithy's Torque",
+		body="Blacksmith's Apron",
+		hands="Smithy's Mitts",
+		ring1="Orvail Ring +1",
+		ring2="Confectioner's Ring",
+		waist="Blacksmith's Belt",
+	}
 end
 
 function check_height() 
@@ -666,10 +690,10 @@ function weathercheck(spell_element,set)
 		equip(set[spell_element])
 	end
 end
-send_command('bind @e gs c toggle Gun set') 
-send_command('bind @s gs c toggle TP set') -- Hit alt+q, toggles the sets
+send_command('bind !e gs c toggle Gun set') 
+send_command('bind !s gs c toggle TP set') -- Hit alt+q, toggles the sets
 send_command('bind !w gs equip movement') -- Hit alt+w, toggles the sets
-send_command('bind @` gs c toggle QD set') -- Hit alt+`, toggles the sets
+send_command('bind !` gs c toggle QD set') -- Hit alt+`, toggles the sets
 send_command('bind !u gs equip low_hp;wait 1; gs equip high_hp')
 send_command('alias food input /item "Grape Daifuku" <me>')
 send_command('alias bolt input /ja "Bolter\'s roll" <me>')
@@ -680,7 +704,7 @@ send_command('alias stp gs equip sets.stp')
 send_command('alias sortie gs equip sets.sortie')
 
 function file_unload()
-	send_command('unbind @e')
+	send_command('unbind !e')
 	send_command('unbind !q')
 	send_command('unbind !w')
 	send_command('unbind !u')

@@ -1,5 +1,7 @@
 res = require 'resources'
 
+include('SendCommands.lua')
+
 function get_sets()
 	sets.fc = {}
 	sets.ja = {}
@@ -46,7 +48,8 @@ function get_sets()
 	hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 	left_ring="Gere Ring",
 	right_ring="Niqmaddu Ring",
-	back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	--back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	back="Null Shawl",
 	waist="Moonbow Belt +1",
 	legs="Bhikku hose +3",
 	--legs="Hesychast's Hose +3",
@@ -74,7 +77,7 @@ function get_sets()
 	right_ring="Shadow Ring",
 	})
 
-	sets.TP['DT'] = {
+	sets.TP['DT'] = set_combine(sets.TP['Standard'], {
 	ammo="Crepuscular Pebble",
     head={ name="Mpaca's Cap", augments={'Path: A',}}, --7%
     body={ name="Mpaca's Doublet", augments={'Path: A',}}, --10%
@@ -87,8 +90,8 @@ function get_sets()
 	right_ear="Bhikku Earring +2",
     left_ring="Defending Ring",
 	right_ring="Niqmaddu Ring",
-    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-	}
+    --back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	})
 	
 	sets.TP['DT2'] = {
 	ammo="Coiste Bodharf",
@@ -207,9 +210,9 @@ function get_sets()
 	}
 	
 	sets.ja['Chi Blast'] = {
+	ammo="Per. Lucky Egg",
 	head={ name="Hes. Crown", augments={'Enhances "Penance" effect',}},
-    body={ name="Herculean Vest", augments={'Weapon skill damage +2%','Crit. hit damage +3%','"Treasure Hunter"+2','Accuracy+6 Attack+6','Mag. Acc.+8 "Mag.Atk.Bns."+8',}},
-    hands={ name="Herculean Gloves", augments={'Accuracy+3','Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','"Treasure Hunter"+2',}},
+    body="Volte Jupon",
     legs={ name="Tatena. Haidate +1", augments={'Path: A',}},
 	feet="Shukuyu Sune-Ate",
 	neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
@@ -352,7 +355,7 @@ function get_sets()
 	hands="Malignance Gloves",
     legs="Malignance Tights",
     feet="Malignance Boots",
-	neck="Sanctity necklace",
+	neck="Null Loop",
 	waist="Luminary sash",
 	left_ear="Digni. Earring",
 	right_ear="Crep. Earring",

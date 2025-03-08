@@ -1055,45 +1055,45 @@ function self_command(command)
 	end
 end
 
-send_command('bind @a gs c reequip;wait 1; input /lockstyle on') -- Hit alt+a, reequips your gear with toggled sword/shield
-send_command('bind @s gs c toggle TP set') -- Hit win+q, toggles the sets
-send_command('bind @e gs c toggle idle set') -- Hit win+e, toggles the sets
-send_command('bind @m gs c toggle nuke set') -- Hit win+m, toggles the sets
+send_command('bind !a gs c reequip;wait 1; input /lockstyle on') -- Hit alt+a, reequips your gear with toggled sword/shield
+send_command('bind !s gs c toggle TP set') -- Hit win+q, toggles the sets
+send_command('bind !e gs c toggle idle set') -- Hit win+e, toggles the sets
+send_command('bind !m gs c toggle nuke set') -- Hit win+m, toggles the sets
 --send_command('wait 5;gs equip fashion;wait 1;input /lockstyle on;wait 1;gs equip refresh')
-send_command('bind @- gs c toggle main set') -- Hit win+-, toggles the sets
-send_command('bind @= gs c toggle sub set') -- Hit win+=, toggles the sets
-send_command('bind @w gs c toggle weaponlock') -- Hit win+w, toggles the sets
+send_command('bind !- gs c toggle main set') -- Hit win+-, toggles the sets
+send_command('bind != gs c toggle sub set') -- Hit win+=, toggles the sets
+send_command('bind !w gs c toggle weaponlock') -- Hit win+w, toggles the sets
 
-send_command('bind @i send @all /mount Ixion')
-send_command('bind @l send @all /lightshot zattano')
-send_command('bind @d send @all /darkshot <bt>')
-send_command('bind @t send tigertale /dia2 <bt>')
-send_command('bind @b send @all /Bolters roll')
-send_command('bind @c send @all /Chaos Roll')
-send_command('bind @v send @all /Samurai Roll')
+send_command('bind !i send @all /mount Ixion')
+send_command('bind !l send @all /lightshot zattano')
+send_command('bind !d send @all /darkshot <bt>')
+send_command('bind !t send tigertale /dia2 <bt>')
+send_command('bind !b send @all /Bolters roll')
+send_command('bind !c send @all /Chaos Roll')
+send_command('bind !v send @all /Samurai Roll')
 
 function file_unload()
-	send_command('unbind @a')
-	send_command('unbind @s')
-	send_command('unbind @e')
-	send_command('unbind @m')
-	send_command('unbind @-')
-	send_command('unbind @=')
-	send_command('unbind @w')
-	send_command('unbind @l')
-	send_command('unbind @d')
-	send_command('unbind @b')
+	send_command('unbind !a')
+	send_command('unbind !s')
+	send_command('unbind !e')
+	send_command('unbind !m')
+	send_command('unbind !-')
+	send_command('unbind !=')
+	send_command('unbind !w')
+	send_command('unbind !l')
+	send_command('unbind !d')
+	send_command('unbind !b')
 	send_command('unbind savage')
 	send_command('unbind seraph')
 	
 	
-	send_command('unbind @i')
-	send_command('unbind @l')
-	send_command('unbind @d')
-	send_command('unbind @t')
-	send_command('unbind @b')
-	send_command('unbind @c')
-	send_command('unbind @v')
+	send_command('unbind !i')
+	send_command('unbind !l')
+	send_command('unbind !d')
+	send_command('unbind !t')
+	send_command('unbind !b')
+	send_command('unbind !c')
+	send_command('unbind !v')
 end
 
 --function zone_change(new,old)

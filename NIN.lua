@@ -110,20 +110,20 @@ function user_setup()
     include('Global-Binds.lua') -- OK to remove this line
     include('Global-GEO-Binds.lua') -- OK to remove this line
 
-    send_command('bind @t gs c cycle treasuremode')
+    send_command('bind !t gs c cycle treasuremode')
     send_command('bind !` gs c toggle MagicBurst')
     send_command('bind ^- input /ja "Yonin" <me>')
     send_command('bind ^= input /ja "Innin" <me>')
     send_command('bind ^, input /nin "Monomi: Ichi" <me>')
     send_command('bind ^. input /ma "Tonko: Ni" <me>')
-    send_command('bind @, input /ma "Utsusemi: Ichi" <me>')
-    send_command('bind @. input /ma "Utsusemi: Ni" <me>')
-    send_command('bind @/ input /ma "Utsusemi: San" <me>')
+    send_command('bind !, input /ma "Utsusemi: Ichi" <me>')
+    send_command('bind !. input /ma "Utsusemi: Ni" <me>')
+    send_command('bind !/ input /ma "Utsusemi: San" <me>')
 
-    send_command('bind @w gs c toggle WeaponLock')
-    -- send_command('bind @c gs c toggle CP')
-    send_command('bind @e gs c cycleback WeaponSet')
-    send_command('bind @r gs c cycle WeaponSet')
+    send_command('bind !w gs c toggle WeaponLock')
+    -- send_command('bind !c gs c toggle CP')
+    send_command('bind !e gs c cycleback WeaponSet')
+    send_command('bind !r gs c cycle WeaponSet')
 
     send_command('bind ^numlock input /ja "Innin" <me>')
     send_command('bind !numlock input /ja "Yonin" <me>')
@@ -160,12 +160,12 @@ function user_unload()
     send_command('unbind !`')
     send_command('unbind ^-')
     send_command('unbind ^=')
-    send_command('unbind @/')
-    send_command('unbind @w')
-    -- send_command('unbind @c')
-    send_command('unbind @e')
-    send_command('unbind @r')
-    send_command('unbind @t')
+    send_command('unbind !/')
+    send_command('unbind !w')
+    -- send_command('unbind !c')
+    send_command('unbind !e')
+    send_command('unbind !r')
+    send_command('unbind !t')
     send_command('unbind ^numlock')
     send_command('unbind !numlock')
     send_command('unbind ^numpad/')
@@ -198,7 +198,7 @@ function init_gear_sets()
 	--Ambu capes/aug gear
 	gear.NIN_FC_Cape = {name="Andartia's Mantle", augments={'INT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10','Spell interruption rate down-10%',}} --**
     gear.NIN_MAB_Cape = {name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10',}}
-    gear.NIN_TP_Cape = {name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}} 
+    gear.NIN_TP_Cape = "Null Shawl"
     gear.NIN_WS1_Cape = {name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}} 
     gear.NIN_WS2_Cape = {name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}} --**
     gear.NIN_WS3_Cape = {name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Damage taken-5%',}} --**
@@ -464,9 +464,9 @@ function init_gear_sets()
 
     sets.midcast.SpellInterrupt = {
         ammo="Staunch Tathlum +1", --11
-        body=gear.Taeon_Phalanx_body, --10
-        legs=gear.Taeon_Phalanx_legs, --10
-        feet=gear.Taeon_Phalanx_feet, --10
+        body="Taeon Tabard", --10
+        legs="Taeon Tights", --10
+        feet="Taeon Boots", --10
         neck="Moonlight Necklace", --15
         ear1="Halasz Earring", --5
         ear2="Magnetic Earring", --8
@@ -476,7 +476,7 @@ function init_gear_sets()
         } --104 sird with merits, add rawhide gloves if more is needed.
 
     -- Specific spells
-    sets.midcast.Utsusemi = set_combine(sets.midcast.SpellInterrupt, {feet="Hattori Kyahan +1", back=gear.NIN_FC_Cape,})
+    sets.midcast.Utsusemi = set_combine(sets.midcast.SpellInterrupt, {feet="Hattori Kyahan +1", back="Andartia's Mantle",}) --back=gear.NIN_FC_Cape,
 
     sets.midcast.ElementalNinjutsu = {
         ammo="Pemphredo Tathlum",
@@ -824,11 +824,11 @@ function init_gear_sets()
         })
 
     sets.engaged.Hybrid = {
-        head="Malignance Chapeau", --6/6
+        head="Nyame Helm", --6/6
         body="Malignance Tabard", --9/9
 		hands="Malignance Gloves", --5/5
 		legs="Malignance Tights", --7/7
-        feet="Malignance Boots", --4/4
+        feet="Nyame Sollerets", --4/4
         ring2="Defending Ring", --10/10
         back=gear.NIN_WS1_Cape, --10/0
         }

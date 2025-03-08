@@ -169,14 +169,15 @@ function get_sets()
 	mode_ind = 1 --Uncapped set is the Default
 	
 	sets.ws.common = {
-	head="Nyame Helm",
+	--head="Nyame Helm",
+	head="Mpaca's Cap",
 	neck="Samurai's Nodowa +2",
-	--left_ear="Thrud Earring",
-	left_ear="Schere Earring", 
+	left_ear="Thrud Earring",
+	--left_ear="Schere Earring", 
 	right_ear="Kasuga Earring +2",
 	body="Nyame Mail",
 	hands="Kasuga Kote +3",
-	left_ring="Niqmaddu Ring",
+	left_ring="Regal Ring",
 	right_ring="Cornelia's Ring",
 	back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
@@ -401,7 +402,8 @@ function get_sets()
 	head="Protective Specs.",
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
-	ring1="Orvail Ring +1",
+	hands="Smithy's Mitts",
+	ring1="Orvail ring +1", --+1
 	ring2="Confectioner's Ring",
 	waist="Alchemist's Belt",
 	}
@@ -652,15 +654,15 @@ function buff_change(n, gain, buff_table)
 	end
 end
 
-send_command('bind @` gs c toggle mode set') -- Hit win+`, toggles the sets
-send_command('bind @s gs c toggle TP set') -- Hit win+s, toggles the sets
-send_command('bind @w gs equip sets.movement')
-send_command('bind @- gs c toggle WEAPON set') -- Hit win+-, toggles the sets
-send_command('bind @r gs equip sets.regen') -- Hit win+r, toggles the sets
-send_command('bind @a gs c reequip;wait 1; input /lockstyle on') -- Hit win+a
-send_command('bind @u gs equip low_hp;wait 1; gs equip high_hp')
-send_command('bind @o gs equip sets.reraise')
---send_command('bind @k gs equip sets.refresh')
+send_command('bind !` gs c toggle mode set') -- Hit win+`, toggles the sets
+send_command('bind !s gs c toggle TP set') -- Hit win+s, toggles the sets
+send_command('bind !w gs equip sets.movement')
+send_command('bind !- gs c toggle WEAPON set') -- Hit win+-, toggles the sets
+send_command('bind !r gs equip sets.regen') -- Hit win+r, toggles the sets
+send_command('bind !a gs c reequip;wait 1; input /lockstyle on') -- Hit win+a
+send_command('bind !u gs equip low_hp;wait 1; gs equip high_hp')
+send_command('bind !o gs equip sets.reraise')
+--send_command('bind !k gs equip sets.refresh')
 send_command('alias food input /item "Grape Daifuku +1" <me>')
 send_command('alias fudo @input /ws "Tachi: Fudo" <t>')
 send_command('alias jinpu @input /ws "Tachi: Jinpu" <t>')
@@ -716,14 +718,14 @@ function self_command(command)
 end
 
 function file_unload()
-    send_command('unbind @`')
-	send_command('unbind @q')
-	send_command('unbind @w')
-	send_command('unbind @e')
-	send_command('unbind @r')
-	send_command('unbind @a')
-	send_command('unbind @s')
-	send_command('unbind @p')
+    send_command('unbind !`')
+	send_command('unbind !q')
+	send_command('unbind !w')
+	send_command('unbind !e')
+	send_command('unbind !r')
+	send_command('unbind !a')
+	send_command('unbind !s')
+	send_command('unbind !p')
 	send_command('unbind fudo')
 	send_command('unbind jinpu')
 end

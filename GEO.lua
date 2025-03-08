@@ -98,15 +98,15 @@ function user_setup()
     send_command('bind ^a input /ja "Ecliptic Attrition" <me>')
     send_command('bind ^d input /ja "Dematerialize" <me>')
     send_command('bind ^c input /ja "Life Cycle" <me>')
-    send_command('bind @m gs c toggle MagicBurst')
+    send_command('bind !m gs c toggle MagicBurst')
     send_command('bind ^insert gs c cycleback Element')
     send_command('bind ^delete gs c cycle Element')
     send_command('bind !w input /ma "Aspir III" <t>')
     send_command('bind !p input /ja "Entrust" <me>')
     send_command('bind ^, input /ma Sneak <stpc>')
     send_command('bind ^. input /ma Invisible <stpc>')
-    -- send_command('bind @c gs c toggle CP')
-    send_command('bind @w gs c toggle WeaponLock')
+    -- send_command('bind !c gs c toggle CP')
+    send_command('bind !w gs c toggle WeaponLock')
 
     send_command('bind ^numpad7 input /ws "Black Halo" <t>')
     send_command('bind ^numpad8 input /ws "Hexa Strike" <t>')
@@ -136,7 +136,7 @@ function user_unload()
     send_command('unbind ^,')
     send_command('unbind !.')
     -- send_command('unbind @c')
-    send_command('unbind @w')
+    send_command('unbind !w')
     send_command('unbind ^numpad7')
     send_command('unbind ^numpad8')
     send_command('unbind ^numpad9')
@@ -622,7 +622,7 @@ function init_gear_sets()
 		hands="Gazu Bracelets +1",
         left_ring={name="Chirich Ring +1", bag="wardrobe2"},
         right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-        back="Nantosuelta's Cape",
+        back="Null Shawl",
 		waist="Grunfeld Rope", --cetl belt
 		legs="Nyame Flanchard",
         feet="Azimuth Gaiters +3",
@@ -639,7 +639,7 @@ function init_gear_sets()
         hands="Nyame Gauntlets",
         ring1="Chirich Ring +1",
         ring2="Defending Ring",
-        back="Nantosuelta's Cape",
+        back="Null Shawl",
 		waist="Cetl Belt",
 		legs="Nyame Flanchard",
         feet="Nyame Sollerets"

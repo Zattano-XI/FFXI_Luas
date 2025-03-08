@@ -74,7 +74,7 @@ function get_sets()
 	feet={name="Souveran schuhs +1",priority=14}, --5
 	}
 	
-	sets.phalanx2 = set_combine(sets.buff["Phalanx"], { --37
+	sets.phalanx = set_combine(sets.buff["Phalanx"], { --37
 	main={name="Sakpata's Sword",priority=12}, --5
 	sub={name="Priwen",priority=11}, --2
 	})
@@ -372,7 +372,7 @@ function midcast(spell)
 		if spell.name == "Phalanx" then
 			--equip({right_ear="Mimir Earring",})
 			if player.tp < 750 then
-				equip(sets.phalanx2)
+				equip(sets.phalanx)
 			end
 		end
 	elseif spell.action_type == 'Magic' and not spell.type:contains('Trust') then
@@ -449,12 +449,12 @@ function buff_change(n, gain, buff_table)
 end
 
 
-send_command('bind @q gs equip dt') -- Hit cmd+q, equips dt set
-send_command('bind @w gs equip movement') -- Hit cmd+w, equips movement equipment
-send_command('bind @a gs c reequip;wait 1; input /lockstyle on') -- Hit alt+a, reequips your gear with toggled sword/shield
-send_command('bind @= gs c toggle shield set') -- Hit cmd+`, toggles the sets
-send_command('bind @- gs c toggle sword set') -- Hit cmd+`, toggles the sets
-send_command('bind @s gs c toggle TP set') -- Hit cmd+s, equips tp set
+send_command('bind !q gs equip dt') -- Hit alt+q, equips dt set
+send_command('bind !w gs equip movement') -- Hit alt+w, equips movement equipment
+send_command('bind !a gs c reequip;wait 1; input /lockstyle on') -- Hit alt+a, reequips your gear with toggled sword/shield
+send_command('bind != gs c toggle shield set') -- Hit alt+=, toggles the sets
+send_command('bind !- gs c toggle sword set') -- Hit alt+-, toggles the sets
+send_command('bind !s gs c toggle TP set') -- Hit alt+s, equips tp set
 
 function file_unload()
     send_command('unbind !q')

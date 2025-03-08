@@ -698,9 +698,9 @@ function self_command(command)
 	end
 end
 
-send_command('bind @s gs c toggle TP set') -- Hit alt+q, toggles the sets
-send_command('bind @w gs c toggle Buff set') -- Hit alt+w, toggles the sets
-send_command('bind @e gs c toggle idle set') -- Hit alt+e, toggles the sets
+send_command('bind !s gs c toggle TP set') -- Hit alt+q, toggles the sets
+send_command('bind !w gs c toggle Buff set') -- Hit alt+w, toggles the sets
+send_command('bind !e gs c toggle idle set') -- Hit alt+e, toggles the sets
 send_command('alias 500hp gs equip low_hp;wait 1; gs equip high_hp')
 send_command('alias food input /item "Grape Daifuku +1" <me>')
 send_command('alias mount input /mount Fenrir')
@@ -711,9 +711,9 @@ send_command('alias jig input /ja "Spectral Jig" <me>')
 send_command('equip(sets.idle[\'Regain\'],sets.movement)')
 
 function file_unload()
-    send_command('unbind @q')
-	send_command('unbind @w')
-	send_command('unbind @e')
+    send_command('unbind !s')
+	send_command('unbind !w')
+	send_command('unbind !e')
 	--send_command('lua u Skillchains')
 	send_command('lua u Steps')
 end

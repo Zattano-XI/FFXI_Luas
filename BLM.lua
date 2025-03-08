@@ -671,7 +671,7 @@ end
 
 send_command('bind !q gs c toggle TP set') -- Hit alt+q, toggles the sets
 send_command('bind !e gs c toggle idle set') -- Hit alt+e, toggles the sets
-send_command('bind @m gs c toggle nuke set') -- Hit alt+n, toggles the sets
+send_command('bind !m gs c toggle nuke set') -- Hit alt+n, toggles the sets
 send_command('bind !u gs equip low_hp;wait 1; gs equip high_hp')
 
 function file_unload()

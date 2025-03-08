@@ -380,17 +380,17 @@ function get_sets()
 	feet="Nyame Sollerets",
 	}
 	
-		sets.alchemy = {
+	sets.alchemy = {
 	main="Caduceus",
 	sub="Br. Escutcheon",
 	head="Protective Specs.",
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
-	ring1="Orvail Ring +1",
+	hands="Smithy's Mitts",
+	ring1="Orvail ring +1", --+1
 	ring2="Confectioner's Ring",
 	waist="Alchemist's Belt",
-	}
-	
+	}	
 		
 	sets.bonecraft = {
 	--main="Caduceus",
@@ -410,6 +410,7 @@ function get_sets()
 	--head="Protective Specs.",
 	neck="Smithy's Torque",
 	body="blackmith's Apron",
+	hands="Smithy's Mitts",
 	ring1="Orvail Ring +1",
 	ring2="Confectioner's Ring",
 	waist="Blacksmith Belt",
@@ -672,21 +673,21 @@ function weathercheck(spell_element,set)
 		equip(set[spell_element])
 	end
 end
-send_command('bind @` gs c toggle mode set') -- Hit win+`, toggles the sets
-send_command('bind @s gs c toggle TP set') -- Hit alt+q, toggles the sets
-send_command('bind @w gs c toggle TH set') -- Hit alt+q, toggles the sets
-send_command('bind @a gs c reequip') -- Hit alt+a, reequips your gear
-send_command('bind @r gs equip sets.regen')
-send_command('bind @u gs equip low_hp;wait 1; gs equip high_hp')
+send_command('bind !q gs c toggle mode set') -- Hit alt+q, toggles the sets
+send_command('bind !s gs c toggle TP set') -- Hit alt+q, toggles the sets
+send_command('bind !w gs c toggle TH set') -- Hit alt+q, toggles the sets
+send_command('bind !a gs c reequip') -- Hit alt+a, reequips your gear
+send_command('bind !r gs equip sets.regen')
+send_command('bind !u gs equip low_hp;wait 1; gs equip high_hp')
 
 function file_unload()
-	send_command('unbind @`')
-    send_command('unbind @q')
-	send_command('unbind @w')
-	send_command('unbind @a')
-	send_command('unbind @s')
-	send_command('unbind @r')
-	send_command('unbind @u')
+	send_command('unbind !`')
+    send_command('unbind !q')
+	send_command('unbind !w')
+	send_command('unbind !a')
+	send_command('unbind !s')
+	send_command('unbind !r')
+	send_command('unbind !u')
 end
 
 function self_command(command)

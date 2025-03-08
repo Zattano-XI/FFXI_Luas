@@ -61,8 +61,9 @@ function get_sets()
 	neck="Vim Torque +1",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
-    back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}, --stp?
-    }
+    --back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}, --stp?
+    back="Brigantia's Mantle",
+	}
 	
 	sets.ja['High Jump'] = sets.ja['Jump']
 	sets.ja['Spirit Jump'] = set_combine(sets.ja['Jump'], 
@@ -82,7 +83,7 @@ function get_sets()
     sets.ja['Angon'] = {ammo="Angon", hands="Ptero. Fin. G. +3"}
 	
 	
-	sets.TP.index = {'Hybrid', 'DT','High ACC',} --'Pet','Standard',
+	sets.TP.index = {'DT','Hybrid','High ACC',} --'Pet','Standard',
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = { --sub war +27% + 56% gear = 83%
@@ -99,7 +100,7 @@ function get_sets()
     left_ring="Niqmaddu Ring",  
     right_ring="Chirich Ring +1",
     --back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}}, --10
-	 back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	 back="Null Shawl",
 	}
 	
 sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
@@ -123,7 +124,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	sets.TP['DT'] = set_combine(sets.TP['Standard'], { --48%
 	ammo="Staunch Tathlum +1",
     head="Nyame Helm", --7
-    body="Nyame Mail", --9
+    body="Gleti's Cuirass", --9
     hands="Gleti's Gauntlets",
     legs="Gleti's Breeches",
     feet={ name="Nyame Sollerets", augments={'Path: B',}}, --7
@@ -493,14 +494,14 @@ function buff_change(n, gain, buff_table)
 	end
 end
 
-send_command('bind @s gs c toggle TP set') -- Hit alt+q, toggles the sets
-send_command('bind @w gs equip sets.movement') -- Hit alt+w, toggles movement set
-send_command('bind @` gs c toggle WEAPON set') -- Hit alt+`, toggles the sets
-send_command('bind @r gs equip sets.regen') -- Hit alt+r, toggles the sets
-send_command('bind @a gs equip sets.weapon') -- Hit alt+a, toggles sets
+send_command('bind !s gs c toggle TP set') -- Hit alt+q, toggles the sets
+send_command('bind !w gs equip sets.movement') -- Hit alt+w, toggles movement set
+send_command('bind !e gs c toggle WEAPON set') -- Hit alt+e, toggles the sets
+send_command('bind !r gs equip sets.regen') -- Hit alt+r, toggles the sets
+send_command('bind !a gs equip sets.weapon') -- Hit alt+a, toggles sets
 send_command('wait 5;gs equip fashion;wait 1;input /lockstyle on;wait 1;gs equip idle')
-send_command('bind @u gs equip low_hp;wait 1; gs equip high_hp') -- Hit alt+u, toggles HP
-send_command('bind @p gs equip sets.tpgain') -- Hit alt+p, toggles the TPgain
+send_command('bind !u gs equip low_hp;wait 1; gs equip high_hp') -- Hit alt+u, toggles HP
+send_command('bind !p gs equip sets.tpgain') -- Hit alt+p, toggles the TPgain
 
 function self_command(command)
 	if command == 'toggle TP set' then

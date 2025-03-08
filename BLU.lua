@@ -60,7 +60,7 @@ function get_sets()
 --------------------------------------------------- MIDCAST ---------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 
-	sets.TP.index = {'Hybrid','DT','Standard','Learning',}
+	sets.TP.index = {'DT','Hybrid','Standard','Learning',}
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = {
@@ -124,7 +124,7 @@ function get_sets()
 	sets.TP['DT'] = set_combine(sets.TP['Hybrid'], { --49
 	head="Nyame Helm", --7
 	--body="Nyame Mail", --9
-	hands="Nyame Gauntlets", --7
+	hands="Gleti's Gauntlets", --7
 	right_ring="Defending Ring", --10
 	legs="Carmine Cuisses +1",
 	feet="Nyame Sollerets" --7
@@ -267,9 +267,9 @@ function get_sets()
 	}
 	
 	sets.ws['Expiacion'] = set_combine(sets.ws['Savage Blade'], {
-        body="Gleti's Cuirass",
+        --body="Gleti's Cuirass",
 		ring1="Beithir Ring",	
-        waist="Kentarch Belt +1",
+        --waist="Kentarch Belt +1",
         --legs="Gleti's Breeches",
     })
 	
@@ -338,6 +338,11 @@ function get_sets()
 	sets.tizona = {
 		main="Tizona",
 		sub="Bunzi's Rod",
+	}
+	
+	sets.swords = {
+		main="Tizona",
+		sub="Sakpata's Sword",
 	}
 end
 
@@ -519,17 +524,16 @@ function self_command(command)
 	end
 end
 
-send_command('bind @s gs c toggle TP set') -- Hit win+s, toggles the sets
-send_command('bind @e gs c toggle idle set') -- Hit win+e, toggles the sets
-send_command('bind @n gs c toggle nuke set') -- Hit win+n, toggles the sets
-send_command('bind @u gs equip low_hp;wait 1; gs equip high_hp')
+send_command('bind !s gs c toggle TP set') -- Hit win+s, toggles the sets
+send_command('bind !e gs c toggle idle set') -- Hit win+e, toggles the sets
+send_command('bind !m gs c toggle nuke set') -- Hit win+n, toggles the sets
+send_command('bind !u gs equip low_hp;wait 1; gs equip high_hp')
 
 function file_unload()
-    send_command('unbind @q')
-	send_command('unbind @e')
-	send_command('unbind @a')
-	send_command('unbind @n')
-	send_command('unbind @u')
+    send_command('unbind !s')
+	send_command('unbind !e')
+	send_command('unbind !m')
+	send_command('unbind !u')
 end
 
 windower.register_event('zone change',function()

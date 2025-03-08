@@ -171,8 +171,8 @@ function user_setup()
     send_command('lua l gearinfo')
 
     send_command('bind ^` input /ja "Velocity Shot" <me>')
-    send_command ('bind @` input /ja "Scavenge" <me>')
-	send_command('bind @w gs c toggle WeaponLock')
+    send_command ('bind !` input /ja "Scavenge" <me>')
+	send_command('bind !w gs c toggle WeaponLock')
 
     if player.sub_job == 'DNC' then
         send_command('bind ^, input /ja "Spectral Jig" <me>')
@@ -182,9 +182,9 @@ function user_setup()
         send_command('bind ^. input /item "Prism Powder" <me>')
     end
 
-    send_command('bind @c gs c toggle CP')
-    send_command('bind @e gs c cycleback WeaponSet')
-    send_command('bind @r gs c cycle WeaponSet')
+    send_command('bind !c gs c toggle CP')
+    send_command('bind !e gs c cycleback WeaponSet')
+    send_command('bind !r gs c cycle WeaponSet')
 
     send_command('bind ^numlock input /ja "Double Shot" <me>')
 
@@ -226,12 +226,12 @@ function user_unload()
     send_command('unbind ^f9')
     send_command('unbind ^`')
     send_command('unbind !`')
-    send_command('unbind @`')
+    send_command('unbind !`')
     send_command('unbind ^,')
-    send_command('unbind @f')
-    send_command('unbind @c')
-    send_command('unbind @e')
-    send_command('unbind @r')
+    send_command('unbind !f')
+    send_command('unbind !c')
+    send_command('unbind !e')
+    send_command('unbind !r')
     send_command('unbind ^numlock')
     send_command('unbind ^numpad/')
     send_command('unbind ^numpad*')
@@ -581,7 +581,7 @@ function init_gear_sets()
     right_ear="Odr Earring",
     left_ring="Mummu Ring",
     right_ring="Begrudging Ring",
-    back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}},
+    --back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Crit.hit rate+10',}},
         })
 
     sets.midcast.RA.STP = set_combine(sets.midcast.RA, {
@@ -1097,19 +1097,19 @@ function init_gear_sets()
 	ammo="Hauksbok Arrow",
 	}
 	sets.Fomalhaut = {
-	--main={ name="Ternion Dagger +1", augments={'Path: A',}},
+	main="Perun +1",
 	--sub="kraken club",
 	ranged="Fomalhaut",
 	ammo="Chrono Bullet",
 	}
 	sets.Armageddon = {
-	--main="Tauret",
+	main="Tauret",
     --sub="Kraken Club",
 	ranged="Armageddon",
 	ammo="Chrono Bullet",
 	}
 	sets.Annihilator = {
-	--main="Tauret",
+	main="Perun +1",
     --sub="Kraken Club",
 	ranged="Annihilator",
 	ammo="Chrono Bullet",
@@ -1127,6 +1127,7 @@ function init_gear_sets()
 	ammo="Quelling Bolt"
 	}
 	sets.Pinaka = {
+	Main="Perun +1",
 	ranged="Pinaka",
 	ammo="Chrono Arrow",
 	}

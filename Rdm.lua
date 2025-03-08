@@ -186,11 +186,13 @@ function get_sets()
 	sub="Ammurapi Shield",
 	head="Vitiation Chapeau +3",
 	neck="Duelist's Torque +2",
-	right_ear="Snotra Earring",
+	left_ear="Snotra Earring",
+	right_ear="Leth. Earring +2",
 	hands="Lethargy Gantherots +3",
 	ring1={name="Stikini Ring +1", bag="wardrobe2"},
     ring2={name="Stikini Ring +1", bag="wardrobe5"},
 	waist="Obstinate Sash",
+	legs="Leth. Fuseau +3",
 	feet="Vitiation Boots +3",
 	}
 	
@@ -199,12 +201,10 @@ function get_sets()
 	sub="Ammurapi Shield",
 	range="Ullr",
 	--head="Lethargy Chappel +3",
-	left_ear="Regal Earring",
 	body="Atrophy Tabard +3",
 	hands="Lethargy Gantherots +3",
 	back="Aurist's Cape +1",
 	waist="Obstinate Sash",
-	legs="Chironic Hose",
 	})
 	
 	sets.midcast.SkillEnfeebles = set_combine(sets.midcast.Enfeebling, {
@@ -318,17 +318,18 @@ function get_sets()
 	
 	 sets.midcast.absorb = set_combine(sets.midcast['Dark Magic'], {
     main="Crocea Mors",
-	back="Aurist's Cape +1",
+	neck="Null Loop",
+	back="Null Cape",
     })
 	--body="Vitiation Tabard +3",
 	
 	sets.midcast.bar_element = {}
 	
 	sets.midcast.regen =  set_combine(sets.midcast.EnhancingDuration, {
+	main="Bolelabunga",
 	feet="Bunzi's Sabots",
     })
 	
-	--[[
 	sets.midcast.impact = {
 	sub="Ammurapi Shield",
 	range="Ullr",
@@ -346,10 +347,10 @@ function get_sets()
 	legs="Chironic Hose",
 	feet="Vitiation Boots +3",
 	}
-	]]
+	
 	--Occult Acumen
-	sets.midcast.impact =  {
-	ammo="Aurgelmir Orb +1",
+	sets.midcast.impact.Occult =  {
+	ammo="Coiste Bodhar",
 	neck="Combatant's Torque", --4 STP
 	left_ear="Crep. Earring", --6 STP
     right_ear="Telos Earring", --5 STP
@@ -369,7 +370,11 @@ function get_sets()
 	
 	sets.buff.selfphalanx = set_combine(sets.buff['Phalanx'], {
 	main="Sakpata's Sword",
-	--hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	--head="Chironic Hat",
+	--body="Chironic Doublet",
+	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	legs="Chironic Hose",
+	feet="Chironic Slippers",
 	})
 	
 	sets.buff['Refresh III'] = set_combine(sets.midcast.EnhancingDuration, {
@@ -427,7 +432,7 @@ function get_sets()
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = {
-	ammo="Aurgelmir Orb +1",
+	ammo="Coiste Bodhar",
 	head="Bunzi's Hat",
 	neck="Combatant's Torque",
 	left_ear="Sherida Earring",
@@ -544,7 +549,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	})
 	
 	sets.ws["Ruthless Stroke"] = set_combine(sets.ws.common, {
-	ammo="Aurgelmir Orb +1",
+	ammo="Coiste Bodhar",
 	left_ring="Ilabrat Ring",
 	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --DW?
 	})
@@ -553,7 +558,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	ammo="Crepuscular Pebble",
 	head="Nyame Helm",
 	neck="Duelist's Torque +2",
-	right_ear="Lethargy Earring +2",
+	right_ear="Leth. Earring +2",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
 	left_ring="Sroda Ring",
@@ -597,7 +602,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	sets.main['Mpu Gandring'] = {main="Mpu Gandring"}
 	sets.main['Maxentius'] = {main="Maxentius"}
 	
-	sets.sub.index = {'Gleti\'s Knife','Daybreak','Bunzi\'s Rod', 'Thibron', 'Crepuscular Knife'}
+	sets.sub.index = {'Gleti\'s Knife','Daybreak','Bunzi\'s Rod',} --'Thibron', 'Crepuscular Knife'
 	sub_ind = 1 --Gleti's Knife is the Default
 	
 	sets.sub['Gleti\'s Knife'] = {sub="Gleti's Knife"}
@@ -700,15 +705,17 @@ function precast(spell)
 			cancel_spell()
 			add_to_chat(123, spell.name..' Canceled: [Out of Range]')
 		elseif player.tp >= 1000 then
-			if (player.tp >= 1000 and player.tp < 3000) and spell.name ~= "Sanguine Blade" then
-				equip({left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}})
-			else
-				equip({left_ear="Sherida Earring"})
-			end
 			if sets.ws[spell.name] then
-				equip(sets.ws[spell.name])
-			else
 				equip(sets.ws.common)
+			end
+			if (player.tp >= 1000 and player.tp < 2750) then
+				equip({left_ear="Moonshade Earring"})  
+			elseif player.tp < 3000 then
+				equip({left_ear="Regal Earring"})
+			elseif spell.name == "Ruthless Stroke" then --or spell.name == "Savage Blade" 
+				equip({left_ear="Sherida Earring"})
+			else
+				equip({left_ear="Regal Earring"})
 			end
 		end
 	end
@@ -729,8 +736,10 @@ function midcast(spell)
 				equip(sets.midcast.raise)
 			end
 		elseif spell.skill == 'Elemental Magic' then
-			if spell.name == "Impact" then
-				equip(sets.midcast.impact) 
+				if spell.name == "Impact" and sets.nuke.index[nuke_ind] == 'Occult' then 
+				equip(sets.midcast.impact.Occult)
+				elseif spell.name == "Impact" then
+				equip(sets.midcast.impact)
 			else
 				if spell.english == "Fire" or spell.english == "Stone" or spell.english == "Blizzard" or spell.english == "Thunder" or spell.english == "Water" or spell.english == "Aero" then
 					equip(sets.TP['DT'])
@@ -819,7 +828,7 @@ function aftercast(spell)
 			equip(sets.TP[sets.TP.index[TP_ind]])
 			determine_dual_wield()
 			if buffactive[EnSpells] then
-				equip({hands="Ayanmo Manopolas +2",})
+				equip({hands="Aya. Manopolas +2",})
 			end
 		end
 	elseif player.status == "Idle" then
@@ -844,7 +853,7 @@ function status_change(new,old)
 			equip(sets.TP[sets.TP.index[TP_ind]])
 			determine_dual_wield()
 			if buffactive[EnSpells] then
-				equip({hands="Ayanmo Manopolas +2",})
+				equip({hands="Aya. Manopolas +2",})
 			end
 		end
 	elseif new == 'Idle' then
@@ -1046,45 +1055,45 @@ function self_command(command)
 	end
 end
 
-send_command('bind @a gs c reequip;wait 1; input /lockstyle on') -- Hit alt+a, reequips your gear with toggled sword/shield
-send_command('bind @s gs c toggle TP set') -- Hit win+q, toggles the sets
-send_command('bind @e gs c toggle idle set') -- Hit win+e, toggles the sets
-send_command('bind @m gs c toggle nuke set') -- Hit win+m, toggles the sets
+send_command('bind !a gs c reequip;wait 1; input /lockstyle on') -- Hit alt+a, reequips your gear with toggled sword/shield
+send_command('bind !s gs c toggle TP set') -- Hit win+q, toggles the sets
+send_command('bind !e gs c toggle idle set') -- Hit win+e, toggles the sets
+send_command('bind !m gs c toggle nuke set') -- Hit win+m, toggles the sets
 --send_command('wait 5;gs equip fashion;wait 1;input /lockstyle on;wait 1;gs equip refresh')
-send_command('bind @- gs c toggle main set') -- Hit win+-, toggles the sets
-send_command('bind @= gs c toggle sub set') -- Hit win+=, toggles the sets
-send_command('bind @w gs c toggle weaponlock') -- Hit win+w, toggles the sets
+send_command('bind !- gs c toggle main set') -- Hit win+-, toggles the sets
+send_command('bind != gs c toggle sub set') -- Hit win+=, toggles the sets
+send_command('bind !w gs c toggle weaponlock') -- Hit win+w, toggles the sets
 
-send_command('bind @i send @all /mount Ixion')
-send_command('bind @l send @all /lightshot zattano')
-send_command('bind @d send @all /darkshot <bt>')
-send_command('bind @t send tigertale /dia2 <bt>')
-send_command('bind @b send @all /Bolters roll')
-send_command('bind @c send @all /Chaos Roll')
-send_command('bind @v send @all /Samurai Roll')
+send_command('bind !i send @all /mount Ixion')
+send_command('bind !l send @all /lightshot zattano')
+send_command('bind !d send @all /darkshot <bt>')
+send_command('bind !t send tigertale /dia2 <bt>')
+send_command('bind !b send @all /Bolters roll')
+send_command('bind !c send @all /Chaos Roll')
+send_command('bind !v send @all /Samurai Roll')
 
 function file_unload()
-	send_command('unbind @a')
-	send_command('unbind @s')
-	send_command('unbind @e')
-	send_command('unbind @m')
-	send_command('unbind @-')
-	send_command('unbind @=')
-	send_command('unbind @w')
-	send_command('unbind @l')
-	send_command('unbind @d')
-	send_command('unbind @b')
+	send_command('unbind !a')
+	send_command('unbind !s')
+	send_command('unbind !e')
+	send_command('unbind !m')
+	send_command('unbind !-')
+	send_command('unbind !=')
+	send_command('unbind !w')
+	send_command('unbind !l')
+	send_command('unbind !d')
+	send_command('unbind !b')
 	send_command('unbind savage')
 	send_command('unbind seraph')
 	
 	
-	send_command('unbind @i')
-	send_command('unbind @l')
-	send_command('unbind @d')
-	send_command('unbind @t')
-	send_command('unbind @b')
-	send_command('unbind @c')
-	send_command('unbind @v')
+	send_command('unbind !i')
+	send_command('unbind !l')
+	send_command('unbind !d')
+	send_command('unbind !t')
+	send_command('unbind !b')
+	send_command('unbind !c')
+	send_command('unbind !v')
 end
 
 --function zone_change(new,old)

@@ -106,7 +106,7 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
     state.OffenseMode:options('Normal', 'Acc')
-    state.CastingMode:options('Normal', 'Resistant', 'SIRD')
+    state.CastingMode:options('DT','Normal', 'Resistant', 'SIRD')
     state.IdleMode:options('DT', 'Normal', 'MEva')
     state.BarElement = M{['description']='BarElement', 'Barfira', 'Barblizzara', 'Baraera', 'Barstonra', 'Barthundra', 'Barwatera'}
     state.BarStatus = M{['description']='BarStatus', 'Baramnesra', 'Barvira', 'Barparalyzra', 'Barsilencera', 'Barpetra', 'Barpoisonra', 'Barblindra', 'Barsleepra'}
@@ -143,8 +143,8 @@ function user_setup()
 
 	
     --send_command('bind !c gs c toggle CP')
-    send_command('bind @r gs c cycle RegenMode')
-    send_command('bind @w gs c toggle WeaponLock')
+    send_command('bind !r gs c cycle RegenMode')
+    send_command('bind !w gs c toggle WeaponLock')
 
     send_command('bind ^numpad7 input /ws "Black Halo" <t>')
     send_command('bind ^numpad8 input /ws "Hexa Strike" <t>')
@@ -180,8 +180,8 @@ function user_unload()
     send_command('unbind ^]')
     send_command('unbind !o')
     -- send_command('unbind @c')
-    send_command('unbind @r')
-    send_command('unbind @w')
+    send_command('unbind !r')
+    send_command('unbind !w')
     send_command('unbind ^numpad7')
     send_command('unbind ^numpad8')
     send_command('unbind ^numpad5')
@@ -313,7 +313,7 @@ function init_gear_sets()
     sets.midcast.FC = sets.precast.FC
 
     sets.midcast.ConserveMP = {
-        --main="Sucellus",
+        main="Septoptic +1",
         --sub="Thuellaic Ecu +1",
         head="Vanya Hood",
         body="Vedic Coat",
@@ -345,14 +345,17 @@ function init_gear_sets()
         waist="Shinjutsu-no-Obi +1",
       }
 
-	sets.midcast.CureSolace.SIRD = set_combine(sets.midcast.CureSolace, { 
+	sets.midcast.CureSolace.DT = set_combine(sets.midcast.CureSolace, { 
+		head="Bunzi's Hat",
+		feet="Bunzi's Sabots",
+		})
+
+	sets.midcast.CureSolace.SIRD = set_combine(sets.midcast.CureSolace.DT, { 
 		ammo="Staunch Tathlum", --10
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
 		feet="Theo. Duckbills +3", --29
 		waist="Rumination Sash", --10
 		--left_ear="Nourishing Earring +1", --5
-		left_ring="Defending Ring",
-		right_ring="Lebeche Ring", 
 		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, --10
 		})
 	--94+10 SIRD from merits

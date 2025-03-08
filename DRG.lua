@@ -37,7 +37,7 @@ function job_setup()
 	send_command('bind ^numpad8 input /ws "Diarmuid" <t>')            	----Diarmuid CTRL + NUMPAD 8
 	send_command('bind !numpad4 input /ws "Geirskogul" <t>')            ----Geirskogul ALT + NUMPAD 4
 	send_command('bind !numpad9 input /ws "Impulse Drive" <t>')         ----Impulse Drive ALT + NUMPAD 9
-	send_command('bind @numpad4 input /ws "Savage Blade" <t>')          ----Savage Blade WIN + NUMPAD 4
+	send_command('bind !numpad4 input /ws "Savage Blade" <t>')          ----Savage Blade ALT + NUMPAD 4
 	send_command('bind !numpad4 input /ws "Judgment" <t>')          	----Judgment ALT + NUMPAD 4
 	send_command('bind ^numpad1 input /ws "Cataclysm" <t>')          	----Cataclysm ALT + NUMPAD 6
 	
@@ -93,7 +93,7 @@ function user_setup()
 	send_command('bind ^` gs c cycle SB')--ctrl+` to cycle subtle blow
 	send_command('bind !` gs c cycle SC')--alt+` to cycle Skill chain gear
 	send_command('bind ^k gs c cycle killer')--ctrl+k to cycle founder's breastplate
-	send_command('bind @` gs c cycle AttackMode')--win +` to cycle attack capped or uncapped
+	send_command('bind !a gs c cycle AttackMode')--win +` to cycle attack capped or uncapped
 	
 	
     send_command('bind ^[ input /lockstyle on')
@@ -159,13 +159,13 @@ function file_unload()
 	send_command('unbind !numpad7')
 	send_command('unbind ^numpad1')
 	send_command('unbind !numpad9')
-	send_command('unbind @numpad4')
+	send_command('unbind !numpad4')
 	send_command('unbind !numpad6')
 	send_command('unbind ^k')
 	
 	send_command('unbind ^`')
 	send_command('unbind !`')
-	send_command('unbind @`')
+	send_command('unbind !a')
 	
 	
 	--[[send_command('unbind ^4')	
@@ -935,13 +935,12 @@ function init_gear_sets()
 		right_ring="Defending Ring",
     }
 
-	sets.PhalanxReceived={
-			head={ name="Taeon Chapeau", augments={'Accuracy+17 Attack+17','"Triple Atk."+2','Phalanx +3',}},
-			body={ name="Taeon Tabard", augments={'Spell interruption rate down -10%','Phalanx +3',}},
-			hands={ name="Taeon Gloves", augments={'Accuracy+13','Spell interruption rate down -8%','Phalanx +3',}},
-			--legs={ name="Taeon Tights", augments={'Accuracy+21','Spell interruption rate down -7%','Phalanx +3',}},
-			legs={ name="Valorous Hose", augments={'STR+4','Pet: "Store TP"+7','Phalanx +4','Accuracy+20 Attack+20','Mag. Acc.+5 "Mag.Atk.Bns."+5',}},
-			feet={ name="Taeon Boots", augments={'Accuracy+25','Spell interruption rate down -10%','Phalanx +3',}},
+	sets.phalanx={
+			head="Valorous Mask",
+			body="Valorous Mail",
+			hands="Valorous Mitts",
+			legs="Valorous Hose",
+			feet="Valorous Greaves",
 	}
 	
 	

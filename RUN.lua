@@ -134,16 +134,16 @@ function user_setup()
 	send_command('bind !- gs c cycleback runes')
     send_command('bind != gs c cycle runes')
     send_command('bind ^f11 gs c cycle MagicalDefenseMode')
-    send_command('bind @a gs c cycle AttackMode')
-    --send_command('bind @c gs c toggle CP')
-    send_command('bind @e gs c cycleback WeaponSet')
-    send_command('bind @r gs c cycle WeaponSet')
-    send_command('bind @w gs c toggle WeaponLock')
-	--send_command('bind @k gs c toggle Knockback')
+    send_command('bind !a gs c cycle AttackMode')
+    --send_command('bind !c gs c toggle CP')
+    send_command('bind !e gs c cycleback WeaponSet')
+    send_command('bind !r gs c cycle WeaponSet')
+    send_command('bind !w gs c toggle WeaponLock')
+	--send_command('bind !k gs c toggle Knockback')
     send_command('bind !q input /ma "Temper" <me>')
 
 --custom binds by me	
-	--send_command('bind @= gs c cycle treasuremode')
+	--send_command('bind != gs c cycle treasuremode')
 
 
     --if player.sub_job == 'BLU' then
@@ -159,8 +159,8 @@ function user_setup()
    -- send_command('bind !o input /ma "Regen IV" <stpc>')
   --  send_command('bind !p input /ma "Ice Spikes" <me>')
 
-    --send_command('bind @w gs c toggle WeaponLock')
-    --send_command('bind @c gs c toggle CP')
+    --send_command('bind !w gs c toggle WeaponLock')
+    --send_command('bind !c gs c toggle CP')
 
     --if player.sub_job == 'WAR' then
         --send_command('bind ^numpad/ input /ja "Berserk" <me>')
@@ -214,17 +214,17 @@ function user_unload()
     send_command('unbind ^f11')
     send_command('unbind ^insert')
     send_command('unbind ^delete')
-    send_command('unbind @a')
-    send_command('unbind @c')
-    send_command('unbind @d')
+    send_command('unbind !a')
+    send_command('unbind !c')
+    send_command('unbind !d')
     send_command('unbind !q')
-    send_command('unbind @w')
-    send_command('unbind @e')
-    send_command('unbind @r')
+    send_command('unbind !w')
+    send_command('unbind !e')
+    send_command('unbind !r')
     send_command('unbind !o')
     send_command('unbind !p')
     send_command('unbind ^,')
-    send_command('unbind @w')
+    send_command('unbind !w')
     --send_command('unbind ^numpad/')
     --send_command('unbind ^numpad*')
     --send_command('unbind ^numpad-')
@@ -233,7 +233,7 @@ function user_unload()
 	--send_command('unbind ^numpad4')
     --send_command('unbind ^numpad5')
     --send_command('unbind ^numpad1')
-    --send_command('unbind @numpad*')
+    --send_command('unbind !numpad*')
 
 	send_command('unbind ^/')
 	send_command('unbind ^*')
@@ -615,7 +615,7 @@ function init_gear_sets()
 			feet="Taeon Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},
 		})
 		
-	sets.phalanx2 = set_combine(sets.midcast.SpellInterrupt, {
+	sets.phalanx = set_combine(sets.midcast.SpellInterrupt, {
 			head="Fu. Bandeau +3", 
 			body="Herculean Vest",
 			hands="herculean Gloves",
@@ -1028,6 +1028,7 @@ function init_gear_sets()
 	head="Protective Specs.",
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
+	hands="Smithy's Mitts",
 	ring1="Orvail ring +1", --+1
 	ring2="Confectioner's Ring",
 	waist="Alchemist's Belt",

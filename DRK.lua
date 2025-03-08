@@ -1,4 +1,5 @@
 res = require 'resources'
+
 include('SendCommands.lua')
 
 function get_sets()
@@ -559,15 +560,15 @@ function buff_change(n, gain, buff_table)
 	end
 end
 
-send_command('bind @s gs c toggle TP set') -- Hit cmd+s, toggles the sets
-send_command('bind @w gs equip sets.movement')
-send_command('bind @- gs c toggle WEAPON set') -- Hit cmd+-, toggles the sets
-send_command('bind @r gs equip sets.regen') -- Hit cmd+r, toggles the sets
-send_command('bind @a gs equip sets.weapon') -- Hit cmd+a
+send_command('bind !s gs c toggle TP set') -- Hit ALT+S, toggles the sets
+send_command('bind !w gs equip sets.movement')
+send_command('bind !- gs c toggle WEAPON set') -- Hit cmd+-, toggles the sets
+send_command('bind !r gs equip sets.regen') -- Hit cmd+r, toggles the sets
+send_command('bind !a gs equip sets.weapon') -- Hit cmd+a
 --send_command('wait 5;gs equip fashion;wait 1;input /lockstyle on;wait 1;gs equip idle')
-send_command('bind @u gs equip low_hp;wait 1; gs equip high_hp')
-send_command('bind @p gs equip sets.tpgain')
-send_command('bind @d gs equip sets.midcast.magic')
+send_command('bind !u gs equip low_hp;wait 1; gs equip high_hp')
+send_command('bind !p gs equip sets.tpgain')
+send_command('bind !d gs equip sets.midcast.magic')
 
 function self_command(command)
 	if command == 'toggle TP set' then

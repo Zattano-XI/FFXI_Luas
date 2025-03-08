@@ -41,10 +41,11 @@ function get_sets()
     neck={ name="Vim Torque +1", augments={'Path: A',}},
     waist="Windbuffet Belt +1",
     left_ear={ name="Schere Earring", augments={'Path: A',}},
-    right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
-    left_ring={ name="Moonlight Ring", bag="wardrobe1"},
-    right_ring="Niqmaddu Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    right_ear="Boii Earring +1",
+    left_ring="Niqmaddu Ring",
+	right_ring={ name="Moonlight Ring", bag="wardrobe5"},
+    --back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	back="Null Shawl",
 	}
 	
 	
@@ -58,10 +59,11 @@ function get_sets()
     neck="Warder's Charm +1",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Schere Earring", augments={'Path: A',}},
-    right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
-    left_ring={name="Moonlight Ring", bag="wardrobe1"},
-    right_ring="Niqmaddu Ring",
-    back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+    right_ear="Boii Earring +1",
+    left_ring="Niqmaddu Ring",
+	right_ring={ name="Moonlight Ring", bag="wardrobe5"},
+    --back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	back="Null Shawl",
 	}
 	
 	sets.idle = {
@@ -91,8 +93,8 @@ function get_sets()
     waist="Ioskeha Belt +1",
     left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
-    left_ring={name="Moonlight Ring", bag="wardrobe1"},
-    right_ring={name="Moonlight Ring", bag="wardrobe2"},
+    left_ring={name="Moonlight Ring", bag="wardrobe2"},
+    right_ring={name="Moonlight Ring", bag="wardrobe5"},
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -107,8 +109,8 @@ function get_sets()
     waist="Ioskeha Belt +1",
     left_ear={ name="Schere Earring", augments={'Path: A',}},
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
-    left_ring={name="Moonlight Ring", bag="wardrobe1"},
-    right_ring={name="Moonlight Ring", bag="wardrobe2"},
+    left_ring={name="Moonlight Ring", bag="wardrobe2"},
+    right_ring={name="Moonlight Ring", bag="wardrobe5"},
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	}
 	
@@ -122,8 +124,8 @@ function get_sets()
     neck={ name="War. Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
-    left_ring="Cornelia's Ring",
-    right_ring="Niqmaddu Ring",
+    left_ring="Niqmaddu Ring",
+	right_ring="Cornelia's Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 }
 	
@@ -205,13 +207,13 @@ function get_sets()
     hands="Boii Mufflers +3",
     legs="Boii Cuisses +3",
     feet="Boii Calligae +3",
-    neck="Baetyl Pendant",
-    waist="Skrymir Cord",
+    neck="Null Loop",
+    waist="Null Belt",
     left_ear="Crep. Earring",
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring={name="Stikini Ring +1", bag="wardrobe4"},
     right_ring={name="Stikini Ring +1", bag="wardrobe7"},
-    back={ name="Cichol's Mantle", augments={'STR+20','Mag. Acc+20 /Mag. Dmg.+20','STR+10','Weapon skill damage +10%',}},
+    back="Null Shawl",
 }
 	sets.ws['Armor Break'] = sets.ws ['Full Break']
 	
@@ -244,8 +246,8 @@ function get_sets()
     neck={ name="War. Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     right_ear="Thrud Earring",
-    left_ring="Sroda Ring",
-    right_ring="Niqmaddu Ring",
+    left_ring="Niqmaddu Ring",
+	right_ring="Sroda Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
 }
 	sets.ws['Mistral\'s Axe'] = {
@@ -259,8 +261,8 @@ function get_sets()
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
-    left_ring="Cornelia's Ring",
-    right_ring="Niqmaddu Ring",
+    left_ring="Niqmaddu Ring",
+	right_ring="Cornelia's Ring",
     back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
 }
 
@@ -275,8 +277,8 @@ function get_sets()
 	}
 	
 	sets.phalanx = {
-	head={ name="Valorous Mask", augments={'"Triple Atk."+1','"Drain" and "Aspir" potency +2','Phalanx +4','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
-    body={ name="Yorium Cuirass", augments={'DEF+19','Spell interruption rate down -10%','Phalanx +3',}},
+	head="Valorous Mask",
+    body="Valorous Mail",
     hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
     feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
