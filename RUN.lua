@@ -623,7 +623,6 @@ function init_gear_sets()
 			feet="Herculean Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},	   
         })
 
-	sets.phalanx = sets.phalanx2
 
     sets.midcast['Aquaveil'] = set_combine(sets.midcast['Enhancing Magic'], sets.midcast.SpellInterrupt, {
         --main="Nibiru Faussar", --1

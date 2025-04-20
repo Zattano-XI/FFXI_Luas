@@ -32,7 +32,7 @@ function get_sets()
 	ammo.shooty = {ammo="Yoichi's Arrow"}
 	
 	sets.movement = {feet="Danzo Sune-Ate"}
-	sets.TH = {ammo="Per. Lucky Egg", waist="Chaac Belt", legs="Volte Hose", feet="Volte Boots",} 
+	sets.TH = {ammo="Per. Lucky Egg",body="Volte Jupon", waist="Chaac Belt",} 
 	
 	sets.fc.base = {
 	neck="Baetyl Pendant",
@@ -441,7 +441,7 @@ function precast(spell)
 			equip(ammo.fc)
 		end
 	elseif string.find(spell.english,'Jump') then
-		equip(sets.TP['DT'],sets.TH)
+		equip(sets.TP['Subtle DT'],sets.TH)
 	elseif spell.type == "WeaponSkill" then
 		local range_mult = {
 			[2] = 1.55,

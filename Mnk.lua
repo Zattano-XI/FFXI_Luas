@@ -17,7 +17,7 @@ function get_sets()
 
 	sets.fc.base = {
 	ammo="Impatiens",
-    head={ name="Herculean Helm", augments={'Mag. Acc.+12','"Fast Cast"+6','MND+7',}}, --13
+    head="Herculean Helm",--augments={'Mag. Acc.+12','"Fast Cast"+6','MND+7',}}, --13
 	neck="Baetyl Pendant", --4
 	left_ear="Loquac. Earring", --2 
 	right_ear="Etiolation Earring", --1
@@ -45,7 +45,7 @@ function get_sets()
 	left_ear="Sherida Earring",
 	right_ear="Bhikku Earring +2",
 	body="Ken. Samue +1",
-	hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+	hands="Adhemar Wrist. +1", --augments={'DEX+12','AGI+12','Accuracy+20',}},
 	left_ring="Gere Ring",
 	right_ring="Niqmaddu Ring",
 	--back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
@@ -94,7 +94,7 @@ function get_sets()
 	})
 	
 	sets.TP['DT2'] = {
-	ammo="Coiste Bodharf",
+	ammo="Coiste Bodhar",
     head="Bhikku Crown +3", --7%
     body={ name="Mpaca's Doublet", augments={'Path: A',}}, --10%
 	hands="Mpaca's gloves", --8%
@@ -119,7 +119,7 @@ function get_sets()
 	left_ear="Sherida Earring",
 	right_ear="Bhikku Earring +2",
 	body="Malignance Tabard",
-	hands={ name="Adhemar Wrist. +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
+	hands="Adhemar Wrist. +1", --augments={'DEX+12','AGI+12','Accuracy+20',}},
 	left_ring="Defending Ring",
 	right_ring="Gelatinous Ring +1",
 	back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
@@ -268,7 +268,7 @@ function get_sets()
 	--neck={ name="Mnk. Nodowa +2", augments={'Path: A',}},
 	waist="Moonbow belt +1",
 	left_ear="Sherida earring",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	right_ear="Moonshade Earring",
 	left_ring="Gere Ring",
 	right_ring="Niqmaddu ring",
     back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
@@ -300,7 +300,7 @@ function get_sets()
     neck="Rep. Plat. Medal",
 	waist="Moonbow belt +1",
 	left_ear="Sherida earring",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	right_ear="Moonshade Earring",
 	left_ring="Gere Ring",
 	right_ring="Niqmaddu ring",
     back={ name="Segomo's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','"Dbl.Atk."+10',}},
@@ -317,7 +317,7 @@ function get_sets()
 	neck="Fotia gorget",
 	waist="Moonbow belt +1",
 	left_ear="Sherida earring",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	right_ear="Moonshade Earring",
 	left_ring="Gere Ring",
 	right_ring="Niqmaddu ring",
     back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
@@ -342,7 +342,7 @@ function get_sets()
 	neck="Baetyl Pendant",
 	waist="Orpheus's sash",
 	left_ear="Friomisi Earring",
-	right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+	right_ear="Moonshade Earring",
 	left_ring="Archon Ring",
 	right_ring="Metamor. Ring +1",
     back={ name="Segomo's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','"Dbl.Atk."+10',}},
@@ -669,8 +669,8 @@ function buff_change(n, gain, buff_table)
 	end
 end
 
-send_command('bind !q gs c toggle TP set') -- Hit alt+q, toggles the sets
-send_command('bind !e gs c toggle DEF set') -- Hit alt+e, toggles the sets
+send_command('bind !s gs c toggle TP set') -- Hit alt+q, toggles the sets
+send_command('bind !d gs c toggle DEF set') -- Hit alt+e, toggles the sets
 send_command('alias 500hp gs equip low_hp;wait 1; gs equip high_hp')
 send_command('alias food input /item "Grape Daifuku" <me>')
 send_command('lua l Skillchains')

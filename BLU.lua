@@ -73,7 +73,8 @@ function get_sets()
 	hands="Adhemar Wristbands +1",
 	left_ring="Ilabrat Ring",
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-	back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},	waist="Reiki Yotai",
+	back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},	
+	waist="Reiki Yotai",
 	legs="Malignance Tights",
 	feet="Gleti's Boots",
 	
@@ -96,7 +97,7 @@ function get_sets()
 		hands="Adhemar Wristbands +1",
 		left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}},		
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},		
 		waist="Reiki Yotai",
 		legs="Malignance Tights",
 		feet="Nyame Sollerets",
@@ -162,9 +163,11 @@ function get_sets()
 	})
 	
 	sets.idle['DT'] = set_combine(sets.TP['DT'], {
+	neck="Null Loop",
 	body="Hashishin Mintan +3",
-	left_ring="Warp Ring",
-	legs="Carmine Cuisses +1",
+	left_ring="Shadow Ring",
+	waist="Null Belt",
+	legs="Nyame Flanchard",
 	})
 	
 	sets.midcast.enhancing = {}
@@ -242,7 +245,7 @@ function get_sets()
 	hands="Nyame Gauntlets",
 	ring1="Beithir Ring",
 	ring2="Cornelia's Ring",
-	back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+	back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	--back="Aurist's Cape +1",
 	waist="Fotia Belt",
 	legs="Nyame Flanchard",
@@ -260,7 +263,7 @@ function get_sets()
     hands="Nyame Gauntlets",
 	ring1="Sroda ring",
 	ring2="Cornelia's Ring",
-	back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+	back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     waist="Sailfi Belt +1",
     legs="Nyame Flanchard",
     feet="Nyame Gauntlets",
@@ -297,7 +300,7 @@ function get_sets()
         waist="Fotia Belt",
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
-		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Damage taken-5%',}}, --Dex,acc/atc/Crit+10
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --Dex,acc/atc/Crit+10
 		neck="Mirage Stole +2",
         ear1="Odr Earring",
         ear2="Mache Earring +1",
@@ -343,6 +346,11 @@ function get_sets()
 	sets.swords = {
 		main="Tizona",
 		sub="Sakpata's Sword",
+	}
+	
+	sets.tpswords = {
+		main="Tizona",
+		sub="Thibron",
 	}
 end
 

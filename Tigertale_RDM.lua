@@ -441,7 +441,7 @@ function get_sets()
 	hands="Malignance Gloves",
 	ring1={name="Chirich Ring +1", bag="wardrobe2"},
 	ring2={name="Chirich Ring +1", bag="wardrobe5"},
-	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --DW?
+	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	waist="Reiki Yotai",
 	legs="Malignance Tights",
 	feet="Nyame Sollerets",
@@ -457,8 +457,7 @@ function get_sets()
 	hands="Aya. Manopolas +2",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 	right_ring="Ilabrat Ring",
-	--back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
-	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	waist="Orpheus's Sash",
 	legs="Malignance Tights",
 	feet="Nyame Sollerets"
@@ -470,7 +469,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 		--head="Malignance Chapeau",
 		neck="Duelist's Torque +2",
 		ring2="Hetairoi Ring",
-		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 		legs="Carmine Cuisses +1",	
 		--feet="Malignance Boots"
 	})
