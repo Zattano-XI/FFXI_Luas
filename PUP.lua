@@ -64,6 +64,7 @@ function user_setup()
 
     update_pet_mode()
     select_default_macro_book()
+	send_command('lua u Gearinfo')
 end
 
 
@@ -347,11 +348,18 @@ function init_gear_sets()
 	})
 	
 	sets.phalanx = {
+		ammo="Staunch Tathlum +1",
 		head="Herculean Helm",
 		body="Herculean Vest",
 		hands="Herculean Gloves",
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
+		neck="Null Loop",
+		ear1="Odnowa earring +1",
+		ring1="Shadow Ring",
+		ring2="Defending Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",		
 	}
 
 end
@@ -476,6 +484,10 @@ function display_pet_status()
         
         add_to_chat(122,petInfoString)
     end
+end
+
+function file_unload()
+	send_command('lua l Gearinfo')
 end
 
 -- Select default macro book on initial load or subjob change.

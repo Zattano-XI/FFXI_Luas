@@ -64,6 +64,7 @@ function get_sets()
 	}
 	
 	sets.buff["Phalanx"] = { --30
+	ammo="Staunch Tathlum +1",
 	head="Valorous Mask", --5
 	neck="Moonlight Necklace",
 	body="Valorous Mail", --5
@@ -336,7 +337,7 @@ function precast(spell)
 			end
 			if spell.name ~= "Shell Crusher" then
 				if (player.tp >= 1000 and player.tp < 3000) then
-					equip({left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}})
+					equip({left_ear="Moonshade Earring",})
 				elseif world.time >= (17*60) or world.time <= (7*60) then
 					equip({left_ear="Lugra Earring +1"})
 				else

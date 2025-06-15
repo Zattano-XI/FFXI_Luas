@@ -31,7 +31,7 @@ function get_sets()
 	sets.fc.base = { --2+14+4+2+1+9+5+4+10+3+8+8=74 with Sakpata's sword
     ammo="Sapience Orb", --2
     head={ name="Carmine Mask +1", augments={'Accuracy+20','Mag. Acc.+12','"Fast Cast"+4',}}, --14
-	neck="Baetyl Pendant", --4
+	neck="Orunmila's Torque", --4
 	left_ear="Loquac. Earring", --2
     right_ear="Etiolation Earring", --1
     body="Adamantite Armor",
@@ -139,7 +139,7 @@ function get_sets()
 	--sub={ name="Maxentius", priority=1,},
 	ammo="Pemphredo Tathlum",
 	head=empty,
-	neck="Baetyl Pendant",
+	neck="Sibyl Scarf",
 	left_ear="Regal Earring",
 	right_ear="Friomisi Earring",
 	head="Hashishin Kavuk +3",
@@ -153,7 +153,7 @@ function get_sets()
 	feet="Hashishin Basmak +3"
 	}
 	
-	sets.idle.index = {'Refresh','DT'}--,'PDT','MDT'}
+	sets.idle.index = {'DT','Refresh',}--,'PDT','MDT'}
 	idle_ind = 1 --Refresh set is the Default
 	
 	sets.idle['Refresh'] = set_combine(sets.TP['DT'], {
@@ -211,15 +211,15 @@ function get_sets()
 		body="Hashishin Mintan +3",
 		hands="Hashishin Bazubands +3",
 		legs="Hashishin Tayt +3",
-		feet="Hashishin BAsmak +3",
+		feet="Hashishin Basmak +3",
 		neck="Mirage Stole +2",
-		waist="Acuity Belt +1",
+		waist="Null Belt",
 		left_ear="Dignitary's Earring",
 		right_ear="Hashi. Earring +2",
         ring1={name="Stikini Ring +1", bag="wardrobe2"},
         ring2={name="Stikini Ring +1", bag="wardrobe5"},
 		--back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%'}},
-		back="Aurist's Cape +1",
+		back="Null Shawl",
 	}
 	
 	sets.midcast.dark = set_combine(sets.nuke['Free'], {
@@ -321,11 +321,19 @@ function get_sets()
 	}
 	
 	sets.phalanx = {
+		ammo="Staunch Tathlum +1",
+		main="Sakpata's Sword",
 		head="Herculean Helm",
 		body="Herculean Vest",
 		hands="Herculean Gloves",
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
+		neck="Null Loop",
+		ear1="Odnowa earring +1",
+		ring1="Shadow Ring",
+		ring2="Defending Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",
 	}
 	
 	sets.lowdmg = {
@@ -390,7 +398,7 @@ function precast(spell)
 			add_to_chat(123, spell.name..' Canceled: [Out of Range]')
 		elseif player.tp > 1000 then
 			if player.tp >= 1000 and player.tp < 2750 then
-				equip({left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}})
+				equip({left_ear="Moonshade Earring",})
 			else
 				equip({left_ear="Ishvara Earring"})
 			end
@@ -637,7 +645,7 @@ Blue_MagicalDex = S{'Charged Whisker','Gates of Hades'}
 ]]
 -- Magical spells (generally debuffs) that we want to focus on magic accuracy over damage.
 -- Add Int for damage where available, though.
-Blue_MagicAccuracy = S{'1000 Needles','Absolute Terror','Actinic Burst','Atra. Libations','Auroral Drape','Awful Eye', 'Blank Gaze','Blistering Roar','Blood Saber','Chaotic Eye','Cimicine Discharge','Cold Wave','Corrosive Ooze','Demoralizing Roar','Digest','Dream Flower','Enervation','Feather Tickle','Filamented Hold','Frightful Roar','Geist Wall','Infrasonics','Jettatura','Light of Penance','Lowing','Mind Blast','Mortal Ray','MP Drainkiss','Osmosis','Reaving Wind','Sandspin','Sandspray','Sheep Song','Soporific','Sound Blast','Stinking Gas','Sub-zero Smash','Venom Shell','Voracious Trunk','Yawn'}
+Blue_MagicAccuracy = S{'Searing Tempest','1000 Needles','Absolute Terror','Actinic Burst','Atra. Libations','Auroral Drape','Awful Eye', 'Blank Gaze','Blistering Roar','Blood Saber','Chaotic Eye','Cimicine Discharge','Cold Wave','Corrosive Ooze','Demoralizing Roar','Digest','Dream Flower','Enervation','Feather Tickle','Filamented Hold','Frightful Roar','Geist Wall','Infrasonics','Jettatura','Light of Penance','Lowing','Mind Blast','Mortal Ray','MP Drainkiss','Osmosis','Reaving Wind','Sandspin','Sandspray','Sheep Song','Soporific','Sound Blast','Stinking Gas','Sub-zero Smash','Venom Shell','Voracious Trunk','Yawn'}
 
 -- Breath-based spells
 Blue_Breath = S{'Bad Breath','Flying Hip Press','Frost Breath','Heat Breath','Hecatomb Wave','Magnetite Cloud','Poison Breath','Self-Destruct','Thunder Breath','Vapor Spray','Wind Breath'}

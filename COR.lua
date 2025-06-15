@@ -26,7 +26,7 @@ function get_sets()
 	
 	sets.fc.base = {
 	head="Carmine Mask +1",
-	neck="Baetyl Pendant",
+	neck="Orunmila's Torque",
 	left_ear="Etiolation Earring",
 	right_ear="Loquacious Earring",
 	body="Adamantite Armor",
@@ -90,7 +90,7 @@ function get_sets()
 	
 	--Sets.Gun['Prime'] = {range="Earp"}
 	
-	sets.TP.index = {'Foxie','DT','Nyame','Aminon','Standard','HighAcc'}
+	sets.TP.index = {'Naegling','DT','Nyame','Aminon','Standard','HighAcc'}
 	TP_ind = 1 --DT set is the Default
 	
 	sets.TP['Standard'] = {
@@ -125,11 +125,12 @@ function get_sets()
 	feet="Nyame Sollerets"
 	})
 	
-	sets.TP['Foxie'] = set_combine(sets.TP['DT'], {
+	sets.TP['Naegling'] = set_combine(sets.TP['DT'], {
 	main="Naegling",
+	sub="Gleti's Knife",
 	})
 	
-	sets.TP['Aminon'] = set_combine(sets.TP['Foxie'], {
+	sets.TP['Aminon'] = set_combine(sets.TP['Naegling'], {
 	hands="Regal Gloves",
 	})
 	
@@ -431,11 +432,18 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	}
 	
 	sets.phalanx = {
+		ammo="Staunch Tathlum +1",
 		head="Herculean Helm",
 		body="Herculean Vest",
 		hands="Herculean Gloves",
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
+		neck="Null Loop",
+		ear1="Odnowa earring +1",
+		ring1="Shadow Ring",
+		ring2="Defending Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",
 	}
 	
 	sets.subjobnin = {left_ear="Eabani Earring",waist="Reiki Yotai"}

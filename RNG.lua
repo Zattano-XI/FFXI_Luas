@@ -1038,11 +1038,18 @@ function init_gear_sets()
         }
 
 	sets.phalanx = {
+		ammo="Staunch Tathlum +1",
 		head="Herculean Helm",
 		body="Herculean Vest",
 		hands="Herculean Gloves",
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
+		neck="Null Loop",
+		ear1="Odnowa earring +1",
+		ring1="Shadow Ring",
+		ring2="Defending Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",		
 	}
 
    -- sets.FullTP = {ear1="Crematio Earring"}

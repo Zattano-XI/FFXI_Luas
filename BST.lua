@@ -160,7 +160,7 @@ function init_gear_sets()
     sets.precast.FC = {
 				ring2="Lebeche Ring",
 				ammo="Impatiens",
-				neck="Baetyl Pendant",
+				neck="Orunmila's Torque",
 				ear1="Etiolation Earring",
 				head={ name="Taeon Chapeau", augments={'"Fast Cast"+2',}},
 				body={ name="Taeon Tabard", augments={'Pet: "Mag.Atk.Bns."+23','"Fast Cast"+4',}},
@@ -256,7 +256,7 @@ function init_gear_sets()
 			hands="Nyame Gauntlets",
 			legs="Nyame Flanchard",
 			feet="Nyame Sollerets",
-			neck="Baetyl Pendant",
+			neck="Sibyl Scarf",
 			waist="Orpheus's Sash",
 			left_ear="Friomisi Earring",
 			right_ear="Moonshade Earring",
@@ -581,6 +581,20 @@ function init_gear_sets()
 			-- THIS IS THE END OF THE GEARSWAP AS FAR AS YOU SHOULD BE CONCERNED --
 
 			--Don't tell me where I should be concerned...
+	sets.phalanx = {
+		ammo="Staunch Tathlum +1",
+		head="Valorous Mask",
+		body="Valorous Mail",
+		hands="Valorous Mitts",
+		legs="Valorous Hose",
+		feet="Valorous Greaves",
+		neck="Null Loop",
+		ear1="Odnowa earring +1",
+		ring1="Shadow Ring",
+		ring2="Defending Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",	
+		}
 end
 
 -------------------------------------------------------------------------------------------------------------------

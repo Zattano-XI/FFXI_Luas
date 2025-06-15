@@ -4,8 +4,6 @@
 
 -- IMPORTANT: Make sure to also get the Mote-Include.lua file (and its supplementary files) to go with this.
 
-include('SendCommands.lua')
-
 -- Initialization function for this job file.
 function get_sets()
     mote_include_version = 2
@@ -37,7 +35,7 @@ function job_setup()
 	send_command('bind ^numpad8 input /ws "Diarmuid" <t>')            	----Diarmuid CTRL + NUMPAD 8
 	send_command('bind !numpad4 input /ws "Geirskogul" <t>')            ----Geirskogul ALT + NUMPAD 4
 	send_command('bind !numpad9 input /ws "Impulse Drive" <t>')         ----Impulse Drive ALT + NUMPAD 9
-	send_command('bind !numpad4 input /ws "Savage Blade" <t>')          ----Savage Blade ALT + NUMPAD 4
+	send_command('bind @numpad4 input /ws "Savage Blade" <t>')          ----Savage Blade WIN + NUMPAD 4
 	send_command('bind !numpad4 input /ws "Judgment" <t>')          	----Judgment ALT + NUMPAD 4
 	send_command('bind ^numpad1 input /ws "Cataclysm" <t>')          	----Cataclysm ALT + NUMPAD 6
 	
@@ -58,7 +56,7 @@ function job_setup()
 	breath_delay = 1.2
 end
 
- 
+
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
 	-- Options: Override default values
@@ -93,7 +91,7 @@ function user_setup()
 	send_command('bind ^` gs c cycle SB')--ctrl+` to cycle subtle blow
 	send_command('bind !` gs c cycle SC')--alt+` to cycle Skill chain gear
 	send_command('bind ^k gs c cycle killer')--ctrl+k to cycle founder's breastplate
-	send_command('bind !a gs c cycle AttackMode')--win +` to cycle attack capped or uncapped
+	send_command('bind @` gs c cycle AttackMode')--win +` to cycle attack capped or uncapped
 	
 	
     send_command('bind ^[ input /lockstyle on')
@@ -159,13 +157,13 @@ function file_unload()
 	send_command('unbind !numpad7')
 	send_command('unbind ^numpad1')
 	send_command('unbind !numpad9')
-	send_command('unbind !numpad4')
+	send_command('unbind @numpad4')
 	send_command('unbind !numpad6')
 	send_command('unbind ^k')
 	
 	send_command('unbind ^`')
 	send_command('unbind !`')
-	send_command('unbind !a')
+	send_command('unbind @`')
 	
 	
 	--[[send_command('unbind ^4')	
@@ -271,9 +269,11 @@ function init_gear_sets()
 		
 		}
     sets.TreasureHunter = { 
-        ammo="Per. Lucky Egg", --1
-		body="Volte Jupon",
-        waist="Chaac Belt",
+        --head="White rarab cap +1", 
+		legs="Volte Hose",--1
+		body={ name="Valorous Mail", augments={'"Conserve MP"+6','"Resist Silence"+4','"Treasure Hunter"+2','Accuracy+11 Attack+11','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},--2
+        --waist="Chaac Belt",
+		ammo="Perfect Lucky Egg", --1
      }
 
 	sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
@@ -602,10 +602,10 @@ function init_gear_sets()
 		--feet={ name="Founder's Greaves", augments={'VIT+10','Accuracy+15','"Mag.Atk.Bns."+15','Mag. Evasion+15',}},
 		--neck="Deviant Necklace",
 		neck="Fotia Gorget",
-		--waist="Null Belt",
+		--waist="Eschan Stone",
 		--waist="Anrin Obi",
 		waist="Orpheus's Sash",
-		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		left_ear="Moonshade Earring",,
 		right_ear="Friomisi Earring",
 		--left_ring="Arvina Ringlet +1",
 		left_ring="Epaminondas's Ring",
@@ -935,14 +935,29 @@ function init_gear_sets()
 		right_ring="Defending Ring",
     }
 
-	sets.phalanx={
-			head="Valorous Mask",
-			body="Valorous Mail",
-			hands="Valorous Mitts",
-			legs="Valorous Hose",
-			feet="Valorous Greaves",
+	sets.PhalanxReceived={
+			head={ name="Taeon Chapeau", augments={'Accuracy+17 Attack+17','"Triple Atk."+2','Phalanx +3',}},
+			body={ name="Taeon Tabard", augments={'Spell interruption rate down -10%','Phalanx +3',}},
+			hands={ name="Taeon Gloves", augments={'Accuracy+13','Spell interruption rate down -8%','Phalanx +3',}},
+			--legs={ name="Taeon Tights", augments={'Accuracy+21','Spell interruption rate down -7%','Phalanx +3',}},
+			legs={ name="Valorous Hose", augments={'STR+4','Pet: "Store TP"+7','Phalanx +4','Accuracy+20 Attack+20','Mag. Acc.+5 "Mag.Atk.Bns."+5',}},
+			feet={ name="Taeon Boots", augments={'Accuracy+25','Spell interruption rate down -10%','Phalanx +3',}},
 	}
-	
+
+	sets.phalanx = {
+		ammo="Staunch Tathlum +1",
+		head="Valorous Mask",
+		body="Valorous Mail",
+		hands="Valorous Mitts",
+		legs="Valorous Hose",
+		feet="Valorous Greaves",
+		neck="Null Loop",
+		ear1="Odnowa earring +1",
+		ring1="Shadow Ring",
+		ring2="Defending Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",
+	} 
 	
 --temp placeholder for mixed pdt set 
 	sets.Reraise = {

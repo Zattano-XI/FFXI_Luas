@@ -32,7 +32,7 @@ function get_sets()
     head="Carmine Mask +1",
     left_ear="Odnowa Earring +1",
     right_ear="Etiolation Earring",
-    neck="Baetyl Pendant",
+    neck="Orunmila's Torque",
 	--neck={ name="Abyssal Beads +1", augments={'Path: A',}},
 	body="Sacro Breastplate",
 	--body={ name="Fall. Cuirass +3", augments={'Enhances "Blood Weapon" effect',}},
@@ -420,6 +420,20 @@ function get_sets()
 		back={ name="Niht Mantle", augments={'Attack+7','Dark magic skill +10','"Drain" and "Aspir" potency +25',}},
         })
 
+	sets.phalanx = {
+		ammo="Staunch Tathlum +1",
+		head="Valorous Mask",
+		body="Valorous Mail",
+		hands="Valorous Mitts",
+		legs="Valorous Hose",
+		feet="Valorous Greaves",
+		neck="Null Loop",
+		ear1="Odnowa earring +1",
+		ring1="Shadow Ring",
+		ring2="Defending Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",	
+		}
 end
 
 function check_height() 

@@ -35,7 +35,7 @@ function get_sets()
 	sets.TH = {ammo="Per. Lucky Egg",body="Volte Jupon", waist="Chaac Belt",} 
 	
 	sets.fc.base = {
-	neck="Baetyl Pendant",
+	neck="Orunmila's Torque",
 	left_ear="Etiolation Earring",
 	body="Sacro Breastplate",
 	hands="Leyline Gloves",
@@ -338,11 +338,18 @@ function get_sets()
 	}
 	
 	sets.phalanx = { 
+	ammo="Staunch Tathlum +1",
 	head="Valorous Mask",
 	body="Valorous Mail",
 	hands="Valorous Mitts",
 	legs="Valorous Hose",
 	feet="Valorous Greaves",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",
 	} --Phalanx+ on all pieces
 	
 	sets.enmity = {
@@ -654,12 +661,12 @@ function buff_change(n, gain, buff_table)
 	end
 end
 
-send_command('bind !` gs c toggle mode set') -- Hit win+`, toggles the sets
-send_command('bind !s gs c toggle TP set') -- Hit win+s, toggles the sets
+send_command('bind !` gs c toggle mode set') -- Hit alt+`, toggles the sets
+send_command('bind !s gs c toggle TP set') -- Hit alt+s, toggles the sets
 send_command('bind !w gs equip sets.movement')
-send_command('bind !- gs c toggle WEAPON set') -- Hit win+-, toggles the sets
-send_command('bind !r gs equip sets.regen') -- Hit win+r, toggles the sets
-send_command('bind !a gs c reequip;wait 1; input /lockstyle on') -- Hit win+a
+send_command('bind !- gs c toggle WEAPON set') -- Hit alt+-, toggles the sets
+send_command('bind !r gs equip sets.regen') -- Hit alt+r, toggles the sets
+send_command('bind !a gs c reequip;wait 1; input /lockstyle on') -- Hit alt+a
 send_command('bind !u gs equip low_hp;wait 1; gs equip high_hp')
 send_command('bind !o gs equip sets.reraise')
 --send_command('bind !k gs equip sets.refresh')

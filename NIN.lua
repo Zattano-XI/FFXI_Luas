@@ -395,7 +395,7 @@ function init_gear_sets()
         hands="Leyline Gloves",
         legs="Nyame Flanchard",
         feet="Nyame Sollerets",
-        neck="Baetyl Pendant",
+        neck="Sibyl Scarf",
         ear1="Crematio Earring",
         ear2="Friomisi Earring",
         ring1="Dingir Ring",
@@ -430,7 +430,7 @@ function init_gear_sets()
 		--neck={ name="Ninja Nodowa +2", augments={'Path: A',}},
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		ear1="Lugra Earring +1",
-		right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Moonshade Earring",
 		left_ring="Regal Ring",
 		right_ring="Cornelia's Ring",
 		back={ name="Andartia's Mantle", augments={'STR+20','Mag. Acc+20 /Mag. Dmg.+20','STR+10','Weapon skill damage +10%',}},
@@ -448,7 +448,7 @@ function init_gear_sets()
 		--neck={ name="Ninja Nodowa +2", augments={'Path: A',}},
 		waist="Orpheus's Sash",
 		ear1="Friomisi Earring",
-		ear2={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		ear2="Moonshade Earring",
 		ring1="Dingir Ring",
 		ring1="Gere Ring",
 		ring2="Cornelia's Ring",
@@ -485,7 +485,7 @@ function init_gear_sets()
         hands="Leyline Gloves",
         legs=gear.Herc_MAB_legs,
         feet=gear.Herc_MAB_feet,
-        neck="Baetyl Pendant",
+        neck="Sibyl Scarf",
         ear1="Crematio Earring",
         ear2="Friomisi Earring",
         ring1="Shiva Ring +1",
@@ -897,11 +897,18 @@ function init_gear_sets()
     sets.Tanking = {main="Fudo Masamune", sub="Ternion Dagger +1"}
 
 	sets.phalanx = {
+		ammo="Staunch Tathlum +1",
 		head="Herculean Helm",
 		body="Herculean Vest",
 		hands="Herculean Gloves",
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
+		neck="Null Loop",
+		ear1="Odnowa earring +1",
+		ring1="Shadow Ring",
+		ring2="Defending Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",
 	}
 
 end

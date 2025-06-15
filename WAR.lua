@@ -189,7 +189,7 @@ function get_sets()
     hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     legs={ name="Nyame Flanchard", augments={'Path: B',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck="Baetyl Pendant",
+    neck="Sibyl Scarf",
     waist="Orpheus's Sash",
     left_ear="Hecate's Earring",
     right_ear="Friomisi Earring",
@@ -259,7 +259,7 @@ function get_sets()
     feet={ name="Sakpata's Leggings", augments={'Path: A',}},
     neck={ name="War. Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+    left_ear="Moonshade Earring",,
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring="Niqmaddu Ring",
 	right_ring="Cornelia's Ring",
@@ -277,11 +277,18 @@ function get_sets()
 	}
 	
 	sets.phalanx = {
+	ammo="Staunch Tathlum +1",
 	head="Valorous Mask",
     body="Valorous Mail",
     hands={ name="Souv. Handsch. +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
     legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
     feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",	
 	}
 	
 	sets.weapon = set_combine(sets.TP['Standard'], {

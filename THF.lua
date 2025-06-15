@@ -24,7 +24,7 @@ function get_sets()
 	
 	sets.fc.base = {
 	head="Herculean Helm",
-	neck="Baetyl Pendant",
+	neck="Orunmila's Torque",
 	left_ear="Etiolation Earring",
 	right_ear="Loquacious Earring",
 	body="Taeon Tabard",
@@ -115,6 +115,7 @@ function get_sets()
 	
 	sets.TH['Full'] = { --9
 	head="Volte Cap", --1
+	body="Volte Jupon",
 	hands="Plun. Armlets +3", --4
 	waist="Chaac Belt", --1
 	legs="Volte Hose",
@@ -136,15 +137,18 @@ function get_sets()
 	}
 	
 	sets.phalanx = {
+	ammo="Staunch Tathlum +1",
 	head="Herculean Helm",
-	neck="Incanter's Torque",
-	left_ear="Mimir Earring",
-	right_ear="Andoaa Earring",
 	body="Herculean Vest",
 	hands="Herculean Gloves",
-	left_ring="Stikini Ring +1",
 	legs="Herculean Trousers",
 	feet="Herculean Boots",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",	
 	}
 	
 	-- Weaponskills --
@@ -490,25 +494,25 @@ function precast(spell)
 			end
 			if player.equipment.main == "Aeneas" and (player.equipment.sub == "Fusetto +2" or player.equipment.sub == "Fusetto +3" or player.equipment.sub == "Centovente") then
 				if (player.tp >= 1000 and player.tp < 1500) then
-					equip({left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}})
+					equip({left_ear="Moonshade Earring",})
 				else
 					equip({left_ear="Ishvara Earring"})
 				end
 			elseif player.equipment.main == "Aeneas" then
 				if (player.tp >= 1000 and player.tp < 2500) then
-					equip({left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}})
+					equip({left_ear="Moonshade Earring",})
 				else
 					equip({left_ear="Ishvara Earring"})
 				end
 			elseif (player.equipment.sub == "Fusetto +2" or player.equipment.sub == "Fusetto +3" or player.equipment.sub == "Centovente") then
 				if (player.tp >= 1000 and player.tp < 2000) then
-					equip({left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}})
+					equip({left_ear="Moonshade Earring",})
 				else
 					equip({left_ear="Ishvara Earring"})
 				end
 			else
 				if (player.tp >= 1000 and player.tp < 3000) then
-					equip({left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}})
+					equip({left_ear="Moonshade Earring",})
 				else
 					equip({left_ear="Ishvara Earring"})
 				end

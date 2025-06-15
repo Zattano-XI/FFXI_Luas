@@ -73,7 +73,7 @@ function get_sets()
 	sub="Chanter's Shield", --3
 	ammo="Sapience Orb", --2
 	head=empty,
-	neck="Baetyl Pendant", --4
+	neck="Orunmila's Torque", --4
 	left_ear="Malignance Earring", --4
 	right_ear="Loquacious Earring", --2
 	body="Crepuscular Cloak",
@@ -173,7 +173,7 @@ function get_sets()
 	sets.midcast.raise = set_combine(sets.midcast.conservemp, { --30(base)(8JP) +51  +21 haste
 	sub="Chanter's Shield", --3
 	head="Carmine Mask +1", --14 --8
-	neck="Baetyl Pendant", --4
+	neck="Orunmila's Torque", --4
 	left_ear="Malignance Earring", --4
 	left_ring="Kishar Ring", --4
 	right_ring="Lebeche Ring", --2 qm
@@ -185,15 +185,17 @@ function get_sets()
 	main="Daybreak",
 	sub="Ammurapi Shield",
 	head="Vitiation Chapeau +3",
+	--head="Atrophy Chapeau +4",
 	neck="Duelist's Torque +2",
 	left_ear="Snotra Earring",
-	right_ear="Leth. Earring +2",
+	right_ear="Lethargy Earring +2",
 	body="Atrophy Tabard +3",
 	hands="Lethargy Gantherots +3",
 	ring1={name="Stikini Ring +1", bag="wardrobe2"},
     ring2={name="Stikini Ring +1", bag="wardrobe5"},
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	waist="Obstinate Sash",
+	--legs="Atrophy Tights +4",
 	legs="Leth. Fuseau +3",
 	feet="Vitiation Boots +3",
 	}
@@ -212,6 +214,7 @@ function get_sets()
 	--main={ name="Contemplator +1", priority=2,},
 	--sub={ name="Enki Strap", priority=1,},
 	ammo="Regal Gem",
+	head="Vitiation Chapeau +3",
 	neck="Incanter's Torque",
 	left_ear="Vor Earring",
 	body="Atrophy Tabard +3",
@@ -320,7 +323,7 @@ function get_sets()
 	 sets.midcast.absorb = set_combine(sets.midcast['Dark Magic'], {
     main="Crocea Mors",
 	neck="Null Loop",
-	back="Null Cape",
+	back="Null Shawl",
     })
 	--body="Vitiation Tabard +3",
 	
@@ -371,7 +374,7 @@ function get_sets()
 	
 	sets.buff.selfphalanx = set_combine(sets.buff['Phalanx'], {
 	main="Sakpata's Sword",
-	--head="Chironic Hat",
+	head="Chironic Hat",
 	--body="Chironic Doublet",
 	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
 	legs="Chironic Hose",
@@ -486,7 +489,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	head="Nyame Helm",
 	neck="Rep. Plat. Medal",
 	left_ear="Sherida Earring",
-	right_ear="Leth. Earring +2",
+	right_ear="Lethargy Earring +2",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
 	left_ring="Sroda Ring",
@@ -551,14 +554,14 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	sets.ws["Ruthless Stroke"] = set_combine(sets.ws.common, {
 	ammo="Coiste Bodhar",
 	left_ring="Ilabrat Ring",
-	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, --DW?
+	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}, --DW?
 	})
 	
 	sets.ws["Black Halo"] = set_combine(sets.ws.common, {
 	ammo="Crepuscular Pebble",
 	head="Nyame Helm",
 	neck="Duelist's Torque +2",
-	right_ear="Leth. Earring +2",
+	right_ear="Lethargy Earring +2",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
 	left_ring="Sroda Ring",
@@ -594,7 +597,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	
 	sets.resting = {}
 	
-	sets.main.index = {'Crocea Mors','Naegling','Mpu Gandring','Maxentius'}
+	sets.main.index = {'Naegling','Mpu Gandring','Maxentius','Crocea Mors',}
 	main_ind = 1 --Crocea Mors is the Default
 	
 	sets.main['Crocea Mors'] = {main="Crocea Mors"}
@@ -602,7 +605,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	sets.main['Mpu Gandring'] = {main="Mpu Gandring"}
 	sets.main['Maxentius'] = {main="Maxentius"}
 	
-	sets.sub.index = {'Gleti\'s Knife','Daybreak','Bunzi\'s Rod',} --'Thibron', 'Crepuscular Knife'
+	sets.sub.index = {'Gleti\'s Knife','Daybreak','Bunzi\'s Rod','Thibron',} -- 'Crepuscular Knife'
 	sub_ind = 1 --Gleti's Knife is the Default
 	
 	sets.sub['Gleti\'s Knife'] = {sub="Gleti's Knife"}
@@ -611,6 +614,21 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	sets.sub['Thibron'] = {sub="Thibron"}
 	sets.sub['Crepuscular Knife'] = {sub="Crepuscular Knife",}
 	
+	sets.phalanx = {
+	ammo="Staunch Tathlum +1",
+	main="Sakpata's Sword",
+	head="Chironic Hat",
+	body="Chironic Doublet",
+	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	legs="Chironic Hose",
+	feet="Chironic Slippers",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",
+	}	
 end
 
 function check_height() 

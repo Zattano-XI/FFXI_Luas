@@ -28,7 +28,7 @@ function get_sets()
 	sets.fc.base = { --rdm sub: 15+68
 	ammo="Impatiens", --2 qm
 	head="Vanya Hood",
-	neck="Baetyl Pendant", --4
+	neck="Orunmila's Torque", --4
 	left_ear="Loquacious Earring", --2
 	right_ear="Malignance Earring", --4
 	body="Merlinic Jubbah", --13
@@ -66,7 +66,7 @@ function get_sets()
 	sub="Chanter's Shield", --3
 	ammo="Sapience Orb", --2
 	head=empty,
-	neck="Baetyl Pendant", --4
+	neck="Orunmila's Torque", --4
 	left_ear="Malignance Earring", --4
 	right_ear="Loquacious Earring", --2
 	body="Crepuscular Cloak",
@@ -177,7 +177,7 @@ function get_sets()
 	sets.nuke['Free'] = {
 	ammo="Pemphredo Tathlum",
 	head=empty,
-	neck="Baetyl Pendant",
+	neck="Sibyl Scarf",
 	left_ear="Regal Earring",
 	right_ear="Malignance Earring",
 	body="Cohort Cloak +1",
@@ -396,6 +396,22 @@ function get_sets()
 	back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	legs="Shamash Robe",
 	}
+	
+	sets.phalanx = {
+	ammo="Staunch Tathlum +1",
+	main="Sakpata's Sword",
+	head="Chironic Hat",
+	body="Chironic Doublet",
+	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	legs="Chironic Hose",
+	feet="Chironic Slippers",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",
+	}	
 
 end
 
@@ -478,7 +494,7 @@ function precast(spell)
 			add_to_chat(123, spell.name..' Canceled: [Out of Range]')
 		elseif player.tp > 1000 then
 			if (player.tp >= 1750 and player.tp < 2000) or (player.tp >= 2750 and player.tp < 3000) then
-				equip({left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}}})
+				equip({left_ear="Moonshade Earring",})
 			else
 				equip({left_ear="Ishvara Earring"})
 			end

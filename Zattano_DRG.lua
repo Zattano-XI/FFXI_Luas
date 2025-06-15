@@ -38,7 +38,7 @@ function get_sets()
 	
 	
 	sets.ja['Spirit Surge'] = {body="Pteroslaver Mail +1",}
-	sets.ja['Call Wyvern'] = {body="Pteroslaver Mail +1", right_ear="Peltast's Earring +1",}
+	sets.ja['Call Wyvern'] = {body="Pteroslaver Mail +1", right_ear="Peltast's Earring +2",}
 	sets.ja['Ancient Circle'] = {Legs="Vishap Brais +3",}
 	sets.ja['Spirit Link'] = {
 	
@@ -47,7 +47,7 @@ function get_sets()
 		hands="Peltast's Vambraces +1",
 		}
 	sets.ja['Steady Wing'] = {}
-	sets.ja['Spirit Surge'] = {feet="Kasuga Sune-Ate +1"}
+	sets.ja['Spirit Surge'] = {}
 	
 	sets.ja['Jump'] = {
     ammo="Seething bomblet",
@@ -61,8 +61,7 @@ function get_sets()
 	neck="Vim Torque +1",
     left_ear="Telos Earring",
     right_ear="Sherida Earring",
-    --back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}, --stp?
-    back="Brigantia's Mantle",
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.ja['High Jump'] = sets.ja['Jump']
@@ -91,7 +90,7 @@ function get_sets()
     head="Nyame Helm", --7
     body={ name="Gleti's Cuirass", augments={'Path: A',}}, --5
     hands="Sulev. Gauntlets +2", --6
-    legs={ name="Valorous Hose", augments={'Attack+17','"Dbl.Atk."+4','AGI+1',}}, --7
+    legs="Gleti's Breeches",
     feet="Flam. Gambieras +2", --6
     neck="Vim Torque +1",
     waist={ name="Sailfi Belt +1", augments={'Path: A',}}, --5
@@ -99,8 +98,8 @@ function get_sets()
     right_ear="Telos Earring", --3
     left_ring="Niqmaddu Ring",  
     right_ring="Chirich Ring +1",
+	back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     --back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}}, --10
-	 back="Null Shawl",
 	}
 	
 sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
@@ -118,7 +117,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
     right_ear="Telos Earring", --telos?
     left_ring="Niqmaddu Ring",
     right_ring="Moonlight Ring",
-    --back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	})
 
 	sets.TP['DT'] = set_combine(sets.TP['Standard'], { --48%
@@ -151,24 +150,23 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
     right_ear="Telos Earring",
     left_ring="Varar Ring +1",
     right_ring="Chirich Ring +1",
-    back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	
 	sets.TP['Pet'] = {
 	ammo="Staunch Tathlum +1",
-    head={ name="Valorous Mask", augments={'Pet: Mag. Acc.+11','Pet: "Regen"+5','Pet: Accuracy+11 Pet: Rng. Acc.+11','Pet: Attack+11 Pet: Rng.Atk.+11',}},
+    head="Gleti's Mask",
     body={ name="Gleti's Cuirass", augments={'Path: A',}},
-    hands={ name="Emi. Gauntlets +1", augments={'Accuracy+25','"Dual Wield"+6','Pet: Accuracy+25',}},
-    legs={ name="Emicho Hose", augments={'Pet: Accuracy+15','Pet: Attack+15','Pet: "Dbl. Atk."+3',}},
-    feet={ name="Valorous Greaves", augments={'Pet: Attack+26 Pet: Rng.Atk.+26','Pet: "Regen"+1','Pet: Accuracy+11 Pet: Rng. Acc.+11',}},
+    hands="Gleti's Gauntlets",
+    legs="Gleti's Breeches",
+    feet="Gleti's Boots",
     neck={ name="Dgn. Collar +1", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     left_ear="Sherida Earring",
     right_ear="Telos Earring",
     left_ring="Chirich Ring +1",
     right_ring="Moonlight Ring",
-    --back={ name="Brigantia's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Attack+10','"Dbl.Atk."+10','Pet: "Regen"+5',}},
-	 back={ name="Brigantia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 		
 	sets.idle = set_combine(sets.TP['Standard'], {
@@ -206,10 +204,10 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	neck="Dragoon's collar +1",
     waist="Sailfi Belt +1",
     left_ear="Thrud Earring",
-    right_ear="Peltast's Earring +1",
+    right_ear="Peltast's Earring +2",
     left_ring="Regal ring",
     right_ring="Cornelia's Ring",
-    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+    back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	}
 	
 	sets.ws['Camlann\'s Torment'] = set_combine(sets.ws.common, {
@@ -233,10 +231,10 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	})
 	
 	sets.ws['Impulse Drive'] = set_combine(sets.ws.common, {
-	
 	body="Gleti's Cuirass",
 	right_ring="Niqmaddu ring",
 	left_ring="Regal ring",	
+	back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 	
 	sets.ws['Sonic Thrust'] = set_combine(sets.ws.common, {
@@ -244,6 +242,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	body="Nyame Mail",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets",
+	back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	waist="Null Belt",
 	--right_ear="Thrud earring",
 	--left_ear="Moonshade earring",
@@ -274,6 +273,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	--neck="Dragoon's collar +1",
     neck="Rep. Plat. Medal",
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+	back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     --left_ear="Moonshade Earring",
     --right_ear="Thrud Earring",
     --left_ring="Metamorph ring +1",
@@ -339,7 +339,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	body="Hjarrandi Breastplate",
 	hands="Gleti's Gauntlets",
 	left_ring="Regal Ring",
-	right_ring="Moonlight Ring",
+	right_ring="Moonlight Ring",	
 	back="Moonbeam cape",
 	legs="Nyame flanchard",
 	feet="Nyame sollerets",
@@ -358,6 +358,21 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	head="Crepuscular Helm",
 	body="Crepuscular Mail",
 	}
+	
+	sets.phalanx = {
+	ammo="Staunch Tathlum +1",
+	head="Valorous Mask",
+	body="Valorous Mail",
+	hands="Valorous Mitts",
+	legs="Valorous Hose",
+	feet="Valorous Greaves",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",	
+	} --Phalanx+ on all pieces
 end
 
 function check_height() 
@@ -393,7 +408,7 @@ function precast(spell)
 		elseif player.tp > 1000 then
 			if player.equipment.main == "Trishula" then
 				if (player.tp >= 1000 and player.tp < 2500) or buffactive['Sekkanoki'] then
-					equip({{ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}}})
+					equip({left_ear="Moonshade Earring",})
 				elseif world.time >= (17*60) or world.time <= (7*60) then
 					equip({left_ear="Lugra Earring +1"})
 				else
@@ -401,7 +416,7 @@ function precast(spell)
 				end
 			else
 				if (player.tp >= 1000 and player.tp < 3000) or buffactive['Sekkanoki'] then
-					equip({left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}}})
+					equip({left_ear="Moonshade Earring",})
 				elseif world.time >= (17*60) or world.time <= (7*60) then
 					equip({left_ear="Lugra Earring +1"})
 				else

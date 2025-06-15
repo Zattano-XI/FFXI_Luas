@@ -140,7 +140,7 @@ function init_gear_sets()
     
     sets.precast.FC = {
         head={ name="Merlinic Hood", augments={'"Fast Cast"+6','Mag. Acc.+2','"Mag.Atk.Bns."+9',}},
-		neck="Baetyl Pendant",
+		neck="Orunmila's Torque",
 		ear1="Malignance Earring",
 		ear2="Loquacious Earring",
         body="Inyanga Jubbah +2",
@@ -307,15 +307,41 @@ function init_gear_sets()
 	feet="Beck. Pigaches +1"}
 
     -- Favor uses Caller's Horn instead of Convoker's Horn for refresh
-    sets.idle.Avatar.Favor = {main="Espiritus",sub="Vox Grip",ammo="Epitaph",
-	head="Beckoner's Horn +1",neck="Incanter's Torque",ear1="C. Palug Earring",ear2="Lodurr Earring",
-	body="Beck. Doublet +1",hands="Baayami Cuffs +1",ring1="Evoker's Ring",ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
-	back="Conveyance Cape",waist="Lucidity Sash",legs="Baayami Slops +1",feet="Baaya. Sabots +1"}
+    sets.idle.Avatar.Favor = {
+	main="Espiritus",
+	sub="Vox Grip",
+	ammo="Epitaph",
+	head="Beckoner's Horn +1",
+	neck="Incanter's Torque",
+	ear1="C. Palug Earring",
+	ear2="Lodurr Earring",
+	body="Beck. Doublet +1",
+	hands="Baayami Cuffs +1",
+	ring1="Evoker's Ring",
+	ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	back="Conveyance Cape",
+	waist="Lucidity Sash",
+	legs="Baayami Slops +1",
+	feet="Baaya. Sabots +1"
+	}
 	
-    sets.idle.Avatar.Melee = {main="Gridarvor",sub="Vox Grip",ammo="Epitaph",
-	head="Beckoner's Horn +1",neck="Incanter's Torque",ear1="C. Palug Earring",ear2="Lodurr Earring",
-	body="Beck. Doublet +1",hands="Baayami Cuffs +1",ring1="Evoker's Ring",ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
-	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},waist="Lucidity Sash",legs="Beck. Spats +1",feet="Beck. Pigaches +1"}
+    sets.idle.Avatar.Melee = {
+	main="Gridarvor",
+	sub="Vox Grip",
+	ammo="Epitaph",
+	head="Beckoner's Horn +1",
+	neck="Incanter's Torque",
+	ear1="C. Palug Earring",
+	ear2="Lodurr Earring",
+	body="Beck. Doublet +1",
+	hands="Baayami Cuffs +1",
+	ring1="Evoker's Ring",
+	ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
+	waist="Lucidity Sash",
+	legs="Beck. Spats +1",
+	feet="Beck. Pigaches +1"
+	}
         
     sets.perp = {}
     
@@ -334,16 +360,43 @@ function init_gear_sets()
     
     sets.latent_refresh = {waist="Fucho-no-obi"}
     
+	sets.phalanx = {
+	ammo="Staunch Tathlum +1",
+	main="Sakpata's Sword",
+	head="Chironic Hat",
+	body="Chironic Doublet",
+	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	legs="Chironic Hose",
+	feet="Chironic Slippers",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",
+	}		
 
     --------------------------------------
     -- Engaged sets
     --------------------------------------
     
     -- Normal melee group
-    sets.engaged = {ammo="Epitaph",
-	head="Blistering Sallet +1",neck="Shulmanu Collar",ear1="Brutal Earring",ear2="Crep. Earring",
-	body="Glyphic Doublet +3",hands="Bunzi's Gloves",ring1="C. Palug Ring",right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','Phys. dmg. taken-10%',}},waist="Windbuffet Belt +1",legs="Nyame Flanchard",feet="Battlecast Gaiters"}
+    sets.engaged = {
+	ammo="Epitaph",
+	head="Blistering Sallet +1",
+	neck="Shulmanu Collar",
+	ear1="Brutal Earring",
+	ear2="Crep. Earring",
+	body="Glyphic Doublet +3",
+	hands="Bunzi's Gloves",
+	ring1="C. Palug Ring",
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
+	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','Phys. dmg. taken-10%',}},
+	waist="Windbuffet Belt +1",
+	legs="Nyame Flanchard",
+	feet="Battlecast Gaiters"
+	}
+	
 end
 
 -------------------------------------------------------------------------------------------------------------------

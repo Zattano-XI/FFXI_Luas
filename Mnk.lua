@@ -18,7 +18,7 @@ function get_sets()
 	sets.fc.base = {
 	ammo="Impatiens",
     head="Herculean Helm",--augments={'Mag. Acc.+12','"Fast Cast"+6','MND+7',}}, --13
-	neck="Baetyl Pendant", --4
+	neck="Orunmila's Torque", --4
 	left_ear="Loquac. Earring", --2 
 	right_ear="Etiolation Earring", --1
 	hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, --8
@@ -35,7 +35,7 @@ function get_sets()
 	--body="Passion Jacket",
 	})
 	
-	sets.TP.index = {'DT2', 'Standard', 'High Acc','Hybrid', 'Ngai', 'DT'}
+	sets.TP.index = {'Ngai', 'DT','DT2', 'Standard', 'High Acc','Hybrid',}
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = {
@@ -74,6 +74,7 @@ function get_sets()
 	
 	sets.TP['Ngai'] = set_combine(sets.TP['Hybrid'], {
 	neck="Warder's charm +1",
+	legs="Malignance Tights", --Bumba temp
 	right_ring="Shadow Ring",
 	})
 
@@ -91,14 +92,15 @@ function get_sets()
     left_ring="Defending Ring",
 	right_ring="Niqmaddu Ring",
     --back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	back="Null Shawl",
 	})
 	
-	sets.TP['DT2'] = {
+	sets.TP['DT2'] = set_combine(sets.TP['DT'], {
 	ammo="Coiste Bodhar",
-    head="Bhikku Crown +3", --7%
+    --head="Bhikku Crown +3", --7%
     body={ name="Mpaca's Doublet", augments={'Path: A',}}, --10%
 	hands="Mpaca's gloves", --8%
-    legs="Bhikku hose +3", --9%
+    --legs="Bhikku hose +3", --9%
     feet="Mpaca's Boots", --6%
 	neck="Mnk. Nodowa +2",
     waist="Moonbow belt +1",
@@ -106,8 +108,8 @@ function get_sets()
 	right_ear="Bhikku Earring +2",
     left_ring="Gere Ring",
 	right_ring="Niqmaddu Ring",
-    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
-	}
+    --back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
+	})
 	
 	sets.DEF.index = {'DT'}
 	DEF_ind = 1 --DT set is the Default
@@ -128,18 +130,18 @@ function get_sets()
 	feet="Anch. Gaiters +3"
 	}
 	
-	sets.right_ear ={right_ear="Schere Earring",}
+	sets.right_ear = {right_ear="Schere Earring",}
 	
-	sets.impetus = set_combine(sets.right_ear, {
+	sets.impetus = set_combine(sets.TP['Ngai'], {
 	--right_ear="Telos Earring",
 	body="Bhikku Cyclas +3",
 	})
 	
-	sets.footwork = {
+	sets.footwork = set_combine(sets.TP['Ngai'], {
 	--legs="Hesychast's Hose +3",
 	--legs="Bhikku hose +3",
 	--feet="Anchorite's Gaiters +3"
-	}
+	})
 	
 	sets.idle = set_combine(sets.TP['Standard'], {
 	--ammo="Coiste Bodhar",
@@ -339,7 +341,7 @@ function get_sets()
 	hands="Nyame Gauntlets",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets",
-	neck="Baetyl Pendant",
+	neck="Sibyl Scarf",
 	waist="Orpheus's sash",
 	left_ear="Friomisi Earring",
 	right_ear="Moonshade Earring",
@@ -395,11 +397,18 @@ function get_sets()
 	}
 	
 	sets.phalanx = {
+		ammo="Staunch Tathlum +1",
 		head="Herculean Helm",
 		body="Herculean Vest",
 		hands="Herculean Gloves",
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
+		neck="Null Loop",
+		ear1="Odnowa earring +1",
+		ring1="Shadow Ring",
+		ring2="Defending Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",
 	}
 	
 	sets.misc.rest = {}

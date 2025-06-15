@@ -116,7 +116,7 @@ function user_setup()
     state.MagicalDefenseMode:options('MDT')
 
     state.Knockback = M(false, 'Knockback')
-    state.WeaponSet = M{['description']='Weapon Set', 'Epeolatry', 'Axe' , 'Reikiko', 'GreatAxe'} -- 'Lionheart' 'Agwu'
+    state.WeaponSet = M{['description']='Weapon Set', 'Epeolatry', 'Helheim', 'Axe' , 'Reikiko', 'GreatAxe'} -- 'Lionheart' 'Agwu'
     state.AttackMode = M{['description']='Attack','Capped','Uncapped',}
     state.CP = M(false, "Capacity Points Mode")
     state.WeaponLock = M(false, 'Weapon Lock')
@@ -344,7 +344,7 @@ function init_gear_sets()
     hands="Agwu's Gages",
     legs="Agwu's Slops",
     feet="Agwu's Pigaches",
-    neck="Baetyl Pendant",
+    neck="Sibyl Scarf",
     waist="Orpheus's Sash",
     left_ear="Hermetic Earring",
     right_ear="Friomisi Earring",
@@ -506,7 +506,6 @@ function init_gear_sets()
 		right_ear="Sherida Earring",
 		--right_ring="Ilabrat Ring",
 		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
-		
         })
 
     sets.precast.WS['Dimidiation'].Acc = set_combine(sets.precast.WS['Dimidiation'], {
@@ -522,6 +521,11 @@ function init_gear_sets()
         waist="Sailfi Belt +1",]]--
         })
 
+	sets.precast.WS['Fimbulvetr'] = set_combine(sets.precast.WS, {
+		neck="Rep. Plat. Medal",
+		waist="Sailfi Belt +1",
+		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},	
+        })
     sets.precast.WS['Herculean Slash'] = sets.precast.JA['Lunge']
 
     sets.precast.WS['Shockwave'] = set_combine(sets.precast.WS, {
@@ -608,19 +612,33 @@ function init_gear_sets()
         }
 
     sets.midcast['Phalanx'] = set_combine(sets.midcast.SpellInterrupt, {
+			ammo="Staunch Tathlum +1",
 			head="Fu. Bandeau +3", 
 			body="Herculean Vest",
 			hands="Herculean Gloves",
 			legs="Taeon Tights", --augments={'Spell interruption rate down -8%','Phalanx +3',}},
 			feet="Taeon Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},
+			neck="Null Loop",
+			ear1="Odnowa earring +1",
+			ring1="Shadow Ring",
+			ring2="Defending Ring",
+			back="Moonbeam Cape",
+			waist="Null Belt",	
 		})
 		
 	sets.phalanx = set_combine(sets.midcast.SpellInterrupt, {
+			ammo="Staunch Tathlum +1",
 			head="Fu. Bandeau +3", 
 			body="Herculean Vest",
 			hands="herculean Gloves",
 			legs="Herculean Trousers", --augments={'Spell interruption rate down -8%','Phalanx +3',}},
 			feet="Herculean Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},	   
+			neck="Null Loop",
+			ear1="Odnowa earring +1",
+			ring1="Shadow Ring",
+			ring2="Defending Ring",
+			back="Moonbeam Cape",
+			waist="Null Belt",	
         })
 
 
@@ -1000,6 +1018,7 @@ function init_gear_sets()
     --sets.Reive = {neck="Ygnas's Resolve +1"}
 
     sets.Epeolatry = {main="Epeolatry",sub="Utu Grip"}
+	sets.Helheim = {main="Helheim",sub="Utu Grip"}
     sets.Lionheart = {main="Lionheart",sub="Utu Grip"}
     sets.Aettir = {main="Aettir",sub="Utu Grip"}
     sets.GreatAxe = {main="Lycurgos",sub="Utu Grip"}

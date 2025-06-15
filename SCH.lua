@@ -223,7 +223,7 @@ function init_gear_sets()
 		hands="Acad. Bracers +2", --7
 		legs="Volte brais", --8
 		feet={ name="Peda. Loafers +3", augments={'Enhances "Stormsurge" effect',}},  --7
-		neck="Baetyl Pendant", --4
+		neck="Orunmila's Torque", --4
 		waist="Embla Sash", --5
 		left_ear="Malignance Earring", --4
 		right_ear="Loquac. Earring", --2
@@ -806,6 +806,38 @@ function init_gear_sets()
     sets.Bookworm = {back="Bookworm's Cape"}
     --sets.CP = {back="Mecisto. Mantle"}
 
+	sets.vagary = {
+    sub="Genmei Shield",
+	head=empty,
+	neck="Null Loop",
+	ear1=empty,
+	ear2=empty,
+    body="Adamantite Armor",
+    hands=empty,
+	left_ring=empty,
+    right_ring="Defending Ring",
+    back="Moonbeam Cape",
+	waist="Plat. Mog. Belt",
+	legs=empty,
+	feet=empty,
+	}
+
+	sets.phalanx = {
+	ammo="Staunch Tathlum +1",
+	main="Sakpata's Sword",
+	head="Chironic Hat",
+	body="Chironic Doublet",
+	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	legs="Chironic Hose",
+	feet="Chironic Slippers",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",
+	}	
+	
 end
 
 -------------------------------------------------------------------------------------------------------------------

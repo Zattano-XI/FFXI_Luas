@@ -113,8 +113,10 @@ function init_gear_sets()
     body="Inyanga Jubbah +2", --14 FC
     hands="Volte Gloves", --6 FC
     legs="Volte Brais", --8 FC
-    feet="Volte Gaiters", --6 FC
+    feet="Fili Cothurnes +3",
+	--feet="Volte Gaiters", --6 FC
     neck="Orunmila's Torque", --5 FC
+	--neck="Baetyl Pendant",
     --waist="Witful Belt", --3 FC 3 QC
 	waist="Embla Sash",
     left_ear="Loquac. Earring", --2 FC
@@ -136,14 +138,17 @@ function init_gear_sets()
     body="Inyanga Jubbah +2",
     hands="Volte Gloves",
     legs="Volte Brais",
-    feet={ name="Bihu Slippers +3", augments={'Enhances "Nightingale" effect',}},
+    feet="Fili Cothurnes +3",
+	--feet={ name="Bihu Slippers +3", augments={'Enhances "Nightingale" effect',}},
     neck="Orunmila's Torque",
-    waist="Embla Sash",
+    --neck="Baetyl Pendant",
+	waist="Embla Sash",
     left_ear="Etiolation Earring",
-    right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
+    right_ear="Fili Earring +1",
     left_ring="Rahab Ring",
     right_ring="Kishar Ring",
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+
 	}
 
     sets.precast.FC.Daurdabla = set_combine(sets.precast.FC.BardSong, {range=info.ExtraSongInstrument})
@@ -161,7 +166,9 @@ function init_gear_sets()
     -- Waltz set (chr and vit)
 	sets.precast.Waltz = {
 	legs="Dashing Subligar",
-	left_ring="Valseur's Ring",
+	--left_ring="Valseur's Ring",
+	left_ring="Metamorph ring +1",
+	right_ring="Defending Ring",
 	} 
      
 	sets.precast.Step = {
@@ -194,7 +201,7 @@ function init_gear_sets()
     left_ear="Ishvara Earring",
 	right_ear="Digni. Earring",
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-    --right_ear={ name="Domin. Earring +1", augments={'Path: A',}},
+    --right_ear="Domin. Earring +1", --augments={'Path: A',}},
 	left_ring="Epaminondas's Ring",
     --right_ring="Ilabrat Ring",	
     back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
@@ -206,7 +213,7 @@ function init_gear_sets()
     ammo="Pemphredo Tathlum",
 	neck="Sibyl Scarf",
     waist="Orpheus's Sash",
-    left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+    left_ear="Moonshade Earring",
     right_ear="Friomisi Earring",
 	right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 	})
@@ -224,8 +231,8 @@ function init_gear_sets()
     feet={ name="Lustra. Leggings +1", augments={'Accuracy+20','DEX+8','Crit. hit rate+3%',}},
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    right_ear={ name="Domin. Earring +1", augments={'Path: A',}},
-    left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+    right_ear="Domin. Earring +1",
+    left_ear="Moonshade Earring",
     left_ring="Ilabrat Ring",
     right_ring={ name="Cacoethic Ring +1", augments={'Path: A',}},
     --back={ name="Intarabus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10','Phys. dmg. taken-10%',}},
@@ -245,14 +252,14 @@ function init_gear_sets()
 	
 	sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {
 	body={ name="Bihu Jstcorps. +3", augments={'Enhances "Troubadour" effect',}},
-	left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	left_ear="Moonshade Earring",
 	neck={ name="Bard's Charm +2", augments={'Path: A',}},
 	waist={ name="Kentarch Belt +1", augments={'Path: A',}},
 	})
     
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {
 	neck="Rep. Plat. Medal",
-	left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+	left_ear="Moonshade Earring",
 	right_ear="Ishvara Earring",
 	--right_ring={name="Chirich Ring +1", bag="wardrobe2"},
 	left_ring={name="Cornelia's Ring"},
@@ -317,7 +324,7 @@ function init_gear_sets()
     body="Fili Hongreline +3",
     hands="Fili Manchettes +3", --11 DT
     legs="Inyanga Shalwar +2", 
-    feet="Brioso Slippers +2",
+    feet="Brioso Slippers +3",
     neck="Mnbw. Whistle +1",
     waist="Plat. Mog. Belt", --3 DT
     right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}}, --5 DT
@@ -339,7 +346,7 @@ function init_gear_sets()
     body="Fili Hongreline +3",
     hands="Fili Manchettes +3",
     legs="Inyanga Shalwar +2",
-    feet="Brioso Slippers +2",
+    feet="Brioso Slippers +3",
     neck="Mnbw. Whistle +1",
     waist="Null Belt",
     left_ear="Regal Earring",
@@ -367,7 +374,7 @@ function init_gear_sets()
     hands="Fili Manchettes +3",
     legs={ name="Zoar Subligar +1", augments={'Path: A',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    neck={ name="Unmoving Collar +1", augments={'Path: A',}},
+    neck="Unmoving Collar +1",
     waist="Kasiri Belt",
     left_ear="Cryptic Earring",
     right_ear="Pluto's Pearl",
@@ -391,17 +398,17 @@ function init_gear_sets()
     -- Other general spells and classes.
     sets.midcast.Cure = { --51 CP 9 CP2 57 ConMP
 	ammo="Pemphredo Tathlum", --4 ConMP
-    head={ name="Kaykaus Mitra +1", augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}}, --11 CP 2 CP2
-    body={ name="Kaykaus Bliaut +1", augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}},
-    hands={ name="Kaykaus Cuffs +1", augments={'MP+80','MND+12','Mag. Acc.+20',}}, --11 CP 2 CP2
-    legs={ name="Kaykaus Tights +1", augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}}, --11 CP 2 CP2
-    feet={ name="Kaykaus Boots +1", augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}}, --11 CP 2 CP2 7 ConMP
+    head="Kaykaus Mitra +1", --augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}}, --11 CP 2 CP2
+    body="Kaykaus Bliaut +1", --augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}},
+    hands="Kaykaus Cuffs +1", --augments={'MP+80','MND+12','Mag. Acc.+20',}}, --11 CP 2 CP2
+    legs="Kaykaus Tights +1", --augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}}, --11 CP 2 CP2
+    feet="Kaykaus Boots +1", --augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}}, --11 CP 2 CP2 7 ConMP
     neck="Reti Pendant", --4 ConMP
     waist={ name="Shinjutsu-no-Obi +1", augments={'Path: A',}}, --15 ConMP
     left_ear="Gifted Earring", --3 ConMP
     right_ear="Calamitous Earring", --4 ConMP
-    left_ring="Naji's Loop", --1 CP 1 CP2
-    right_ring={ name="Mephitas's Ring +1", augments={'Path: A',}}, --15 ConMP
+    left_ring="Lebeche Ring", --1 CP 1 CP2
+    right_ring="Mephitas's Ring +1", --15 ConMP
     back={ name="Fi Follet Cape +1", augments={'Path: A',}}, --5 ConMP
 	}
         
@@ -410,11 +417,11 @@ function init_gear_sets()
 	sets.midcast['Enhancing Magic'] = {
 	--main="Pukulatmuj +1",
     --sub="Ammurapi Shield",
-	head={ name="Telchine Cap", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-	body={ name="Telchine Chas.", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-	hands={ name="Telchine Gloves", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-	legs={ name="Telchine Braconi", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
-	feet={ name="Telchine Pigaches", augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+	head="Telchine Cap", --augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+	body="Telchine Chas.", --augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+	hands="Telchine Gloves", --augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+	legs="Telchine Braconi", --augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
+	feet="Telchine Pigaches", --augments={'"Conserve MP"+5','Enh. Mag. eff. dur. +10',}},
     neck="Incanter's Torque",
     waist="Embla Sash",
     left_ear="Mimir Earring",
@@ -439,8 +446,8 @@ function init_gear_sets()
 		--right_ring="Kishar Ring",
 		back="Null Shawl",
 		waist="Obstin. Sash",
-		legs={ name="Chironic Hose", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','Enmity-2','Mag. Acc.+12',}},
-		feet="Brioso Slippers +2"
+		legs="Fili Rhingrave +3",
+		feet="Brioso Slippers +3"
 		--feet="Uk'uxkaj Boots",
 		}
 		
@@ -448,7 +455,7 @@ function init_gear_sets()
 	--ammo="Pemphredo Tathlum",
 	hands="Inyan. Dastanas +2",
     legs="Brioso Cannions +3",
-	waist={ name="Acuity Belt +1", augments={'Path: A',}},
+	waist="Acuity Belt +1",
 	}) 
 	
     sets.midcast.Stoneskin = set_combine (sets.midcast['Enhancing Magic'], {
@@ -457,7 +464,7 @@ function init_gear_sets()
 	waist="Siegel Sash",
 	legs="Shedir Seraweels",
 	hands="Inyan. Dastanas +2",
-	feet={ name="Kaykaus Boots +1", augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}},
+	feet="Kaykaus Boots +1", --augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}},
 	}) 
 	
 	sets.midcast.Aquaveil = set_combine (sets.midcast['Enhancing Magic'], {
@@ -465,21 +472,28 @@ function init_gear_sets()
 	waist="Emphatikos Rope",
 	legs="Shedir Seraweels",
 	hands="Inyan. Dastanas +2",
-	feet={ name="Kaykaus Boots +1", augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}},
+	feet="Kaykaus Boots +1", --augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}},
 	}) 
 	
 	sets.midcast.Phalanx = set_combine (sets.midcast['Enhancing Magic'], {
-	legs="Shedir Seraweels",
-	waist="Olympus Sash",
-	hands="Inyan. Dastanas +2",
-	feet={ name="Kaykaus Boots +1", augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}},
+	head="Chironic Hat",
+	body="Chironic Doublet",
+	hands="Chironic Gloves",
+	legs="Chironic Hose",
+	feet="Chironic Slippers",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",
 	}) 
 		
 	sets.midcast.bar_element = set_combine(sets.midcast['Enhancing Magic'], {
 	legs="Shedir Seraweels",
 	waist="Olympus Sash",
 	hands="Inyan. Dastanas +2",
-	feet={ name="Kaykaus Boots +1", augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}},
+	feet="Kaykaus Boots +1", --augments={'MP+80','Spell interruption rate down +12%','"Cure" spellcasting time -7%',}},
 	})
 
 	sets.midcast.Haste = set_combine (sets.midcast['Enhancing Magic'], {}) 
@@ -517,7 +531,7 @@ function init_gear_sets()
     sets.idle = { --48 DT 18% Movement
 	--main="Daybreak",
     --sub="Genmei Shield",
-	head="Fili Calot +3", --11 DT
+	head="Null Masuqe", --3regen/1Refresh/2regain/10DT
     body="Adamantite Armor",
 	--body="Annoint. Kalasiris", --Reraise
     hands="Fili Manchettes +3", --11 DT
@@ -534,7 +548,7 @@ function init_gear_sets()
 
     sets.idle.DT = set_combine(sets.idle, {
 	body="Adamantite Armor", --20 DT
-	neck={name="Warder's Charm +1", augments={'Path: A',}},
+	neck="Warder's Charm +1",
 	left_ear="Etiolation Earring",
     left_ring={name="Moonlight Ring", bag="wardrobe2"}, --5 DT
 	right_ring={name="Moonlight Ring", bag="wardrobe5"}, --5 DT
@@ -542,9 +556,8 @@ function init_gear_sets()
 	})
 	
     sets.idle.Refresh = set_combine(sets.idle, {
-	head="Volte Beret", --1 Refresh
-	hands={ name="Chironic Gloves", augments={'Weapon skill damage +2%','INT+7','"Refresh"+2','Accuracy+11 Attack+11','Mag. Acc.+13 "Mag.Atk.Bns."+13',}}, --2 Refresh
-	legs={ name="Assid. Pants +1", augments={'Path: A',}}, --1~2 Refresh
+	hands="Volte Gloves",
+	legs="Assid. Pants +1", --1~2 Refresh
 	feet="Volte Gaiters", --1 Refresh
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
 	waist="Plat. Mog. Belt",
@@ -602,7 +615,7 @@ function init_gear_sets()
     --legs={ name="Zoar Subligar +1", augments={'Path: A',}},
     feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	--feet="Volte Spats",
-    --neck={ name="Warder's Charm +1", augments={'Path: A',}},
+    --neck="Warder's Charm +1",
 	neck={ name="Bard's Charm +2", augments={'Path: A',}},
     --waist="Reiki Yotai",
 	waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -626,11 +639,18 @@ function init_gear_sets()
 	sets.sub = {}
 
 	sets.phalanx = {
+	ammo="Staunch Tathlum +1",
 	head="Chironic Hat",
 	body="Chironic Doublet",
 	hands="Chironic Gloves",
 	legs="Chironic Hose",
 	feet="Chironic Slippers",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",	
 	}
 	
 	--sets.dmg.index = {'Naegling','Tauret','Aeneas'}
@@ -905,7 +925,7 @@ function calculate_duration(spellName, spellMap)
     if player.equipment.neck == "Aoidos' Matinee" then mult = mult + 0.1 end
     if player.equipment.body == "Fili Hongreline +3" then mult = mult + 0.14 end
     if player.equipment.legs == "Inyanga Shalwar +2" then mult = mult + 0.17 end
-    if player.equipment.feet == "Brioso Slippers +2" then mult = mult + 0.15 end
+    if player.equipment.feet == "Brioso Slippers +3" then mult = mult + 0.15 end
     
     if spellMap == 'Paeon' and player.equipment.head == "Brioso Roundlet +3" then mult = mult + 0.2 end
 	if spellMap == 'Etude' and player.equipment.head == "Mousai Turban +1" then mult = mult + 0.2 end

@@ -182,7 +182,7 @@ function init_gear_sets()
 		--legs="Geomancy Pants +2", --15 excluded
         legs="Agwu's Slops", --7
 		feet="Regal Pumps +1", --5 Volte Gaiters
-        neck="Baetyl Pendant", --4
+        neck="Orunmila's Torque", --4
         ear1="Malignance Earring", --4
         ear2="Etiolation Earring", --1 
         ring1="Kishar Ring", --4
@@ -217,7 +217,7 @@ function init_gear_sets()
 		--legs="Geomancy Pants +2", --15 excluded
         legs="Agwu's Slops", --7
 		feet="Regal Pumps +1", --5 Volte Gaiters
-        neck="Baetyl Pendant", --4
+        neck="Orunmila's Torque", --4
         ear1="Malignance Earring", --4
         ear2="Etiolation Earring", --1 
         ring1="Kishar Ring", --4
@@ -678,8 +678,25 @@ function init_gear_sets()
 	back=empty,
 	waist=empty,
 	legs="Volte Brais",
-	feet=empty,
+	feet="Volte Boots",
 }
+
+	sets.phalanx = {
+	ammo="Staunch Tathlum +1",
+	main="Sakpata's Sword",
+	head="Chironic Hat",
+	body="Chironic Doublet",
+	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	legs="Chironic Hose",
+	feet="Chironic Slippers",
+	neck="Null Loop",
+	ear1="Odnowa earring +1",
+	ring1="Shadow Ring",
+	ring2="Defending Ring",
+	back="Moonbeam Cape",
+	waist="Null Belt",
+	}	
+
 
 end
 
