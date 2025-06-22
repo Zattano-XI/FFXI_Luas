@@ -184,12 +184,12 @@ function get_sets()
 	sets.midcast.Enfeebling = {
 	main="Daybreak",
 	sub="Ammurapi Shield",
-	head="Vitiation Chapeau +3",
-	--head="Atrophy Chapeau +4",
+	--head="Vitiation Chapeau +4",
+	head="Atrophy Chapeau +4",
 	neck="Duelist's Torque +2",
 	left_ear="Snotra Earring",
 	right_ear="Lethargy Earring +2",
-	body="Atrophy Tabard +3",
+	body="Atrophy Tabard +4",
 	hands="Lethargy Gantherots +3",
 	ring1={name="Stikini Ring +1", bag="wardrobe2"},
     ring2={name="Stikini Ring +1", bag="wardrobe5"},
@@ -197,7 +197,8 @@ function get_sets()
 	waist="Obstinate Sash",
 	--legs="Atrophy Tights +4",
 	legs="Leth. Fuseau +3",
-	feet="Vitiation Boots +3",
+	feet="Atrophy Boots +4",
+	--feet="Vitiation Boots +3",
 	}
 	
 	sets.midcast.maxenfacc = set_combine(sets.midcast.Enfeebling, {
@@ -214,15 +215,16 @@ function get_sets()
 	--main={ name="Contemplator +1", priority=2,},
 	--sub={ name="Enki Strap", priority=1,},
 	ammo="Regal Gem",
-	head="Vitiation Chapeau +3",
+	head="Vitiation Chapeau +4",
 	neck="Incanter's Torque",
 	left_ear="Vor Earring",
-	body="Atrophy Tabard +3",
+	body="Atrophy Tabard +4",
 	hands="Lethargy Gantherots +3",
 	right_ring="Metamorph Ring +1",
 	waist="Obstinate Sash",
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	legs="Lethargy Fuseau +3",
+	feet="Vitiation Boots +3",
 	})
 	
 	sets.midcast.enfeebleMND = set_combine(sets.midcast.Enfeebling, {
@@ -230,11 +232,11 @@ function get_sets()
 	sub="Ammurapi Shield",
 	ammo="Regal Gem",
 	left_ear="Regal Earring",
-	body="Lethargy Sayon +3",
+	--body="Lethargy Sayon +3",
 	right_ring="Metamorph Ring +1",
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	waist="Obstinate Sash",
-	legs="Lethargy Fuseau +3",
+	--legs="Lethargy Fuseau +3",
 	})
 	
 	sets.midcast.enfeebleINT = set_combine(sets.midcast.enfeebleMND, {})
@@ -242,13 +244,13 @@ function get_sets()
 	sets.midcast.enfduration = set_combine(sets.midcast.Enfeebling, {
 	range="Ullr",
 	--ammo="Regal Gem",
-	left_ear="Regal Earring",
-	body="Atrophy Tabard +3",
+	left_ear="Snotra Earring",
+	body="Atrophy Tabard +4",
 	--hands="Regal Cuffs",
 	right_ring="Kishar Ring",
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	waist="Obstinate Sash",
-	legs="Chironic Hose", --augments={'Mag. Acc.+13','MND+15','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
+	--legs="Chironic Hose", --augments={'Mag. Acc.+13','MND+15','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
 	})
 	
 	sets.midcast.dia = set_combine(sets.midcast.Enfeebling, {
@@ -383,7 +385,7 @@ function get_sets()
 	
 	sets.buff['Refresh III'] = set_combine(sets.midcast.EnhancingDuration, {
 	head="Amalric Coif +1",
-	body="Atrophy Tabard +3",
+	body="Atrophy Tabard +4",
 	legs="Lethargy Fuseau +3",
 	})
 	
@@ -577,12 +579,12 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	--main="Sakpata's Sword",
 	--sub="Genmei Shield",
 	ammo="Homiliary",
-	head="Vitiation Chapeau +3",
+	head="Vitiation Chapeau +4",
 	neck="Loricate Torque +1",
 	left_ear="Etiolation Earring",
 	right_ear="Dominance Earring +1",
 	body="Lethargy Sayon +3",
-	hands="Volte Gloves",
+	hands="Leth. Ganth. +3",
 	ring1={name="Stikini Ring +1", bag="wardrobe2"},
 	right_ring="Defending Ring",
 	back="Solemnity Cape",
@@ -629,6 +631,19 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}	
+	
+	sets.alchemy = {
+	main="Caduceus",
+	sub="Br. Escutcheon",
+	head="Protective Specs.",
+	neck="Alchemist's Torque",
+	body="Alchemist's Smock",
+	hands="Smithy's Mitts",
+	ring1="Orvail ring +1", --+1
+	ring2="Confectioner's Ring",
+	waist="Alchemist's Belt",
+	}
+	
 end
 
 function check_height() 
@@ -1033,13 +1048,13 @@ function self_command(command)
 		if main_ind == 1 then
 			send_command('alias savage @input /ws "Savage Blade" <t>')
 			send_command('alias seraph @input /ws "Seraph Blade" <t>')
-		elseif main_ind == 2 then
+		elseif main_ind == 4 then
 			send_command('alias savage @input /ws "Savage Blade" <t>')
 			send_command('alias seraph @input /ws "Seraph Blade" <t>')
-		elseif main_ind == 3 then
+		elseif main_ind == 2 then
 			send_command('alias savage @input /ws "Ruthless Stroke" <t>')
 			send_command('alias seraph @input /ws "Aeolian Edge" <t>')
-		elseif main_ind == 4 then
+		elseif main_ind == 3 then
 			send_command('alias savage @input /ws "Black Halo" <t>')
 			send_command('alias seraph @input /ws "Brainshaker" <t>')
 		end
