@@ -29,7 +29,7 @@ function get_sets()
 	body={name="Reverence Surcoat +3",priority=15}, --10%
 	hands="Leyline Gloves", --8%
 	left_ring="Kishar ring", --4%
-	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Damage taken-5%',},priority=13}, --'HP+20'
+	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',},priority=13}, --'HP+20'
 	waist="Plat. Mog. Belt",
 	legs={name="Enif Cosciales",priority=11}, --8%
 	feet={name="Chevalier's Sabatons +3",priority=14} --13%
@@ -89,7 +89,7 @@ function get_sets()
 	hands={name="Souveran Handschuhs +1",priority=15}, --9
 	left_ring="Pernicious Ring", --5
 	right_ring="Apeile Ring +1", --5
-	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Damage taken-5%',},priority=10},
+	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Phys. dmg. taken-10%',},priority=10},
 	waist={name="Creed Baudrier",priority=9}, --5
 	legs={name="Souveran Diechlings +1",priority=13}, --9
 	--feet={ name="Eschite Greaves", augments={'HP+80','Enmity+7','Phys. dmg. taken -4',},priority=11},
@@ -144,7 +144,7 @@ function get_sets()
 	hands={name="Sakpata's Gauntlets",priority=7},
 	left_ring={name="Gelatinous Ring +1",priority=11},
 	right_ring={name="Moonlight Ring",priority=10},
-	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Damage taken-5%',},priority=6},
+	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Phys. dmg. taken-10%',},priority=6},
 	waist="Plat. Mog. Belt",
 	legs={name="Sakpata's Cuisses",priority=12},
 	feet={name="Sakpata's Leggings",priority=5}
@@ -201,7 +201,7 @@ function get_sets()
 	legs="Souveran Diechlings +1",
 	}
 	
-	sets.sword.index = {'Burtgang', 'Sakpatas Sword','Naegling','Malevolence','Caladbolg', 'Excalibur',--[[,'Mafic Cudgel',]]}
+	sets.sword.index = {'Burtgang', 'Sakpatas Sword','Naegling','Malevolence','Helheim', 'Excalibur',--[[,'Mafic Cudgel',]]}
 	sword_ind = 1 --Burtgang is the Default
 	
 	sets.sword['Sakpatas Sword'] = {main="Sakpata's Sword"}
@@ -211,6 +211,7 @@ function get_sets()
 	sets.sword['Burtgang'] = {main="Burtgang"}
 	sets.sword['Mafic Cudgel'] = {main="Mafic Cudgel"}
 	sets.sword['Caladbolg'] = {main="Caladbolg", sub="Alber Strap",}
+	sets.sword['Helheim'] = {main="Helheim", sub="Alber Strap",}
 	sets.sword['Reikiko'] = {main="Reikiko"}
 	
 	sets.shield.index = {'Duban','Aegis','Priwen','Blurred'} --'Srivatsa',
@@ -258,12 +259,18 @@ function get_sets()
 	hands={name="Nyame Gauntlets",priority=12}, --91
 	left_ring="Regal Ring",
 	right_ring="Cornelia's Ring",
-	back={ name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+	back={ name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	waist="Fotia Belt",
 	legs={name="Nyame Flanchard",priority=14}, --114
 	feet={name="Nyame Sollerets",priority=11} --68
 	}
 	
+	sets.ws['Fimbulvetr'] = set_combine(sets.ws.common, {
+	neck="Rep. Plat. Medal",
+	waist="Sailfi Belt +1",
+	back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},	
+	})
+		
 	sets.ws["Savage Blade"] = set_combine(sets.ws.common, {})
 	
 	sets.ws["Atonement"] = sets.enmity

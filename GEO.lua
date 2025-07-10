@@ -671,14 +671,14 @@ function init_gear_sets()
 	ear1=empty,
 	ear2=empty,
     body="Adamantite Armor",
-    hands="Volte Gloves",
+    hands="Regal Cuffs",
     neck={ name="Bagua Charm +2", augments={'Path: A',}},
     left_ring="Defending Ring",
     right_ring="Shadow Ring",
 	back=empty,
 	waist=empty,
 	legs="Volte Brais",
-	feet="Volte Boots",
+	feet="Medium's Sabots",
 }
 
 	sets.phalanx = {

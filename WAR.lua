@@ -126,7 +126,7 @@ function get_sets()
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring="Niqmaddu Ring",
 	right_ring="Cornelia's Ring",
-    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 }
 	
 	sets.ws["Ukko\'s Fury"] =  {
@@ -142,7 +142,7 @@ function get_sets()
 	right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring="Sroda Ring",
     right_ring="Begrudging Ring",
-    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10','Damage taken-5%',}}}
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10','Phys. dmg. taken-10%',}}}
 
 	
 	sets.ws['Impulse Drive'] = {
@@ -157,14 +157,14 @@ function get_sets()
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring="Cornelia's Ring",
     right_ring="Sroda Ring",
-    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 }
 	
 	sets.ws['Stardiver'] = sets.ws["Impulse Drive"]
 	
 	sets.ws['Upheaval'] = set_combine(sets.ws.common, {
         --left_ring="Regal Ring",
-		back={ name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%'},
+		back={ name="Cichol's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%','Phys. dmg. taken-10%',},
 	}})
 		
 	sets.ws['Cloudsplitter'] = {
@@ -179,7 +179,7 @@ function get_sets()
     right_ear="Friomisi Earring",
     left_ring="Regal Ring",
     right_ring="Epaminondas's Ring",
-    back={ name="Cichol's Mantle", augments={'STR+20','Mag. Acc+20 /Mag. Dmg.+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Cichol's Mantle", augments={'STR+20','Mag. Acc+20 /Mag. Dmg.+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 }
 	
 	sets.ws['Cataclysm'] = {
@@ -195,7 +195,7 @@ function get_sets()
     right_ear="Friomisi Earring",
     left_ring="Archon Ring",
     right_ring="Epaminondas's Ring",
-    back={ name="Cichol's Mantle", augments={'STR+20','Mag. Acc+20 /Mag. Dmg.+20','STR+10','Weapon skill damage +10%',}},
+    back={ name="Cichol's Mantle", augments={'STR+20','Mag. Acc+20 /Mag. Dmg.+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 }
 	
 	sets.ws['Sanguine Blade'] = sets.ws['Cataclysm']
@@ -233,7 +233,7 @@ function get_sets()
 	right_ear="Thrud Earring",
     left_ring="Cornelia's Ring",
     right_ring="Sroda Ring",
-    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 }
 
 	sets.ws['Resolution'] = {
@@ -248,7 +248,7 @@ function get_sets()
     right_ear="Thrud Earring",
     left_ring="Niqmaddu Ring",
 	right_ring="Sroda Ring",
-    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}},
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 	sets.ws['Mistral\'s Axe'] = {
 	ammo="Knobkierrie",
@@ -263,7 +263,7 @@ function get_sets()
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring="Niqmaddu Ring",
 	right_ring="Cornelia's Ring",
-    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+    back={ name="Cichol's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 }
 
 	sets.ws['Calamity'] = sets.ws['Mistral\'s Axe']

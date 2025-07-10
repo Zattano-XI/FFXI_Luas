@@ -807,6 +807,7 @@ function init_gear_sets()
     --sets.CP = {back="Mecisto. Mantle"}
 
 	sets.vagary = {
+	main="Raetic Rod +1",
     sub="Genmei Shield",
 	head=empty,
 	neck="Null Loop",

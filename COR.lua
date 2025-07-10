@@ -432,7 +432,6 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	}
 	
 	sets.phalanx = {
-		ammo="Staunch Tathlum +1",
 		head="Herculean Helm",
 		body="Herculean Vest",
 		hands="Herculean Gloves",

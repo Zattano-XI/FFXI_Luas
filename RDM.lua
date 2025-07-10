@@ -40,7 +40,7 @@ function get_sets()
 	
 	sets.fc.base = { --30(base)(8JP)=38 +44
 	--ammo="Impatiens", --2 qm
-	head="Atrophy Chapeau +3", --16
+	head="Atrophy Chapeau +4", --16
 	--neck="Baetyl Pendant", --4
 	--left_ear="Malignance Earring", --4
 	--right_ear="Loquacious Earring", --2
@@ -91,7 +91,8 @@ function get_sets()
 	neck="Loricate Torque +1",
 	right_ear="Gifted Earring", --3
 	body="Vedic Coat", --10
-	hands="Shrieker's Cuffs", --7
+	--hands="Shrieker's Cuffs", --7
+	hands="Telchine Gloves",
 	left_ring="Mephitas's Ring +1", --15
 	back="Solemnity Cape", --5
 	waist="Shinjutsu-no-obi +1",
@@ -108,7 +109,7 @@ function get_sets()
 	right_ring="Menelaus's Ring", --5
 	--left_ring="Janniston Ring", --II+5
 	back="Solemnity Cape", --7
-	legs="Atrophy Tights +3", --11
+	legs="Atrophy Tights +4", --11
 	})
 	
 	sets.midcast.cursna = set_combine(sets.midcast.conservemp, {
@@ -195,8 +196,8 @@ function get_sets()
     ring2={name="Stikini Ring +1", bag="wardrobe5"},
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	waist="Obstinate Sash",
-	--legs="Atrophy Tights +4",
-	legs="Leth. Fuseau +3",
+	legs="Atrophy Tights +4",
+	--legs="Leth. Fuseau +3",
 	feet="Atrophy Boots +4",
 	--feet="Vitiation Boots +3",
 	}
@@ -260,7 +261,8 @@ function get_sets()
 	hands="Regal Cuffs",
 	right_ring="Kishar Ring",
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
-	waist="Obstinate Sash",
+	waist="Skrymir Cord",
+	--waist="Obstinate Sash",
 	legs="Lethargy Fuseau +3",
 	feet="Lethargy Houseaux +3"
 	})
@@ -274,7 +276,7 @@ function get_sets()
 	right_ear="Lethargy Earring +2",
 	ring1={name="Stikini Ring +1", bag="wardrobe2"},
 	ring2={name="Stikini Ring +1", bag="wardrobe5"},
-	legs="Atrophy Tights +3",
+	legs="Atrophy Tights +4",
 	})
 	
 	sets.midcast.EnhancingDuration = set_combine(sets.midcast['Enhancing Magic'], {
@@ -423,7 +425,7 @@ function get_sets()
     ring2={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Ghostfyre Cape",
 	waist="Olympus Sash",
-	legs="Atrophy Tights +3",
+	legs="Atrophy Tights +4",
 	feet="Lethargy Houseaux +3"
 	}
 	
@@ -501,6 +503,13 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	legs="Nyame Flanchard",
 	Feet="Nyame Sollerets",
 	}
+	
+	sets.ws["Imperator"] = set_combine(sets.ws.common, {
+	feet="Leth. Houseaux +3",
+	ear1="Domin. Earring +1",
+	ring1="Epaminondas's Ring",
+	--back="Sucellos's Cape", dex+wsd
+	})
 	
 	sets.ws["Savage Blade"] = set_combine(sets.ws.common, {
 	ammo="Crepuscular Pebble",
@@ -590,7 +599,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	back="Solemnity Cape",
 	waist="Shinjutsu-no-obi +1",
 	legs="Carmine Cuisses +1",
-	feet="Volte Gaiters"
+	feet="Nyame Sollerets"
 	}
 	
 	sets.idle['Flans'] = sets.TP['EnSpell']
@@ -599,10 +608,11 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	
 	sets.resting = {}
 	
-	sets.main.index = {'Naegling','Mpu Gandring','Maxentius','Crocea Mors',}
-	main_ind = 1 --Crocea Mors is the Default
+	sets.main.index = {'Naegling','Mpu Gandring','Maxentius','Caliburnus',}
+	main_ind = 1 --First weapon indicated above is the Default
 	
 	sets.main['Crocea Mors'] = {main="Crocea Mors"}
+	sets.main['Caliburnus'] = {main="Caliburnus"}
 	sets.main['Naegling'] = {main="Naegling"}
 	sets.main['Mpu Gandring'] = {main="Mpu Gandring"}
 	sets.main['Maxentius'] = {main="Maxentius"}
@@ -1049,7 +1059,7 @@ function self_command(command)
 			send_command('alias savage @input /ws "Savage Blade" <t>')
 			send_command('alias seraph @input /ws "Seraph Blade" <t>')
 		elseif main_ind == 4 then
-			send_command('alias savage @input /ws "Savage Blade" <t>')
+			send_command('alias savage @input /ws "Imperator" <t>')
 			send_command('alias seraph @input /ws "Seraph Blade" <t>')
 		elseif main_ind == 2 then
 			send_command('alias savage @input /ws "Ruthless Stroke" <t>')

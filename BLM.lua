@@ -32,7 +32,7 @@ function get_sets()
 	left_ear="Loquacious Earring", --2
 	right_ear="Malignance Earring", --4
 	body="Merlinic Jubbah", --13
-	hands="Volte Gloves", --6
+	hands="Agwu's Gages", --6
 	left_ring="Kishar Ring", --4
 	right_ring="Lebeche Ring", --2 qm
 	back="Perimede Cape", --4 qm
@@ -276,7 +276,7 @@ function get_sets()
 	left_ear="Etiolation Earring",
 	right_ear="Lugalbanda Earring",
 	body="Shamash Robe",
-	hands="Volte Gloves",
+	hands="Agwu's Gages",
 	ring1={name="Stikini Ring +1", bag="wardrobe2"},
 	ring2={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Solemnity Cape",
@@ -319,7 +319,7 @@ function get_sets()
 	neck="Incanter's Torque",
 	left_ear=empty,
 	body="Shamash Robe",
-	hands="Volte Gloves",
+	--hands="Volte Gloves",
 	left_ring="Metamorph Ring +1",
 	right_ring="Mephitas's Ring +1",
 	--back="Vates Cape +1",
@@ -392,7 +392,7 @@ function get_sets()
 	main="Marin Staff +1",
 	sub="Enki Strap",
 	ammo="Pemphredo Tathlum",
-	hands="Volte Gloves",
+	hands="Regal Cuffs",
 	back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
 	legs="Shamash Robe",
 	}

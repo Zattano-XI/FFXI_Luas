@@ -311,13 +311,9 @@ function get_sets()
 	sets.buff['Diffusion'] = {feet="Luhlaza Charuqs +3"}
 
 	sets.th = {
-		ammo="Per. Lucky Egg",
-		head="Volte Cap",
-		body="Volte Jupon", --keep
-		hands="Volte Bracers", --keep
-		waist="Chaac Belt",
-		legs="Volte Hose",
-		feet="Volte Boots", --keep
+		ammo="Per. Lucky Egg",--1
+		body="Volte Jupon", --2
+		waist="Chaac Belt",--1
 	}
 	
 	sets.phalanx = {

@@ -526,15 +526,16 @@ function init_gear_sets()
 		waist="Sailfi Belt +1",
 		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},	
         })
+		
     sets.precast.WS['Herculean Slash'] = sets.precast.JA['Lunge']
 
     sets.precast.WS['Shockwave'] = set_combine(sets.precast.WS, {
         ammo="Perfect Lucky Egg",
-		head="Volte Cap",
-		body={ name="Nyame Mail", augments={'Path: B',}},
+		head="Nyame Helm",
+		body="Volte Jupon",
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
-		feet="Volte Boots",
+		feet="Nyame Sollerets",
 		--neck={ name="Futhark Torque +2", augments={'Path: A',}},
 		neck="Fotia Gorget",
 		waist="Chaac Belt",
@@ -616,7 +617,7 @@ function init_gear_sets()
 			head="Fu. Bandeau +3", 
 			body="Herculean Vest",
 			hands="Herculean Gloves",
-			legs="Taeon Tights", --augments={'Spell interruption rate down -8%','Phalanx +3',}},
+			legs="Herculean Trousers",
 			feet="Taeon Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},
 			neck="Null Loop",
 			ear1="Odnowa earring +1",
@@ -1030,7 +1031,6 @@ function init_gear_sets()
         ammo="Per. Lucky Egg", 
 		body="Volte Jupon",
         waist="Chaac Belt",
-		--legs="Volte Hose",
 		}
 	
 	sets.death = {

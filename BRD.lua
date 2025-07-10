@@ -111,7 +111,7 @@ function init_gear_sets()
     sets.precast.FC = { --69 FC 7 QC
     head={ name="Bunzi's Hat", augments={'Path: A',}}, --10 FC
     body="Inyanga Jubbah +2", --14 FC
-    hands="Volte Gloves", --6 FC
+    hands="Leyline Gloves", --6 FC
     legs="Volte Brais", --8 FC
     feet="Fili Cothurnes +3",
 	--feet="Volte Gaiters", --6 FC
@@ -136,7 +136,7 @@ function init_gear_sets()
     sets.precast.FC.BardSong = { --83~87
     head="Fili Calot +3",
     body="Inyanga Jubbah +2",
-    hands="Volte Gloves",
+    hands="Leyline Gloves",
     legs="Volte Brais",
     feet="Fili Cothurnes +3",
 	--feet={ name="Bihu Slippers +3", augments={'Enhances "Nightingale" effect',}},
@@ -556,7 +556,7 @@ function init_gear_sets()
 	})
 	
     sets.idle.Refresh = set_combine(sets.idle, {
-	hands="Volte Gloves",
+	--hands="Volte Gloves",
 	legs="Assid. Pants +1", --1~2 Refresh
 	feet="Volte Gaiters", --1 Refresh
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},

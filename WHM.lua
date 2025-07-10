@@ -782,7 +782,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
         body="Ayanmo Corazza +2",
         hands="Bunzi's Gloves",
         legs="Aya. Cosciales +2",
-        feet="Bunzi's Sabots",
+        feet="Nyame Sollerets",
         neck="Combatant's Torque", --combatant's torque
         ear1="Cessance Earring",
         ear2="Telos	Earring",
@@ -799,7 +799,6 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
 		hands="Gazu Bracelet +1",
 		ring1="Cacoethic Ring +1",
 		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-        --feet="Volte Boots",
         waist="Grunfeld Rope",
         })
 
@@ -813,7 +812,6 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
     sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
         --sub="Sindri",
         hands="Gazu Bracelet +1",
-        feet="Volte Boots",
         })
 
     sets.engaged.Aftermath = set_combine(sets.engaged, {

@@ -114,11 +114,11 @@ function get_sets()
 	}
 	
 	sets.TH['Full'] = { --9
+	ammo="Per. Lucky Egg",
 	head="Volte Cap", --1
-	body="Volte Jupon",
+	body="Volte Jupon", --2
 	hands="Plun. Armlets +3", --4
-	waist="Chaac Belt", --1
-	legs="Volte Hose",
+	waist="Chaac Belt", --11
 	feet="Skulker's Poulaines +3" --3
 	}
 	
@@ -273,8 +273,8 @@ function get_sets()
 	
 	--sets.THwhore = set_combine(sets.macc, {
 	sets.THwhore = set_combine(sets.nomacc, {
-	head="Volte Cap",
-	hands="Plunderer's Armlets +3",
+	ammo="Per. Lucky Egg",
+	hands="Plunderer's Armlets +3",. 
 	waist="Chaac Belt",
 	feet="Skulker's Poulaines +3"
 	})
