@@ -254,7 +254,7 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	--waist="Tellen belt",
 	waist="Yemaya Belt",
 	legs="Malignance Tights",
-	feet="Malignance Boots"
+	feet="Malignance Boots",
 	}
 	
 	sets.QD['MAB'] = {
@@ -305,8 +305,8 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
     waist="Null Belt",
     left_ear="Digni. Earring",
     right_ear="Crep. Earring",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-    ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+    right_ring={name="Stikini Ring +1", bag="wardrobe5"},
     back="Null Shawl",
 	}
 	
@@ -439,8 +439,8 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 		feet="Herculean Boots",
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
-		ring1="Shadow Ring",
-		ring2="Defending Ring",
+		left_ring="Shadow Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	}
@@ -456,8 +456,8 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
 	hands="Smithy's Mitts",
-	ring1="Orvail ring +1", --+1
-	ring2="Confectioner's Ring",
+	left_ring="Orvail ring +1", --+1
+	right_ring="Confectioner's Ring",
 	waist="Alchemist's Belt",
 	}
 	
@@ -465,8 +465,8 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 		neck="Smithy's Torque",
 		body="Blacksmith's Apron",
 		hands="Smithy's Mitts",
-		ring1="Orvail Ring +1",
-		ring2="Confectioner's Ring",
+		left_ring="Orvail Ring +1",
+		right_ring="Confectioner's Ring",
 		waist="Blacksmith's Belt",
 	}
 end

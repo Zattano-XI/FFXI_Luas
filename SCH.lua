@@ -248,7 +248,7 @@ function init_gear_sets()
     sets.precast.FC.Curaga = sets.precast.FC.Cure
     --sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty, body="Crepuscular Cloak"})
     sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak", sub="Ammurapi Shield"})
-    --sets.precast.Storm = set_combine(sets.precast.FC, {ring2={name="Stikini Ring +1", bag="wardrobe4"},})
+    --sets.precast.Storm = set_combine(sets.precast.FC, {right_ring={name="Stikini Ring +1", bag="wardrobe4"},})
 
 
     ------------------------------------------------------------------------------------------------
@@ -275,7 +275,7 @@ function init_gear_sets()
         feet="Merlinic Crackows",
         ear1="Malignance Earring",
         ear2="Regal Earring",
-        ring1="Archon Ring",
+        left_ring="Archon Ring",
         back=gear.SCH_MAB_Cape,
         --waist="Sacro Cord",
         })
@@ -445,7 +445,7 @@ function init_gear_sets()
 		head="Amalric Coif +1",
 		hands="Regal cuffs",
         ear1="Halasz Earring",
-        ring2="Freke Ring",
+        right_ring="Freke Ring",
         --waist="Emphatikos Rope",
 		legs="Shedir Seraweels",
         })
@@ -454,7 +454,7 @@ function init_gear_sets()
 
     sets.midcast.Stormsurge = set_combine(sets.midcast.Storm, {feet="Peda. Loafers +3"})
 
-    sets.midcast.Protect = set_combine(sets.midcast.EnhancingDuration, {ring2="Sheltered Ring"})
+    sets.midcast.Protect = set_combine(sets.midcast.EnhancingDuration, {right_ring="Sheltered Ring"})
     sets.midcast.Protectra = sets.midcast.Protect
     sets.midcast.Shell = sets.midcast.Protect
     sets.midcast.Shellra = sets.midcast.Shell
@@ -477,8 +477,8 @@ function init_gear_sets()
 		waist="Obstin. Sash",
         left_ear="Vor Earring",
 		right_ear="Regal Earring",
-        ring1={name="Stikini Ring +1", bag="wardrobe2"},
-		ring2={name="Stikini Ring +1", bag="wardrobe5"},
+        left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+		right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}},
 		--back={ name="Aurist's Cape +1", augments={'Path: A',}},
         }
@@ -507,8 +507,8 @@ function init_gear_sets()
 		neck="Argute Stole +2",
         left_ear="Malignance Earring",
         right_ear="Regal earring",
-		ring1={name="Stikini Ring +1", bag="wardrobe2"},
-		ring2={name="Stikini Ring +1", bag="wardrobe5"},
+		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+		right_ring={name="Stikini Ring +1", bag="wardrobe5"},
         waist="Acuity Belt +1",
 		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}},
         }
@@ -525,8 +525,8 @@ function init_gear_sets()
         neck="Argute Stole +2", --7
         ear1="Malignance Earring",
         ear2="Regal Earring",
-        ring1="Archon Ring",
-		ring2="Freke Ring",
+        left_ring="Archon Ring",
+		right_ring="Freke Ring",
 		back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Fast Cast"+10',}},
         waist="Hachirin-no-Obi",
         }
@@ -538,8 +538,8 @@ function init_gear_sets()
         neck="Erra pendant",
 		feet={ name="Agwu's Pigaches", augments={'Path: A',}},
 		--ear1="Hirudinea Earring",
-        ring1="Archon Ring",
-        ring2="Evanescence Ring",
+        left_ring="Archon Ring",
+        right_ring="Evanescence Ring",
         waist="Fucho-no-obi",
         })
 
@@ -588,7 +588,7 @@ function init_gear_sets()
 		sub="Ammurapi shield",
         --head=empty,
         --body="Crepuscular Cloak",
-        ring1="Archon Ring",
+        left_ring="Archon Ring",
         })
 
     sets.magic_burst = set_combine(sets.midcast['Elemental Magic'], { --10 from Akademos
@@ -597,7 +597,7 @@ function init_gear_sets()
         legs="Agwu's slops", --9
 		feet={ name="Agwu's Pigaches", augments={'Path: A',}}, --6
         neck="Argute Stole +2", --10
-        ring1="Mujin Band", --(5)
+        left_ring="Mujin Band", --(5)
         })
 		
     sets.midcast.Helix = {
@@ -625,7 +625,7 @@ function init_gear_sets()
 
     sets.midcast.DarkHelix = set_combine(sets.midcast.Helix, {
         head="Pixie Hairpin +1",
-        ring1="Archon Ring",
+        left_ring="Archon Ring",
         })
 
     sets.midcast.LightHelix = set_combine(sets.midcast.Helix, {
@@ -641,7 +641,7 @@ function init_gear_sets()
         hands={ name="Agwu's Gages", augments={'Path: A',}}, --8/5
         feet={ name="Agwu's Pigaches", augments={'Path: A',}}, --6
         neck="Argute Stole +2", --10
-        ring1="Mujin Band", --(5)
+        left_ring="Mujin Band", --(5)
         })	
 
 
@@ -687,8 +687,8 @@ function init_gear_sets()
         sub="Genmei Shield", --10/0
 		head="Befouled crown",
 		neck="Sibyl scarf",
-		ring1={name="Stikini Ring +1", bag="wardrobe2"},
-		ring2={name="Stikini Ring +1", bag="wardrobe5"},
+		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+		right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 		feet="Herald's Gaiters"
         })
 
@@ -702,8 +702,8 @@ function init_gear_sets()
         --feet="Volte Gaiters",
         neck="Loricate Torque +1", --5/5
         --ear1="Sanare Earring",
-        ring1="Gelatinous Ring +1", --6/(-2)
-        ring2="Defending Ring", --10/10
+        left_ring="Gelatinous Ring +1", --6/(-2)
+        right_ring="Defending Ring", --10/10
         back="Solemnity cape", --4/4
         --waist="Carrier's Sash",
         })
@@ -762,7 +762,7 @@ function init_gear_sets()
     ---------------------------------------- Special Sets ------------------------------------------
     ------------------------------------------------------------------------------------------------
 
-    sets.buff['Ebullience'] = {head="Arbatel bonnet +3",body="Agwu's robe",ring1="Mujin Band",}
+    sets.buff['Ebullience'] = {head="Arbatel bonnet +3",body="Agwu's robe",left_ring="Mujin Band",}
     sets.buff['Rapture'] = {head="Arbatel bonnet +3"}
     sets.buff['Perpetuance'] = {hands="Arbatel Bracers +3"}
     sets.buff['Immanence'] = {hands="Arbatel Bracers +3", "Lugh's Cape"}
@@ -793,8 +793,8 @@ function init_gear_sets()
 
     sets.buff.Doom = {
         --neck="Nicander's Necklace", --20
-        --ring1={name="Eshmun's Ring", bag="wardrobe3"}, --20
-        --ring2={name="Eshmun's Ring", bag="wardrobe4"}, --20
+        --left_ring={name="Eshmun's Ring", bag="wardrobe3"}, --20
+        --right_ring={name="Eshmun's Ring", bag="wardrobe4"}, --20
         waist="Gishdubar Sash", --10
         }
 	sets.buff.Sleep = {main="Prime Staff",}
@@ -833,8 +833,8 @@ function init_gear_sets()
 	feet="Chironic Slippers",
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
-	ring1="Shadow Ring",
-	ring2="Defending Ring",
+	left_ring="Shadow Ring",
+	right_ring="Defending Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}	
@@ -981,9 +981,9 @@ function job_buff_change(buff, gain)
         if gain then
             equip(sets.buff.Doom)
             send_command('@input /p Doomed.')
-             disable('ring1','ring2','waist')
+             disable('left_ring','right_ring','waist')
         else
-            enable('ring1','ring2','waist')
+            enable('left_ring','right_ring','waist')
             handle_equipping_gear(player.status)
         end
 	elseif buff == "sleep" then
@@ -1373,11 +1373,11 @@ end
 windower.register_event('zone change',
     function()
         if no_swap_gear:contains(player.equipment.left_ring) then
-            enable("ring1")
+            enable("left_ring")
             equip(sets.idle)
         end
         if no_swap_gear:contains(player.equipment.right_ring) then
-            enable("ring2")
+            enable("right_ring")
             equip(sets.idle)
         end
         if no_swap_gear:contains(player.equipment.waist) then

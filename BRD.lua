@@ -385,7 +385,7 @@ function init_gear_sets()
 
 
     -- Song-specific recast reduction
-    sets.midcast.SongRecast = {ear1="Loquacious Earring",ring1="Kishar Ring",ring1="Lebeche Ring",legs="Fili Rhingrave +3"}
+    sets.midcast.SongRecast = {ear1="Loquacious Earring",left_ring="Kishar Ring",left_ring="Lebeche Ring",legs="Fili Rhingrave +3"}
 
     sets.midcast.Daurdabla = set_combine(sets.midcast.FastRecast, sets.midcast.SongRecast, {range=info.ExtraSongInstrument})
 
@@ -483,8 +483,8 @@ function init_gear_sets()
 	feet="Chironic Slippers",
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
-	ring1="Shadow Ring",
-	ring2="Defending Ring",
+	left_ring="Shadow Ring",
+	right_ring="Defending Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}) 
@@ -647,8 +647,8 @@ function init_gear_sets()
 	feet="Chironic Slippers",
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
-	ring1="Shadow Ring",
-	ring2="Defending Ring",
+	left_ring="Shadow Ring",
+	right_ring="Defending Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",	
 	}

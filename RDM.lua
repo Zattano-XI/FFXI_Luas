@@ -192,8 +192,8 @@ function get_sets()
 	right_ear="Lethargy Earring +2",
 	body="Atrophy Tabard +4",
 	hands="Lethargy Gantherots +3",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-    ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+    right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	waist="Obstinate Sash",
 	legs="Atrophy Tights +4",
@@ -274,8 +274,8 @@ function get_sets()
 	neck="Incanter's Torque",
 	left_ear="Mimir Earring",
 	right_ear="Lethargy Earring +2",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-	ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	legs="Atrophy Tights +4",
 	})
 	
@@ -302,8 +302,8 @@ function get_sets()
 	right_ear="Lethargy Earring +2",
 	body="Lethargy Sayon +3",
 	hands="Leth. Ganth. +3",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-	ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Perimede Cape",
 	waist="Acuity Belt +1",
 	legs="Lethargy Fuseau +3",
@@ -348,7 +348,7 @@ function get_sets()
 	body="Crepuscular Cloak",
 	--hands="Regal Cuffs",
 	hands="Lethargy Gantherots +3",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
 	right_ring="Metamorph Ring +1",
 	back="Aurist's Cape +1",
 	waist="Acuity Belt +1",
@@ -376,13 +376,18 @@ function get_sets()
 	
 	sets.buff['Phalanx'] = set_combine(sets.midcast.EnhancingDuration, {})
 	
-	sets.buff.selfphalanx = set_combine(sets.buff['Phalanx'], {
+	sets.buff.selfphalanx = set_combine(sets.buff['Phalanx'], { --use whichever has stronger augments
 	main="Sakpata's Sword",
 	head="Chironic Hat",
-	--body="Chironic Doublet",
-	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	--head="Taeon Chapeau",
+	body="Chironic Doublet",
+	--body="Taeon Tabard",
+	--hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
+	hands="Taeon Gloves",
 	legs="Chironic Hose",
+	--legs="Taeon Tights",
 	feet="Chironic Slippers",
+	--feet="Taeon Boots",
 	})
 	
 	sets.buff['Refresh III'] = set_combine(sets.midcast.EnhancingDuration, {
@@ -421,8 +426,8 @@ function get_sets()
 	right_ear="Mimir Earring",
 	body={ name="Vitiation Tabard +3", augments={'Enhances "Chainspell" effect',}},
 	hands="Vitiation Gloves +3",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-    ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+    right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Ghostfyre Cape",
 	waist="Olympus Sash",
 	legs="Atrophy Tights +4",
@@ -447,8 +452,8 @@ function get_sets()
 	right_ear="Lethargy Earring +2",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
-	ring1={name="Chirich Ring +1", bag="wardrobe2"},
-	ring2={name="Chirich Ring +1", bag="wardrobe5"},
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	waist="Reiki Yotai",
 	legs="Malignance Tights",
@@ -476,7 +481,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 		sub="Aern Dagger II",
 		--head="Malignance Chapeau",
 		neck="Duelist's Torque +2",
-		ring2="Hetairoi Ring",
+		right_ring="Hetairoi Ring",
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 		legs="Carmine Cuisses +1",	
 		--feet="Malignance Boots"
@@ -507,8 +512,8 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	sets.ws["Imperator"] = set_combine(sets.ws.common, {
 	feet="Leth. Houseaux +3",
 	ear1="Domin. Earring +1",
-	ring1="Epaminondas's Ring",
-	--back="Sucellos's Cape", dex+wsd
+	left_ring="Epaminondas's Ring",
+	back={ name="Sucellos's Cape",  augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 	
 	sets.ws["Savage Blade"] = set_combine(sets.ws.common, {
@@ -565,7 +570,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	sets.ws["Ruthless Stroke"] = set_combine(sets.ws.common, {
 	ammo="Coiste Bodhar",
 	left_ring="Ilabrat Ring",
-	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}, --DW?
+	back={ name="Sucellos's Cape",  augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 	
 	sets.ws["Black Halo"] = set_combine(sets.ws.common, {
@@ -594,7 +599,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	right_ear="Dominance Earring +1",
 	body="Lethargy Sayon +3",
 	hands="Leth. Ganth. +3",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
 	right_ring="Defending Ring",
 	back="Solemnity Cape",
 	waist="Shinjutsu-no-obi +1",
@@ -608,7 +613,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	
 	sets.resting = {}
 	
-	sets.main.index = {'Naegling','Mpu Gandring','Maxentius','Caliburnus',}
+	sets.main.index = {'Naegling', 'Caliburnus', 'Crocea Mors','Mpu Gandring','Maxentius',}
 	main_ind = 1 --First weapon indicated above is the Default
 	
 	sets.main['Crocea Mors'] = {main="Crocea Mors"}
@@ -636,8 +641,8 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	feet="Chironic Slippers",
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
-	ring1="Shadow Ring",
-	ring2="Defending Ring",
+	left_ring="Shadow Ring",
+	right_ring="Defending Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}	
@@ -649,8 +654,8 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
 	hands="Smithy's Mitts",
-	ring1="Orvail ring +1", --+1
-	ring2="Confectioner's Ring",
+	left_ring="Orvail ring +1", --+1
+	right_ring="Confectioner's Ring",
 	waist="Alchemist's Belt",
 	}
 	
@@ -1058,13 +1063,16 @@ function self_command(command)
 		if main_ind == 1 then
 			send_command('alias savage @input /ws "Savage Blade" <t>')
 			send_command('alias seraph @input /ws "Seraph Blade" <t>')
-		elseif main_ind == 4 then
+		elseif main_ind == 2 then
 			send_command('alias savage @input /ws "Imperator" <t>')
 			send_command('alias seraph @input /ws "Seraph Blade" <t>')
-		elseif main_ind == 2 then
+		elseif main_ind == 3 then
+			send_command('alias savage @input /ws "Savage Blade" <t>')
+			send_command('alias seraph @input /ws "Seraph Blade" <t>')
+		elseif main_ind == 4 then
 			send_command('alias savage @input /ws "Ruthless Stroke" <t>')
 			send_command('alias seraph @input /ws "Aeolian Edge" <t>')
-		elseif main_ind == 3 then
+		elseif main_ind == 5 then
 			send_command('alias savage @input /ws "Black Halo" <t>')
 			send_command('alias seraph @input /ws "Brainshaker" <t>')
 		end

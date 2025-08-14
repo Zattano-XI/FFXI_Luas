@@ -376,7 +376,7 @@ function get_sets()
 	head=empty,
 	body=empty,
 	hands=empty,
-	ring2=empty,
+	right_ring=empty,
 	legs=empty,
 	feet=empty,
 	}
@@ -405,8 +405,8 @@ function get_sets()
 		feet="Herculean Boots",
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
-		ring1="Shadow Ring",
-		ring2="Defending Ring",
+		left_ring="Shadow Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	}

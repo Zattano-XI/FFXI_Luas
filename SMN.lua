@@ -123,7 +123,7 @@ function init_gear_sets()
     sets.precast.JA['Elemental Siphon'] = {
 	main="Chatoyant Staff",sub="Vox Grip",ammo="Esper Stone +1",
 	head="Baayami Hat +1",neck="Incanter's Torque",ear1="C. Palug Earring",ear2="Lodurr Earring",
-	body="Beck. Doublet +1",hands="Baayami Cuffs +1",ring1="Evoker's Ring",ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	body="Beck. Doublet +1",hands="Baayami Cuffs +1",left_ring="Evoker's Ring",right_ring={name="Stikini Ring +1",bag="Wardrobe 2"},
 	back="Conveyance Cape",waist="Kobo Obi",legs="Baayami Slops +1",feet="Beck. Pigaches +1"}
 
     sets.precast.JA['Mana Cede'] = {hands="Beck. Bracers +1"}
@@ -131,7 +131,7 @@ function init_gear_sets()
     -- Pact delay reduction gear
     sets.precast.BloodPactWard = {main="Espiritus",sub="Vox Grip",ammo="Epitaph",
 	head="Beckoner's Horn +1",neck="Incanter's Torque",ear1="C. Palug Earring",ear2="Lodurr Earring",
-	body="Baayami Robe",hands="Baayami Cuffs +1",ring1="Evoker's Ring",ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	body="Baayami Robe",hands="Baayami Cuffs +1",left_ring="Evoker's Ring",right_ring={name="Stikini Ring +1",bag="Wardrobe 2"},
     back="Conveyance Cape",waist="Kobo Obi",legs="Baayami Slops +1",feet="Baayami Sabots +1"}
 
     sets.precast.BloodPactRage = sets.precast.BloodPactWard
@@ -145,8 +145,8 @@ function init_gear_sets()
 		ear2="Loquacious Earring",
         body="Inyanga Jubbah +2",
 		hands={ name="Merlinic Dastanas", augments={'Mag. Acc.+21','"Fast Cast"+6','"Mag.Atk.Bns."+4',}},
-		ring1="Kishar Ring",
-		ring2="Lebeche Ring",
+		left_ring="Kishar Ring",
+		right_ring="Lebeche Ring",
 		back="Fi Follet Cape +1",
         waist="Witful Belt",
 		legs="Psycloth Lappas",
@@ -161,7 +161,7 @@ function init_gear_sets()
 	
 	sets.precast.WS['Garland of Bliss'] = {ammo="Pemphredo Tathlum",
 	head="Nyame Helm",neck="Baetyl Pendant",ear1="Friomisi Earring",ear2="Malignance Earring",
-	body="Nyame Mail",hands="Nyame Gauntlets",ring1="Metamor. Ring +1",ring2="Freke Ring",
+	body="Nyame Mail",hands="Nyame Gauntlets",left_ring="Metamor. Ring +1",right_ring="Freke Ring",
 	back={ name="Campestres's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},waist=gear.ElementalObi,legs="Nyame Flanchard",feet="Nyame Sollerets"}
 
     
@@ -181,8 +181,8 @@ function init_gear_sets()
 	ear2="Beck. Earring +1",
 	body="Baayami Robe",
 	hands="Baayami Cuffs +1",
-	ring1="Evoker's Ring",
-	ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	left_ring="Evoker's Ring",
+	right_ring={name="Stikini Ring +1",bag="Wardrobe 2"},
 	back="Campestres's Cape",
 	--back="Conveyance Cape",
 	waist="Kobo Obi",
@@ -199,8 +199,8 @@ function init_gear_sets()
 	ear1="Mendi. Earring",
 	body="Bunzi's Robe",
 	hands="Inyan. Dastanas +2",
-	ring1="Sirona's Ring",
-	ring2="Janniston Ring",
+	left_ring="Sirona's Ring",
+	right_ring="Janniston Ring",
 	legs="Vanya Slops",
 	feet="Vanya Clogs"
 	}
@@ -216,7 +216,7 @@ function init_gear_sets()
     
     sets.midcast.Pet.BloodPactWard = {main="Espiritus",sub="Vox Grip",ammo="Epitaph",
 	head="Baayami Hat +1",neck="Incanter's Torque",ear1="C. Palug Earring",ear2="Lodurr Earring",
-	body="Baayami Robe",hands="Baayami Cuffs +1",ring1="Evoker's Ring",ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	body="Baayami Robe",hands="Baayami Cuffs +1",left_ring="Evoker's Ring",right_ring={name="Stikini Ring +1",bag="Wardrobe 2"},
 	back="Conveyance Cape",waist="Kobo Obi",legs="Baayami Slops +1",feet="Baaya. Sabots +1"}
 
     sets.midcast.Pet.DebuffBloodPactWard = {}
@@ -228,8 +228,8 @@ function init_gear_sets()
 	ear2="Lugalbanda Earring",
 	body="Con. Doublet +3",
 	hands="Merlinic Dastanas",
-	ring1="C. Palug Ring",
-	ring2="Varar Ring +1",
+	left_ring="C. Palug Ring",
+	right_ring="Varar Ring +1",
 	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	waist="Incarnation Sash",
 	legs={ name="Apogee Slacks +1", augments={'Pet: STR+20','Blood Pact Dmg.+14','Pet: "Dbl. Atk."+4',}},
@@ -239,7 +239,7 @@ function init_gear_sets()
 
     sets.midcast.Pet.MagicalBloodPactRage = {main={ name="Grioavolr", augments={'Blood Pact Dmg.+5','Pet: INT+14','Pet: Mag. Acc.+30','Pet: "Mag.Atk.Bns."+25',}},sub="Elan Strap +1",ammo="Epitaph",
 	head="Glyphic Horn +3",neck="Adad Amulet",ear1="Gelos Earring",ear2="Lugalbanda Earring",
-	body="Apo. Dalmatica +1",hands={ name="Merlinic Dastanas", augments={'Pet: Mag. Acc.+18','Blood Pact Dmg.+10','Pet: INT+3',}},ring1="Speaker's Ring",ring2="Varar Ring +1",
+	body="Apo. Dalmatica +1",hands={ name="Merlinic Dastanas", augments={'Pet: Mag. Acc.+18','Blood Pact Dmg.+10','Pet: INT+3',}},left_ring="Speaker's Ring",right_ring="Varar Ring +1",
 	back={ name="Campestres's Cape", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},waist="Regal Belt",legs={ name="Apogee Slacks +1", augments={'MP+80','Pet: "Mag.Atk.Bns."+35','Blood Pact Dmg.+8',}},feet="Apogee Pumps +1"}
 
     sets.midcast.Pet.MagicalBloodPactRage.Acc = {}
@@ -260,7 +260,7 @@ function init_gear_sets()
     
     sets.midcast.Pet['Elemental Magic'] = {main={ name="Grioavolr", augments={'Blood Pact Dmg.+5','Pet: INT+14','Pet: Mag. Acc.+30','Pet: "Mag.Atk.Bns."+25',}},sub=" ",ammo="Epitaph",
 	head="Glyphic Horn +3",neck="Adad Amulet",ear1="Gelos Earring",ear2="Lugalbanda Earring",
-	body="Apo. Dalmatica +1",hands={ name="Merlinic Dastanas", augments={'Pet: Mag. Acc.+18','Blood Pact Dmg.+10','Pet: INT+3',}},ring1="Speaker's Ring",ring2="Varar Ring +1",
+	body="Apo. Dalmatica +1",hands={ name="Merlinic Dastanas", augments={'Pet: Mag. Acc.+18','Blood Pact Dmg.+10','Pet: INT+3',}},left_ring="Speaker's Ring",right_ring="Varar Ring +1",
 	back={ name="Campestres's Cape", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Eva.+20 /Mag. Eva.+20','Pet: "Regen"+10','Pet: Damage taken -5%',}},waist="Regal Belt",legs="Glyphic Spats +3",feet="Apogee Pumps +1"}
     
 
@@ -274,7 +274,7 @@ function init_gear_sets()
     -- Idle sets
     sets.idle = {main="Nirvana",sub="Khonsu",ammo="Epitaph",
 	head="Beckoner's Horn +1",neck="Loricate Torque +1",ear1="C. Palug Earring",ear2="Tuisto Earring",
-	body="Shomonjijoe +1",hands="Asteria Mitts +1",ring1={name="Stikini Ring +1",bag="Wardrobe2"},ring2={name="Stikini Ring +1",bag="Wardrobe5"},
+	body="Shomonjijoe +1",hands="Asteria Mitts +1",left_ring={name="Stikini Ring +1",bag="Wardrobe2"},right_ring={name="Stikini Ring +1",bag="Wardrobe5"},
 	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},waist="Fucho-no-Obi",legs="Assid. Pants +1",feet="Crier's Gaiters"}
 
     sets.idle.PDT = {}
@@ -288,8 +288,8 @@ function init_gear_sets()
 	ear2="Tuisto Earring",
 	body="Shomonjijoe +1",
 	hands="Asteria Mitts +1",
-	ring1="Evoker's Ring",
-	ring2="Stikini Ring +1",
+	left_ring="Evoker's Ring",
+	right_ring="Stikini Ring +1",
 	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	waist="Fucho-no-Obi",
 	legs="Inyanga Shalwar +2",
@@ -300,7 +300,7 @@ function init_gear_sets()
 
     sets.idle.Spirit = {main="Gridarvor",sub="Vox Grip",ammo="Epitaph",
 	head="Beckoner's Horn +1",neck="Loricate Torque +1",ear1="C. Palug Earring",ear2="Tuisto Earring",
-	body="Shomonjijoe +1",hands="Asteria Mitts +1",ring1="Evoker's Ring",ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	body="Shomonjijoe +1",hands="Asteria Mitts +1",left_ring="Evoker's Ring",right_ring={name="Stikini Ring +1",bag="Wardrobe 2"},
 	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	waist="Fucho-no-Obi",
 	legs="Inyanga Shalwar +2",
@@ -317,8 +317,8 @@ function init_gear_sets()
 	ear2="Lodurr Earring",
 	body="Beck. Doublet +1",
 	hands="Baayami Cuffs +1",
-	ring1="Evoker's Ring",
-	ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	left_ring="Evoker's Ring",
+	right_ring={name="Stikini Ring +1",bag="Wardrobe 2"},
 	back="Conveyance Cape",
 	waist="Lucidity Sash",
 	legs="Baayami Slops +1",
@@ -335,8 +335,8 @@ function init_gear_sets()
 	ear2="Lodurr Earring",
 	body="Beck. Doublet +1",
 	hands="Baayami Cuffs +1",
-	ring1="Evoker's Ring",
-	ring2={name="Stikini Ring +1",bag="Wardrobe 2"},
+	left_ring="Evoker's Ring",
+	right_ring={name="Stikini Ring +1",bag="Wardrobe 2"},
 	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10','Pet: Damage taken -5%',}},
 	waist="Lucidity Sash",
 	legs="Beck. Spats +1",
@@ -370,8 +370,8 @@ function init_gear_sets()
 	feet="Chironic Slippers",
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
-	ring1="Shadow Ring",
-	ring2="Defending Ring",
+	left_ring="Shadow Ring",
+	right_ring="Defending Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}		
@@ -389,7 +389,7 @@ function init_gear_sets()
 	ear2="Crep. Earring",
 	body="Glyphic Doublet +3",
 	hands="Bunzi's Gloves",
-	ring1="C. Palug Ring",
+	left_ring="C. Palug Ring",
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Haste+10','Phys. dmg. taken-10%',}},
 	waist="Windbuffet Belt +1",
@@ -408,7 +408,7 @@ end
 
 function job_post_precast(spell, action, spellMap, eventArgs)
 	if spell.english == "Astral Conduit" then
-		disable('main','sub','range','ammo','head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
+		disable('main','sub','range','ammo','head','neck','ear1','ear2','body','hands','left_ring','right_ring','back','waist','legs','feet')
 	end
 end
 
@@ -430,7 +430,7 @@ function job_buff_change(buff, gain)
         handle_equipping_gear(player.status)
     end
 	if buff == "Astral Conduit" and not gain then
-		enable('main','sub','range','ammo','head','neck','ear1','ear2','body','hands','ring1','ring2','back','waist','legs','feet')
+		enable('main','sub','range','ammo','head','neck','ear1','ear2','body','hands','left_ring','right_ring','back','waist','legs','feet')
 	end
 end
 

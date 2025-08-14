@@ -62,7 +62,7 @@ function get_sets()
 	
 	-- Melee Sets --
 	
-	sets.TP.index = {'DT','Standard','Acc','Hybrid'}	
+	sets.TP.index = {'DT','Parry','Standard','Acc','Hybrid'}	
 	TP_ind = 1 -- DT set is the Default
 	
 	sets.TP['Standard'] = {
@@ -73,8 +73,8 @@ function get_sets()
 	right_ear="Skulker's Earring +1",
 	body="Pillager's Vest +3",
 	hands="Adhemar Wristbands +1",
-	left_ring="Gere Ring",
-	right_ring="Epona's Ring",
+	left_ring="Epona's Ring",
+	right_ring="Gere Ring",
 	back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Reiki Yotai",
 	legs="Samnuha Tights",
@@ -91,18 +91,23 @@ function get_sets()
 	
 	sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --30%
 	hands="Malignance Gloves",
-	right_ring="Moonlight Ring",
+	left_ring="Moonlight Ring",
 	legs="Malignance Tights",
 	})
 	
 	sets.TP['DT'] = set_combine(sets.TP['Standard'], { --48%
-	ear1="Odnowa earring +1", --ear2="Telos Earring",
+	ear1="Odnowa earring +1",
     body="Gleti's Cuirass",
 	hands="Malignance Gloves",
-	ring1="Moonlight Ring",
-	ring2="Defending Ring",
+	left_ring="Moonlight Ring",
+	right_ring="Defending Ring",
     back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}, 
 	legs="Malignance Tights",
+	})
+	
+	sets.TP['Parry'] = set_combine(sets.TP['DT'], { --48%
+	hands="Turms Mittens +1",
+	feet="Turms Leggings +1",
 	})
 	
 	sets.TH.index = {'None','TH','Full'}	
@@ -145,8 +150,8 @@ function get_sets()
 	feet="Herculean Boots",
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
-	ring1="Shadow Ring",
-	ring2="Defending Ring",
+	left_ring="Shadow Ring",
+	right_ring="Defending Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",	
 	}
@@ -162,8 +167,8 @@ function get_sets()
 	ear2="Skulker's Earring +1",
     body="Nyame Mail",
 	hands="Nyame Gauntlets",
-	ring1="Regal Ring",
-	ring2="Cornelia's Ring",
+	left_ring="Regal Ring",
+	right_ring="Cornelia's Ring",
     back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	waist="Kentarch Belt +1",
 	legs="Nyame Flanchard",
@@ -192,7 +197,7 @@ function get_sets()
 	ammo="Seething Bomblet +1",
 	neck="Sibyl Scarf",
 	right_ear="Friomisi Earring",
-	Ring1="Dingir Ring",
+	left_ring="Dingir Ring",
 	waist="Orpheus's Sash",
 	})
 	
@@ -225,7 +230,7 @@ function get_sets()
 	ammo="Crepuscular Pebble",
 	head="Skulker's Bonnet +3",
 	ear1="Ishvara Earring",
-	ring1="Epaminondas's Ring",
+	left_ring="Epaminondas's Ring",
 	})
 	
 	sets.ws["Savage Blade"] = set_combine(sets.ws.common, {
@@ -264,8 +269,8 @@ function get_sets()
 	left_ear="Etiolation Earring",
 	right_ear="Telos Earring",
 	body="Adhemar Jacket +1",
-	left_ring="Gelatinous Ring +1",
-	right_ring="Moonlight Ring", --5
+	left_ring="Moonlight Ring", --5
+	right_ring="Gelatinous Ring +1",
 	waist="Sailfi Belt +1",
 	legs="Turms Subligar",
 	feet="Turms Leggings +1"
@@ -274,7 +279,7 @@ function get_sets()
 	--sets.THwhore = set_combine(sets.macc, {
 	sets.THwhore = set_combine(sets.nomacc, {
 	ammo="Per. Lucky Egg",
-	hands="Plunderer's Armlets +3",. 
+	hands="Plunderer's Armlets +3",
 	waist="Chaac Belt",
 	feet="Skulker's Poulaines +3"
 	})
@@ -295,8 +300,7 @@ function get_sets()
 	sets.ja.waltz = {ammo="Yamarang",
         head="Mummu Bonnet +2",
         body="Gleti's Cuirass",
-		hands="Pillager's Armlets +1",
-		ring1="Asklepian Ring",
+		left_ring="Asklepian Ring",
         legs="Pillager's Culottes +3", 
 		feet="Rawhide Boots"
 	}
@@ -308,8 +312,8 @@ function get_sets()
 		ear2="Sherida Earring",
         body="Pillager's Vest +3",
 		hands="Skulker's Armlets +3",
-		ring1="Ilabrat Ring",
-		ring2="Regal Ring",
+		left_ring="Ilabrat Ring",
+		right_ring="Regal Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 		waist="Kentarch Belt +1",
 		legs="Pillager's Culottes +3",
@@ -323,8 +327,8 @@ function get_sets()
 		ear1="Sherida Earring",
         body="Pillager's Vest +3",
 		hands="Pillager's Armlets +1",
-		ring1="Ilabrat Ring",
-		ring2="Regal Ring",
+		left_ring="Ilabrat Ring",
+		right_ring="Regal Ring",
         back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 		waist="Yemaya Belt",
 		legs="Pillager's Culottes +3",
@@ -353,8 +357,8 @@ function get_sets()
 	right_ear="Odnowa Earring +1",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
-	left_ring="Gelatinous Ring +1",
-	right_ring="Moonlight Ring",
+	left_ring="Moonlight Ring", --5
+	right_ring="Gelatinous Ring +1",
 	back="Reiki Cloak",
 	waist="Plat. Mog. Belt",
 	legs="Nyame Flanchard",
@@ -391,8 +395,8 @@ function get_sets()
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
 	hands="Smithy's Mitts",
-	ring1="Orvail ring +1", --+1
-	ring2="Confectioner's Ring",
+	left_ring="Orvail ring +1", --+1
+	right_ring="Confectioner's Ring",
 	waist="Alchemist's Belt",
 	}	
 		
@@ -402,9 +406,9 @@ function get_sets()
 	head="Protective Specs.",
 	neck="boneworker's Torque",
 	body="Boneworker's Smock",
-	ring1="Orvail Ring +1",
-	ring2="Patissiere's Ring",
-	--ring2="Confectioner's Ring",
+	left_ring="Orvail Ring +1",
+	right_ring="Patissiere's Ring",
+	--right_ring="Confectioner's Ring",
 	waist="Boneworker's Belt",
 	}
 	
@@ -415,8 +419,8 @@ function get_sets()
 	neck="Smithy's Torque",
 	body="blackmith's Apron",
 	hands="Smithy's Mitts",
-	ring1="Orvail Ring +1",
-	ring2="Confectioner's Ring",
+	left_ring="Orvail Ring +1",
+	right_ring="Confectioner's Ring",
 	waist="Blacksmith Belt",
 	}
 end

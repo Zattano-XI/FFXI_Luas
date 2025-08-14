@@ -429,8 +429,8 @@ function get_sets()
 		feet="Valorous Greaves",
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
-		ring1="Shadow Ring",
-		ring2="Defending Ring",
+		left_ring="Shadow Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",	
 		}

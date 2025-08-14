@@ -218,8 +218,8 @@ function init_gear_sets()
         neck="Moonlight Necklace", --15
         ear1="Cryptic Earring", --4
         ear2="Trux Earring", --5
-        ring1="Pernicious Ring", --5
-        ring2="Eihwaz Ring", --5
+        left_ring="Pernicious Ring", --5
+        right_ring="Eihwaz Ring", --5
         waist="Kasiri Belt", --3
         }
 
@@ -234,7 +234,7 @@ function init_gear_sets()
         ammo="Yamarang",
         body="Passion Jacket",
         legs="Dashing Subligar",
-        ring1="Asklepian Ring",
+        left_ring="Asklepian Ring",
         waist="Gishdubar Sash",
         }
 
@@ -252,8 +252,8 @@ function init_gear_sets()
         neck="Orunmila's Torque", --5
         ear1="Loquacious Earring", --2
         ear2="Enchntr. Earring +1", --2
-        ring1="Kishar Ring", --4
-        ring2="Weather. Ring +1", --6(4)
+        left_ring="Kishar Ring", --4
+        right_ring="Weather. Ring +1", --6(4)
         back=gear.NIN_FC_Cape, --10
         waist="Sailfi Belt +1",
         }
@@ -276,8 +276,8 @@ function init_gear_sets()
         neck="Fotia Gorget",
         ear1="Cessance Earring",
         ear2="Moonshade Earring",
-        ring1="Ilabrat Ring",
-        ring2="Regal Ring",
+        left_ring="Ilabrat Ring",
+        right_ring="Regal Ring",
         back=gear.NIN_WS2_Cape,
         waist="Fotia Belt",
         } -- default set
@@ -299,7 +299,7 @@ function init_gear_sets()
 		waist="Sailfi Belt +1",
         ear2="Odr Earring",
         ear1="Lugra Earring +1",
-        ring1="Gere Ring",
+        left_ring="Gere Ring",
 		back=gear.NIN_WS2_Cape, --ws2 cape
         })
 
@@ -312,7 +312,7 @@ function init_gear_sets()
         --ear2="Odr Earring",
         ear1="Lugra Earring +1",
         --hands="Mochizuki Tekko +3",
-		ring1="Gere Ring",
+		left_ring="Gere Ring",
 		--legs="Mochi. Hakama +3",
 		--feet="Mochi. Kyahan +3",
 		waist="Sailfi Belt +1",
@@ -327,7 +327,7 @@ function init_gear_sets()
 		neck="Republican Platinum Medal", --JSE neck +2
 		ear1="Lugra Earring +1",
 		--hands="Mochizuki Tekko +3",
-		ring1="Gere ring",
+		left_ring="Gere ring",
         back=gear.NIN_WS1_Cape, --NIN_WS2_Cape
         waist="Sailfi Belt +1",
 		--legs="Mochi. Hakama +3",
@@ -347,8 +347,8 @@ function init_gear_sets()
         legs="Ken. Hakama +1", --Rao Haidate +1
         --feet="Ken. Sune-Ate +1", --Mochi. Sune-ate +3
         ear1="Lugra Earring +1",
-        ring1="Ilabrat Ring",
-        ring2="Regal Ring",
+        left_ring="Ilabrat Ring",
+        right_ring="Regal Ring",
         back=gear.NIN_WS1_Cape,
         })
 
@@ -364,8 +364,8 @@ function init_gear_sets()
 		--feet={ name="Mochi. Kyahan +3", augments={'Enh. Ninj. Mag. Acc/Cast Time Red.',}},
 		ear1="Lugra Earring +1",
 		ear2="Mache Earring +1",
-		ring1="Gere Ring",
-		ring2="Regal Ring",
+		left_ring="Gere Ring",
+		right_ring="Regal Ring",
 		back=gear.NIN_WS2_Cape
 	})
 
@@ -383,9 +383,9 @@ function init_gear_sets()
 		waist="Sailfi Belt +1",
 		ear2="Mache Earring +1",
 		ear1="Lugra Earring +1",
-		ring1="Gere Ring",
-		ring1="Ilabrat Ring",
-		ring2="Epona's Ring",
+		left_ring="Gere Ring",
+		left_ring="Ilabrat Ring",
+		right_ring="Epona's Ring",
 		back=gear.NIN_WS2_Cape
         })
 
@@ -398,7 +398,7 @@ function init_gear_sets()
         neck="Sibyl Scarf",
         ear1="Crematio Earring",
         ear2="Friomisi Earring",
-        ring1="Dingir Ring",
+        left_ring="Dingir Ring",
         back=gear.NIN_MAB_Cape,
         waist="Orpheus's Sash",
         })
@@ -414,9 +414,9 @@ function init_gear_sets()
 		waist="Orpheus's Sash",
 		ear1="Lugra Earring +1",
 		ear2="Moonshade Earring",
-		ring1="Dingir Ring",
-		ring1="Gere Ring",
-		ring2="Cornelia's Ring",
+		left_ring="Dingir Ring",
+		left_ring="Gere Ring",
+		right_ring="Cornelia's Ring",
 		back=gear.NIN_MAB_Cape,
 	}
 	
@@ -449,9 +449,9 @@ function init_gear_sets()
 		waist="Orpheus's Sash",
 		ear1="Friomisi Earring",
 		ear2="Moonshade Earring",
-		ring1="Dingir Ring",
-		ring1="Gere Ring",
-		ring2="Cornelia's Ring",
+		left_ring="Dingir Ring",
+		left_ring="Gere Ring",
+		right_ring="Cornelia's Ring",
 		back=gear.NIN_MAB_Cape,
 	}
     sets.Lugra = {ear2="Lugra Earring +1"}
@@ -470,7 +470,7 @@ function init_gear_sets()
         neck="Moonlight Necklace", --15
         ear1="Halasz Earring", --5
         ear2="Magnetic Earring", --8
-        ring1="Evanescence Ring", --5
+        left_ring="Evanescence Ring", --5
         back=gear.NIN_FC_Cape, --10
         waist="Audumbla Sash", --10
         } --104 sird with merits, add rawhide gloves if more is needed.
@@ -488,8 +488,8 @@ function init_gear_sets()
         neck="Sibyl Scarf",
         ear1="Crematio Earring",
         ear2="Friomisi Earring",
-        ring1="Shiva Ring +1",
-        ring2="Metamor. Ring +1",
+        left_ring="Shiva Ring +1",
+        right_ring="Metamor. Ring +1",
         back=gear.NIN_MAB_Cape,
         waist="Orpheus's Sash",
         }
@@ -497,8 +497,8 @@ function init_gear_sets()
     sets.midcast.ElementalNinjutsu.Resistant = set_combine(sets.midcast.Ninjutsu, {
         ammo="Pemphredo Tathlum",
         neck="Null Loop",
-        ring1={name="Stikini Ring +1", bag="wardrobe2"},
-        ring2={name="Stikini Ring +1", bag="wardrobe5"},
+        left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+        right_ring={name="Stikini Ring +1", bag="wardrobe5"},
         ear1="Enchntr. Earring +1",
         })
 
@@ -512,8 +512,8 @@ function init_gear_sets()
         neck="Null Loop",
         ear1="Enchntr. Earring +1",
         ear2="Digni. Earring",
-        ring1={name="Stikini Ring +1", bag="wardrobe2"},
-        ring2={name="Stikini Ring +1", bag="wardrobe5"},
+        left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+        right_ring={name="Stikini Ring +1", bag="wardrobe5"},
         back=gear.NIN_MAB_Cape,
         waist="Null Belt",
         }
@@ -523,8 +523,8 @@ function init_gear_sets()
         feet="Mochi. Kyahan +3",
         neck="Incanter's Torque",
         ear1="Stealth Earring",
-        ring1={name="Stikini Ring +1", bag="wardrobe2"},
-        ring2={name="Stikini Ring +1", bag="wardrobe5"},
+        left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+        right_ring={name="Stikini Ring +1", bag="wardrobe5"},
         back="Astute Cape",
         waist="Cimmerian Sash",
         }
@@ -540,8 +540,8 @@ function init_gear_sets()
         neck="Iskur Gorget",
         ear1="Crepuscular Earring",
         ear2="Telos Earring",
-        ring1="Dingir Ring",
-        ring2="Hajduk Ring +1",
+        left_ring="Dingir Ring",
+        right_ring="Hajduk Ring +1",
         back=gear.NIN_TP_Cape,
         waist="Yemaya Belt",
         }
@@ -565,8 +565,8 @@ function init_gear_sets()
         neck="Bathy Choker +1",
         ear1="Eabani Earring",
         ear2="Sanare Earring",
-        ring1="Chirich Ring +1",
-        ring2="Chirich Ring +1",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
         back=gear.NIN_FC_Cape,
         waist="Engraved Belt",
         }
@@ -579,8 +579,8 @@ function init_gear_sets()
         feet="Malignance Boots", --4/4
         neck="Warder's Charm +1",
         ear1="Sanare Earring",
-        ring1="Purity Ring", --0/4
-        ring2="Defending Ring", --10/10
+        left_ring="Purity Ring", --0/4
+        right_ring="Defending Ring", --10/10
         back="Moonlight Cape", --6/6
         })
 
@@ -632,8 +632,8 @@ function init_gear_sets()
         neck="Ninja Nodowa +2",
         ear1="Cessance Earring",
         ear2="Suppanomimi", --5
-        ring2="Gere Ring", --ring1
-        ring1="Epona's Ring", --ring2
+        right_ring="Gere Ring", --left_ring
+        left_ring="Epona's Ring", --right_ring
         back=gear.NIN_TP_Cape,
         waist="Reiki Yotai", --7
       } -- 38%
@@ -644,7 +644,7 @@ function init_gear_sets()
 		hands="Malignance Gloves",
 		legs="Malignance Tights", --7/7
         feet="Nyame Sollerets", --4/4
-        ring2="Defending Ring", --10/10
+        right_ring="Defending Ring", --10/10
 		Back="Mecistopins Mantle",
 		})
 
@@ -653,19 +653,19 @@ function init_gear_sets()
         })
 
     sets.engaged.MidAcc = set_combine(sets.engaged.LowAcc, {
-        ring2="Ilabrat Ring",
-        ring1="Chirich Ring +1",
+        right_ring="Ilabrat Ring",
+        left_ring="Chirich Ring +1",
         })
 
     sets.engaged.HighAcc = set_combine(sets.engaged.MidAcc, {
-        ring1="Regal Ring",
-        ring2="Chirich Ring +1",
+        left_ring="Regal Ring",
+        right_ring="Chirich Ring +1",
         })
 
     sets.engaged.STP = set_combine(sets.engaged, {
         legs="Samnuha Tights",
-        ring1="Chirich Ring +1",
-        ring2="Chirich Ring +1",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
         })
 
     -- 15% Magic Haste (67% DW to cap)
@@ -679,8 +679,8 @@ function init_gear_sets()
         neck="Ninja Nodowa +2",
         ear1="Cessance Earring",
         ear2="Suppanomimi", --5
-        ring2="Gere Ring", --R1
-        ring1="Epona's Ring", --R2
+        right_ring="Gere Ring", --R1
+        left_ring="Epona's Ring", --R2
         back=gear.NIN_TP_Cape,
         waist="Reiki Yotai", --7
       } -- 30%
@@ -690,19 +690,19 @@ function init_gear_sets()
         })
 
     sets.engaged.MidAcc.LowHaste = set_combine(sets.engaged.LowAcc.LowHaste, {
-        ring1="Chirich Ring +1",
-        ring2="Ilabrat Ring",
+        left_ring="Chirich Ring +1",
+        right_ring="Ilabrat Ring",
         })
 
     sets.engaged.HighAcc.LowHaste = set_combine(sets.engaged.LowAcc.LowHaste, {
-        ring1="Regal Ring",
-        ring2="Chirich Ring +1",
+        left_ring="Regal Ring",
+        right_ring="Chirich Ring +1",
         })
 
     sets.engaged.STP.LowHaste = set_combine(sets.engaged.LowHaste, {
         legs="Samnuha Tights",
-        ring1="Chirich Ring +1",
-        ring2="Chirich Ring +1",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
         })
 
     -- 30% Magic Haste (56% DW to cap)
@@ -716,8 +716,8 @@ function init_gear_sets()
         neck="Ninja Nodowa +2",
         ear1="Cessance Earring",
         ear2="Suppanomimi", --5
-        ring1="Gere Ring",
-        ring2="Epona's Ring",
+        left_ring="Gere Ring",
+        right_ring="Epona's Ring",
         back=gear.NIN_TP_Cape,
         waist="Reiki Yotai", --7
         } -- 21%
@@ -727,19 +727,19 @@ function init_gear_sets()
         })
 
     sets.engaged.MidAcc.MidHaste = set_combine(sets.engaged.LowAcc.MidHaste, {
-        ring1="Chirich Ring +1",
-        ring2="Ilabrat Ring",
+        left_ring="Chirich Ring +1",
+        right_ring="Ilabrat Ring",
         })
 
     sets.engaged.HighAcc.MidHaste = set_combine(sets.engaged.MidHaste.MidAcc, {
-        ring1="Regal Ring",
-        ring2="Chirich Ring +1",
+        left_ring="Regal Ring",
+        right_ring="Chirich Ring +1",
         })
 
     sets.engaged.STP.MidHaste = set_combine(sets.engaged.MidHaste, {
         legs="Samnuha Tights",
-        ring1="Chirich Ring +1",
-        ring2="Chirich Ring +1",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
         })
 
     -- 35% Magic Haste (51% DW to cap)
@@ -753,8 +753,8 @@ function init_gear_sets()
         neck="Ninja Nodowa +2",
         ear1="Eabani Earring", --4
         ear2="Suppanomimi", --5
-        ring1="Gere Ring",
-        ring2="Epona's Ring",
+        left_ring="Gere Ring",
+        right_ring="Epona's Ring",
         back=gear.NIN_TP_Cape,
         waist="Reiki Yotai", --7
       } -- 16%
@@ -764,19 +764,19 @@ function init_gear_sets()
         })
 
     sets.engaged.MidAcc.HighHaste = set_combine(sets.engaged.LowAcc.HighHaste, {
-        ring1={name="Chirich Ring +1", bag="wardrobe2"},
-        ring2="Ilabrat Ring",
+        left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+        right_ring="Ilabrat Ring",
         })
 
     sets.engaged.HighAcc.HighHaste = set_combine(sets.engaged.MidAcc.HighHaste, {
-        ring1="Regal Ring",
-        ring2="Chirich Ring +1",
+        left_ring="Regal Ring",
+        right_ring="Chirich Ring +1",
         })
 
     sets.engaged.STP.HighHaste = set_combine(sets.engaged.HighHaste, {
         legs="Samnuha Tights",
-        ring1="Chirich Ring +1",
-        ring2="Chirich Ring +1",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
         waist="Kentarch Belt +1",
         })
 
@@ -791,8 +791,8 @@ function init_gear_sets()
         neck="Ninja Nodowa +2",
         ear1="Cessance Earring",
         ear2="Telos Earring",
-        ring1="Gere Ring",
-        ring2="Epona's Ring",
+        left_ring="Gere Ring",
+        right_ring="Epona's Ring",
         back=gear.NIN_TP_Cape,
         waist="Windbuffet Belt +1",
         } -- 0%
@@ -804,13 +804,13 @@ function init_gear_sets()
 
     sets.engaged.MidAcc.MaxHaste = set_combine(sets.engaged.LowAcc.MaxHaste, {
         ear1="Cessance Earring",
-        ring1="Chirich Ring +1",
-        ring2="Ilabrat Ring",
+        left_ring="Chirich Ring +1",
+        right_ring="Ilabrat Ring",
         })
 
     sets.engaged.HighAcc.MaxHaste = set_combine(sets.engaged.MidAcc.MaxHaste, {
-        ring1="Regal Ring",
-        ring2="Chirich Ring +1",
+        left_ring="Regal Ring",
+        right_ring="Chirich Ring +1",
         waist="Olseni Belt",
         })
 
@@ -818,8 +818,8 @@ function init_gear_sets()
         legs="Samnuha Tights",
         ear1="Dedition Earring",
         ear2="Telos Earring",
-        ring1="Chirich Ring +1",
-        ring2="Chirich Ring +1",
+        left_ring="Chirich Ring +1",
+        right_ring="Chirich Ring +1",
         waist="Kentarch Belt +1",
         })
 
@@ -829,7 +829,7 @@ function init_gear_sets()
 		hands="Malignance Gloves", --5/5
 		legs="Malignance Tights", --7/7
         feet="Nyame Sollerets", --4/4
-        ring2="Defending Ring", --10/10
+        right_ring="Defending Ring", --10/10
         back=gear.NIN_WS1_Cape, --10/0
         }
 
@@ -874,16 +874,16 @@ function init_gear_sets()
 
     sets.magic_burst = {
         feet="Hachiya Kyahan +3",
-        ring1="Locus Ring",
-        ring2="Mujin Band", --(5)
+        left_ring="Locus Ring",
+        right_ring="Mujin Band", --(5)
         }
 
 --    sets.buff.Migawari = {body="Iga Ningi +2"}
 
     sets.buff.Doom = {
         neck="Nicander's Necklace", --20
-        ring1={name="Eshmun's Ring", bag="wardrobe3"}, --20
-        ring2={name="Eshmun's Ring", bag="wardrobe4"}, --20
+        left_ring={name="Eshmun's Ring", bag="wardrobe3"}, --20
+        right_ring={name="Eshmun's Ring", bag="wardrobe4"}, --20
         waist="Gishdubar Sash", --10
         }
 
@@ -905,8 +905,8 @@ function init_gear_sets()
 		feet="Herculean Boots",
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
-		ring1="Shadow Ring",
-		ring2="Defending Ring",
+		left_ring="Shadow Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	}
@@ -999,9 +999,9 @@ function job_buff_change(buff, gain)
         if gain then
             equip(sets.buff.Doom)
             send_command('@input /p Doomed.')
-            disable('ring1','ring2','waist')
+            disable('left_ring','right_ring','waist')
         else
-            enable('ring1','ring2','waist')
+            enable('left_ring','right_ring','waist')
             handle_equipping_gear(player.status)
         end
     end
@@ -1271,14 +1271,14 @@ end
 
 function check_gear()
     if no_swap_gear:contains(player.equipment.left_ring) then
-        disable("ring1")	
+        disable("left_ring")	
     else
-        enable("ring1")
+        enable("left_ring")
     end
     if no_swap_gear:contains(player.equipment.right_ring) then
-        disable("ring2")
+        disable("right_ring")
     else
-        enable("ring2")
+        enable("right_ring")
     end
 end
 
@@ -1292,11 +1292,11 @@ end
 windower.register_event('zone change',
     function()
         if no_swap_gear:contains(player.equipment.left_ring) then
-            enable("ring1")
+            enable("left_ring")
             equip(sets.idle)
         end
         if no_swap_gear:contains(player.equipment.right_ring) then
-            enable("ring2")
+            enable("right_ring")
             equip(sets.idle)
         end
     end

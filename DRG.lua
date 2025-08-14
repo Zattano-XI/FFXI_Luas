@@ -374,35 +374,35 @@ function init_gear_sets()
 	sets.SB = {
 		--SB I
 		legs="Gleti's Breeches", -- I - 13 at R25
-		ring1="Chirich Ring +1", -- I - 10
+		left_ring="Chirich Ring +1", -- I - 10
 		ear2="Dignitary's Earring", -- I - 5
 		neck="Bathy Choker +1", --I - 11
 		--feet="Volte Spats", --I - 6 (too glassy)
 		--39 SB I
 		
 		------------------- SB II -------------------------
-		--ring2="Niqmaddu Ring", -- II - 5
+		--right_ring="Niqmaddu Ring", -- II - 5
 		ear1="Sherida Earring", -- II - 5
 		body="Dagon Breastplate", -- II - 10		
 		--20 SB II
 		
 		--may need to use defending ring instead of niq for survival purposes
-		ring2="Defending Ring",
+		right_ring="Defending Ring",
 	}--Total SB = 59
 	
 	sets.SB_Auspice = {
 		------------------ SB I -------------------------
 		--Auspice = 29 SB I
 		legs="Gleti's Breeches", -- I - 13 at R25
-		ring1="Chirich Ring +1", -- I - 10
+		left_ring="Chirich Ring +1", -- I - 10
 		
 		------------------- SB II -------------------------
-		--ring2="Niqmaddu Ring", -- II - 5
+		--right_ring="Niqmaddu Ring", -- II - 5
 		ear1="Sherida Earring", -- II - 5
 		body="Dagon Breastplate", -- II - 10
 		
 		--may need to use defending ring instead of niq for survival purposes
-		ring2="Defending Ring",
+		right_ring="Defending Ring",
 		
 	}--Total SB = 70
 	
@@ -465,8 +465,8 @@ function init_gear_sets()
         ear1="Thrud Earring",
 		--body="Sulevia's Platemail +2",
 		hands="Pteroslaver Finger Gauntlets +3",
-        ring2="Niqmaddu Ring",
-        ring1="Regal Ring",
+        right_ring="Niqmaddu Ring",
+        left_ring="Regal Ring",
 		back=Brigantia.WS,
         waist="Sailfi Belt +1",
         --legs="Vishap Brais +3",
@@ -493,7 +493,7 @@ function init_gear_sets()
 		neck="fotia gorget",
 		hands="Pel. Vambraces +3",
 		body="Gleti's Cuirass",--Nyame technically better when underbuffed, but this allows for situations when just over attack cap 
-		ring1="Sroda Ring",
+		left_ring="Sroda Ring",
 		legs="Nyame Flanchard",--Path B
 		feet="Nyame Sollerets",--Path B
 	})
@@ -555,8 +555,8 @@ function init_gear_sets()
 		--legs="Vishap Brais +3",
 		legs="Peltast's Cuissots +3",
 		feet="Nyame Sollerets",
-        ring2="Niqmaddu Ring",
-        ring1="Regal Ring",
+        right_ring="Niqmaddu Ring",
+        left_ring="Regal Ring",
 		back=Brigantia.WSD,
 		waist="Sailfi Belt +1",
 		
@@ -642,8 +642,8 @@ function init_gear_sets()
         ear1="Crepuscular Earring",
 		ear2="Dignitary's Earring",
 		back=Brigantia.GS,
-		ring1="Flamma Ring",
-		ring2="Crepuscular Ring",
+		left_ring="Flamma Ring",
+		right_ring="Crepuscular Ring",
         waist="fotia belt",
 		
 		
@@ -692,7 +692,7 @@ function init_gear_sets()
 
 	sets.CamlannsCapped = set_combine(sets.precast.WS["Camlann's Torment"],{
 		neck="Dragoon's Collar +2",
-		ring1="Epaminondas's Ring",
+		left_ring="Epaminondas's Ring",
 		
 		ear1="Moonshade Earring",
 		--will need to test gleti's over wsd options
@@ -716,8 +716,8 @@ function init_gear_sets()
 		--body="Hjarrandi Breastplate",
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		ring1="Regal Ring",
-		ring2="Niqmaddu Ring",
+		left_ring="Regal Ring",
+		right_ring="Niqmaddu Ring",
 		ear2="Sherida Earring",
 		ear1="Sroda Earring",--assuming that wyvern is alive. May add logic for this later... may not be worth it over empy earring and thrud
         legs="Peltast's Cuissots +3",
@@ -743,8 +743,8 @@ function init_gear_sets()
 		--body="Pteroslaver Mail +3",
 		--body="Hjarrandi Breastplate",
 		--hands="Flamma Manopolas +2",
-		ring1="Regal Ring",
-		ring2="Niqmaddu Ring",
+		left_ring="Regal Ring",
+		right_ring="Niqmaddu Ring",
 		ear2="Sherida Earring",
         legs="Peltast's Cuissots +3",
 		body="Gleti's Cuirass",
@@ -761,8 +761,8 @@ function init_gear_sets()
 		--head={ name="Valorous Mask", augments={'MND+10','Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','Weapon skill damage +9%','Accuracy+13 Attack+13','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		back=Brigantia.WSD,
 		--body="Founder's Breastplate",--add in for bumba
-		ring1="Cornelia's Ring",
-		ring2="Epaminondas's Ring",
+		left_ring="Cornelia's Ring",
+		right_ring="Epaminondas's Ring",
 	})
 	sets.precast.WS['Savage Blade'].Mid = set_combine(sets.precast.WS['Savage Blade'], {
     })
@@ -774,7 +774,7 @@ function init_gear_sets()
 		neck="Dragoon's Collar +2",
 		--head="Gleti's Mask",
 		feet="Gleti's Boots",--unsure on this. Just eyeballing vs trading relic gloves for more pdl
-		ring2="Sroda Ring",
+		right_ring="Sroda Ring",
 	})
 	
 	sets.precast.WS['Judgment'] = set_combine(sets.precast.WS['Savage Blade'], {
@@ -785,7 +785,7 @@ function init_gear_sets()
     })
 	
 	--[[sets.precast.WS['Diarmuid'] = set_combine(sets.precast.WS['Stardiver'], {
-		ring1="Cornelia's Ring",
+		left_ring="Cornelia's Ring",
 		neck="Dgn. Collar +2",
 		waist="Sailfi Belt +1",
 		hands="Nyame Gauntlets",
@@ -793,7 +793,7 @@ function init_gear_sets()
 	
 	--Additional set for testing pure wsd set vs multi attack set
 	sets.precast.WS['Diarmuid'] = set_combine(sets.precast.WS['Savage Blade'], {
-		ring2="Sroda Ring",
+		right_ring="Sroda Ring",
     })
 	
 	sets.precast.WS['Diarmuid'].Mid = set_combine(sets.precast.WS['Savage Blade'].Mid, {
@@ -835,7 +835,7 @@ function init_gear_sets()
 		--right_ear="Etiolation Earring",
 		right_ear="Odnowa Earring +1",
 		--left_ring="Moonlight Ring",
-		ring1="Shneddick Ring +1",
+		left_ring="Shneddick Ring +1",
 		right_ring="Defending Ring",
 		back=Brigantia.TP,
     }
@@ -859,7 +859,7 @@ function init_gear_sets()
 	
 	--sets.idle.Regain=set_combine(sets.idle, {
 	sets.idle.Regain=set_combine(sets.idle,{
-		--ring1="Epaminondas's Ring",
+		--left_ring="Epaminondas's Ring",
 		head={ name="Valorous Mask", augments={'MND+10','Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','Weapon skill damage +9%','Accuracy+13 Attack+13','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
@@ -951,8 +951,8 @@ function init_gear_sets()
 		feet="Valorous Greaves",
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
-		ring1="Shadow Ring",
-		ring2="Defending Ring",
+		left_ring="Shadow Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	} 
@@ -1010,8 +1010,8 @@ function init_gear_sets()
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		ear2="Dedition Earring",--swap to sroda if wyvern alive
 		ear1="Sherida Earring",
-		ring2="Niqmaddu Ring",
-		ring1="Petrov Ring",
+		right_ring="Niqmaddu Ring",
+		left_ring="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 		
 		
@@ -1029,10 +1029,10 @@ function init_gear_sets()
 		--head="Flamma Zucchetto +2",
 		--legs={ name="Valorous Hose", augments={'Accuracy+24 Attack+24','"Dbl.Atk."+5',}},
 		waist="Ioskeha Belt",
-		--ring1="Flamma Ring",
+		--left_ring="Flamma Ring",
 		--hands="Flamma Manopolas +2",
 		--neck="Shulmanu Collar",
-		ring1="Chirich Ring +1",
+		left_ring="Chirich Ring +1",
 		ear2="Cessance Earring",
 		body="Nyame Mail",
 		legs="Ptero. Brais +3",
@@ -1050,8 +1050,8 @@ function init_gear_sets()
 		head="Flamma Zucchetto +2",
 		--feet="Vishap Greaves +3",
 		feet="Nyame Sollerets",
-		ring1="Chirich Ring +1",
-		ring2="Regal Ring",
+		left_ring="Chirich Ring +1",
+		right_ring="Regal Ring",
 		neck="Shulmanu Collar",
 		--waist="Olseni Belt",
     })
@@ -1113,7 +1113,7 @@ function init_gear_sets()
 		legs="Pteroslaver Brais +3",
 		--hands = "Ptero. Fin. G. +3",
 		hands="Gleti's Gauntlets",
-		--ring2="Defending Ring",
+		--right_ring="Defending Ring",
 	})
 	
 	
@@ -1187,8 +1187,8 @@ sets.engaged.Aftermath_Rhongo = {
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		ear2="Brutal Earring",
 		ear1="Sherida Earring",
-		ring2="Niqmaddu Ring",
-		ring1="Petrov Ring",
+		right_ring="Niqmaddu Ring",
+		left_ring="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 
@@ -1213,8 +1213,8 @@ sets.engaged.Aftermath_Rhongo_capped = {
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		ear2="Brutal Earring",
 		ear1="Sherida Earring",
-		ring2="Niqmaddu Ring",
-		ring1="Petrov Ring",
+		right_ring="Niqmaddu Ring",
+		left_ring="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 
@@ -1234,8 +1234,8 @@ sets.engaged.Aftermath_Rhongo.LowHaste = set_combine(sets.engaged.Aftermath_Rhon
 		waist="Ioskeha Belt",
 		ear2="Brutal Earring",
 		ear1="Sherida Earring",
-		ring2="Niqmaddu Ring",
-		ring1="Petrov Ring",
+		right_ring="Niqmaddu Ring",
+		left_ring="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},]]
 })
 
@@ -1254,8 +1254,8 @@ sets.engaged.Aftermath_Rhongo.Mid = {
 		waist="Ioskeha Belt",
 		ear2="Telos Earring",
 		ear1="Sherida Earring",
-		ring2="Niqmaddu Ring",
-		ring1="Petrov Ring",
+		right_ring="Niqmaddu Ring",
+		left_ring="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 
@@ -1279,16 +1279,16 @@ sets.engaged.Aftermath_Rhongo.MaxBuff = set_combine(sets.engaged.Aftermath_Rhong
 sets.engaged.Aftermath_Rhongo.DT = set_combine(sets.engaged.Aftermath_Rhongo, {
 		--[[legs="Gleti's Breeches",
 		hands="Gleti's Gauntlets",
-		ring1="Moonlight Ring",]]
+		left_ring="Moonlight Ring",]]
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
 		neck="Dragoon's Collar +2",
 		--legs="Pteroslaver Brais +3",--should add a wyvern toggle
 		feet="Gleti's Boots",
 		
-		ring1="Moonlight Ring",
-		--ring2="Defending Ring",
-		--ring1="Shadow Ring",
+		left_ring="Moonlight Ring",
+		--right_ring="Defending Ring",
+		--left_ring="Shadow Ring",
 		legs="Gleti's Breeches",--relic +3 instead for wyvern?
 })
 
@@ -1340,12 +1340,12 @@ sets.engaged.Aftermath_Ryu.Mid = set_combine(sets.engaged.Aftermath_Ryu,{
 		waist="Ioskeha Belt",
 		ear2="Telos Earring",
 		ear1="Sherida Earring",
-		ring2="Niqmaddu Ring",
-		ring1="Petrov Ring",
+		right_ring="Niqmaddu Ring",
+		left_ring="Petrov Ring",
 		back=Brigantia.STP,]]
 		ear2="Telos Earring",
 		--body="Nyame Mail",
-		ring1="Chirich Ring +1",
+		left_ring="Chirich Ring +1",
 })
 
 sets.engaged.Aftermath_Ryu.Acc = set_combine(sets.engaged.Acc, {
@@ -1366,8 +1366,8 @@ sets.engaged.Aftermath_Ryu.DT = set_combine(sets.engaged.Aftermath_Ryu, {
 		--hands="Nyame Gauntlets",
 		left_ring="Defending Ring",
 		hands="Gleti's Gauntlets",
-		ring2="Moonlight Ring",
-		ring1="Defending Ring",
+		right_ring="Moonlight Ring",
+		left_ring="Defending Ring",
 		--feet="Nyame Sollerets",
 		left_ring="Chirich Ring +1",
 		boey="Gleti's Cuirass",--consider Hjarrandi here.Big hit to Meva
@@ -1378,11 +1378,11 @@ sets.engaged.Aftermath_Ryu.DT = set_combine(sets.engaged.Aftermath_Ryu, {
 --------Misc---------------------
     sets.buff.Doom = {
         neck="Nicander's Necklace", --20
-        --ring1={name="Eshmun's Ring", bag="wardrobe3"}, --20
-        --ring2={name="Eshmun's Ring", bag="wardrobe4"}, --20
+        --left_ring={name="Eshmun's Ring", bag="wardrobe3"}, --20
+        --right_ring={name="Eshmun's Ring", bag="wardrobe4"}, --20
         waist="Gishdubar Sash", --10
-		ring1={name="Saida Ring", bag="wardrobe3"}, --15
-        ring2={name="Saida Ring", bag="wardrobe4"}, --15
+		left_ring={name="Saida Ring", bag="wardrobe3"}, --15
+        right_ring={name="Saida Ring", bag="wardrobe4"}, --15
         }
 		
 --set for regain while sleeping with DT		
@@ -1488,8 +1488,8 @@ function job_post_precast(spell, action, spellMap, eventArgs)
 					--Auspice SB 29
 					neck="Bathy Choker +1",--11
 					ear1="Sherida earring",--5 (II)
-					ring1="Chirich Ring +1",--10
-					ring2="Niqmaddu Ring",--5(II)
+					left_ring="Chirich Ring +1",--10
+					right_ring="Niqmaddu Ring",--5(II)
 					--60 SB
 					
 				})
@@ -1498,8 +1498,8 @@ function job_post_precast(spell, action, spellMap, eventArgs)
 				equip({
 					neck="Bathy Choker +1",--11
 					ear1="Sherida earring",--5 (II)
-					ring1="Chirich Ring +1",--10
-					ring2="Niqmaddu Ring",--5(II)
+					left_ring="Chirich Ring +1",--10
+					right_ring="Niqmaddu Ring",--5(II)
 					legs="Gleti's Breeches"--11
 					
 					
@@ -1518,8 +1518,8 @@ function job_post_precast(spell, action, spellMap, eventArgs)
 	--if spell.english == 'Jump' --[[and state.HybridMode.value == "PDT"]] then
 		--add_to_chat(8, '-------------Jump Called--------------')
 			equip({
-				ring1="Defending Ring",
-				ring2="Moonlight Ring",
+				left_ring="Defending Ring",
+				right_ring="Moonlight Ring",
 				head="Nyame Helm",
 				body="Gleti's Cuirass",
 			})
@@ -1697,9 +1697,9 @@ function job_buff_change(buff, gain)
         if gain then
             equip(sets.buff.Doom)
             send_command('@input /p Doomed')
-             disable('ring1','ring2','waist','neck')
+             disable('left_ring','right_ring','waist','neck')
         else
-            enable('ring1','ring2','waist','neck')
+            enable('left_ring','right_ring','waist','neck')
             handle_equipping_gear(player.status)
         end
     end
@@ -1854,7 +1854,7 @@ end
 --added code to the end of motes-include for this to work
 function job_handle_equipping_gear(playerStatus, eventArgs)
     local lockables = T{'Mecisto. Mantle', 'Shobuhouou Kabuto', 'Aptitude Mantle', 'Nexus Cape', 'Aptitude Mantle +1', 'Warp Ring', 'Vocation Ring', 'Reraise Earring', 'Capacity Ring', 'Trizek Ring', 'Echad Ring', 'Facility Ring', 'Dim. Ring (Holla)', 'Dim. Ring (Dem)', 'Dim. Ring (Mea)'}
-    local watch_slots = T{'ear1','ear2','ring1','ring2','back','head'}
+    local watch_slots = T{'ear1','ear2','left_ring','right_ring','back','head'}
  
     for _,v in pairs(watch_slots) do
         if lockables:contains(player.equipment[v]) then
@@ -1900,9 +1900,9 @@ end
         if gain then
             equip(sets.buff.Doom)
             send_command('@input /p Doomed')
-             disable('ring1','ring2','waist','neck')
+             disable('left_ring','right_ring','waist','neck')
         else
-            enable('ring1','ring2','waist','neck')
+            enable('left_ring','right_ring','waist','neck')
             handle_equipping_gear(player.status)
         end
     end

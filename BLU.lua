@@ -73,7 +73,7 @@ function get_sets()
 	hands="Adhemar Wristbands +1",
 	left_ring="Ilabrat Ring",
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-	back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},	
+	back="Null Cape",
 	waist="Reiki Yotai",
 	legs="Malignance Tights",
 	feet="Gleti's Boots",
@@ -97,7 +97,7 @@ function get_sets()
 		hands="Adhemar Wristbands +1",
 		left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},		
+		back="Null Cape",
 		waist="Reiki Yotai",
 		legs="Malignance Tights",
 		feet="Nyame Sollerets",
@@ -131,7 +131,7 @@ function get_sets()
 	feet="Nyame Sollerets" --7
 	})
 	
-	sets.nuke.index = {'Free'}
+	sets.nuke.index = {'Macc','Free',}
 	nuke_ind = 1 --Free set is the Default
 	
 	sets.nuke['Free'] = {
@@ -151,6 +151,25 @@ function get_sets()
 	waist="Orpheus's Sash",
 	legs="Hashishin Tayt +3",
 	feet="Hashishin Basmak +3"
+	}
+	
+	sets.nuke['Macc'] = {
+	--main={ name="Bunzi's Rod", priority=2,},
+	--sub={ name="Maxentius", priority=1,},
+	ammo="Pemphredo Tathlum",
+	head=empty,
+	neck="Null Loop",
+	left_ear="Regal Earring",
+	right_ear="Friomisi Earring",
+	head="Malignance Chappeau",
+	body="Malignance Tabard",
+	hands="Malignance Gloves",
+	left_ring="Stikini Ring +1",
+	right_ring="Metamorph Ring +1",
+	back="Null Cape",
+	waist="Null Belt",
+	legs="Malignance Tights",
+	feet="Malignance Boots"
 	}
 	
 	sets.idle.index = {'DT','Refresh',}--,'PDT','MDT'}
@@ -183,8 +202,8 @@ function get_sets()
 	--ammo="Mavi Tathlum",
 	neck="Incanter's Torque",
 	ear2="Hashi. Earring +2",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-	ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Cornflower Cape",
 	legs="Hashishin Tayt +3",
 	}
@@ -207,17 +226,22 @@ function get_sets()
 	
 	sets.midcast.magicacc = {
 		ammo="Mavi Tathlum",
-		head="Hashishin Kavuk +3",
-		body="Hashishin Mintan +3",
-		hands="Hashishin Bazubands +3",
-		legs="Hashishin Tayt +3",
-		feet="Hashishin Basmak +3",
+		--head="Hashishin Kavuk +3",
+		--body="Hashishin Mintan +3",
+		--hands="Hashishin Bazubands +3",
+		--legs="Hashishin Tayt +3",
+		--feet="Hashishin Basmak +3",
+		head="Malignance Chappeau",
+		body="Malignance Tabard",
+		hands="Malignance Gloves",
+		legs="Malignance Tights",
+		feet="Malignance Boots",
 		neck="Mirage Stole +2",
 		waist="Null Belt",
 		left_ear="Dignitary's Earring",
 		right_ear="Hashi. Earring +2",
-        ring1={name="Stikini Ring +1", bag="wardrobe2"},
-        ring2={name="Stikini Ring +1", bag="wardrobe5"},
+        left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+        right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 		--back={ name="Rosmerta's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Damage taken-5%'}},
 		back="Null Shawl",
 	}
@@ -243,8 +267,8 @@ function get_sets()
 	ear2="Hashi. Earring +2",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
-	ring1="Beithir Ring",
-	ring2="Cornelia's Ring",
+	left_ring="Beithir Ring",
+	right_ring="Cornelia's Ring",
 	back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	--back="Aurist's Cape +1",
 	waist="Fotia Belt",
@@ -261,8 +285,8 @@ function get_sets()
     ear2="Hashi. Earring +2",
 	body="Nyame Mail",
     hands="Nyame Gauntlets",
-	ring1="Sroda ring",
-	ring2="Cornelia's Ring",
+	left_ring="Sroda ring",
+	right_ring="Cornelia's Ring",
 	back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     waist="Sailfi Belt +1",
     legs="Nyame Flanchard",
@@ -271,7 +295,7 @@ function get_sets()
 	
 	sets.ws['Expiacion'] = set_combine(sets.ws['Savage Blade'], {
         --body="Gleti's Cuirass",
-		ring1="Beithir Ring",	
+		left_ring="Beithir Ring",	
         --waist="Kentarch Belt +1",
         --legs="Gleti's Breeches",
     })
@@ -300,12 +324,12 @@ function get_sets()
         waist="Fotia Belt",
         legs="Gleti's Breeches",
         feet="Gleti's Boots",
-		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --Dex,acc/atc/Crit+10
+		--back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}, --Dex,acc/atc/Crit+10
 		neck="Mirage Stole +2",
         ear1="Odr Earring",
         ear2="Mache Earring +1",
-		ring1="Epona's ring",
-		ring2="Ilabrat Ring",
+		left_ring="Epona's ring",
+		right_ring="Ilabrat Ring",
     })
 	
 	sets.buff['Diffusion'] = {feet="Luhlaza Charuqs +3"}
@@ -326,8 +350,8 @@ function get_sets()
 		feet="Herculean Boots",
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
-		ring1="Shadow Ring",
-		ring2="Defending Ring",
+		left_ring="Shadow Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	}

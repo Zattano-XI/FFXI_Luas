@@ -132,14 +132,14 @@ function init_gear_sets()
 	--This is what will equip when you use Reward.  No need to manually equip Pet Food Theta.
 		sets.precast.JA.Reward = {
 				ammo="Pet Food Theta",
-				--ring1="Aquasoul Ring",
+				--left_ring="Aquasoul Ring",
 				--head="Stout Bonnet",
 				--neck="Aife's Medal",
 				--ear1="Lifestorm Earring",
 				--ear2="Neptune's Pearl",
 				--body="Ankusa Jackcoat +1",
 				--hands="Leyline Gloves",
-				--ring2="Aquasoul Ring",
+				--right_ring="Aquasoul Ring",
 				--back="Pastoralist's Mantle",
 				--waist="Crudelis Belt",
 				--legs="Ankusa Trousers +2",
@@ -158,7 +158,7 @@ function init_gear_sets()
 
 	--This is your base FastCast set that equips during precast for all spells/magic.
     sets.precast.FC = {
-				ring2="Lebeche Ring",
+				right_ring="Lebeche Ring",
 				ammo="Impatiens",
 				neck="Orunmila's Torque",
 				ear1="Etiolation Earring",
@@ -167,8 +167,8 @@ function init_gear_sets()
 				hands="Leyline Gloves",
 				legs="Limbo Trousers",
 				feet={ name="Taeon Boots", augments={'Pet: "Mag.Atk.Bns."+24','"Fast Cast"+2',}},
-				ring1="Prolix Ring",
-				ring2="Lebeche Ring",
+				left_ring="Prolix Ring",
+				right_ring="Lebeche Ring",
 				waist="Ninurta's Sash",}
 			
          			
@@ -179,8 +179,8 @@ function init_gear_sets()
 			ear2="Lifestorm Earring",
 			body="Totemic Jackcoat +1",
 			hands="Stone Mufflers",
-			ring1="Aquasoul Ring",
-			ring2="Aquasoul Ring",
+			left_ring="Aquasoul Ring",
+			right_ring="Aquasoul Ring",
 			back="Pastoralist's Mantle",
 			waist="Crudelis Belt",
 			legs="Haven Hose",
@@ -199,8 +199,8 @@ function init_gear_sets()
 			--ear2="Brutal Earring",
 			--body="Nukumi Gausape +1",
 			--hands="Boor Bracelets",
-			--ring1="Pyrosoul Ring",
-			--ring2="Ifrit Ring",
+			--left_ring="Pyrosoul Ring",
+			--right_ring="Ifrit Ring",
 			--back="Buquwik Cape",
 			--waist="Windbuffet Belt +1",
 			--legs="Nukumi Quijotes +1",
@@ -230,7 +230,7 @@ function init_gear_sets()
 			ear1="Sherida Earring",
 			--body="Mes'yohi Haubergeon",
 			--hands="Nomkahpa Mittens +1",
-			--ring1="Ramuh Ring +1",
+			--left_ring="Ramuh Ring +1",
 		})
 			
 		
@@ -301,7 +301,7 @@ function init_gear_sets()
 			legs={ name="Nyame Flanchard", augments={'Path: B',}},
 			feet={ name="Nyame Sollerets", augments={'Path: B',}},
 			back="Pastoralist's Mantle",
-			ring1="Thurandaut Ring",
+			left_ring="Thurandaut Ring",
 			ear2="Nukumi Earring +2",
 			waist="Hurch'lan Sash",}
 	
@@ -319,7 +319,7 @@ function init_gear_sets()
 			legs={ name="Nyame Flanchard", augments={'Path: B',}},
 			feet={ name="Nyame Sollerets", augments={'Path: B',}},
 			back="Pastoralist's Mantle",
-			ring1="Thurandaut Ring",
+			left_ring="Thurandaut Ring",
 			sub="Digirbalag",
 			waist="Hurch'lan Sash",})
 			
@@ -423,7 +423,7 @@ function init_gear_sets()
 			main="Agwu's axe",
 			sub="Glyph axe",
 			--ear2="Handler's Earring +1",
-			--ring2="Succor Ring",
+			--right_ring="Succor Ring",
 			--head="Anwig Salade",
 			--neck="Empath Necklace",
 			--ammo="Demonry Core",
@@ -431,7 +431,7 @@ function init_gear_sets()
 			--hands="Acro Gauntlets",
 			--legs="Nukumi Quijotes +1",
 			--feet="Skadi's Jambeaux +1",
-			--ring1="Thurandaut Ring",
+			--left_ring="Thurandaut Ring",
 			--sub="Astolfo",
 			--back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Attack+5 Pet: Rng.Atk.+5','Pet: "Regen"+10','Pet: "Regen"+5',}},
 			--waist="Isa Belt",
@@ -462,7 +462,7 @@ function init_gear_sets()
 			--neck="Empath Necklace",
 			--ammo="Demonry Core",
 			--ear2="Handler's Earring +1",
-			--ring1="Thurandaut Ring",
+			--left_ring="Thurandaut Ring",
 			--body="Acro Surcoat",
 			--hands="Acro Gauntlets",
 			--legs="Nukumi Quijotes +1",
@@ -470,7 +470,7 @@ function init_gear_sets()
 			--sub="Astolfo",
 			--back="Pastoralist's Mantle",
 			--waist="Isa Belt",
-			--ring2="Succor Ring",
+			--right_ring="Succor Ring",
 			--ear1="Handler's Earring",
 			
 			
@@ -523,8 +523,8 @@ function init_gear_sets()
 			ear1="Handler's Earring",
 			body="Nukumi Gausape +1",
 			--hands={ name="Taeon Gloves", augments={'Accuracy+20 Attack+20','"Triple Atk."+2',}},
-			--ring1="Epona's Ring",
-			ring2="Moonlight Ring",
+			--left_ring="Epona's Ring",
+			right_ring="Moonlight Ring",
 			--back="Bleating Mantle",
 			--waist="Windbuffet Belt +1",
 			ear2="Nukumi Earring +2",
@@ -563,8 +563,8 @@ function init_gear_sets()
 			--waist="Patentia Sash",
 			--ear1="Dudgeon Earring",
 			--ear2="Heartseeker Earring",
-			--ring1="Epona's Ring",
-			--ring2="Rajas Ring",
+			--left_ring="Epona's Ring",
+			--right_ring="Rajas Ring",
 			--back="Atheling Mantle",
 			}
 	
@@ -590,8 +590,8 @@ function init_gear_sets()
 		feet="Valorous Greaves",
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
-		ring1="Shadow Ring",
-		ring2="Defending Ring",
+		left_ring="Shadow Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",	
 		}

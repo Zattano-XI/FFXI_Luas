@@ -1045,8 +1045,8 @@ function init_gear_sets()
 		feet="Herculean Boots",
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
-		ring1="Shadow Ring",
-		ring2="Defending Ring",
+		left_ring="Shadow Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",		
 	}
@@ -1360,9 +1360,9 @@ function job_buff_change(buff,gain)
         if gain then
             equip(sets.buff.Doom)
             send_command('@input /p Doomed.')
-            disable('ring1','ring2','waist')
+            disable('left_ring','right_ring','waist')
         else
-            enable('ring1','ring2','waist')
+            enable('left_ring','right_ring','waist')
             handle_equipping_gear(player.status)
         end
     end
@@ -1638,14 +1638,14 @@ end
 
 function check_gear()
     if no_swap_gear:contains(player.equipment.left_ring) then
-        disable("ring1")
+        disable("left_ring")
     else
-        enable("ring1")
+        enable("left_ring")
     end
     if no_swap_gear:contains(player.equipment.right_ring) then
-        disable("ring2")
+        disable("right_ring")
     else
-        enable("ring2")
+        enable("right_ring")
     end
     if no_swap_gear:contains(player.equipment.waist) then
         disable("waist")
@@ -1668,11 +1668,11 @@ end
 windower.register_event('zone change',
     function()
         if no_swap_gear:contains(player.equipment.left_ring) then
-            enable("ring1")
+            enable("left_ring")
             equip(sets.idle)
         end
         if no_swap_gear:contains(player.equipment.right_ring) then
-            enable("ring2")
+            enable("right_ring")
             equip(sets.idle)
         end
         if no_swap_gear:contains(player.equipment.waist) then

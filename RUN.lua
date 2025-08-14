@@ -124,7 +124,7 @@ function user_setup()
     state.Runes = M{['description']='Runes', 'Ignis', 'Gelus', 'Flabra', 'Tellus', 'Sulpor', 'Unda', 'Lux', 'Tenebrae'}
 
     -- Additional local binds
-    include('Global-Binds.lua') -- OK to remove this line
+    --include('Global-Binds.lua') -- OK to remove this line
     --include('Global-GEO-Binds.lua') -- OK to remove this line
 
     --send_command('lua l gearinfo')
@@ -273,8 +273,8 @@ function init_gear_sets()
 		 ear2="Cryptic Earring", --4
 	     body="Adamantite Armor", --10
 		 hands="Futhark Mitons +3", --6 Kurys Gloves?
-		 ring1="Eihwaz Ring", --4
-		 ring2="Begrudging Ring", --5
+		 left_ring="Eihwaz Ring", --4
+		 right_ring="Begrudging Ring", --5
 		 back="Reiki Cloak", --6
 		 waist="Plat. Mog. Belt", --
 		 legs="Eri. Leg Guards +3", --13
@@ -291,8 +291,8 @@ function init_gear_sets()
 		ear2="Cryptic Earring",
         body="Runeist Coat +3",
 		hands="Futhark Mitons +3",
-		ring1="Moonlight Ring",
-		ring2="Moonlight Ring",
+		left_ring="Moonlight Ring",
+		right_ring="Moonlight Ring",
         back="Moonbeam Cape",
 		waist="Plat. Mog. Belt",
 		legs="Eri. Leg Guards +3",
@@ -348,15 +348,15 @@ function init_gear_sets()
     waist="Orpheus's Sash",
     left_ear="Hermetic Earring",
     right_ear="Friomisi Earring",
-    ring1="Shiva Ring +1",
-    ring2="Mujin Band",
+    left_ring="Shiva Ring +1",
+    right_ring="Mujin Band",
 	--back="Argocham. Mantle",
     back="Evasionist's Cape",
 	}
 
     sets.precast.JA['Swipe'] = sets.precast.JA['Lunge']
     
-	sets.precast.JA['Vivacious Pulse'] = {head="Erilaz Galea +3",neck="Incanter's Torque",ring1={name="Stikini Ring +1", bag="wardrobe2"},ring2={name="Stikini Ring +1", bag="wardrobe5"},legs="Rune. Trousers +2"}
+	sets.precast.JA['Vivacious Pulse'] = {head="Erilaz Galea +3",neck="Incanter's Torque",left_ring={name="Stikini Ring +1", bag="wardrobe2"},right_ring={name="Stikini Ring +1", bag="wardrobe5"},legs="Rune. Trousers +2"}
     sets.precast.JA['Vivacious Pulse']['Ignis'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
 	sets.precast.JA['Vivacious Pulse']['Gelus'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
 	sets.precast.JA['Vivacious Pulse']['Flabra'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
@@ -371,7 +371,7 @@ function init_gear_sets()
 		neck="Unmoving Collar +1",
 		--ear1="Enchntr. Earring +1",
 		--ear2="Handler's Earring +1",
-		ring2="Defending Ring",
+		right_ring="Defending Ring",
         back="Moonbeam Cape",
 		waist="Chaac Belt",
 		--legs="Dashing Subligar",
@@ -411,8 +411,8 @@ function init_gear_sets()
 		ear1="Odnowa Earring +1",
 		ear2="Etiolation Earring",
         body="	 +3",
-		ring1="Moonlight Ring",
-		ring2="Moonlight Ring",
+		left_ring="Moonlight Ring",
+		right_ring="Moonlight Ring",
         --back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 		back={name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 		waist="Plat. Mog. Belt",
@@ -429,7 +429,7 @@ function init_gear_sets()
 
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {
 		neck="Magoraga Beads",
-		ring1="Lebeche Ring",
+		left_ring="Lebeche Ring",
         })
 
 
@@ -451,7 +451,7 @@ function init_gear_sets()
 		left_ring="Regal Ring",
 		right_ring="Cornelia's Ring",
 		--back={ name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}, 
-		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}, --replace if inventory allows
+		back={ name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}, --replace if inventory allows
 	}
 
     sets.precast.WS.Acc = set_combine(sets.precast.WS, {
@@ -459,8 +459,8 @@ function init_gear_sets()
         --body=gear.Adhemar_B_body,
 		ear1="Telos Earring",
         hands="Gazu Bracelets +1",
-		ring1="Moonlight Ring",
-        ring2={name="Chirich Ring +1", bag="wardrobe5"},
+		left_ring="Moonlight Ring",
+        right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 		--legs="Meg. Chausses +2",
         --right_ear="Telos Earring",]]
         })
@@ -482,7 +482,6 @@ function init_gear_sets()
 		hands="Adhemar Wrist. +1",
 		right_ring="Niqmaddu Ring",
 		--back={ name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
-		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}, --replace if inventory allows
 		legs="Meg. Chausses +2",
 		feet="Nyame Sollerets",
 	})
@@ -498,14 +497,14 @@ function init_gear_sets()
         body=gear.Adhemar_B_body,
         legs="Meg. Chausses +2",
         feet=gear.Herc_TA_feet,
-        ring1="Regal Ring",]]--
+        left_ring="Regal Ring",]]--
         })
 
     sets.precast.WS['Dimidiation'] = set_combine(sets.precast.WS, {
 		waist="Grunfeld Rope",
 		right_ear="Sherida Earring",
 		--right_ring="Ilabrat Ring",
-		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+		--back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
         })
 
     sets.precast.WS['Dimidiation'].Acc = set_combine(sets.precast.WS['Dimidiation'], {
@@ -524,7 +523,6 @@ function init_gear_sets()
 	sets.precast.WS['Fimbulvetr'] = set_combine(sets.precast.WS, {
 		neck="Rep. Plat. Medal",
 		waist="Sailfi Belt +1",
-		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},	
         })
 		
     sets.precast.WS['Herculean Slash'] = sets.precast.JA['Lunge']
@@ -541,9 +539,7 @@ function init_gear_sets()
 		waist="Chaac Belt",
 		right_ear="Sherida Earring",
 		left_ring="Regal Ring",
-		right_ring="Niqmaddu Ring",
-		--back={ name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
-		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}, --Replace if inventory allows
+		right_ring="Niqmaddu Ring",		
 		})	
 
     sets.precast.WS['Fell Cleave'] = set_combine(sets.precast.WS, {
@@ -568,8 +564,8 @@ function init_gear_sets()
 		ear2="Cryptic Earring",
 		body="Adamantite Armor",
 		hands="Regal Gauntlets", --10%
-		ring1="Moonlight Ring",
-		ring2="Defending Ring",
+		left_ring="Moonlight Ring",
+		right_ring="Defending Ring",
 		back={name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 		waist="Audumbla Sash", --10%
 		legs="Carmine Cuisses +1", --20%
@@ -582,7 +578,7 @@ function init_gear_sets()
 		ear1="Mendi. Earring",
 		ear2="Odnowa Earring +1",
         body="Vrikodara Jupon",
-		ring1="Lebeche Ring",
+		left_ring="Lebeche Ring",
         back="Solemnity Cape",
 		waist="Sroda Belt",
 		legs="Carmine Cuisses +1",
@@ -601,8 +597,8 @@ function init_gear_sets()
 		waist="Olympus Sash",
 		left_ear="Andoaa Earring",
 		right_ear="Mimir Earring",
-		ring1={name="Stikini Ring +1", bag="wardrobe2"},
-		ring2={name="Stikini Ring +1", bag="wardrobe5"},
+		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+		right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 		back={name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 		})
 
@@ -621,8 +617,8 @@ function init_gear_sets()
 			feet="Taeon Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},
 			neck="Null Loop",
 			ear1="Odnowa earring +1",
-			ring1="Shadow Ring",
-			ring2="Defending Ring",
+			left_ring="Shadow Ring",
+			right_ring="Defending Ring",
 			back="Moonbeam Cape",
 			waist="Null Belt",	
 		})
@@ -636,8 +632,8 @@ function init_gear_sets()
 			feet="Herculean Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},	   
 			neck="Null Loop",
 			ear1="Odnowa earring +1",
-			ring1="Shadow Ring",
-			ring2="Defending Ring",
+			left_ring="Shadow Ring",
+			right_ring="Defending Ring",
 			back="Moonbeam Cape",
 			waist="Null Belt",	
         })
@@ -663,8 +659,8 @@ function init_gear_sets()
         --legs="Rune. Trousers +2",--15
         --neck="Incanter's Torque",
 		--left_ear="Divine Earring",--3
-		ring1={name="Stikini Ring +1", bag="wardrobe2"},
-		ring2={name="Stikini Ring +1", bag="wardrobe5"},
+		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+		right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 		left_ear="Beatific Earring",--4
         waist="Bishop's Sash",
 		---------   Total Divine = 34   ---------- 
@@ -714,8 +710,8 @@ function init_gear_sets()
 		waist="Plat. Mog. Belt",
 		left_ear="Odnowa Earring +1",
 		right_ear="Erilaz Earring +2",
-		ring1="Moonlight Ring",
-		ring2="Defending Ring",
+		left_ring="Moonlight Ring",
+		right_ring="Defending Ring",
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 		back="Reiki Cloak",
 	}
@@ -731,8 +727,8 @@ function init_gear_sets()
 		body="Nyame Mail", --8/8
         --body="Futhark Coat +3",
 		hands="Regal Gauntlets",
-		ring1="Moonlight Ring",--4DT
-		ring2="Defending Ring",--10DT
+		left_ring="Moonlight Ring",--4DT
+		right_ring="Defending Ring",--10DT
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},--10PDT
 		back="Reiki Cloak",
 		waist="Plat. Mog. Belt",
@@ -746,8 +742,8 @@ function init_gear_sets()
         body="Runeist Coat +3",
         hands="Regal Gauntlets",
         --legs="Rawhide Trousers",
-		ring1={name="Stikini Ring +1", bag="wardrobe2"},
-		ring2={name="Stikini Ring +1", bag="wardrobe5"},
+		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+		right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 		waist="Fucho-no-obi",
         })
 
@@ -784,8 +780,8 @@ function init_gear_sets()
 		right_ear="Odnowa Earring",
 		left_ear="Odnowa Earring +1",--2MDT
 		--right_ear="tuisto Earring",
-		ring1="Moonlight Ring",--4DT
-		ring2="Defending Ring",--10DT
+		left_ring="Moonlight Ring",--4DT
+		right_ring="Defending Ring",--10DT
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},--10PDT
 		back="Moonbeam cape",
         }
@@ -807,8 +803,8 @@ function init_gear_sets()
 		--right_ear="Eabani Earring",
 		left_ear="Odnowa Earring +1",--2MDT
 		right_ear="Odnowa Earring",
-		ring1="Moonlight Ring",--4DT
-		ring2="Defending Ring",--10DT
+		left_ring="Moonlight Ring",--4DT
+		right_ring="Defending Ring",--10DT
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Parrying rate+5%',}},	--need
 		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
         }
@@ -837,8 +833,8 @@ function init_gear_sets()
 		left_ear="Odnowa Earring +1",--2MDT
 		--right_ear="Tuisto Earring",
 		right_ear="Odnowa Earring",
-		ring1="Moonlight Ring",--4DT
-		ring2="Defending Ring",--10DT
+		left_ring="Moonlight Ring",--4DT
+		right_ring="Defending Ring",--10DT
 		back="Reiki cloak",
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},--10PDT
 
@@ -859,8 +855,8 @@ function init_gear_sets()
 		waist="CArrier's sash",
 		Right_ear="Odnowa Earring",
 		left_ear="Odnowa Earring +1",
-		ring1="Moonlight Ring",
-		ring2="Defending Ring",
+		left_ring="Moonlight Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam cape",
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},--10PDT
         }
@@ -931,8 +927,8 @@ function init_gear_sets()
 	
 	sets.engaged.ResistDeath = set_combine(sets.engaged.DT, { 
 		body="Samnuha Coat",
-		ring1="Eihwaz Ring",
-		ring2="Shadow Ring",
+		left_ring="Eihwaz Ring",
+		right_ring="Shadow Ring",
 	})
 	
     sets.engaged.STP = set_combine(sets.engaged, {
@@ -940,8 +936,8 @@ function init_gear_sets()
         body="Ashera Harness",
         --feet="Carmine Greaves +1",
         right_ear="Telos Earring",
-        ring1={name="Chirich Ring +1", bag="wardrobe2"},
-        ring2={name="Chirich Ring +1", bag="wardrobe5"},
+        left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+        right_ring={name="Chirich Ring +1", bag="wardrobe5"},
         waist="Kentarch Belt +1",
         })
 
@@ -952,8 +948,8 @@ function init_gear_sets()
         body="Ashera Harness",
         left_ear="Sherida Earring",
         right_ear="Erilaz Earring +2",
-        ring1={name="Chirich Ring +1", bag="wardrobe2"},
-        ring2={name="Moonlight Ring", bag="wardrobe5"},
+        left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+        right_ring={name="Moonlight Ring", bag="wardrobe5"},
         --waist="Kentarch Belt +1",
 		--waist="Windbuffet Belt",
         })
@@ -996,8 +992,8 @@ function init_gear_sets()
         --neck="Futhark Torque +2",
         left_ear="Sherida Earring",
         right_ear="Telos Earring",
-        ring1={name="Moonlight Ring", bag="wardrobe5"},
-        ring2="Defending Ring",
+        left_ring={name="Moonlight Ring", bag="wardrobe5"},
+        right_ring="Defending Ring",
         back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
         --waist="Sailfi Belt +1",--
         })
@@ -1008,8 +1004,8 @@ function init_gear_sets()
 
     sets.buff.Doom = {
         neck="Nicander's Necklace", --20
-        ring1="Purity Ring", --20
-        --ring2={name="Eshmun's Ring", bag="wardrobe4"}, --20
+        left_ring="Purity Ring", --20
+        --right_ring={name="Eshmun's Ring", bag="wardrobe4"}, --20
         --waist="Gishdubar Sash", --10
         }
 
@@ -1035,8 +1031,8 @@ function init_gear_sets()
 	
 	sets.death = {
 		body="Samnuha Coat",
-		ring1="Eihwaz Ring",
-		ring2="Shadow Ring",
+		left_ring="Eihwaz Ring",
+		right_ring="Shadow Ring",
 		}
 	
 	--Craft
@@ -1047,8 +1043,8 @@ function init_gear_sets()
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
 	hands="Smithy's Mitts",
-	ring1="Orvail ring +1", --+1
-	ring2="Confectioner's Ring",
+	left_ring="Orvail ring +1", --+1
+	right_ring="Confectioner's Ring",
 	waist="Alchemist's Belt",
 	}
 
@@ -1242,9 +1238,9 @@ function job_buff_change(buff,gain)
         if gain then
             equip(sets.buff.Doom)
             send_command('@input /p Doomed')
-             disable('ring1','ring2','waist')
+             disable('left_ring','right_ring','waist')
         else
-            enable('ring1','ring2','waist')
+            enable('left_ring','right_ring','waist')
             handle_equipping_gear(player.status)
         end
     end
@@ -1473,14 +1469,14 @@ end
 
 --function check_gear()
  --   if no_swap_gear:contains(player.equipment.left_ring) then
-   --     disable("ring1")
+   --     disable("left_ring")
     --else
---        enable("ring1")
+--        enable("left_ring")
   --  end
     --if no_swap_gear:contains(player.equipment.right_ring) then
---        disable("ring2")
+--        disable("right_ring")
   --  else
-    --    enable("ring2")
+    --    enable("right_ring")
 --    end
 --end
 

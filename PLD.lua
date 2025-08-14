@@ -102,8 +102,8 @@ function get_sets()
 	neck="Moonlight Necklace", --15
 	left_ear="Odnowa Earring +1",
 	right_ear="Chev. Earring +2",
-	ring1="Defending Ring", --DT+
-	ring2="Moonlight Ring", --DT+
+	left_ring="Defending Ring", --DT+
+	right_ring="Moonlight Ring", --DT+
 	waist="Plat. Mog. Belt",
 	--waist="Audumbla Sash", --10
 	legs={name="Founder's Hose",priority=14}, --30
@@ -217,7 +217,7 @@ function get_sets()
 	sets.shield.index = {'Duban','Aegis','Priwen','Blurred'} --'Srivatsa',
 	shield_ind = 1 --Srivatsa is the Default
 	sets.shield['Srivatsa'] = {sub="Srivatsa",waist="Asklepian Belt",}
-	sets.shield['Aegis'] = {sub="Aegis",neck="Warder's Charm +1",ring1="Shadow Ring",} --waist="Carrier's Sash",
+	sets.shield['Aegis'] = {sub="Aegis",neck="Warder's Charm +1",left_ring="Shadow Ring",} --waist="Carrier's Sash",
 	sets.shield['Duban'] = {sub="Duban",} --Flume?
 	sets.shield['Priwen'] = {sub="Priwen",} --Flume?
 	sets.shield['Blurred'] = {sub="Blurred Shield +1",waist="Sailfi Belt +1",}

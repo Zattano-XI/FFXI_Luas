@@ -97,7 +97,7 @@ function init_gear_sets()
     -- Waltz set (chr and vit)
     sets.precast.Waltz = {
         head="Whirlpool Mask",ear1="Roundel Earring",
-        body="Otronif Harness +1",hands="Otronif Gloves",ring1="Spiral Ring",
+        body="Otronif Harness +1",hands="Otronif Gloves",left_ring="Spiral Ring",
         back="Iximulew Cape",legs="Nahtirah Trousers",feet="Thurandaut Boots +1"}
         
     -- Don't need any special gear for Healing Waltz.
@@ -126,7 +126,7 @@ function init_gear_sets()
 		neck="Rancor Collar",
 		ear1="Brutal Earring",
 		ear2="Moonshade Earring",
-        ring1="Spiral Ring",
+        left_ring="Spiral Ring",
 		waist="Fotia Belt"
 		})
 		
@@ -173,8 +173,8 @@ function init_gear_sets()
     sets.resting = {
 		head="Pitre Taj",
 		neck="Loricate Torque +1",
-        ring1="Sheltered Ring",
-		ring2="Paguroidea Ring"
+        left_ring="Sheltered Ring",
+		right_ring="Paguroidea Ring"
 	}
     
 
@@ -187,8 +187,8 @@ function init_gear_sets()
 		ear2="Odnowa Earring +1",
         body="Nyame Mail", --Foire
 		hands="Nyame Gauntlets", --Regimen
-		ring1="Sheltered Ring",
-		ring2="Paguroidea Ring",
+		left_ring="Sheltered Ring",
+		right_ring="Paguroidea Ring",
         back="Shadow Mantle",
 		waist="Incarnation Sash",
 		legs="Nyame Flanchard", --foire
@@ -210,7 +210,7 @@ function init_gear_sets()
         --body="Foire Tobe",
 		body="Mpaca's Doublet",
 		hands="Mpaca's Gloves",
-		ring1="C. Palug Ring",
+		left_ring="C. Palug Ring",
 		right_ring={name="Varar ring +1", bag="wardrobe5"},
         back="Visucius's Mantle",
 		waist="Incarnation Sash",
@@ -231,7 +231,7 @@ function init_gear_sets()
 	})
 		
     sets.idle.Pet.Engaged.Nuke = set_combine(sets.idle.Pet.Engaged, {
-		ring2="Tali'ah Ring",
+		right_ring="Tali'ah Ring",
 		waist="Ukko's Sash",
 		--legs="Pitre Churidars +3",
 		--feet="Pitre Babouches +3"
@@ -248,17 +248,17 @@ function init_gear_sets()
 
     sets.defense.Evasion = {
         head="Whirlpool Mask",neck="Twilight Torque",
-        body="Otronif Harness +1",hands="Otronif Gloves",ring2="Defending Ring",
+        body="Otronif Harness +1",hands="Otronif Gloves",right_ring="Defending Ring",
         back="Ik Cape",waist="Hurch'lan Sash",legs="Nahtirah Trousers",feet="Otronif Boots +1"}
 
     sets.defense.PDT = {
         head="Whirlpool Mask",neck="Twilight Torque",
-        body="Otronif Harness +1",hands="Otronif Gloves",ring2="Defending Ring",
+        body="Otronif Harness +1",hands="Otronif Gloves",right_ring="Defending Ring",
         back="Shadow Mantle",waist="Hurch'lan Sash",legs="Nahtirah Trousers",feet="Otronif Boots +1"}
 
     sets.defense.MDT = {
         head="Whirlpool Mask",neck="Twilight Torque",
-        body="Otronif Harness +1",hands="Otronif Gloves",ring1="Defending Ring",ring2="Shadow Ring",
+        body="Otronif Harness +1",hands="Otronif Gloves",left_ring="Defending Ring",right_ring="Shadow Ring",
         back="Tuilha Cape",waist="Hurch'lan Sash",legs="Nahtirah Trousers",feet="Otronif Boots +1"}
 
     sets.Kiting = {feet="Hermes' Sandals"}
@@ -297,8 +297,8 @@ function init_gear_sets()
 		ear2="Crepuscular Earring",
         body="Qaaxo Harness",
 		hands="Otronif Gloves",
-		ring1="Chirich Ring +1",
-		ring2="Epona's Ring",
+		left_ring="Chirich Ring +1",
+		right_ring="Epona's Ring",
         back="Null Shawl",
 		waist="Hurch'lan Sash",
 		legs="Manibozho Brais",
@@ -312,8 +312,8 @@ function init_gear_sets()
 		ear2="Cessance Earring",
         body="Mpaca's Doublet",
 		hands="Mpaca's Gloves",
-		ring1="Gere Ring",
-		ring2="Niqmaddu Ring",
+		left_ring="Gere Ring",
+		right_ring="Niqmaddu Ring",
         back="Visucius's Mantle",
 		waist="Windbuffet Belt",
 		legs="Samnuha Tights",
@@ -328,8 +328,8 @@ function init_gear_sets()
 		ear2="Odnowa Earring +1",
         body="Malignance Tabard",
 		hands="Malignance Gloves",
-		ring1="Gere Ring",
-		ring2="Niqmaddu Ring",
+		left_ring="Gere Ring",
+		right_ring="Niqmaddu Ring",
         back="Visucius's Mantle",
 		waist="Windbuffet Belt",
 		legs="Malignance Tights",
@@ -356,8 +356,8 @@ function init_gear_sets()
 		feet="Herculean Boots",
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
-		ring1="Shadow Ring",
-		ring2="Defending Ring",
+		left_ring="Shadow Ring",
+		right_ring="Defending Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",		
 	}

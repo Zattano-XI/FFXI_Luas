@@ -39,8 +39,8 @@ function get_sets()
 	left_ear="Etiolation Earring",
 	body="Sacro Breastplate",
 	hands="Leyline Gloves",
-	ring1="Prolix Ring",
-	ring2="Lebeche Ring",
+	left_ring="Prolix Ring",
+	right_ring="Lebeche Ring",
 	--legs="Arjuna Breeches",
 	legs="Limbo Trousers",
 	}
@@ -91,8 +91,8 @@ function get_sets()
         head="Mpaca's Cap", --7pdt
         body="Mpaca's Doublet", --10pdt
         hands="Wakido Kote +3",
-        ring1="Niqmaddu Ring", 
-        ring2="Defending Ring", --10dt
+        left_ring="Niqmaddu Ring", 
+        right_ring="Defending Ring", --10dt
         --back=Smertrios.TP, 5dt
         waist="Ioskeha Belt +1",        
 		--15dt, 23pdt
@@ -102,7 +102,7 @@ function get_sets()
 		head="Kasuga Kabuto +3", --10dt
 		body="Kasuga Domaru +3", --14dt
 		hands="Mpaca's Gloves", --8pdt
-		ring2="Defending Ring", --10dt
+		right_ring="Defending Ring", --10dt
 		--back="Moonbeam Cape", --5dt
 		legs="Kasuga Haidate +3", --11dt
 		feet="Mpaca's Boots", --6pdt
@@ -113,7 +113,7 @@ function get_sets()
 		head="Kasuga Kabuto +3",
 		body="Kasuga Domaru +3",
 		hands="Nyame Gauntlets",
-		ring1="Niqmaddu Ring",
+		left_ring="Niqmaddu Ring",
 		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 		legs="Kasuga Haidate +3",
 		feet="Nyame Sollerets",
@@ -333,8 +333,8 @@ function get_sets()
 	
 	sets.refresh = {
 	body="Crepuscular Mail",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-	ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	}
 	
 	sets.phalanx = { 
@@ -346,8 +346,8 @@ function get_sets()
 	feet="Valorous Greaves",
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
-	ring1="Shadow Ring",
-	ring2="Defending Ring",
+	left_ring="Shadow Ring",
+	right_ring="Defending Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	} --Phalanx+ on all pieces
@@ -410,8 +410,8 @@ function get_sets()
 	neck="Alchemist's Torque",
 	body="Alchemist's Smock",
 	hands="Smithy's Mitts",
-	ring1="Orvail ring +1", --+1
-	ring2="Confectioner's Ring",
+	left_ring="Orvail ring +1", --+1
+	right_ring="Confectioner's Ring",
 	waist="Alchemist's Belt",
 	}
 end
