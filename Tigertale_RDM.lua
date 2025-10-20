@@ -40,11 +40,11 @@ function get_sets()
 	
 	sets.fc.base = { --30(base)(8JP)=38 +44
 	--ammo="Impatiens", --2 qm
-	head="Atrophy Chapeau +3", --16
+	head="Atrophy Chapeau +4", --16
 	--neck="Baetyl Pendant", --4
 	--left_ear="Malignance Earring", --4
 	--right_ear="Loquacious Earring", --2
-	body="Vitiation Tabard +3", --15
+	body="Vitiation Tabard +4", --15
 	--hands="Leyline Gloves", --5
 	--left_ring="Kishar Ring", --4
 	right_ring="Lebeche Ring", --2 qm
@@ -73,7 +73,7 @@ function get_sets()
 	sub="Chanter's Shield", --3
 	ammo="Sapience Orb", --2
 	head=empty,
-	neck="Baetyl Pendant", --4
+	neck="Orunmila's Torque", --4
 	left_ear="Malignance Earring", --4
 	right_ear="Loquacious Earring", --2
 	body="Crepuscular Cloak",
@@ -108,7 +108,7 @@ function get_sets()
 	right_ring="Menelaus's Ring", --5
 	--left_ring="Janniston Ring", --II+5
 	back="Solemnity Cape", --7
-	legs="Atrophy Tights +3", --11
+	legs="Atrophy Tights +4", --11
 	})
 	
 	sets.midcast.cursna = set_combine(sets.midcast.conservemp, {
@@ -116,7 +116,7 @@ function get_sets()
 	neck="Debilis Medallion",
 	left_ear="Beatific Earring",
 	right_ear="Meili Earring",
-	body="Vitiation Tabard +3",
+	body="Vitiation Tabard +4",
 	left_ring="Haoma's Ring",
 	right_ring="Menelaus's Ring",
 	waist="Bishop's Sash",
@@ -173,7 +173,7 @@ function get_sets()
 	sets.midcast.raise = set_combine(sets.midcast.conservemp, { --30(base)(8JP) +51  +21 haste
 	sub="Chanter's Shield", --3
 	head="Carmine Mask +1", --14 --8
-	neck="Baetyl Pendant", --4
+	neck="Orunmila's Torque", --4
 	left_ear="Malignance Earring", --4
 	left_ring="Kishar Ring", --4
 	right_ring="Lebeche Ring", --2 qm
@@ -184,12 +184,12 @@ function get_sets()
 	sets.midcast.Enfeebling = {
 	main="Daybreak",
 	sub="Ammurapi Shield",
-	head="Vitiation Chapeau +3",
+	head="Vitiation Chapeau +4",
 	neck="Duelist's Torque +2",
 	right_ear="Snotra Earring",
 	hands="Lethargy Gantherots +3",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-    ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+    right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	waist="Obstinate Sash",
 	feet="Vitiation Boots +3",
 	}
@@ -200,7 +200,7 @@ function get_sets()
 	range="Ullr",
 	--head="Lethargy Chappel +3",
 	left_ear="Regal Earring",
-	body="Atrophy Tabard +3",
+	body="Atrophy Tabard +4",
 	hands="Lethargy Gantherots +3",
 	back="Aurist's Cape +1",
 	waist="Obstinate Sash",
@@ -213,7 +213,7 @@ function get_sets()
 	ammo="Regal Gem",
 	neck="Incanter's Torque",
 	left_ear="Vor Earring",
-	body="Atrophy Tabard +3",
+	body="Atrophy Tabard +4",
 	hands="Lethargy Gantherots +3",
 	right_ring="Metamorph Ring +1",
 	waist="Obstinate Sash",
@@ -239,7 +239,7 @@ function get_sets()
 	range="Ullr",
 	--ammo="Regal Gem",
 	left_ear="Regal Earring",
-	body="Atrophy Tabard +3",
+	body="Atrophy Tabard +4",
 	--hands="Regal Cuffs",
 	right_ring="Kishar Ring",
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
@@ -266,9 +266,9 @@ function get_sets()
 	neck="Incanter's Torque",
 	left_ear="Mimir Earring",
 	right_ear="leth. earring +1",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-	ring2={name="Stikini Ring +1", bag="wardrobe5"},
-	legs="Atrophy Tights +3",
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
+	legs="Atrophy Tights +4",
 	})
 	
 	sets.midcast.EnhancingDuration = set_combine(sets.midcast['Enhancing Magic'], {
@@ -294,8 +294,8 @@ function get_sets()
 	right_ear="leth. earring +1",
 	body="Lethargy Sayon +3",
 	hands="Leth. Ganth. +3",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-	ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Perimede Cape",
 	waist="Acuity Belt +1",
 	legs="Lethargy Fuseau +3",
@@ -319,9 +319,9 @@ function get_sets()
 	 sets.midcast.absorb = set_combine(sets.midcast['Dark Magic'], {
     main="Crocea Mors",
 	neck="Null Loop",
-	back="Null Cape",
+	back="Null Shawl",
     })
-	--body="Vitiation Tabard +3",
+	--body="Vitiation Tabard +4",
 	
 	sets.midcast.bar_element = {}
 	
@@ -340,7 +340,7 @@ function get_sets()
 	body="Crepuscular Cloak",
 	--hands="Regal Cuffs",
 	hands="Lethargy Gantherots +3",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
 	right_ring="Metamorph Ring +1",
 	back="Aurist's Cape +1",
 	waist="Acuity Belt +1",
@@ -379,7 +379,7 @@ function get_sets()
 	
 	sets.buff['Refresh III'] = set_combine(sets.midcast.EnhancingDuration, {
 	head="Amalric Coif +1",
-	body="Atrophy Tabard +3",
+	body="Atrophy Tabard +4",
 	legs="Lethargy Fuseau +3",
 	})
 	
@@ -411,17 +411,17 @@ function get_sets()
 	neck="Incanter's Torque",
 	left_ear="Andoaa Earring",
 	right_ear="Mimir Earring",
-	body={ name="Vitiation Tabard +3", augments={'Enhances "Chainspell" effect',}},
-	hands="Vitiation Gloves +3",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-    ring2={name="Stikini Ring +1", bag="wardrobe5"},
+	body={ name="Vitiation Tabard +4", augments={'Enhances "Chainspell" effect',}},
+	hands="Vitiation Gloves +4",
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+    right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Ghostfyre Cape",
 	waist="Olympus Sash",
-	legs="Atrophy Tights +3",
+	legs="Atrophy Tights +4",
 	feet="Lethargy Houseaux +3"
 	}
 	
-	sets.ja['Chainspell'] = {body="Vitiation Tabard +3",}
+	sets.ja['Chainspell'] = {body="Vitiation Tabard +4",}
 	sets.ja['Vallation'] = sets.enmity
 	sets.ja['Swordplay'] = sets.enmity
 	sets.ja['Pflug'] = sets.enmity
@@ -439,8 +439,8 @@ function get_sets()
 	right_ear="leth. earring +1",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
-	ring1={name="Chirich Ring +1", bag="wardrobe2"},
-	ring2={name="Chirich Ring +1", bag="wardrobe5"},
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	waist="Reiki Yotai",
 	legs="Malignance Tights",
@@ -468,7 +468,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 		sub="Aern Dagger II",
 		--head="Malignance Chapeau",
 		neck="Duelist's Torque +2",
-		ring2="Hetairoi Ring",
+		right_ring="Hetairoi Ring",
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 		legs="Carmine Cuisses +1",	
 		--feet="Malignance Boots"
@@ -573,14 +573,14 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	--main="Sakpata's Sword",
 	--sub="Genmei Shield",
 	ammo="Homiliary",
-	head="Vitiation Chapeau +3",
+	head="Vitiation Chapeau +4",
 	neck="Loricate Torque +1",
 	left_ear="Etiolation Earring",
 	right_ear="Dominance Earring +1",
 	body="Lethargy Sayon +3",
-	hands="Volte Gloves",
-	ring1={name="Stikini Ring +1", bag="wardrobe2"},
-	right_ring="Defending Ring",
+	hands="Leth. Ganth. +3",
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring="Murky Ring",
 	back="Solemnity Cape",
 	waist="Shinjutsu-no-obi +1",
 	legs="Carmine Cuisses +1",
@@ -773,9 +773,9 @@ function midcast(spell)
 					equip({head="Lethargy Chappel +3",body="Lethargy Sayon +3",legs="Lethargy Fuseau +3",})
 				end
 				if GainSpells:contains(spell.name) then
-					equip({hands="Vitiation Gloves +3",})
+					equip({hands="Vitiation Gloves +4",})
 				elseif Spikes:contains(spell.name) then
-					equip({legs="Vitiation Tights +2",})
+					equip({legs="Vitiation Tights +4",})
 				end
 				if string.find(spell.english,'Protect') or string.find(spell.english,'Shell') and spell.target.type == 'SELF' then
 					equip({right_ring="Sheltered Ring"})
@@ -1044,7 +1044,7 @@ function self_command(command)
 		if player.status == 'Idle' then
 			equip(sets.TP[sets.TP.index[TP_ind]],sets.idle)
 			if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
-				equip({right_ring="Defending Ring",})
+				equip({right_ring="Murky Ring",})
 			end
 		end
 	end
