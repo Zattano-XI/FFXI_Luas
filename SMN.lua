@@ -371,7 +371,7 @@ function init_gear_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}		

@@ -410,7 +410,7 @@ function init_gear_sets()
 		left_ear="Odnowa Earring +1",
 		right_ear="Nukumi Earring",
 		left_ring="Moonbeam Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam Cape",
 			}
 
@@ -447,7 +447,7 @@ function init_gear_sets()
 			waist="Plat. Mog. Belt",
 			left_ear="Odnowa Earring +1",
 			right_ear="Nukumi Earring +2",
-			left_ring="Defending Ring",
+			left_ring="Murky Ring",
 			right_ring="Moonbeam Ring",
 			back={ name="Artio's Mantle", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Accuracy+20 Attack+20','Pet: Attack+5 Pet: Rng.Atk.+5','Pet: "Regen"+10','Pet: "Regen"+5',}},
 			
@@ -591,7 +591,7 @@ function init_gear_sets()
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
 		left_ring="Shadow Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",	
 		}

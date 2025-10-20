@@ -77,7 +77,7 @@ function get_sets()
 	body="Malignance Tabard",  --9
 	hands="Malignance Gloves",  --5
 	left_ring="Gere Ring",
-	right_ring="Defending ring", --10
+	right_ring="Murky Ring", --10
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Malignance Tights", --7
@@ -111,7 +111,7 @@ function get_sets()
 	hands="Malignance Gloves",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 	--right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-	right_ring="Defending ring",
+	right_ring="Murky Ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Malignance Tights",
@@ -148,7 +148,7 @@ function get_sets()
 	left_ring="Moonlight Ring",
 	right_ring="Shadow ring",
 	--right_ring="Moonlight Ring",
-	--right_ring="Defending ring",
+	--right_ring="Murky Ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Nyame flanchard",
@@ -222,7 +222,7 @@ function get_sets()
 	left_ear="Odr Earring",
 	right_ear="Maculele Earring +2",
 	left_ring="Moonlight ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	}
 	
@@ -274,7 +274,7 @@ function get_sets()
     waist="Flume belt +1",
     left_ear="Genmei Earring",
     right_ear="Odnowa Earring +1",
-    right_ring="Defending Ring",
+    right_ring="Murky Ring",
     --back="Toetapper Mantle", --5
 	}
 	
@@ -312,7 +312,7 @@ function get_sets()
 	left_ring="Moonlight Ring",
 	right_ring="Shadow ring",
 	--right_ring="Moonlight Ring",
-	--right_ring="Defending ring",
+	--right_ring="Murky Ring",
 	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 	waist="Sailfi Belt +1",
 	legs="Nyame flanchard",
@@ -369,7 +369,7 @@ function get_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	neck="Null Loop",

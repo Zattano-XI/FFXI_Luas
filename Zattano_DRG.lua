@@ -132,7 +132,7 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	waist="Ioskeha Belt +1",
     left_ear="Odnowa Earring +1",
     right_ear="Telos Earring",
-    left_ring="Defending Ring",
+    left_ring="Murky Ring",
     right_ring="Moonlight Ring",
     --back="Moonbeam Cape",
 	})
@@ -368,8 +368,8 @@ sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --24DT, 48PDT, 8PetDT
 	feet="Valorous Greaves",
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
-	ring1="Shadow Ring",
-	ring2="Defending Ring",
+	left_ring="Shadow Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",	
 	} --Phalanx+ on all pieces

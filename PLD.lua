@@ -100,9 +100,9 @@ function get_sets()
 	ammo="Staunch Tathlum +1", --11
 	head={name="Souveran Schaller +1",priority=15}, --20
 	neck="Moonlight Necklace", --15
-	left_ear="Odnowa Earring +1",
+	left_ear="Alabaster Earring",
 	right_ear="Chev. Earring +2",
-	left_ring="Defending Ring", --DT+
+	left_ring="Murky Ring", --3
 	right_ring="Moonlight Ring", --DT+
 	waist="Plat. Mog. Belt",
 	--waist="Audumbla Sash", --10
@@ -138,7 +138,7 @@ function get_sets()
 	ammo={name="Staunch Tathlum +1",priority=1},
 	head={name="Sakpata's Helm",priority=8},
 	neck={name="Unmoving Collar +1",priority=15},
-	left_ear={name="Odnowa Earring",priority=14},
+	left_ear={name="Alabaster Earring",priority=14},
 	right_ear={name="Chev. Earring +2",priority=9},
 	body={name="Sakpata's Breastplate",priority=13},
 	hands={name="Sakpata's Gauntlets",priority=7},
@@ -229,8 +229,8 @@ function get_sets()
 	head="Hjarrandi Helm",
 	--head="Flamma zucchetto +2",
 	neck="Vim Torque +1",
-	left_ear="Telos Earring",
-	right_ear="Mache Earring +1",
+	left_ear="Alabaster Earring",
+	right_ear="Telos Earring",
 	body="Sakpata's Plate",
 	hands="Sakpata's Gauntlets",
 	left_ring="Chirich Ring +1",

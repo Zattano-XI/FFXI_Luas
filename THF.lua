@@ -100,7 +100,7 @@ function get_sets()
     body="Gleti's Cuirass",
 	hands="Malignance Gloves",
 	left_ring="Moonlight Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
     back={ name="Toutatis's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}, 
 	legs="Malignance Tights",
 	})
@@ -151,7 +151,7 @@ function get_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",	
 	}
@@ -707,7 +707,7 @@ function self_command(command)
 		if player.status == 'Idle' then
 			equip(sets.TP[sets.TP.index[TP_ind]],sets.idle)
 			if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
-				equip({right_ring="Defending Ring",})
+				equip({right_ring="Murky Ring",})
 			end
 		elseif player.status == 'Engaged' then
 			if player.equipment.range == 'empty' then
@@ -731,7 +731,7 @@ function self_command(command)
 		elseif player.status == 'Idle' then
 			equip(sets.TP[sets.TP.index[TP_ind]],sets.idle)
 			if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
-				equip({right_ring="Defending Ring",})
+				equip({right_ring="Murky Ring",})
 			end
 		end
 		if sets.TH[sets.TH.index[TH_ind]] ~= sets.TH['None'] then
@@ -768,7 +768,7 @@ function self_command(command)
 		if player.status == 'Idle' then
 			equip(sets.TP[sets.TP.index[TP_ind]],sets.idle)
 			if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
-				equip({right_ring="Defending Ring",})
+				equip({right_ring="Murky Ring",})
 			end
 		end
 	end

@@ -126,12 +126,12 @@ function get_sets()
 	head="Nyame Helm", --7
 	--body="Nyame Mail", --9
 	hands="Gleti's Gauntlets", --7
-	right_ring="Defending Ring", --10
+	right_ring="Murky Ring", --10
 	legs="Carmine Cuisses +1",
 	feet="Nyame Sollerets" --7
 	})
 	
-	sets.nuke.index = {'Macc','Free',}
+	sets.nuke.index = {'Free','Macc',}
 	nuke_ind = 1 --Free set is the Default
 	
 	sets.nuke['Free'] = {
@@ -351,7 +351,7 @@ function get_sets()
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
 		left_ring="Shadow Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	}

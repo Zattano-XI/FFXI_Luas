@@ -92,7 +92,7 @@ function get_sets()
         body="Mpaca's Doublet", --10pdt
         hands="Wakido Kote +3",
         left_ring="Niqmaddu Ring", 
-        right_ring="Defending Ring", --10dt
+        right_ring="Murky Ring", --10dt
         --back=Smertrios.TP, 5dt
         waist="Ioskeha Belt +1",        
 		--15dt, 23pdt
@@ -102,7 +102,7 @@ function get_sets()
 		head="Kasuga Kabuto +3", --10dt
 		body="Kasuga Domaru +3", --14dt
 		hands="Mpaca's Gloves", --8pdt
-		right_ring="Defending Ring", --10dt
+		right_ring="Murky Ring", --10dt
 		--back="Moonbeam Cape", --5dt
 		legs="Kasuga Haidate +3", --11dt
 		feet="Mpaca's Boots", --6pdt
@@ -127,7 +127,7 @@ function get_sets()
 	head="Ken. Jinpachi +1",
 	body="Ken. Samue +1",
 	hands="Ken. Tekko +1",
-	right_ring="Defending Ring", --10%
+	right_ring="Murky Ring", --10%
 	legs="Ken. Hakama +1",
 	feet="Kendatsuba Sune-Ate +1"
 	})
@@ -135,7 +135,7 @@ function get_sets()
 	sets.TP['Nyame'] = set_combine(sets.TP['Standard'], {
 	head="Nyame Helm", --7
 	body="Nyame Mail", --9
-	right_ring="Defending Ring", --10%
+	right_ring="Murky Ring", --10%
 	legs="Nyame Flanchard", --8
 	feet="Nyame Sollerets", --7
 	})
@@ -347,7 +347,7 @@ function get_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	} --Phalanx+ on all pieces

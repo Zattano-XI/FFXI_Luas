@@ -291,7 +291,7 @@ function get_sets()
 	hands="Nyame Gauntlets",
 	back="Solemnity Cape",
 	left_ring="Gelatinous Ring +1",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
 	}
@@ -391,11 +391,19 @@ function get_sets()
 	sets.vagary = {
 	main="Marin Staff +1",
 	sub="Enki Strap",
-	ammo="Pemphredo Tathlum",
-	hands="Regal Cuffs",
-	back={ name="Taranus's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}},
-	legs="Shamash Robe",
-	}
+    ammo="Dunna",
+    head="Volte Beret",
+	ear1="Alabaster Earring",
+	ear2=empty,
+    body="Adamantite Armor",
+    hands="Regal Cuffs",
+    neck="Null Loop",
+    left_ring="Murky Ring",
+    right_ring="Shadow Ring",
+	back=empty,
+	waist=empty,
+	legs="Volte Brais",
+	feet="Medium's Sabots",
 	
 	sets.phalanx = {
 	ammo="Staunch Tathlum +1",
@@ -408,7 +416,7 @@ function get_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}	

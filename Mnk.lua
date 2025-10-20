@@ -22,7 +22,7 @@ function get_sets()
 	left_ear="Loquac. Earring", --2 
 	right_ear="Etiolation Earring", --1
 	hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, --8
-	left_ring="Defending Ring",
+	left_ring="Murky Ring",
 	right_ring="Weather. Ring", --5
 	back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	waist="Moonbow Belt +1",
@@ -69,7 +69,7 @@ function get_sets()
     --legs="Malignance Tights",
 	legs="Bhikku hose +3",	
     feet="Malignance Boots",
-    left_ring="Defending Ring",
+    left_ring="Murky Ring",
 	})
 	
 	sets.TP['Ngai'] = set_combine(sets.TP['Hybrid'], {
@@ -89,7 +89,7 @@ function get_sets()
     waist="Moonbow belt +1",
 	left_ear="Sherida Earring",
 	right_ear="Bhikku Earring +2",
-    left_ring="Defending Ring",
+    left_ring="Murky Ring",
 	right_ring="Niqmaddu Ring",
     --back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	back="Null Shawl",
@@ -122,7 +122,7 @@ function get_sets()
 	right_ear="Bhikku Earring +2",
 	body="Malignance Tabard",
 	hands="Adhemar Wrist. +1", --augments={'DEX+12','AGI+12','Accuracy+20',}},
-	left_ring="Defending Ring",
+	left_ring="Murky Ring",
 	right_ring="Gelatinous Ring +1",
 	back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	waist="Moonbow Belt +1",
@@ -406,7 +406,7 @@ function get_sets()
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
 		left_ring="Shadow Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	}

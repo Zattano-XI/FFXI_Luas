@@ -146,7 +146,7 @@ function get_sets()
 	legs="Carmine Cuisses +1",
     left_ear="Ethereal Earring",
     right_ear="Etiolation earring",
-    left_ring="Defending Ring",
+    left_ring="Murky Ring",
     right_ring="Karieyh Ring",
     back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
 	})
@@ -430,7 +430,7 @@ function get_sets()
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
 		left_ring="Shadow Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",	
 		}

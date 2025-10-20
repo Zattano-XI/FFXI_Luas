@@ -244,7 +244,7 @@ function init_gear_sets()
    --[[ left_ring="Petrov Ring",
     right_ring="Niqmaddu Ring",]]
 	left_ring="Moonlight Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
     back=Brigantia.TP
     }
 
@@ -335,7 +335,7 @@ function init_gear_sets()
 		left_ear="Anastasi Earring",
 		right_ear="Genmei Earring",
 		left_ring="Moonlight Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Updraft Mantle",
     }--some DT options added to this set as it already heals to full HP from critical
 	
@@ -352,7 +352,7 @@ function init_gear_sets()
 		left_ear="Handler's Earring +1",
 		left_ring="Moonlight Ring",
 		--left_ring="Cath Palug Ring",--Need to farm
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Updraft Mantle",
 	
 		--body="Acro Surcoat",
@@ -386,8 +386,8 @@ function init_gear_sets()
 		body="Dagon Breastplate", -- II - 10		
 		--20 SB II
 		
-		--may need to use defending ring instead of niq for survival purposes
-		right_ring="Defending Ring",
+		--may need to use Murky Ring instead of niq for survival purposes
+		right_ring="Murky Ring",
 	}--Total SB = 59
 	
 	sets.SB_Auspice = {
@@ -401,8 +401,8 @@ function init_gear_sets()
 		ear1="Sherida Earring", -- II - 5
 		body="Dagon Breastplate", -- II - 10
 		
-		--may need to use defending ring instead of niq for survival purposes
-		right_ring="Defending Ring",
+		--may need to use Murky Ring instead of niq for survival purposes
+		right_ring="Murky Ring",
 		
 	}--Total SB = 70
 	
@@ -582,7 +582,7 @@ function init_gear_sets()
 		legs="Gleti's Breeches",
 		
 		
-		right_ring="Defending Ring",--for xevi
+		right_ring="Murky Ring",--for xevi
 		
 	})
 
@@ -836,7 +836,7 @@ function init_gear_sets()
 		right_ear="Odnowa Earring +1",
 		--left_ring="Moonlight Ring",
 		left_ring="Shneddick Ring +1",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back=Brigantia.TP,
     }
 
@@ -883,7 +883,7 @@ function init_gear_sets()
 		right_ear="Sherida Earring",
 		left_ear="Brutal Earring",
 		left_ring="Moonlight Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},]]
 		
 		
@@ -930,7 +930,7 @@ function init_gear_sets()
 
 	sets.Kiting = {
 		legs="Carmine Cuisses +1",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
     }
 
 	sets.PhalanxReceived={
@@ -952,7 +952,7 @@ function init_gear_sets()
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
 		left_ring="Shadow Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	} 
@@ -1076,13 +1076,13 @@ function init_gear_sets()
 		--left_ear="Sherida Earring",
 		--right_ear="Brutal Earring",
 		
-		--right_ring="Defending Ring",
+		--right_ring="Murky Ring",
 		--back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 		
 		
 		
 		--left_ring="Moonlight Ring",--commenting out for xevi only
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		head="Nyame Helm",
 		legs="Ptero. Brais +3",--maintaining pet dt
 		hands="Gleti's Gauntlets",
@@ -1113,7 +1113,7 @@ function init_gear_sets()
 		legs="Pteroslaver Brais +3",
 		--hands = "Ptero. Fin. G. +3",
 		hands="Gleti's Gauntlets",
-		--right_ring="Defending Ring",
+		--right_ring="Murky Ring",
 	})
 	
 	
@@ -1133,7 +1133,7 @@ function init_gear_sets()
 		--left_ear="Sherida Earring",
 		--right_ear="Brutal Earring",
 		left_ring="Moonlight Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		--back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     })
 	sets.engaged.Acc.PDT = set_combine(sets.engaged.Acc, {
@@ -1152,7 +1152,7 @@ function init_gear_sets()
 		--left_ear="Sherida Earring",
 		--right_ear="Brutal Earring",
 		left_ring="Moonlight Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		--back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
     })
 
@@ -1287,7 +1287,7 @@ sets.engaged.Aftermath_Rhongo.DT = set_combine(sets.engaged.Aftermath_Rhongo, {
 		feet="Gleti's Boots",
 		
 		left_ring="Moonlight Ring",
-		--right_ring="Defending Ring",
+		--right_ring="Murky Ring",
 		--left_ring="Shadow Ring",
 		legs="Gleti's Breeches",--relic +3 instead for wyvern?
 })
@@ -1364,10 +1364,10 @@ sets.engaged.Aftermath_Ryu.DT = set_combine(sets.engaged.Aftermath_Ryu, {
 		legs="Ptero. Brais +3",
 		neck="Dragoon's Collar +2",
 		--hands="Nyame Gauntlets",
-		left_ring="Defending Ring",
+		left_ring="Murky Ring",
 		hands="Gleti's Gauntlets",
 		right_ring="Moonlight Ring",
-		left_ring="Defending Ring",
+		left_ring="Murky Ring",
 		--feet="Nyame Sollerets",
 		left_ring="Chirich Ring +1",
 		boey="Gleti's Cuirass",--consider Hjarrandi here.Big hit to Meva
@@ -1518,7 +1518,7 @@ function job_post_precast(spell, action, spellMap, eventArgs)
 	--if spell.english == 'Jump' --[[and state.HybridMode.value == "PDT"]] then
 		--add_to_chat(8, '-------------Jump Called--------------')
 			equip({
-				left_ring="Defending Ring",
+				left_ring="Murky Ring",
 				right_ring="Moonlight Ring",
 				head="Nyame Helm",
 				body="Gleti's Cuirass",

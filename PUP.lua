@@ -248,17 +248,17 @@ function init_gear_sets()
 
     sets.defense.Evasion = {
         head="Whirlpool Mask",neck="Twilight Torque",
-        body="Otronif Harness +1",hands="Otronif Gloves",right_ring="Defending Ring",
+        body="Otronif Harness +1",hands="Otronif Gloves",right_ring="Murky Ring",
         back="Ik Cape",waist="Hurch'lan Sash",legs="Nahtirah Trousers",feet="Otronif Boots +1"}
 
     sets.defense.PDT = {
         head="Whirlpool Mask",neck="Twilight Torque",
-        body="Otronif Harness +1",hands="Otronif Gloves",right_ring="Defending Ring",
+        body="Otronif Harness +1",hands="Otronif Gloves",right_ring="Murky Ring",
         back="Shadow Mantle",waist="Hurch'lan Sash",legs="Nahtirah Trousers",feet="Otronif Boots +1"}
 
     sets.defense.MDT = {
         head="Whirlpool Mask",neck="Twilight Torque",
-        body="Otronif Harness +1",hands="Otronif Gloves",left_ring="Defending Ring",right_ring="Shadow Ring",
+        body="Otronif Harness +1",hands="Otronif Gloves",left_ring="Murky Ring",right_ring="Shadow Ring",
         back="Tuilha Cape",waist="Hurch'lan Sash",legs="Nahtirah Trousers",feet="Otronif Boots +1"}
 
     sets.Kiting = {feet="Hermes' Sandals"}
@@ -357,7 +357,7 @@ function init_gear_sets()
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
 		left_ring="Shadow Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",		
 	}

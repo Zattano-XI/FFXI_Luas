@@ -106,7 +106,7 @@ end
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
     state.OffenseMode:options('Normal', 'Acc')
-    state.CastingMode:options('DT','Normal', 'Resistant', 'SIRD')
+    state.CastingMode:options('SIRD','DT','Normal', 'Resistant')
     state.IdleMode:options('DT', 'Normal', 'MEva')
     state.BarElement = M{['description']='BarElement', 'Barfira', 'Barblizzara', 'Baraera', 'Barstonra', 'Barthundra', 'Barwatera'}
     state.BarStatus = M{['description']='BarStatus', 'Baramnesra', 'Barvira', 'Barparalyzra', 'Barsilencera', 'Barpetra', 'Barpoisonra', 'Barblindra', 'Barsleepra'}
@@ -340,7 +340,7 @@ function init_gear_sets()
         ear1="Glorious Earring",
         ear2="Ebers Earring +1",
         left_ring="Lebeche Ring", --3/(-5)
-        right_ring="Defending Ring",
+        right_ring="Murky Ring",
         back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, --10
         waist="Shinjutsu-no-Obi +1",
       }
@@ -351,14 +351,17 @@ function init_gear_sets()
 		})
 
 	sets.midcast.CureSolace.SIRD = set_combine(sets.midcast.CureSolace.DT, { 
-		ammo="Staunch Tathlum", --10
+		ammo="Staunch Tathlum +1", --11
+		head="Ebers Cap +3",
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
+		ring1="Defending Ring",
+		ring2="Murky Ring", --3
 		feet="Theo. Duckbills +3", --29
 		waist="Rumination Sash", --10
 		--left_ear="Nourishing Earring +1", --5
 		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, --10
 		})
-	--94+10 SIRD from merits
+	--93+10 SIRD from merits
 	
 	
     sets.midcast.CureSolaceWeather = set_combine(sets.midcast.CureSolace, {
@@ -372,16 +375,16 @@ function init_gear_sets()
         })
 		
 	sets.midcast.CureNormal.SIRD = set_combine(sets.midcast.CureSolace, {
-		ammo="Staunch Tathlum", --10
+		ammo="Staunch Tathlum +1", --11
+		head="Ebers Cap +3",
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
 		feet="Theo. Duckbills +3", --29
 		waist="Rumination Sash", --10
-		left_ear="Nourishing Earring +1", --5
-		left_ring="Defending Ring",
-		right_ring="Lebeche Ring", 
+		Right_ring="Murky Ring", --3
+		left_ring="Defending Ring", 
 		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, --10
 		})
-	--94+10 SIRD from merits
+	--98+10 SIRD from merits
 	
     sets.midcast.CureWeather = set_combine(sets.midcast.CureNormal, {
         hands="Kaykaus Cuffs +1", --11/(-6)
@@ -389,14 +392,15 @@ function init_gear_sets()
         waist="Hachirin-no-Obi",
         })
 
-sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
-        ammo="Staunch Tathlum", --10
+	sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
+        ammo="Staunch Tathlum +1", --11
+		head="Ebers Cap +3",
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
 		feet="Theo. Duckbills +3", --29
 		waist="Rumination Sash", --10
-		left_ear="Nourishing Earring +1", --5
-		left_ring="Defending Ring",
-		right_ring="Lebeche Ring", 
+		left_ear="Glorious Earring", --5
+		left_ring="Murky Ring", --3
+		right_ring="Defending Ring", 
 		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, --10
 		})
 	--94+10 SIRD from merits
@@ -409,13 +413,13 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
         })
 
 	sets.midcast.CuragaNormal.SIRD = set_combine(sets.midcast.CuragaNormal, {
-        ammo="Staunch Tathlum", --10
+        ammo="Staunch Tathlum +1", --11
+		head="Ebers Cap +3",
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
 		feet="Theo. Duckbills +3", --29
 		waist="Rumination Sash", --10
-		left_ear="Nourishing Earring +1", --5
-		left_ring="Defending Ring",
-		right_ring="Lebeche Ring", 
+		left_ring="Murky Ring", --3
+		right_ring="Defending Ring", 
 		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, --10
 		})
 	--94+10 SIRD from merits
@@ -436,13 +440,13 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
         }
 
 	sets.midcast.CuragaWeather.SIRD = set_combine(sets.midcast.CuragaWeather,  { 
-		ammo="Staunch Tathlum", --10
+		ammo="Staunch Tathlum +1", --11
+		head="Ebers Cap +3",
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
 		feet="Theo. Duckbills +3", --29
 		waist="Rumination Sash", --10
-		left_ear="Nourishing Earring +1", --5
-		left_ring="Defending Ring",
-		right_ring="Lebeche Ring", 
+		left_ring="Murky Ring", --3
+		right_ring="Defending Ring", 
 		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, --10
 		})
 	--94+10 SIRD from merits
@@ -545,7 +549,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
     sets.midcast.Aquaveil = set_combine(sets.midcast.EnhancingDuration, {
         --main="Vadose Rod",
         sub="Ammurapi Shield",
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         hands="Regal Cuffs",
         ear1="Halasz Earring",
         ear2="Magnetic Earring",
@@ -720,13 +724,13 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
         } --DT 32+10PDT
 		
     sets.idle.DT = set_combine(sets.idle, {
-        --ammo="Staunch Tathlum", --3/3
+        --ammo="Staunch Tathlum +1", --3/3
         head="Bunzi's Hat", --7/7
         --neck="Loricate Torque +1", --6/6
-        --ear1="Odnowa Earring +1", --3/5		
+        --ear1="Odnowa Earring +1", --3/5	
 		feet="Ebers Duckbills +3", --11/11
         --left_ring="Gelatinous Ring +1", --7/(-1)
-        --right_ring="Defending Ring", --10/10
+        --right_ring="Murky Ring", --10/10
         --back="Moonlight Cape", --6/6
         waist="Carrier's Sash",
         }) 
@@ -735,7 +739,7 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
     sets.idle.MEva = set_combine(sets.idle.DT, {
         main="Daybreak",
         sub="Genmei Shield",
-        ammo="Staunch Tathlum",
+        ammo="Staunch Tathlum +1",
         head="Bunzi's Hat",
         --hands="Raetic Bangles +1",
         feet="Inyan. Crackows +2",
@@ -783,9 +787,9 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
         hands="Bunzi's Gloves",
         legs="Aya. Cosciales +2",
         feet="Nyame Sollerets",
-        neck="Combatant's Torque", --combatant's torque
-        ear1="Cessance Earring",
-        ear2="Telos	Earring",
+        neck="Null Loop",
+        left_ear="Cessance Earring",
+        right_ear="Alabaster Earring",
         left_ring={name="Chirich Ring +1", bag="wardrobe2"},
         right_ring={name="Chirich Ring +1", bag="wardrobe5"},
         back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -794,8 +798,8 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
 
     sets.engaged.Acc = set_combine(sets.engaged, {
         neck="Combatant's Torque",
-		ear1="Mache Earring +1",
-		ear2="Telos Earring",
+		left_ear="Mache Earring +1",
+		right_ear="Telos Earring",
 		hands="Gazu Bracelet +1",
 		left_ring="Cacoethic Ring +1",
 		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
@@ -805,8 +809,8 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
     sets.engaged.DW = set_combine(sets.engaged, {ammo="Amar Cluster",
         main="Yagrush",
         sub="C. Palug Hammer",
-        ear1="Eabani Earring",
-        ear2="Suppanomimi", --5
+        left_ear="Eabani Earring",
+        right_ear="Suppanomimi", --5
         })
 
     sets.engaged.DW.Acc = set_combine(sets.engaged.DW, {
@@ -838,16 +842,15 @@ sets.midcast.CureWeather.SIRD = set_combine(sets.midcast.CureWeather, {
 	
 	sets.phalanx = {
 	ammo="Staunch Tathlum +1",
-	main="Sakpata's Sword",
 	head="Chironic Hat",
 	body="Chironic Doublet",
 	hands="Chironic Gloves", --augments={'Phys. dmg. taken -2%','Pet: "Store TP"+7','Phalanx +5','Mag. Acc.+20 "Mag.Atk.Bns."+20',}},
 	legs="Chironic Hose",
 	feet="Chironic Slippers",
 	neck="Null Loop",
-	ear1="Odnowa earring +1",
+	ear1="Alabaster Earring",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}	
@@ -1125,9 +1128,9 @@ end
 function status_change(new,old)
 	if new == 'Resting' then
 		equip(sets.misc.rest)
-	elseif new == 'Engaged' and player.target.distance > target_distance or new == 'Idle' then
-		enable('main','sub','ammo')
-		equip(sets.idle[sets.idle.index[idle_ind]])
+	--elseif new == 'Engaged' and player.target.distance > target_distance or new == 'Idle' then
+	--	enable('main','sub','ammo')
+	--	equip(sets.idle[sets.idle.index[idle_ind]])
 	elseif new == 'Engaged' then
 		disable('main','sub','ammo')
 		equip(sets.TP[sets.TP.index[TP_ind]])

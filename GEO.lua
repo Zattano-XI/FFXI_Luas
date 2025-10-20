@@ -556,7 +556,7 @@ function init_gear_sets()
         ear2="Azimuth Earring +2", --3/3
 		--ear2="Azimuth Earring +1", --3/3
         left_ring="Gelatinous Ring +1", --7/(-1)
-        right_ring="Defending Ring", --10/10
+        right_ring="Murky Ring", --10/10
         back="Nantosuelta's Cape", --5/5
         waist="Slipor Sash", --0/3
         })
@@ -638,7 +638,7 @@ function init_gear_sets()
         body="Nyame Mail",
         hands="Nyame Gauntlets",
         left_ring="Chirich Ring +1",
-        right_ring="Defending Ring",
+        right_ring="Murky Ring",
         back="Null Shawl",
 		waist="Cetl Belt",
 		legs="Nyame Flanchard",
@@ -666,14 +666,14 @@ function init_gear_sets()
 	sets.vagary = {    
 	main="Idris",
     sub="Genmei Shield",
-    ammo="Pemphredo Tathlum",
+    ammo="Dunna",
     head="Volte Beret",
-	ear1=empty,
+	ear1="Alabaster Earring",
 	ear2=empty,
     body="Adamantite Armor",
     hands="Regal Cuffs",
     neck={ name="Bagua Charm +2", augments={'Path: A',}},
-    left_ring="Defending Ring",
+    left_ring="Murky Ring",
     right_ring="Shadow Ring",
 	back=empty,
 	waist=empty,
@@ -692,7 +692,7 @@ function init_gear_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}	

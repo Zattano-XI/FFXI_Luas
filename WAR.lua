@@ -77,7 +77,7 @@ function get_sets()
     --waist="Plat. Mog. Belt",
     --left_ear="Odnowa Earring",
     --right_ear="Tuisto Earring",
-    left_ring="Defending Ring",
+    left_ring="Murky Ring",
     right_ring="Shneddick Ring",
     back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
@@ -259,7 +259,7 @@ function get_sets()
     feet={ name="Sakpata's Leggings", augments={'Path: A',}},
     neck={ name="War. Beads +2", augments={'Path: A',}},
     waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    left_ear="Moonshade Earring",,
+    left_ear="Moonshade Earring",
     right_ear={ name="Boii Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+17','Mag. Acc.+17','Crit.hit rate+6','STR+9 VIT+9',}},
     left_ring="Niqmaddu Ring",
 	right_ring="Cornelia's Ring",
@@ -286,7 +286,7 @@ function get_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",	
 	}
@@ -539,6 +539,6 @@ function set_style(sheet)
 end
 
 --Page, Book--
-set_macros(6,1)
+set_macros(1,1)
 --Use the Lockstyle Number--
 set_style(199) 

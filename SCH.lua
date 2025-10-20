@@ -382,7 +382,7 @@ function init_gear_sets()
 		right_ear="Magnetic Earring",
 		--right_ear="Andoaa Earring",
 		left_ring="Weather. Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Fi Follet Cape +1",
         }
 
@@ -678,7 +678,7 @@ function init_gear_sets()
 		left_ear="Etiolation Earring",
 		right_ear="Infused Earring",
 		left_ring="Gelatinous Ring +1",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Solemnity cape",
         }
 
@@ -703,7 +703,7 @@ function init_gear_sets()
         neck="Loricate Torque +1", --5/5
         --ear1="Sanare Earring",
         left_ring="Gelatinous Ring +1", --6/(-2)
-        right_ring="Defending Ring", --10/10
+        right_ring="Murky Ring", --10/10
         back="Solemnity cape", --4/4
         --waist="Carrier's Sash",
         })
@@ -809,19 +809,18 @@ function init_gear_sets()
 	sets.vagary = {
 	main="Raetic Rod +1",
     sub="Genmei Shield",
-	head=empty,
-	neck="Null Loop",
-	ear1=empty,
+    head="Volte Beret",
+	ear1="Alabaster Earring",
 	ear2=empty,
     body="Adamantite Armor",
-    hands=empty,
-	left_ring=empty,
-    right_ring="Defending Ring",
-    back="Moonbeam Cape",
-	waist="Plat. Mog. Belt",
-	legs=empty,
-	feet=empty,
-	}
+    neck="Null Loop",
+    hands="Regal Cuffs",
+    left_ring="Murky Ring",
+    right_ring="Shadow Ring",
+	back=empty,
+	waist=empty,
+	legs="Volte Brais",
+	feet="Medium's Sabots",
 
 	sets.phalanx = {
 	ammo="Staunch Tathlum +1",
@@ -834,7 +833,7 @@ function init_gear_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}	

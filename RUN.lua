@@ -269,7 +269,7 @@ function init_gear_sets()
 	     head="Nyame Helm",
 		 --neck="Futhark Torque +2",
 		 neck="Unmoving Collar +1", --10
-		 ear1="Odnowa Earring +1", 
+		 ear1="Alabaster Earring", 
 		 ear2="Cryptic Earring", --4
 	     body="Adamantite Armor", --10
 		 hands="Futhark Mitons +3", --6 Kurys Gloves?
@@ -287,7 +287,7 @@ function init_gear_sets()
         head="Nyame Helm",
 		--neck="Futhark Torque +2",
 		neck="Unmoving Collar +1",
-		ear1="Odnowa Earring +1",
+		ear1="Alabaster Earring",
 		ear2="Cryptic Earring",
         body="Runeist Coat +3",
 		hands="Futhark Mitons +3",
@@ -371,7 +371,7 @@ function init_gear_sets()
 		neck="Unmoving Collar +1",
 		--ear1="Enchntr. Earring +1",
 		--ear2="Handler's Earring +1",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
         back="Moonbeam Cape",
 		waist="Chaac Belt",
 		--legs="Dashing Subligar",
@@ -396,9 +396,9 @@ function init_gear_sets()
 		neck="Moonlight Necklace", --orunmila's torque
 		waist="Carrier's sash",
 		Right_ear="Etiolation Earring",
-		Left_ear="Odnowa Earring +1", --enchanter?
+		Left_ear="Alabaster Earring", --enchanter?
 		left_ring="Kishar Ring",
-		right_ring="Defending Ring", --rahab?
+		right_ring="Murky Ring", --rahab?
 		back={name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}}
 			
 		-----------   Total FC=54   ----------------------------
@@ -408,7 +408,7 @@ function init_gear_sets()
 		ammo="Staunch Tathlum +1",
         head="Rune. Bandeau +3",
 		neck="Loricate Torque +1",
-		ear1="Odnowa Earring +1",
+		ear1="Alabaster Earring",
 		ear2="Etiolation Earring",
         body="	 +3",
 		left_ring="Moonlight Ring",
@@ -560,12 +560,12 @@ function init_gear_sets()
 		head="Erilaz Galea +3", --20%
 		--neck="Futhark Torque +2", 
 		neck="Moonlight Necklace", --15%
-		ear1="Odnowa Earring +1",
+		ear1="Alabaster Earring",
 		ear2="Cryptic Earring",
 		body="Adamantite Armor",
 		hands="Regal Gauntlets", --10%
 		left_ring="Moonlight Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring", --3
 		back={name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 		waist="Audumbla Sash", --10%
 		legs="Carmine Cuisses +1", --20%
@@ -575,8 +575,8 @@ function init_gear_sets()
     sets.midcast.Cure = {
 		ammo="Staunch Tathlum +1",
 		neck="Sacro Gorget",
-		ear1="Mendi. Earring",
-		ear2="Odnowa Earring +1",
+		ear1="Alabaster Earring",
+		ear2="Mendi. Earring",
         body="Vrikodara Jupon",
 		left_ring="Lebeche Ring",
         back="Solemnity Cape",
@@ -614,11 +614,11 @@ function init_gear_sets()
 			body="Herculean Vest",
 			hands="Herculean Gloves",
 			legs="Herculean Trousers",
-			feet="Taeon Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},
+			feet="Herculean Boots",
 			neck="Null Loop",
-			ear1="Odnowa earring +1",
+			ear1="Alabaster Earring",
 			left_ring="Shadow Ring",
-			right_ring="Defending Ring",
+			right_ring="Murky Ring",
 			back="Moonbeam Cape",
 			waist="Null Belt",	
 		})
@@ -628,12 +628,12 @@ function init_gear_sets()
 			head="Fu. Bandeau +3", 
 			body="Herculean Vest",
 			hands="herculean Gloves",
-			legs="Herculean Trousers", --augments={'Spell interruption rate down -8%','Phalanx +3',}},
-			feet="Herculean Boots", --augments={'Spell interruption rate down -9%','Phalanx +3',}},	   
+			legs="Herculean Trousers",
+			feet="Herculean Boots",
 			neck="Null Loop",
-			ear1="Odnowa earring +1",
+			ear1="Alabaster Earring",
 			left_ring="Shadow Ring",
-			right_ring="Defending Ring",
+			right_ring="Murky Ring",
 			back="Moonbeam Cape",
 			waist="Null Belt",	
         })
@@ -684,8 +684,8 @@ function init_gear_sets()
 		--neck={name="Moonlight necklace",priority=4},
 		--waist={name="Audumbla Sash",priority=4},
 		--right_ear={name="Odnowa Earring",priority=13},
-		--left_ear={name="Odnowa Earring +1",priority=13},
-		--left_ring={name="Defending Ring",priority=4},
+		--left_ear={name="Alabaster Earring",priority=13},
+		--left_ring={name="Murky Ring",priority=4},
 		--right_ring="Moonlight Ring",
 		--back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Evasion+10','"Fast Cast"+10','Spell interruption rate down-10%',}},
 	
@@ -708,10 +708,10 @@ function init_gear_sets()
 		legs="Carmine Cuisses +1",
 		feet="Nyame sollerets",
 		waist="Plat. Mog. Belt",
-		left_ear="Odnowa Earring +1",
+		left_ear="Alabaster Earring",
 		right_ear="Erilaz Earring +2",
 		left_ring="Moonlight Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 		back="Reiki Cloak",
 	}
@@ -722,13 +722,13 @@ function init_gear_sets()
 		head="Nyame Helm",
         --neck={ name="Futhark Torque +2", augments={'Path: A',}},--6DT
 		neck="Unmoving Collar +1",
-		left_ear={name="Odnowa Earring +1", priority=15},--2MDT
+		left_ear={name="Alabaster Earring", priority=15},--2MDT
 		right_ear="Erilaz Earring +2",
 		body="Nyame Mail", --8/8
         --body="Futhark Coat +3",
 		hands="Regal Gauntlets",
 		left_ring="Moonlight Ring",--4DT
-		right_ring="Defending Ring",--10DT
+		right_ring="Murky Ring",--10DT
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},--10PDT
 		back="Reiki Cloak",
 		waist="Plat. Mog. Belt",
@@ -778,10 +778,10 @@ function init_gear_sets()
 		--[[left_ear="Etiolation Earring",
 		]]--
 		right_ear="Odnowa Earring",
-		left_ear="Odnowa Earring +1",--2MDT
+		left_ear="Alabaster Earring",--2MDT
 		--right_ear="tuisto Earring",
 		left_ring="Moonlight Ring",--4DT
-		right_ring="Defending Ring",--10DT
+		right_ring="Murky Ring",--10DT
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},--10PDT
 		back="Moonbeam cape",
         }
@@ -801,10 +801,10 @@ function init_gear_sets()
 		waist="Plat. Mog. Belt",
 		--right_ear="Tuisto Earring",
 		--right_ear="Eabani Earring",
-		left_ear="Odnowa Earring +1",--2MDT
+		left_ear="Alabaster Earring",--2MDT
 		right_ear="Odnowa Earring",
 		left_ring="Moonlight Ring",--4DT
-		right_ring="Defending Ring",--10DT
+		right_ring="Murky Ring",--10DT
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Enmity+10','Parrying rate+5%',}},	--need
 		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
         }
@@ -830,11 +830,11 @@ function init_gear_sets()
 		--left_ear="Etiolation Earring",
 		--right_ear="Genmei Earring",
 		--right_ear="Eabani Earring",
-		left_ear="Odnowa Earring +1",--2MDT
+		left_ear="Alabaster Earring",--2MDT
 		--right_ear="Tuisto Earring",
 		right_ear="Odnowa Earring",
 		left_ring="Moonlight Ring",--4DT
-		right_ring="Defending Ring",--10DT
+		right_ring="Murky Ring",--10DT
 		back="Reiki cloak",
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},--10PDT
 
@@ -854,9 +854,9 @@ function init_gear_sets()
 		--neck={ name="Futhark Torque +2", augments={'Path: A',}},
 		waist="CArrier's sash",
 		Right_ear="Odnowa Earring",
-		left_ear="Odnowa Earring +1",
+		left_ear="Alabaster Earring",
 		left_ring="Moonlight Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam cape",
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},--10PDT
         }
@@ -904,7 +904,7 @@ function init_gear_sets()
 		head="Nyame helm",
 		neck="Loricate Torque +1",
 		--neck="Futhark Torque +2", is this necessary?
-		left_ear="Odnowa Earring +1",
+		left_ear="Alabaster Earring",
 		right_ear="Erilaz Earring +2",
 		--body="Runeist Coat +3", No
 		--body="Nyame Mail",
@@ -912,7 +912,7 @@ function init_gear_sets()
 		--body="Futhark Coat +3",
 		hands="Turms Mittens +1",
 		left_ring="Moonlight Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		--back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},--10PDT
 		back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
 		waist="Plat. Mog. Belt",
@@ -946,7 +946,7 @@ function init_gear_sets()
 		--body={ name="Adhemar Jacket +1", augments={'STR+12','DEX+12','Attack+20',}},
 		legs="Erilaz Leg Guards +3",
         body="Ashera Harness",
-        left_ear="Sherida Earring",
+        left_ear="Alabaster Earring",
         right_ear="Erilaz Earring +2",
         left_ring={name="Chirich Ring +1", bag="wardrobe2"},
         right_ring={name="Moonlight Ring", bag="wardrobe5"},
@@ -990,10 +990,10 @@ function init_gear_sets()
         --feet=gear.Herc_STP_feet,
 		--feet="Herculean Boots",-- augments={'Pet: Phys. dmg. taken -1%','"Mag.Atk.Bns."+6','"Store TP"+9','Accuracy+1 Attack+1',}},
         --neck="Futhark Torque +2",
-        left_ear="Sherida Earring",
+        left_ear="Alabaster Earring",
         right_ear="Telos Earring",
         left_ring={name="Moonlight Ring", bag="wardrobe5"},
-        right_ring="Defending Ring",
+        right_ring="Murky Ring",
         back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}},
         --waist="Sailfi Belt +1",--
         })

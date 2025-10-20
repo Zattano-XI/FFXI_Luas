@@ -44,7 +44,7 @@ function get_sets()
 	--neck="Baetyl Pendant", --4
 	--left_ear="Malignance Earring", --4
 	--right_ear="Loquacious Earring", --2
-	body="Vitiation Tabard +3", --15
+	body="Vitiation Tabard +4", --15
 	--hands="Leyline Gloves", --5
 	--left_ring="Kishar Ring", --4
 	right_ring="Lebeche Ring", --2 qm
@@ -117,7 +117,7 @@ function get_sets()
 	neck="Debilis Medallion",
 	left_ear="Beatific Earring",
 	right_ear="Meili Earring",
-	body="Vitiation Tabard +3",
+	body="Vitiation Tabard +4",
 	left_ring="Haoma's Ring",
 	right_ring="Menelaus's Ring",
 	waist="Bishop's Sash",
@@ -199,7 +199,7 @@ function get_sets()
 	legs="Atrophy Tights +4",
 	--legs="Leth. Fuseau +3",
 	feet="Atrophy Boots +4",
-	--feet="Vitiation Boots +3",
+	--feet="Vitiation Boots +4",
 	}
 	
 	sets.midcast.maxenfacc = set_combine(sets.midcast.Enfeebling, {
@@ -329,7 +329,7 @@ function get_sets()
 	neck="Null Loop",
 	back="Null Shawl",
     })
-	--body="Vitiation Tabard +3",
+	--body="Vitiation Tabard +4",
 	
 	sets.midcast.bar_element = {}
 	
@@ -424,8 +424,8 @@ function get_sets()
 	neck="Incanter's Torque",
 	left_ear="Andoaa Earring",
 	right_ear="Mimir Earring",
-	body={ name="Vitiation Tabard +3", augments={'Enhances "Chainspell" effect',}},
-	hands="Vitiation Gloves +3",
+	body={ name="Vitiation Tabard +4", augments={'Enhances "Chainspell" effect',}},
+	hands="Vitiation Gloves +4",
 	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
     right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Ghostfyre Cape",
@@ -434,7 +434,7 @@ function get_sets()
 	feet="Lethargy Houseaux +3"
 	}
 	
-	sets.ja['Chainspell'] = {body="Vitiation Tabard +3",}
+	sets.ja['Chainspell'] = {body="Vitiation Tabard +4",}
 	sets.ja['Vallation'] = sets.enmity
 	sets.ja['Swordplay'] = sets.enmity
 	sets.ja['Pflug'] = sets.enmity
@@ -512,7 +512,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	sets.ws["Imperator"] = set_combine(sets.ws.common, {
 	feet="Leth. Houseaux +3",
 	ear1="Domin. Earring +1",
-	left_ring="Epaminondas's Ring",
+	ring1="Epaminondas's Ring",
 	back={ name="Sucellos's Cape",  augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	})
 	
@@ -600,7 +600,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	body="Lethargy Sayon +3",
 	hands="Leth. Ganth. +3",
 	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Solemnity Cape",
 	waist="Shinjutsu-no-obi +1",
 	legs="Carmine Cuisses +1",
@@ -642,7 +642,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}	
@@ -754,7 +754,7 @@ function precast(spell)
 			add_to_chat(123, spell.name..' Canceled: [Out of Range]')
 		elseif player.tp >= 1000 then
 			if sets.ws[spell.name] then
-				equip(sets.ws.common)
+				equip(sets.ws[spell.name])
 			end
 			if (player.tp >= 1000 and player.tp < 2750) then
 				equip({left_ear="Moonshade Earring"})  
@@ -822,9 +822,9 @@ function midcast(spell)
 					equip({head="Lethargy Chappel +3",body="Lethargy Sayon +3",legs="Lethargy Fuseau +3",})
 				end
 				if GainSpells:contains(spell.name) then
-					equip({hands="Vitiation Gloves +3",})
+					equip({hands="Vitiation Gloves +4",})
 				elseif Spikes:contains(spell.name) then
-					equip({legs="Vitiation Tights +2",})
+					equip({legs="Vitiation Tights +4",})
 				end
 				if string.find(spell.english,'Protect') or string.find(spell.english,'Shell') and spell.target.type == 'SELF' then
 					equip({right_ring="Sheltered Ring"})
@@ -1096,7 +1096,7 @@ function self_command(command)
 		if player.status == 'Idle' then
 			equip(sets.TP[sets.TP.index[TP_ind]],sets.idle)
 			if sets.TP[sets.TP.index[TP_ind]] == sets.TP['DT'] then
-				equip({right_ring="Defending Ring",})
+				equip({right_ring="Murky Ring",})
 			end
 		end
 	end

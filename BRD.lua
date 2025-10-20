@@ -168,7 +168,7 @@ function init_gear_sets()
 	legs="Dashing Subligar",
 	--left_ring="Valseur's Ring",
 	left_ring="Metamorph ring +1",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	} 
      
 	sets.precast.Step = {
@@ -329,7 +329,7 @@ function init_gear_sets()
     waist="Plat. Mog. Belt", --3 DT
     right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}}, --5 DT
     left_ear="Darkside Earring",
-    left_ring="Defending Ring", --10 DT
+    left_ring="Murky Ring", --10 DT
     right_ring="Moonlight Ring", --5 DT
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, --10 PDT
 	}
@@ -484,7 +484,7 @@ function init_gear_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",
 	}) 
@@ -601,7 +601,7 @@ function init_gear_sets()
 	--main="Tauret",
 	--main={ name="Aeneas", augments={'Path: A',}},
 	main="Naegling",
-	--main="Carnwenhan",
+	--main="Mpu Gandring",
     --sub="Mercurial Kris",
     --sub="Centovente",
 	sub={ name="Gleti's Knife", augments={'Path: A',}},
@@ -648,7 +648,7 @@ function init_gear_sets()
 	neck="Null Loop",
 	ear1="Odnowa earring +1",
 	left_ring="Shadow Ring",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	back="Moonbeam Cape",
 	waist="Null Belt",	
 	}

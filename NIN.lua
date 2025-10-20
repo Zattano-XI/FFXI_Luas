@@ -471,6 +471,7 @@ function init_gear_sets()
         ear1="Halasz Earring", --5
         ear2="Magnetic Earring", --8
         left_ring="Evanescence Ring", --5
+		right_Ring="Murky Ring", --3
         back=gear.NIN_FC_Cape, --10
         waist="Audumbla Sash", --10
         } --104 sird with merits, add rawhide gloves if more is needed.
@@ -580,7 +581,7 @@ function init_gear_sets()
         neck="Warder's Charm +1",
         ear1="Sanare Earring",
         left_ring="Purity Ring", --0/4
-        right_ring="Defending Ring", --10/10
+        right_ring="Murky Ring", --10/10
         back="Moonlight Cape", --6/6
         })
 
@@ -644,7 +645,7 @@ function init_gear_sets()
 		hands="Malignance Gloves",
 		legs="Malignance Tights", --7/7
         feet="Nyame Sollerets", --4/4
-        right_ring="Defending Ring", --10/10
+        right_ring="Murky Ring", --10/10
 		Back="Mecistopins Mantle",
 		})
 
@@ -829,7 +830,7 @@ function init_gear_sets()
 		hands="Malignance Gloves", --5/5
 		legs="Malignance Tights", --7/7
         feet="Nyame Sollerets", --4/4
-        right_ring="Defending Ring", --10/10
+        right_ring="Murky Ring", --10/10
         back=gear.NIN_WS1_Cape, --10/0
         }
 
@@ -906,7 +907,7 @@ function init_gear_sets()
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
 		left_ring="Shadow Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	}

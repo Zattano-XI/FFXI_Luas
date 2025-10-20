@@ -138,7 +138,7 @@ function get_sets()
 	head="Nyame Helm",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
-	right_ring="Defending Ring",
+	right_ring="Murky Ring",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
 	})
@@ -440,7 +440,7 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 		neck="Null Loop",
 		ear1="Odnowa earring +1",
 		left_ring="Shadow Ring",
-		right_ring="Defending Ring",
+		right_ring="Murky Ring",
 		back="Moonbeam Cape",
 		waist="Null Belt",
 	}
@@ -449,16 +449,16 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	sets.subjobdnc = set_combine(sets.subjobnin, {back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+18 Attack+18','Accuracy+10','"Dual Wield"+10','Damage taken-5%',}},})
 	
 	--Crafting Sets
-		sets.alchemy = {
-	main="Caduceus",
-	sub="Br. Escutcheon",
-	head="Protective Specs.",
-	neck="Alchemist's Torque",
-	body="Alchemist's Smock",
-	hands="Smithy's Mitts",
-	left_ring="Orvail ring +1", --+1
-	right_ring="Confectioner's Ring",
-	waist="Alchemist's Belt",
+	sets.alchemy = {
+		main="Caduceus",
+		sub="Br. Escutcheon",
+		head="Protective Specs.",
+		neck="Alchemist's Torque",
+		body="Alchemist's Smock",
+		hands="Smithy's Mitts",
+		left_ring="Orvail ring +1", --+1
+		right_ring="Confectioner's Ring",
+		waist="Alchemist's Belt",
 	}
 	
 	sets.smithing = {
@@ -469,6 +469,18 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 		right_ring="Confectioner's Ring",
 		waist="Blacksmith's Belt",
 	}
+	
+	sets.bonecraft = {
+		main="Caduceus",
+		sub="Br. Escutcheon",
+		head="Protective Specs.",
+		neck="Boneworker's Torque",
+		body="Boneworker's Smock",
+		hands="Smithy's Mitts",
+		left_ring="Orvail ring +1", --+1
+		right_ring="Confectioner's Ring",
+		waist="Boneworker's Belt",
+	}	
 end
 
 function check_height() 
