@@ -186,7 +186,7 @@ function get_sets()
 	body="Hashishin Mintan +3",
 	left_ring="Shadow Ring",
 	waist="Null Belt",
-	legs="Nyame Flanchard",
+	legs="Carmine Cuisses +1",
 	})
 	
 	sets.midcast.enhancing = {}
@@ -262,7 +262,7 @@ function get_sets()
 ---------------------------------------------------------------------------------------------------------------
 	
 	sets.ws.common = {
-	head="Nyame Helm",
+	head="Hashishin Kavuk +3",
 	neck="Fotia Gorget",
 	ear2="Hashi. Earring +2",
 	body="Nyame Mail",
@@ -278,8 +278,7 @@ function get_sets()
 	
 	sets.ws['Savage Blade'] = {
     ammo="Coiste Bodhar",
-	head="Hashi. Kavuk +3",
-	head="Nyame Helm",
+	head="Hashishin Kavuk +3",
 	neck="Mirage Stole +2",
     ear1="Ishvara Earring",
     ear2="Hashi. Earring +2",
@@ -290,7 +289,7 @@ function get_sets()
 	back={name="Rosmerta's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
     waist="Sailfi Belt +1",
     legs="Nyame Flanchard",
-    feet="Nyame Gauntlets",
+    feet="Nyame Sollerets",
 	}
 	
 	sets.ws['Expiacion'] = set_combine(sets.ws['Savage Blade'], {
@@ -298,6 +297,13 @@ function get_sets()
 		left_ring="Beithir Ring",	
         --waist="Kentarch Belt +1",
         --legs="Gleti's Breeches",
+    })
+	
+	sets.ws['Imperator'] = set_combine(sets.ws['Savage Blade'], {
+		waist="Kentarch Belt +1",
+		ear1="Domin. Earring +1",
+		ring1="Epaminondas's Ring",
+		back="Rosmerta's Cape",
     })
 	
 	sets.ws['Sanguine Blade'] = set_combine(sets.ws.common, {
@@ -340,6 +346,22 @@ function get_sets()
 		waist="Chaac Belt",--1
 	}
 	
+	sets.midcast['Phalanx'] = {
+		ammo="Staunch Tathlum +1",
+		main="Sakpata's Sword",
+		head="Herculean Helm",
+		body="Herculean Vest",
+		hands="Herculean Gloves",
+		legs="Herculean Trousers",
+		feet="Herculean Boots",
+		neck="Null Loop",
+		ear1="Alabaster Earring",
+		left_ring="Shadow Ring",
+		right_ring="Murky Ring",
+		back="Moonbeam Cape",
+		waist="Null Belt",
+	}
+	
 	sets.phalanx = {
 		ammo="Staunch Tathlum +1",
 		main="Sakpata's Sword",
@@ -349,7 +371,7 @@ function get_sets()
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
 		neck="Null Loop",
-		ear1="Odnowa earring +1",
+		ear1="Alabaster Earring",
 		left_ring="Shadow Ring",
 		right_ring="Murky Ring",
 		back="Moonbeam Cape",

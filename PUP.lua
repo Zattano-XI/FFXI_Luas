@@ -183,8 +183,8 @@ function init_gear_sets()
     sets.idle = {	--Divinator
         head="Nyame Helm", --Pitre
 		neck="Loricate Torque +1",
-		ear1="Enmerkar Earring",
-		ear2="Odnowa Earring +1",
+		ear1="Alabaster Earring",
+		ear2="Enmerkar Earring",
         body="Nyame Mail", --Foire
 		hands="Nyame Gauntlets", --Regimen
 		left_ring="Sheltered Ring",
@@ -324,8 +324,8 @@ function init_gear_sets()
 	sets.engaged.DT = {
         head="Malignance Chapeau",
 		neck="Loricate Torque +1",
-		ear1="Schere Earring",
-		ear2="Odnowa Earring +1",
+		ear1="Alabaster Earring",
+		ear2="Schere Earring",
         body="Malignance Tabard",
 		hands="Malignance Gloves",
 		left_ring="Gere Ring",
@@ -355,7 +355,7 @@ function init_gear_sets()
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
 		neck="Null Loop",
-		ear1="Odnowa earring +1",
+		ear1="Alabaster Earring",
 		left_ring="Shadow Ring",
 		right_ring="Murky Ring",
 		back="Moonbeam Cape",

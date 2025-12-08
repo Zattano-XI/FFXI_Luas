@@ -572,7 +572,7 @@ function init_gear_sets()
         legs="Telchine Braconi", --0/0/0/3
         feet="Bagua Sandals +3", --0/0/0/5
         neck="Bagua Charm +2",
-        ear1="Odnowa Earring +1", 
+        ear1="Alabaster Earring", 
         ear2="Azimuth Earring +2", priority=14, --6/6/0/0
 		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
 		right_ring={name="Stikini Ring +1", bag="wardrobe5"},
@@ -690,7 +690,7 @@ function init_gear_sets()
 	legs="Chironic Hose",
 	feet="Chironic Slippers",
 	neck="Null Loop",
-	ear1="Odnowa earring +1",
+	ear1="Alabaster Earring",
 	left_ring="Shadow Ring",
 	right_ring="Murky Ring",
 	back="Moonbeam Cape",

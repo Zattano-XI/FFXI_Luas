@@ -44,7 +44,7 @@ function get_sets()
     legs="Rawhide Trousers", --5
 	}
 	
-	sets.TP.index = {'Arebati', 'DT', 'STP', 'STP2', 'Aminon'}--'Standard','High Acc','Hybird',
+	sets.TP.index = { 'STP', 'STP2', 'Aminon','Arebati', 'DT'}--'Standard','High Acc','Hybird',
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = {
@@ -166,7 +166,7 @@ function get_sets()
 	feet="Gleti's Boots",
     neck="Etoile Gorget +2",
     waist="Plat. Mog. Belt",
-    left_ear="Odnowa Earring +1",
+    left_ear="Alabaster Earring",
     right_ear="Maculele Earring +2",
     left_ring="Moonlight Ring",
     right_ring="Shadow Ring",
@@ -272,8 +272,8 @@ function get_sets()
     feet="Maculele Toe Shoes +3",
     neck={ name="Etoile Gorget +2", augments={'Path: A',}}, --10%
     waist="Flume belt +1",
-    left_ear="Genmei Earring",
-    right_ear="Odnowa Earring +1",
+    left_ear="Alabaster Earring",
+	right_ear="Genmei Earring",
     right_ring="Murky Ring",
     --back="Toetapper Mantle", --5
 	}
@@ -352,7 +352,7 @@ function get_sets()
 	feet="Gleti's Boots",
     neck="Etoile Gorget +2",
     waist="Plat. Mog. Belt",
-    left_ear="Odnowa Earring +1",
+    left_ear="Alabaster Earring",
     right_ear="Macu. Earring +2",
     left_ring="Moonlight Ring",
     right_ring="Shadow Ring",
@@ -367,7 +367,7 @@ function get_sets()
 	legs="Herculean Trousers",
 	feet="Herculean Boots",
 	neck="Null Loop",
-	ear1="Odnowa earring +1",
+	ear1="Alabaster Earring",
 	left_ring="Shadow Ring",
 	right_ring="Murky Ring",
 	back="Moonbeam Cape",
@@ -625,7 +625,7 @@ function aftercast(spell)
 		--elseif sets.TP[sets.TP.index[TP_ind]] == sets.TP['Hybird'] then
 		--	equip(sets.TP['Hybird'],sets.movement)
 		else
-			equip(sets.idle[sets.idle.index[idle_ind]])--,sets.movement
+			equip(sets.idle[sets.idle.index[idle_ind]],sets.movement)--
 		end
 	end
 	if player.equipment.range == 'empty' then

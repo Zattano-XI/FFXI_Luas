@@ -50,7 +50,7 @@ function get_sets()
 	--ammo="Egoist's Tathlum",
 	head={name="Souveran Schaller +1",priority=15}, --280
 	neck={name="Unmoving Collar +1",priority=11}, --200
-	left_ear={name="Odnowa Earring +1",priority=9}, --150
+	left_ear={name="Alabaster Earring",priority=9}, --150
 	right_ear={name="Tuisto Earring",priority=6}, --110
 	body={name="Reverence Surcoat +3",priority=14}, --254
 	hands="Regal Gauntlets",
@@ -201,11 +201,12 @@ function get_sets()
 	legs="Souveran Diechlings +1",
 	}
 	
-	sets.sword.index = {'Burtgang', 'Sakpatas Sword','Naegling','Malevolence','Helheim', 'Excalibur',--[[,'Mafic Cudgel',]]}
+	sets.sword.index = {'Burtgang', 'Caliburnus','Sakpatas Sword','Naegling','Malevolence','Helheim',--[['Excalibur','Mafic Cudgel',]]}
 	sword_ind = 1 --Burtgang is the Default
 	
 	sets.sword['Sakpatas Sword'] = {main="Sakpata's Sword"}
 	sets.sword['Excalibur'] = {main="Excalibur"}
+	sets.sword['Caliburnus'] = {main="Caliburnus"}
 	sets.sword['Naegling'] = {main="Naegling"}
 	sets.sword['Malevolence'] = {main="Malevolence"}
 	sets.sword['Burtgang'] = {main="Burtgang"}
@@ -264,6 +265,22 @@ function get_sets()
 	legs={name="Nyame Flanchard",priority=14}, --114
 	feet={name="Nyame Sollerets",priority=11} --68
 	}
+	
+	sets.ws["Imperator"] = {
+	ammo="Coiste Bodhar",
+	head="Nyame Helm",
+	body="Nyame Mail",
+	hands="Nyame Gauntlets",
+	legs="Nyame Flanchard",
+	feet="Nyame Sollerets",
+	neck="Rep. Plat. Medal",
+	waist="Sailfi Belt +1",
+	ear1="Thrud Earring",
+	ear2="Moonshade Earring",
+	ring1="Cornelia's ring",
+	ring2="Regal Ring",
+	back={ name="Rudianos's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
+}
 	
 	sets.ws['Fimbulvetr'] = set_combine(sets.ws.common, {
 	neck="Rep. Plat. Medal",

@@ -284,7 +284,7 @@ function get_sets()
     legs={ name="Sakpata's Cuisses", augments={'Path: A',}},
     feet={ name="Souveran Schuhs +1", augments={'HP+105','Enmity+9','Potency of "Cure" effect received +15%',}},
 	neck="Null Loop",
-	ear1="Odnowa earring +1",
+	ear1="Alabaster Earring",
 	left_ring="Shadow Ring",
 	right_ring="Murky Ring",
 	back="Moonbeam Cape",

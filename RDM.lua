@@ -622,8 +622,8 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	sets.main['Mpu Gandring'] = {main="Mpu Gandring"}
 	sets.main['Maxentius'] = {main="Maxentius"}
 	
-	sets.sub.index = {'Gleti\'s Knife','Daybreak','Bunzi\'s Rod','Thibron',} -- 'Crepuscular Knife'
-	sub_ind = 1 --Gleti's Knife is the Default
+	sets.sub.index = {'Thibron', 'Gleti\'s Knife','Daybreak','Bunzi\'s Rod',} -- 'Crepuscular Knife'
+	sub_ind = 1 --Thibron is the Default
 	
 	sets.sub['Gleti\'s Knife'] = {sub="Gleti's Knife"}
 	sets.sub['Daybreak'] = {sub="Daybreak"}
@@ -640,7 +640,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	legs="Chironic Hose",
 	feet="Chironic Slippers",
 	neck="Null Loop",
-	ear1="Odnowa earring +1",
+	ear1="Alabaster Earring",
 	left_ring="Shadow Ring",
 	right_ring="Murky Ring",
 	back="Moonbeam Cape",
@@ -754,8 +754,10 @@ function precast(spell)
 			add_to_chat(123, spell.name..' Canceled: [Out of Range]')
 		elseif player.tp >= 1000 then
 			if sets.ws[spell.name] then
-				equip(sets.ws[spell.name])
-			end
+					equip(sets.ws[spell.name])
+				else
+					equip(sets.ws.common)
+				end
 			if (player.tp >= 1000 and player.tp < 2750) then
 				equip({left_ear="Moonshade Earring"})  
 			elseif player.tp < 3000 then

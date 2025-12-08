@@ -244,7 +244,7 @@ function init_gear_sets()
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {
         ammo="Impatiens", --(2)
-        head="Piety Cap +3", --15
+        head="Piety Cap +4", --15
 		legs="Vanya Slops", --7
         feet="Vanya Clogs", --7
 		ear1="Mendi. earring",
@@ -268,12 +268,12 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
         --ammo="Floestone",
-        head="Piety Cap +3",
+        head="Piety Cap +4",
 		neck="Fotia Gorget",
 		ear1="Moonshade Earring",
         ear2="Ishvara Earring",
-        body="Piety Bliaut +3",
-        hands="Piety Mitts +3",
+        body="Piety Bliaut +4",
+        hands="Piety Mitts +4",
 		left_ring="Cornelia's Ring",
         right_ring="Metamorph Ring +1",
         back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
@@ -526,7 +526,7 @@ function init_gear_sets()
         main="Bolelabunga",
         sub="Ammurapi Shield",
         head="Inyanga Tiara +2",
-        body="Piety Bliaut +3",
+        body="Piety Bliaut +4",
 		hands="Ebers Mitts +3",
         })
 
@@ -602,7 +602,7 @@ function init_gear_sets()
         ammo="Pemphredo Tathlum",
         head="Theophany Cap +3",
         body="Theo. Bliaut +3",
-        hands="Piety Mitts +3",
+        hands="Piety Mitts +4",
         legs="Chironic Hose",
         feet="Theo. Duckbills +3",
         neck="Erra Pendant",
@@ -727,7 +727,7 @@ function init_gear_sets()
         --ammo="Staunch Tathlum +1", --3/3
         head="Bunzi's Hat", --7/7
         --neck="Loricate Torque +1", --6/6
-        --ear1="Odnowa Earring +1", --3/5	
+        --ear1="Alabaster Earring", --3/5	
 		feet="Ebers Duckbills +3", --11/11
         --left_ring="Gelatinous Ring +1", --7/(-1)
         --right_ring="Murky Ring", --10/10
@@ -825,7 +825,7 @@ function init_gear_sets()
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
     sets.buff['Divine Caress'] = {hands="Ebers Mitts +3", back="Mending Cape"}
-    sets.buff['Devotion'] = {head="Piety Cap +3"}
+    sets.buff['Devotion'] = {head="Piety Cap +4"}
     sets.buff.Sublimation = {waist="Embla Sash"}
 
     sets.buff.Doom = {

@@ -404,7 +404,7 @@ function get_sets()
 		legs="Herculean Trousers",
 		feet="Herculean Boots",
 		neck="Null Loop",
-		ear1="Odnowa earring +1",
+		ear1="Alabaster Earring",
 		left_ring="Shadow Ring",
 		right_ring="Murky Ring",
 		back="Moonbeam Cape",

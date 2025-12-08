@@ -809,19 +809,20 @@ function init_gear_sets()
 	sets.vagary = {
 	main="Raetic Rod +1",
     sub="Genmei Shield",
-    head="Volte Beret",
+    head=empty,
 	ear1="Alabaster Earring",
 	ear2=empty,
     body="Adamantite Armor",
     neck="Null Loop",
-    hands="Regal Cuffs",
+    hands=empty,
     left_ring="Murky Ring",
     right_ring="Shadow Ring",
 	back=empty,
 	waist=empty,
-	legs="Volte Brais",
-	feet="Medium's Sabots",
-
+	legs=empty,
+	feet=empty,
+	}
+	
 	sets.phalanx = {
 	ammo="Staunch Tathlum +1",
 	main="Sakpata's Sword",
@@ -831,7 +832,7 @@ function init_gear_sets()
 	legs="Chironic Hose",
 	feet="Chironic Slippers",
 	neck="Null Loop",
-	ear1="Odnowa earring +1",
+	ear1="Alabaster Earring",
 	left_ring="Shadow Ring",
 	right_ring="Murky Ring",
 	back="Moonbeam Cape",

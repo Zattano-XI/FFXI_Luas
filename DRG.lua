@@ -347,7 +347,7 @@ function init_gear_sets()
 		--feet="Acro Leggings",
 		neck="Adad Amulet",--maybe switch to JSE neck for wyvern DT?
 		waist="Incarnation Sash",
-		right_ear="Odnowa Earring +1",
+		right_ear="Alabaster Earring",
 		--right_ear="Genmei Earring",
 		left_ear="Handler's Earring +1",
 		left_ring="Moonlight Ring",
@@ -833,7 +833,7 @@ function init_gear_sets()
 		waist="Flume Belt",
 		left_ear="Anastasi Earring",
 		--right_ear="Etiolation Earring",
-		right_ear="Odnowa Earring +1",
+		right_ear="Alabaster Earring",
 		--left_ring="Moonlight Ring",
 		left_ring="Shneddick Ring +1",
 		right_ring="Murky Ring",
@@ -950,7 +950,7 @@ function init_gear_sets()
 		legs="Valorous Hose",
 		feet="Valorous Greaves",
 		neck="Null Loop",
-		ear1="Odnowa earring +1",
+		ear1="Alabaster Earring",
 		left_ring="Shadow Ring",
 		right_ring="Murky Ring",
 		back="Moonbeam Cape",
@@ -1094,7 +1094,7 @@ function init_gear_sets()
 		
 		--changes for xevi only
 		left_ring="Shadow Ring",
-		right_ear="Odnowa Earring +1",
+		right_ear="Alabaster Earring",
 		feet="Nyame Sollerets",
 		
 		

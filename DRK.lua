@@ -30,7 +30,7 @@ function get_sets()
 	 sets.fc.base = { --68
     ammo="Sapience Orb",
     head="Carmine Mask +1",
-    left_ear="Odnowa Earring +1",
+    left_ear="Alabaster Earring",
     right_ear="Etiolation Earring",
     neck="Orunmila's Torque",
 	--neck={ name="Abyssal Beads +1", augments={'Path: A',}},
@@ -155,7 +155,7 @@ function get_sets()
         ammo="Staunch Tathlum +1",
         --head="Baghere Salade", --2/0
         neck="Bathy Choker +1",
-        left_ear="Odnowa Earring +1",
+        left_ear="Alabaster Earring",
 		--right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','Latent effect: "Refresh"+1',}}, --0/1
         --body="Sacro Breastplate", --13/0
 		--hands={ name="Yorium Gauntlets", augments={'Rng.Atk.+10','"Regen"+2','VIT+1',}}, --2/0
@@ -327,7 +327,7 @@ function get_sets()
 		feet="Ratri Sollerets +1",
 		neck="Unmoving Collar +1",
 		waist="Plat. Mog. Belt",
-		left_ear="Odnowa Earring +1",
+		left_ear="Alabaster Earring",
 		right_ear="Etiolation Earring",
 		left_ring="Regal Ring",
 		right_ring="Moonbeam Ring",
@@ -351,8 +351,8 @@ function get_sets()
 		feet="Ratri Sollerets +1",
 		neck="Erra Pendant",
 		waist="Null Belt",
-		left_ear="Etiolation Earring",
-		right_ear="Odnowa Earring +1",
+		left_ear="Alabaster Earring",
+		right_ear="Etiolation Earring",
 		left_ring="Evanescence Ring",
 		right_ring="Kishar Ring",
 		back="Niht Mantle",
@@ -385,8 +385,8 @@ function get_sets()
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 		neck="Null Loop",
 		waist="Orpheus's Sash",
-		left_ear="Etiolation Earring",
-		right_ear="Odnowa Earring +1",
+		left_ear="Alabaster Earring",
+		right_ear="Etiolation Earring",
 		left_ring="Metamor. Ring +1",
 		right_ring="Kishar Ring",
 		back={ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}},
@@ -428,7 +428,7 @@ function get_sets()
 		legs="Valorous Hose",
 		feet="Valorous Greaves",
 		neck="Null Loop",
-		ear1="Odnowa earring +1",
+		ear1="Alabaster Earring",
 		left_ring="Shadow Ring",
 		right_ring="Murky Ring",
 		back="Moonbeam Cape",

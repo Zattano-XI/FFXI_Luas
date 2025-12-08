@@ -96,7 +96,7 @@ function get_sets()
 	})
 	
 	sets.TP['DT'] = set_combine(sets.TP['Standard'], { --48%
-	ear1="Odnowa earring +1",
+	ear1="Alabaster Earring",
     body="Gleti's Cuirass",
 	hands="Malignance Gloves",
 	left_ring="Moonlight Ring",
@@ -149,7 +149,7 @@ function get_sets()
 	legs="Herculean Trousers",
 	feet="Herculean Boots",
 	neck="Null Loop",
-	ear1="Odnowa earring +1",
+	ear1="Alabaster Earring",
 	left_ring="Shadow Ring",
 	right_ring="Murky Ring",
 	back="Moonbeam Cape",
@@ -353,8 +353,8 @@ function get_sets()
 	sets.high_hp = {
 	head="Nyame Helm",
 	neck="Unmoving Collar +1",
-	left_ear="Tuisto Earring",
-	right_ear="Odnowa Earring +1",
+	left_ear="Alabaster Earring",
+	right_ear="Tuisto Earring",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
 	left_ring="Moonlight Ring", --5
