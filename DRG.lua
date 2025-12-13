@@ -201,12 +201,11 @@ function init_gear_sets()
 	Brigantia.STP = { name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Store TP"+10','Phys. dmg. taken-10%',}}
     -- Precast Sets
 	-- Precast sets to enhance JAs
-	sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +3", ear1="Dragoon's Earring",
+	sets.precast.JA.Angon = {ammo="Angon",hands="Pteroslaver Finger Gauntlets +4", ear1="Dragoon's Earring",
 	
 		--adding enmity gear for arebati
 		head="Halitus Helm",
 		body="Emet Harness +1",
-		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 		neck={ name="Unmoving Collar +1", augments={'Path: A',}},
@@ -228,12 +227,12 @@ function init_gear_sets()
 	sets.precast.JA.Jump = {
     ammo="Coiste Bodhar",
     head="Flamma Zucchetto +2",
-    --body="Vishap Mail +3",
+    --body="vishap mail +4",
 	body="Pteroslaver Mail +3",
     hands="Vis. Fng. Gaunt. +3",
     --legs={ name="Valorous Hose", augments={'Accuracy+24 Attack+24','"Dbl.Atk."+5',}},
-	--legs="Pteroslaver Brais +3",
-	legs="Ptero. Brais +3",
+	--legs="pteroslaver brais +4",
+	legs="ptero. brais +4",
     feet="Ostro Greaves",
     --neck="Dragoon's Collar +2",
 	neck="Vim Torque +1",
@@ -269,18 +268,20 @@ function init_gear_sets()
 		
 		}
     sets.TreasureHunter = { 
-		ammo="Per. Lucky Egg",--1
-		body="Volte Jupon", --2
-		waist="Chaac Belt",--1
+        --head="White rarab cap +1", 
+		legs="Volte Hose",--1
+		body={ name="Valorous Mail", augments={'"Conserve MP"+6','"Resist Silence"+4','"Treasure Hunter"+2','Accuracy+11 Attack+11','Mag. Acc.+16 "Mag.Atk.Bns."+16',}},--2
+        --waist="Chaac Belt",
+		ammo="Perfect Lucky Egg", --1
      }
 
 	sets.precast.JA['High Jump'] = set_combine(sets.precast.JA.Jump, {
         --legs="Vishap Brais +3",
-		legs="Pteroslaver Brais +3",
+		legs="pteroslaver brais +4",
     }) 
 	sets.precast.JA['Soul Jump'] = set_combine(sets.precast.JA.Jump, {
         --legs="Peltast's Cuissots +3",
-		body="Vishap Mail +3",--higher tp return
+		body="vishap mail +4",--higher tp return
 		hands="Nyame Gauntlets",
 		back=Brigantia.STP,
     })
@@ -347,7 +348,7 @@ function init_gear_sets()
 		--feet="Acro Leggings",
 		neck="Adad Amulet",--maybe switch to JSE neck for wyvern DT?
 		waist="Incarnation Sash",
-		right_ear="Alabaster Earring",
+		right_ear="Odnowa Earring +1",
 		--right_ear="Genmei Earring",
 		left_ear="Handler's Earring +1",
 		left_ring="Moonlight Ring",
@@ -371,38 +372,39 @@ function init_gear_sets()
     }
 	
 	--Subtle Blow set to be combined with melee sets and ws sets
+	--auspice with ebers duckbills +3 grants +29 auspice. 21 required to cap when auspice is up
 	sets.SB = {
 		--SB I
 		legs="Gleti's Breeches", -- I - 13 at R25
-		left_ring="Chirich Ring +1", -- I - 10
+		ring1="Chirich Ring +1", -- I - 10
 		ear2="Dignitary's Earring", -- I - 5
 		neck="Bathy Choker +1", --I - 11
 		--feet="Volte Spats", --I - 6 (too glassy)
 		--39 SB I
 		
 		------------------- SB II -------------------------
-		--right_ring="Niqmaddu Ring", -- II - 5
+		ring2="Niqmaddu Ring", -- II - 5
 		ear1="Sherida Earring", -- II - 5
 		body="Dagon Breastplate", -- II - 10		
 		--20 SB II
 		
 		--may need to use Murky Ring instead of niq for survival purposes
-		right_ring="Murky Ring",
+		--ring2="Murky Ring",
 	}--Total SB = 59
 	
 	sets.SB_Auspice = {
 		------------------ SB I -------------------------
 		--Auspice = 29 SB I
 		legs="Gleti's Breeches", -- I - 13 at R25
-		left_ring="Chirich Ring +1", -- I - 10
+		ring1="Chirich Ring +1", -- I - 10
 		
 		------------------- SB II -------------------------
-		--right_ring="Niqmaddu Ring", -- II - 5
+		ring2="Niqmaddu Ring", -- II - 5
 		ear1="Sherida Earring", -- II - 5
 		body="Dagon Breastplate", -- II - 10
 		
 		--may need to use Murky Ring instead of niq for survival purposes
-		right_ring="Murky Ring",
+		--ring2="Murky Ring",
 		
 	}--Total SB = 70
 	
@@ -421,7 +423,7 @@ function init_gear_sets()
 	}
 	
 
-    sets.MadrigalBonus = {hands="Composer's Mitts"}
+    --sets.MadrigalBonus = {hands="Composer's Mitts"}
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {}
 		
@@ -449,6 +451,20 @@ function init_gear_sets()
     
 	-- Midcast Sets
 	sets.midcast.FastRecast = {
+		ammo="Sapience Orb",
+		--head={ name="Nyame Helm", augments={'Path: A',}},
+		head="Vishap armet +3",
+		body={ name="Nyame Mail", augments={'Path: B',}},
+		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck="Orunmila's Torque",
+		waist="Flume Belt",
+		left_ear="Ethereal Earring",
+		right_ear="Etiolation Earring",
+		left_ring="Prolix Ring",
+		right_ring="Rahab Ring",
+		back=Brigantia.TP,
     }	
 		
 	sets.midcast.Breath = set_combine(sets.midcast.FastRecast, { head="Vishap armet +3" })
@@ -457,21 +473,17 @@ function init_gear_sets()
 	sets.precast.WS = {
         ammo="Knobkierrie",
 		head="Peltast's Mezail +3",
-		--head={ name="Valorous Mask", augments={'MND+10','Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','Weapon skill damage +9%','Accuracy+13 Attack+13','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
-		--body={ name="Valorous Mail", augments={'Pet: Attack+3 Pet: Rng.Atk.+3','Weapon skill damage +10%','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
 		body="Nyame Mail",--Path B
         neck="Dragoon's Collar +2",
         ear2="Moonshade Earring",
         ear1="Thrud Earring",
-		--body="Sulevia's Platemail +2",
-		hands="Pteroslaver Finger Gauntlets +3",
-        right_ring="Niqmaddu Ring",
-        left_ring="Regal Ring",
+		--hands="Nyame Gauntlets",--Path B
+		hands="Pteroslaver Finger Gauntlets +4",
+        ring2="Niqmaddu Ring",
+        ring1="Regal Ring",
 		back=Brigantia.WS,
         waist="Sailfi Belt +1",
-        --legs="Vishap Brais +3",
 		legs="Nyame Flanchard",--Path B
-        --feet="Sulevia's Leggings +2",
 		feet="Nyame Sollerets",--Path B
     }
 	sets.precast.WS.Mid = set_combine(sets.precast.WS,{
@@ -493,7 +505,7 @@ function init_gear_sets()
 		neck="fotia gorget",
 		hands="Pel. Vambraces +3",
 		body="Gleti's Cuirass",--Nyame technically better when underbuffed, but this allows for situations when just over attack cap 
-		left_ring="Sroda Ring",
+		ring1="Sroda Ring",
 		legs="Nyame Flanchard",--Path B
 		feet="Nyame Sollerets",--Path B
 	})
@@ -505,7 +517,7 @@ function init_gear_sets()
 	sets.precast.WS['Stardiver'].Acc = set_combine(sets.precast.WS['Stardiver'].Mid, {
 		legs="Vishap Brais +3",
 		--feet="Vishap Greaves +3",
-		--body="Vishap Mail +3", --offensive stats aren't great. Replace once I have regal ring
+		--body="vishap mail +4", --offensive stats aren't great. Replace once I have regal ring
 	})
 
 	
@@ -550,13 +562,12 @@ function init_gear_sets()
 		ear2="Moonshade Earring",
 		--body="Gleti's Cuirass",--this assumes some level of buffs such as chaos roll and minuets. Nyame pulls ahead otherwise
 		body="Nyame Mail",--Path B
-		--hands="Pteroslaver Finger Gauntlets +3",
-		hands="Nyame Gauntlets",
+		--hands="Pteroslaver Finger Gauntlets +4",
 		--legs="Vishap Brais +3",
 		legs="Peltast's Cuissots +3",
 		feet="Nyame Sollerets",
-        right_ring="Niqmaddu Ring",
-        left_ring="Regal Ring",
+        ring2="Niqmaddu Ring",
+        ring1="Regal Ring",
 		back=Brigantia.WSD,
 		waist="Sailfi Belt +1",
 		
@@ -570,7 +581,7 @@ function init_gear_sets()
 	sets.precast.WS['Impulse Drive'].Acc = set_combine(sets.precast.WS['Impulse Drive'].Mid, {
 		legs="Vishap Brais +3",
 		feet="Vishap Greaves +3",
-		--body="Vishap Mail +3", --offensive stats aren't great. Replace once I have regal ring
+		--body="vishap mail +4", --offensive stats aren't great. Replace once I have regal ring
 	})
 
 	sets.ImpulseCapped = set_combine(sets.precast.WS['Impulse Drive'], {
@@ -596,31 +607,21 @@ function init_gear_sets()
 		head="Pixie Hairpin +1",
 		--body={ name="Valorous Mail", augments={'Pet: Attack+3 Pet: Rng.Atk.+3','Weapon skill damage +10%','Mag. Acc.+1 "Mag.Atk.Bns."+1',}},
 		--hands={ name="Carmine Fin. Ga. +1", augments={'Rng.Atk.+20','"Mag.Atk.Bns."+12','"Store TP"+6',}},
-		--legs={ name="Ptero. Brais +3", augments={'Enhances "Strafe" effect',}},
+		--legs={ name="ptero. brais +4", augments={'Enhances "Strafe" effect',}},
 		--feet={ name="Founder's Greaves", augments={'VIT+10','Accuracy+15','"Mag.Atk.Bns."+15','Mag. Evasion+15',}},
 		--neck="Deviant Necklace",
 		neck="Fotia Gorget",
 		--waist="Eschan Stone",
 		--waist="Anrin Obi",
+		hands="Nyame Gauntlets",
 		waist="Orpheus's Sash",
-		left_ear="Moonshade Earring",,
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 		right_ear="Friomisi Earring",
 		--left_ring="Arvina Ringlet +1",
-		left_ring="Epaminondas's Ring",
+		--left_ring="Epaminondas's Ring",
+		left_ring="Cornelia's Ring",
 		right_ring="Archon Ring",
 		back=Brigantia.WSD,
-		
-		
-		
-
-		--head="Nyame Helm",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
-		
-		
-		
 		
 		
 		
@@ -637,15 +638,16 @@ function init_gear_sets()
         ammo="Pemphredo Tathlum",
 		--[[head="Flamma Zucchetto +2",
 		body="Flamma Korazin +2",
-		legs="Pteroslaver Brais +3",
+		legs="pteroslaver brais +4",
 		feet="Flamma Gambieras +2",]]
         ear1="Crepuscular Earring",
 		ear2="Dignitary's Earring",
 		back=Brigantia.GS,
-		left_ring="Flamma Ring",
-		right_ring="Crepuscular Ring",
-        waist="fotia belt",
-		
+		ring1="Flamma Ring",
+		ring2="Crepuscular Ring",
+        --waist="fotia belt",
+		waist="Null Belt",
+		neck="Null Loop",
 		
 		head="Nyame Helm",
 		--body="Nyame Mail",
@@ -692,7 +694,7 @@ function init_gear_sets()
 
 	sets.CamlannsCapped = set_combine(sets.precast.WS["Camlann's Torment"],{
 		neck="Dragoon's Collar +2",
-		left_ring="Epaminondas's Ring",
+		ring1="Epaminondas's Ring",
 		
 		ear1="Moonshade Earring",
 		--will need to test gleti's over wsd options
@@ -716,8 +718,8 @@ function init_gear_sets()
 		--body="Hjarrandi Breastplate",
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
-		left_ring="Regal Ring",
-		right_ring="Niqmaddu Ring",
+		ring1="Regal Ring",
+		ring2="Niqmaddu Ring",
 		ear2="Sherida Earring",
 		ear1="Sroda Earring",--assuming that wyvern is alive. May add logic for this later... may not be worth it over empy earring and thrud
         legs="Peltast's Cuissots +3",
@@ -743,8 +745,8 @@ function init_gear_sets()
 		--body="Pteroslaver Mail +3",
 		--body="Hjarrandi Breastplate",
 		--hands="Flamma Manopolas +2",
-		left_ring="Regal Ring",
-		right_ring="Niqmaddu Ring",
+		ring1="Regal Ring",
+		ring2="Niqmaddu Ring",
 		ear2="Sherida Earring",
         legs="Peltast's Cuissots +3",
 		body="Gleti's Cuirass",
@@ -761,20 +763,22 @@ function init_gear_sets()
 		--head={ name="Valorous Mask", augments={'MND+10','Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','Weapon skill damage +9%','Accuracy+13 Attack+13','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		back=Brigantia.WSD,
 		--body="Founder's Breastplate",--add in for bumba
-		left_ring="Cornelia's Ring",
-		right_ring="Epaminondas's Ring",
+		ring1="Cornelia's Ring",
+		ring2="Epaminondas's Ring",
 	})
 	sets.precast.WS['Savage Blade'].Mid = set_combine(sets.precast.WS['Savage Blade'], {
     })
 	sets.precast.WS['Savage Blade'].Acc = set_combine(sets.precast.WS['Savage Blade'].Mid, {
     })
 	sets.SavageCapped = set_combine(sets.precast.WS['Savage Blade'],{
-		body="Gleti's Cuirass",
+		--body="Gleti's Cuirass",
 		--head={ name="Valorous Mask", augments={'MND+10','Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','Weapon skill damage +9%','Accuracy+13 Attack+13','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		neck="Dragoon's Collar +2",
 		--head="Gleti's Mask",
-		feet="Gleti's Boots",--unsure on this. Just eyeballing vs trading relic gloves for more pdl
-		right_ring="Sroda Ring",
+		--feet="Gleti's Boots",--unsure on this. Just eyeballing vs trading relic gloves for more pdl
+		ring2="Sroda Ring",
+		ear2="Pel. Earring +1",
+		ear1="Moonshade Earring",
 	})
 	
 	sets.precast.WS['Judgment'] = set_combine(sets.precast.WS['Savage Blade'], {
@@ -785,7 +789,7 @@ function init_gear_sets()
     })
 	
 	--[[sets.precast.WS['Diarmuid'] = set_combine(sets.precast.WS['Stardiver'], {
-		left_ring="Cornelia's Ring",
+		ring1="Cornelia's Ring",
 		neck="Dgn. Collar +2",
 		waist="Sailfi Belt +1",
 		hands="Nyame Gauntlets",
@@ -793,7 +797,7 @@ function init_gear_sets()
 	
 	--Additional set for testing pure wsd set vs multi attack set
 	sets.precast.WS['Diarmuid'] = set_combine(sets.precast.WS['Savage Blade'], {
-		right_ring="Sroda Ring",
+		ring2="Sroda Ring",
     })
 	
 	sets.precast.WS['Diarmuid'].Mid = set_combine(sets.precast.WS['Savage Blade'].Mid, {
@@ -823,19 +827,20 @@ function init_gear_sets()
 		ammo="Staunch Tathlum +1",
 		--head="Hjarrandi Helm",
 		head="Gleti's Mask",
-		body="Vishap Mail +3",
+		body="vishap mail +4",
 		--hands="Sulev. Gauntlets +2",
 		hands="Gleti's Gauntlets",
 		--legs="Carmine Cuisses +1",
 		legs="Gleti's Breeches",
 		feet="Gleti's Boots",
 		neck="Dgn. Collar +2",
-		waist="Flume Belt",
+		--waist="Flume Belt",
+		waist="Null Belt",
 		left_ear="Anastasi Earring",
 		--right_ear="Etiolation Earring",
-		right_ear="Alabaster Earring",
+		right_ear="Odnowa Earring +1",
 		--left_ring="Moonlight Ring",
-		left_ring="Shneddick Ring +1",
+		ring1="Shneddick Ring +1",
 		right_ring="Murky Ring",
 		back=Brigantia.TP,
     }
@@ -859,7 +864,7 @@ function init_gear_sets()
 	
 	--sets.idle.Regain=set_combine(sets.idle, {
 	sets.idle.Regain=set_combine(sets.idle,{
-		--left_ring="Epaminondas's Ring",
+		--ring1="Epaminondas's Ring",
 		head={ name="Valorous Mask", augments={'MND+10','Pet: "Dbl.Atk."+3 Pet: Crit.hit rate +3','Weapon skill damage +9%','Accuracy+13 Attack+13','Mag. Acc.+6 "Mag.Atk.Bns."+6',}},
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
@@ -876,7 +881,7 @@ function init_gear_sets()
 		--body="Sulevia's Plate. +2",
 		body="Hjarrandi Breastplate",
 		hands="Nyame Gauntlets",
-		legs={ name="Ptero. Brais +3", augments={'Enhances "Strafe" effect',}},
+		legs={ name="ptero. brais +4", augments={'Enhances "Strafe" effect',}},
 		feet="Flam. Gambieras +2",
 		neck="Dgn. Collar +2",
 		waist="Sailfi Belt +1",--Should probably get tempest fugit for this set
@@ -924,7 +929,7 @@ function init_gear_sets()
 		head="Nyame Helm", --5
 		body="Nyame Mail",--Path B --7
 		hands="Nyame Gauntlets", --5
-		legs="Ptero. Brais +3",
+		legs="ptero. brais +4",
 		feet="Nyame Sollerets", --5
     })
 
@@ -941,21 +946,7 @@ function init_gear_sets()
 			legs={ name="Valorous Hose", augments={'STR+4','Pet: "Store TP"+7','Phalanx +4','Accuracy+20 Attack+20','Mag. Acc.+5 "Mag.Atk.Bns."+5',}},
 			feet={ name="Taeon Boots", augments={'Accuracy+25','Spell interruption rate down -10%','Phalanx +3',}},
 	}
-
-	sets.phalanx = {
-		ammo="Staunch Tathlum +1",
-		head="Valorous Mask",
-		body="Valorous Mail",
-		hands="Valorous Mitts",
-		legs="Valorous Hose",
-		feet="Valorous Greaves",
-		neck="Null Loop",
-		ear1="Alabaster Earring",
-		left_ring="Shadow Ring",
-		right_ring="Murky Ring",
-		back="Moonbeam Cape",
-		waist="Null Belt",
-	} 
+	
 	
 --temp placeholder for mixed pdt set 
 	sets.Reraise = {
@@ -1002,18 +993,18 @@ function init_gear_sets()
 		hands="Nyame Gauntlets",
 		--legs={ name="Valorous Hose", augments={'Accuracy+24 Attack+24','"Dbl.Atk."+5',}},
 		--legs={ name="Valorous Hose", augments={'"Mag.Atk.Bns."+8','"Store TP"+5','Quadruple Attack +2','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
-		--legs="Pteroslaver Brais +3",--decent stats and wyvern survivability
-		--legs="Ptero. Brais +3",
+		--legs="pteroslaver brais +4",--decent stats and wyvern survivability
+		--legs="ptero. brais +4",
 		legs="Gleti's Breeches",
 		feet="Flam. Gambieras +2",
 		neck="Vim Torque +1",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		ear2="Dedition Earring",--swap to sroda if wyvern alive
 		ear1="Sherida Earring",
-		right_ring="Niqmaddu Ring",
-		left_ring="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		ring1="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
-		
+		--back="Null Shawl",
 		
     }
 	
@@ -1025,22 +1016,22 @@ function init_gear_sets()
 	
 
 	sets.engaged.Mid = set_combine(sets.engaged, {
-		legs="Pteroslaver Brais +3",
+		legs="pteroslaver brais +4",
 		--head="Flamma Zucchetto +2",
 		--legs={ name="Valorous Hose", augments={'Accuracy+24 Attack+24','"Dbl.Atk."+5',}},
 		waist="Ioskeha Belt",
-		--left_ring="Flamma Ring",
+		--ring1="Flamma Ring",
 		--hands="Flamma Manopolas +2",
 		--neck="Shulmanu Collar",
-		left_ring="Chirich Ring +1",
+		ring1="Chirich Ring +1",
 		ear2="Cessance Earring",
 		body="Nyame Mail",
-		legs="Ptero. Brais +3",
+		legs="ptero. brais +4",
     })
 
 	sets.engaged.Acc = set_combine(sets.engaged.Mid, {
 		ammo="Voluspa Tathlum",
-		body="Vishap Mail +3",
+		body="vishap mail +4",
         legs="Vishap Brais +3",
 		--hands="Vishap Finger Gauntlets +3",
 		hands="Nyame Gauntlets",
@@ -1050,8 +1041,8 @@ function init_gear_sets()
 		head="Flamma Zucchetto +2",
 		--feet="Vishap Greaves +3",
 		feet="Nyame Sollerets",
-		left_ring="Chirich Ring +1",
-		right_ring="Regal Ring",
+		ring1="Chirich Ring +1",
+		ring2="Regal Ring",
 		neck="Shulmanu Collar",
 		--waist="Olseni Belt",
     })
@@ -1084,7 +1075,7 @@ function init_gear_sets()
 		--left_ring="Moonlight Ring",--commenting out for xevi only
 		right_ring="Murky Ring",
 		head="Nyame Helm",
-		legs="Ptero. Brais +3",--maintaining pet dt
+		legs="ptero. brais +4",--maintaining pet dt
 		hands="Gleti's Gauntlets",
 		--feet="Nyame Sollerets",
 		--feet="Flam. Gambieras +2",
@@ -1094,7 +1085,7 @@ function init_gear_sets()
 		
 		--changes for xevi only
 		left_ring="Shadow Ring",
-		right_ear="Alabaster Earring",
+		right_ear="Odnowa Earring +1",
 		feet="Nyame Sollerets",
 		
 		
@@ -1110,10 +1101,10 @@ function init_gear_sets()
 	
 	--not really required anymore
 	sets.engaged.Wyvern = set_combine(sets.engaged.PDT, {
-		legs="Pteroslaver Brais +3",
-		--hands = "Ptero. Fin. G. +3",
+		legs="pteroslaver brais +4",
+		--hands = "Ptero. Fin. G. +4",
 		hands="Gleti's Gauntlets",
-		--right_ring="Murky Ring",
+		--ring2="Murky Ring",
 	})
 	
 	
@@ -1126,7 +1117,7 @@ function init_gear_sets()
 		--body="Sulevia's Plate. +2",
 		--body="Hjarrandi Breastplate",
 		--hands="Sulev. Gauntlets +2",
-		legs={ name="Ptero. Brais +3", augments={'Enhances "Strafe" effect',}},
+		legs={ name="ptero. brais +4", augments={'Enhances "Strafe" effect',}},
 		--feet="Flam. Gambieras +2",
 		neck="Dgn. Collar +2",
 		--waist="Sailfi Belt +1",
@@ -1144,7 +1135,7 @@ function init_gear_sets()
 		--body="Hjarrandi Breastplate",
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
-		legs={ name="Ptero. Brais +3", augments={'Enhances "Strafe" effect',}},
+		legs={ name="ptero. brais +4", augments={'Enhances "Strafe" effect',}},
 		geet="Nyame Sollerets",
 		--feet="Flam. Gambieras +2",
 		neck="Dgn. Collar +2",
@@ -1187,8 +1178,8 @@ sets.engaged.Aftermath_Rhongo = {
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		ear2="Brutal Earring",
 		ear1="Sherida Earring",
-		right_ring="Niqmaddu Ring",
-		left_ring="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		ring1="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 
@@ -1200,8 +1191,8 @@ sets.engaged.Aftermath_Rhongo_capped = {
 		--body="Hjarrandi Breastplate",
 		--hands="Sulevia's Gauntlets +2",
 		body="Gleti's Cuirass",
-		--hands="Gleti's Gauntlets",
-		hands={ name="Valorous Mitts", augments={'Pet: STR+6','Attack+2','Quadruple Attack +3','Accuracy+16 Attack+16',}},
+		hands="Gleti's Gauntlets",
+		--hands={ name="Valorous Mitts", augments={'Pet: STR+6','Attack+2','Quadruple Attack +3','Accuracy+16 Attack+16',}},
 		--legs="Gleti's Breeches",
 		--legs={ name="Valorous Hose", augments={'Accuracy+24 Attack+24','"Dbl.Atk."+5',}},
 		--legs={ name="Valorous Hose", augments={'"Mag.Atk.Bns."+8','"Store TP"+5','Quadruple Attack +2','Mag. Acc.+17 "Mag.Atk.Bns."+17',}},
@@ -1213,8 +1204,8 @@ sets.engaged.Aftermath_Rhongo_capped = {
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		ear2="Brutal Earring",
 		ear1="Sherida Earring",
-		right_ring="Niqmaddu Ring",
-		left_ring="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		ring1="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 
@@ -1234,8 +1225,8 @@ sets.engaged.Aftermath_Rhongo.LowHaste = set_combine(sets.engaged.Aftermath_Rhon
 		waist="Ioskeha Belt",
 		ear2="Brutal Earring",
 		ear1="Sherida Earring",
-		right_ring="Niqmaddu Ring",
-		left_ring="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		ring1="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},]]
 })
 
@@ -1246,7 +1237,7 @@ sets.engaged.Aftermath_Rhongo.Mid = {
 		--hands="Sulevia's Gauntlets +2",
 		hands="Gleti's Gauntlets",
 		--legs={ name="Valorous Hose", augments={'Accuracy+24 Attack+24','"Dbl.Atk."+5',}},
-		legs="Pteroslaver Brais +3",
+		legs="pteroslaver brais +4",
 		feet="Flam. Gambieras +2",
 		--neck="Vim Torque +1",
 		neck="Dragoon's Collar +2",
@@ -1254,8 +1245,8 @@ sets.engaged.Aftermath_Rhongo.Mid = {
 		waist="Ioskeha Belt",
 		ear2="Telos Earring",
 		ear1="Sherida Earring",
-		right_ring="Niqmaddu Ring",
-		left_ring="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		ring1="Petrov Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 }
 
@@ -1279,16 +1270,16 @@ sets.engaged.Aftermath_Rhongo.MaxBuff = set_combine(sets.engaged.Aftermath_Rhong
 sets.engaged.Aftermath_Rhongo.DT = set_combine(sets.engaged.Aftermath_Rhongo, {
 		--[[legs="Gleti's Breeches",
 		hands="Gleti's Gauntlets",
-		left_ring="Moonlight Ring",]]
+		ring1="Moonlight Ring",]]
 		body="Gleti's Cuirass",
 		hands="Gleti's Gauntlets",
 		neck="Dragoon's Collar +2",
-		--legs="Pteroslaver Brais +3",--should add a wyvern toggle
-		feet="Gleti's Boots",
-		
-		left_ring="Moonlight Ring",
-		--right_ring="Murky Ring",
-		--left_ring="Shadow Ring",
+		--legs="pteroslaver brais +4",--should add a wyvern toggle
+		--feet="Gleti's Boots",
+		feet="Nyame Sollerets",
+		ring1="Moonlight Ring",
+		--ring2="Murky Ring",
+		--ring1="Shadow Ring",
 		legs="Gleti's Breeches",--relic +3 instead for wyvern?
 })
 
@@ -1308,8 +1299,8 @@ sets.engaged.Aftermath_Ryu = {
     --hands="Flam. Manopolas +2",
 	--hands="Nyame Gauntlets",
 	hands="Gleti's Gauntlets",
-    --legs={ name="Ptero. Brais +3", augments={'Enhances "Strafe" effect',}},
-	legs="Ptero. Brais +3",
+    --legs={ name="ptero. brais +4", augments={'Enhances "Strafe" effect',}},
+	legs="ptero. brais +4",
     --feet={ name="Valorous Greaves", augments={'Accuracy+12 Attack+12','"Store TP"+3','STR+5','Accuracy+13','Attack+14',}},
 	--feet="Flamma Gambieras +2",--to be replaced once I get new valorous augments
 	feet="Nyame Sollerets",
@@ -1340,12 +1331,12 @@ sets.engaged.Aftermath_Ryu.Mid = set_combine(sets.engaged.Aftermath_Ryu,{
 		waist="Ioskeha Belt",
 		ear2="Telos Earring",
 		ear1="Sherida Earring",
-		right_ring="Niqmaddu Ring",
-		left_ring="Petrov Ring",
+		ring2="Niqmaddu Ring",
+		ring1="Petrov Ring",
 		back=Brigantia.STP,]]
 		ear2="Telos Earring",
 		--body="Nyame Mail",
-		left_ring="Chirich Ring +1",
+		ring1="Chirich Ring +1",
 })
 
 sets.engaged.Aftermath_Ryu.Acc = set_combine(sets.engaged.Acc, {
@@ -1361,13 +1352,13 @@ sets.engaged.Aftermath_Ryu.MaxBuff = set_combine(sets.engaged.Aftermath_Ryu, {
 
 sets.engaged.Aftermath_Ryu.DT = set_combine(sets.engaged.Aftermath_Ryu, {
 		head="Nyame Helm",
-		legs="Ptero. Brais +3",
+		legs="ptero. brais +4",
 		neck="Dragoon's Collar +2",
 		--hands="Nyame Gauntlets",
 		left_ring="Murky Ring",
 		hands="Gleti's Gauntlets",
-		right_ring="Moonlight Ring",
-		left_ring="Murky Ring",
+		ring2="Moonlight Ring",
+		ring1="Murky Ring",
 		--feet="Nyame Sollerets",
 		left_ring="Chirich Ring +1",
 		boey="Gleti's Cuirass",--consider Hjarrandi here.Big hit to Meva
@@ -1378,11 +1369,11 @@ sets.engaged.Aftermath_Ryu.DT = set_combine(sets.engaged.Aftermath_Ryu, {
 --------Misc---------------------
     sets.buff.Doom = {
         neck="Nicander's Necklace", --20
-        --left_ring={name="Eshmun's Ring", bag="wardrobe3"}, --20
-        --right_ring={name="Eshmun's Ring", bag="wardrobe4"}, --20
+        --ring1={name="Eshmun's Ring", bag="wardrobe3"}, --20
+        --ring2={name="Eshmun's Ring", bag="wardrobe4"}, --20
         waist="Gishdubar Sash", --10
-		left_ring={name="Saida Ring", bag="wardrobe3"}, --15
-        right_ring={name="Saida Ring", bag="wardrobe4"}, --15
+		ring1={name="Saida Ring", bag="wardrobe3"}, --15
+        ring2={name="Saida Ring", bag="wardrobe4"}, --15
         }
 		
 --set for regain while sleeping with DT		
@@ -1488,8 +1479,8 @@ function job_post_precast(spell, action, spellMap, eventArgs)
 					--Auspice SB 29
 					neck="Bathy Choker +1",--11
 					ear1="Sherida earring",--5 (II)
-					left_ring="Chirich Ring +1",--10
-					right_ring="Niqmaddu Ring",--5(II)
+					ring1="Chirich Ring +1",--10
+					ring2="Niqmaddu Ring",--5(II)
 					--60 SB
 					
 				})
@@ -1498,9 +1489,9 @@ function job_post_precast(spell, action, spellMap, eventArgs)
 				equip({
 					neck="Bathy Choker +1",--11
 					ear1="Sherida earring",--5 (II)
-					left_ring="Chirich Ring +1",--10
-					right_ring="Niqmaddu Ring",--5(II)
-					legs="Gleti's Breeches"--11
+					ring1="Chirich Ring +1",--10
+					ring2="Niqmaddu Ring",--5(II)
+					legs="Gleti's Breeches"--13
 					
 					
 				})
@@ -1518,8 +1509,8 @@ function job_post_precast(spell, action, spellMap, eventArgs)
 	--if spell.english == 'Jump' --[[and state.HybridMode.value == "PDT"]] then
 		--add_to_chat(8, '-------------Jump Called--------------')
 			equip({
-				left_ring="Murky Ring",
-				right_ring="Moonlight Ring",
+				ring1="Murky Ring",
+				ring2="Moonlight Ring",
 				head="Nyame Helm",
 				body="Gleti's Cuirass",
 			})
@@ -1681,11 +1672,6 @@ end
 -- buff == buff gained or lost
 -- gain == true if the buff was gained, false if it was lost.
 function job_buff_change(buff, gain)
-    if S{'madrigal'}:contains(buff:lower()) then
-        if buffactive.madrigal and state.OffenseMode.value == 'Acc' then
-            equip(sets.MadrigalBonus)
-        end
-    end
     if string.lower(buff) == "sleep" and gain and player.hp > 200 then
         equip(sets.Sleeping)--regain/DT set while asleep
     else
@@ -1697,9 +1683,9 @@ function job_buff_change(buff, gain)
         if gain then
             equip(sets.buff.Doom)
             send_command('@input /p Doomed')
-             disable('left_ring','right_ring','waist','neck')
+             disable('ring1','ring2','waist','neck')
         else
-            enable('left_ring','right_ring','waist','neck')
+            enable('ring1','ring2','waist','neck')
             handle_equipping_gear(player.status)
         end
     end
@@ -1854,7 +1840,7 @@ end
 --added code to the end of motes-include for this to work
 function job_handle_equipping_gear(playerStatus, eventArgs)
     local lockables = T{'Mecisto. Mantle', 'Shobuhouou Kabuto', 'Aptitude Mantle', 'Nexus Cape', 'Aptitude Mantle +1', 'Warp Ring', 'Vocation Ring', 'Reraise Earring', 'Capacity Ring', 'Trizek Ring', 'Echad Ring', 'Facility Ring', 'Dim. Ring (Holla)', 'Dim. Ring (Dem)', 'Dim. Ring (Mea)'}
-    local watch_slots = T{'ear1','ear2','left_ring','right_ring','back','head'}
+    local watch_slots = T{'ear1','ear2','ring1','ring2','back','head'}
  
     for _,v in pairs(watch_slots) do
         if lockables:contains(player.equipment[v]) then
@@ -1900,9 +1886,9 @@ end
         if gain then
             equip(sets.buff.Doom)
             send_command('@input /p Doomed')
-             disable('left_ring','right_ring','waist','neck')
+             disable('ring1','ring2','waist','neck')
         else
-            enable('left_ring','right_ring','waist','neck')
+            enable('ring1','ring2','waist','neck')
             handle_equipping_gear(player.status)
         end
     end
