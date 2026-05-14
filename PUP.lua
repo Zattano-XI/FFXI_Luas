@@ -308,8 +308,8 @@ function init_gear_sets()
 	sets.engaged.Hybrid = {
         head="Mpaca's Cap",
 		neck="Shulmanu Collar",
-		ear1="Schere Earring",
-		ear2="Cessance Earring",
+		ear1="Alabaster Earring",
+		ear2="Schere Earring",
         body="Mpaca's Doublet",
 		hands="Mpaca's Gloves",
 		left_ring="Gere Ring",

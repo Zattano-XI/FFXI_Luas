@@ -387,21 +387,21 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
     sets.precast.FC = {--3101hp
-        ammo="Sapience Orb", --2  
-		head="Rune. Bandeau +3",
-		body="Erilaz Surcoat +3",
-		hands="Leyline Gloves",
-		legs="Agwu's Slops",
-		feet="Carmine Greaves +1",
-		neck="Moonlight Necklace", --orunmila's torque
-		waist="Carrier's sash",
-		Right_ear="Etiolation Earring",
+        ammo="Sapience Orb",       --2%
+		head="Rune. Bandeau +3",   --14%
+		body="Erilaz Surcoat +3",  --13%
+		hands="Sworn Gauntlets",   --5%
+		legs="Sworn Brais",        --8%
+		feet="Carmine Greaves +1", --8%
+		neck="Orunnmila's Torque", --5%
+		waist="Carrier's sash",   
+		Right_ear="Etiolation Earring", --1%
 		Left_ear="Alabaster Earring", --enchanter?
-		left_ring="Kishar Ring",
+		left_ring="Kishar Ring", --4%
 		right_ring="Murky Ring", --rahab?
-		back={name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}}
+		back={name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}} --10%
 			
-		-----------   Total FC=54   ----------------------------
+		-----------   Total FC=70 + Capped DT  ----------------------------
         }
 
     sets.precast.FC.HP = set_combine(sets.precast.FC, {
@@ -410,13 +410,13 @@ function init_gear_sets()
 		neck="Loricate Torque +1",
 		ear1="Alabaster Earring",
 		ear2="Etiolation Earring",
-        body="	 +3",
+        body="Sworn Platemail",
 		left_ring="Moonlight Ring",
 		right_ring="Moonlight Ring",
         --back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 		back={name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Spell interruption rate down-10%',}},
 		waist="Plat. Mog. Belt",
-		legs="Eri. Leg Guards +3",
+		legs="Sworn Brais",
 		feet="Erilaz Greaves +3"
 		})
 
@@ -963,7 +963,7 @@ function init_gear_sets()
     sets.Hybrid = {
 		head="Nyame Helm",
 		--body={ name="Adhemar Jacket +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
-		body="Ayanmo Corazza +2",
+		body="Nyame Mail",
 		hands="Turms Mittens +1",
 		--hands="Adhemar Wrist. +1",
 		--legs={ name="Samnuha Tights", augments={'STR+9','DEX+8','"Dbl.Atk."+2','"Triple Atk."+2',}},

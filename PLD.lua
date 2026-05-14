@@ -26,12 +26,12 @@ function get_sets()
 	sets.fc.base = { --2+14+10+8+4+10+8+13=69
 	ammo="Sapience Orb", --2%
 	head={name="Carmine Mask +1",priority=12}, --14%
-	body={name="Reverence Surcoat +3",priority=15}, --10%
-	hands="Leyline Gloves", --8%
+	body={name="Reverence Surcoat +4",priority=15}, --10%
+	hands="Sworn Gauntlets", --8%
 	left_ring="Kishar ring", --4%
 	back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',},priority=13}, --'HP+20'
 	waist="Plat. Mog. Belt",
-	legs={name="Enif Cosciales",priority=11}, --8%
+	legs={name="Sworn Brais",priority=11}, --8%
 	feet={name="Chevalier's Sabatons +3",priority=14} --13%
 	}
 	
@@ -52,7 +52,7 @@ function get_sets()
 	neck={name="Unmoving Collar +1",priority=11}, --200
 	left_ear={name="Alabaster Earring",priority=9}, --150
 	right_ear={name="Tuisto Earring",priority=6}, --110
-	body={name="Reverence Surcoat +3",priority=14}, --254
+	body={name="Reverence Surcoat +4",priority=14}, --254
 	hands="Regal Gauntlets",
 	hands={name="Souveran Handschuhs +1",priority=13}, --239
 	left_ring={name="Gelatinous Ring +1",priority=7}, --110

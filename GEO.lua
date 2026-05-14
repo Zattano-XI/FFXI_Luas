@@ -530,7 +530,7 @@ function init_gear_sets()
         --hands="Bagua Mitaines +3",
         hands="Agwu's Gages",
 		legs="Volte Brais",
-        feet="Geomancy Sandals +3",
+        feet="Geomancy Sandals +4",
         neck="Bathy Choker +1",--windy?
         ear1="Lugalbanda Earring",
         ear2="Etiolation Earring",
@@ -597,7 +597,7 @@ function init_gear_sets()
     sets.defense.PDT = sets.idle.DT
     sets.defense.MDT = sets.idle.DT
 
-    sets.Kiting = {feet="Geo. Sandals +3"}
+    sets.Kiting = {feet="Geo. Sandals +4"}
 
     sets.latent_refresh = {waist="Fucho-no-Obi"}
 
@@ -633,7 +633,7 @@ function init_gear_sets()
         sub="Genmei Shield",
         head="Nyame Helm",
 		neck="Loricate Torque +1",
-		ear1="Cessance Earring",
+		ear1="Alabaster Earring",
         ear2="Brutal Earring",
         body="Nyame Mail",
         hands="Nyame Gauntlets",

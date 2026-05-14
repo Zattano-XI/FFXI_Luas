@@ -227,14 +227,14 @@ function init_gear_sets()
         head="Ebers Cap +3", --6 volte beret
         body="Inyanga Jubbah +2", --14
         --hands="Gende. Gages +1", --7
-        legs="Ayanmo Cosciales +2", --8
+        legs="Sworn Brais", --8 DT
         feet="Regal Pumps +1", --6 
         neck="Clr. Torque +2", --10
-        ear1="Loquacious Earring", --2
+        ear1="Alabaster Earring", --5DT
         ear2="Malignance Earring", --2
         left_ring="Lebeche Ring", --4
         right_ring="Kishar Ring", --4
-        back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, --10
+        back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, --10DT
         waist="Embla Sash", --5 Witful belt
         }
 
@@ -245,8 +245,7 @@ function init_gear_sets()
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {
         ammo="Impatiens", --(2)
         head="Piety Cap +4", --15
-		legs="Vanya Slops", --7
-        feet="Vanya Clogs", --7
+        feet="Vanya Clogs", --7 --sworn Brais
 		ear1="Mendi. earring",
 		ear2="Malignance earring",
         left_ring="Lebeche Ring", 
@@ -267,19 +266,19 @@ function init_gear_sets()
 
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {
-        --ammo="Floestone",
-        head="Piety Cap +4",
+        ammo="Crepuscular Pebble",
+        head="Nyame Helm",
 		neck="Fotia Gorget",
 		ear1="Moonshade Earring",
         ear2="Ishvara Earring",
-        body="Piety Bliaut +4",
-        hands="Piety Mitts +4",
+        body="Nyame Mail",
+        hands="Nyame Gauntlets",
 		left_ring="Cornelia's Ring",
         right_ring="Metamorph Ring +1",
         back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
         waist="Fotia Belt",
-        legs="Piety Pantaln. +3",
-        feet="Piety Duckbills +3",
+        legs="Nyame Flanchard",
+        feet="Nyame Sollerets",
         }
 
     sets.precast.WS['Black Halo'] = set_combine(sets.precast.WS, {
@@ -333,7 +332,7 @@ function init_gear_sets()
         ammo="Pemphredo Tathlum",
         head="Kaykaus Mitra +1", --11(+2)/(-6)
         body="Ebers Bliaut +3",
-        hands="Theophany Mitts +3", --(+4)/(-7)
+        hands="Theophany Mitts +4", --(+4)/(-7)
         legs="Ebers Pant. +3",
         feet="Kaykaus Boots +1", -- 11(+2)/(-12)
         neck="Clr. Torque +2", --10/(-25)
@@ -356,7 +355,7 @@ function init_gear_sets()
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
 		ring1="Defending Ring",
 		ring2="Murky Ring", --3
-		feet="Theo. Duckbills +3", --29
+		feet="Theo. Duckbills +4", --29
 		waist="Rumination Sash", --10
 		--left_ear="Nourishing Earring +1", --5
 		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Fast Cast"+10','Spell interruption rate down-10%',}}, --10
@@ -371,14 +370,14 @@ function init_gear_sets()
         })
 
     sets.midcast.CureNormal = set_combine(sets.midcast.CureSolace, {
-        body="Theo. Bliaut +3", --0(+6)/(-6)
+        body="Theo. Bliaut +4", --0(+6)/(-6)
         })
 		
 	sets.midcast.CureNormal.SIRD = set_combine(sets.midcast.CureSolace, {
 		ammo="Staunch Tathlum +1", --11
 		head="Ebers Cap +3",
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
-		feet="Theo. Duckbills +3", --29
+		feet="Theo. Duckbills +4", --29
 		waist="Rumination Sash", --10
 		Right_ring="Murky Ring", --3
 		left_ring="Defending Ring", 
@@ -396,7 +395,7 @@ function init_gear_sets()
         ammo="Staunch Tathlum +1", --11
 		head="Ebers Cap +3",
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
-		feet="Theo. Duckbills +3", --29
+		feet="Theo. Duckbills +4", --29
 		waist="Rumination Sash", --10
 		left_ear="Glorious Earring", --5
 		left_ring="Murky Ring", --3
@@ -406,7 +405,7 @@ function init_gear_sets()
 	--94+10 SIRD from merits
 
     sets.midcast.CuragaNormal = set_combine(sets.midcast.CureNormal, {
-        body="Theo. Bliaut +3", --0(+6)/(-6)
+        body="Theo. Bliaut +4", --0(+6)/(-6)
         left_ring={name="Stikini Ring +1", bag="wardrobe2"},
         right_ring={name="Stikini Ring +1", bag="wardrobe5"},
         waist="Luminary Sash",
@@ -416,7 +415,7 @@ function init_gear_sets()
         ammo="Staunch Tathlum +1", --11
 		head="Ebers Cap +3",
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
-		feet="Theo. Duckbills +3", --29
+		feet="Theo. Duckbills +4", --29
 		waist="Rumination Sash", --10
 		left_ring="Murky Ring", --3
 		right_ring="Defending Ring", 
@@ -429,8 +428,8 @@ function init_gear_sets()
 		neck="Clr. Torque +2",
         ear1="Glorious Earring",
         ear2="Ebers Earring +1",
-		body="Theo. Bliaut +3", --0(+6)/(-6)
-        hands="Theophany Mitts +3", --11/(-6)
+		body="Theo. Bliaut +4", --0(+6)/(-6)
+        hands="Theophany Mitts +4", --11/(-6)
         left_ring={name="Stikini Ring +1", bag="wardrobe2"}, --Janniston
         right_ring="Metamor. Ring +1", --Mephitas
         back="Twilight Cape",
@@ -443,7 +442,7 @@ function init_gear_sets()
 		ammo="Staunch Tathlum +1", --11
 		head="Ebers Cap +3",
 		hands={ name="Chironic Gloves", augments={'Spell interruption rate down -10%','INT+7','"Mag.Atk.Bns."+8',}}, --30
-		feet="Theo. Duckbills +3", --29
+		feet="Theo. Duckbills +4", --29
 		waist="Rumination Sash", --10
 		left_ring="Murky Ring", --3
 		right_ring="Defending Ring", 
@@ -460,7 +459,7 @@ function init_gear_sets()
         head="Vanya Hood",
         body="Inyanga Jubbah +2",
         hands="Fanatic Gloves",
-        legs="Aya. Cosciales +2",
+        legs="Nyame Flanchard",
         feet="Medium's Sabots",
         neck="Orunmila's Torque",
 		ear1="Etiolation Earring",
@@ -498,7 +497,7 @@ function init_gear_sets()
         body="Telchine Chasuble",
         hands="Dynasty Mitts",
         legs="Telchine Braconi",
-        feet="Theo. Duckbills +3",
+        feet="Theo. Duckbills +4",
         neck="Incanter's Torque",
         ear1="Mimir Earring",
         ear2="Andoaa Earring",
@@ -518,7 +517,7 @@ function init_gear_sets()
         body="Telchine Chasuble",
         hands="Telchine Gloves",
         legs="Telchine Braconi",
-        feet="Theo. Duckbills +3",
+        feet="Theo. Duckbills +4",
         waist="Embla Sash",
         }
 
@@ -533,7 +532,7 @@ function init_gear_sets()
     sets.midcast.RegenDuration = set_combine(sets.midcast.EnhancingDuration, {
         hands="Ebers Mitts +3",
         legs="Th. Pant. +3", --
-        feet="Theo. Duckbills +3",
+        feet="Theo. Duckbills +4",
         })
 
     sets.midcast.Refresh = set_combine(sets.midcast.EnhancingDuration, {
@@ -581,7 +580,7 @@ function init_gear_sets()
         hands="Telchine Gloves",
 		waist="Embla Sash",
         legs="Telchine Braconi",
-        feet="Theo. Duckbills +3",
+        feet="Theo. Duckbills +4",
 		})
 
     sets.midcast.BoostStat = set_combine(sets.midcast['Enhancing Magic'], {
@@ -600,11 +599,11 @@ function init_gear_sets()
         main="Yagrush",
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",
-        head="Theophany Cap +3",
-        body="Theo. Bliaut +3",
+        head="Theophany Cap +4",
+        body="Theo. Bliaut +4",
         hands="Piety Mitts +4",
         legs="Chironic Hose",
-        feet="Theo. Duckbills +3",
+        feet="Theo. Duckbills +4",
         neck="Erra Pendant",
         ear1="Digni. Earring",
         ear2="Regal Earring",
@@ -645,10 +644,10 @@ function init_gear_sets()
         sub="Ammurapi Shield",
         ammo="Pemphredo Tathlum",
         head="Pixie Hairpin +1",
-        body="Theo. Bliaut +3",
-        hands="Theophany Mitts +3",
+        body="Theo. Bliaut +4",
+        hands="Theophany Mitts +4",
         legs="Chironic Hose",
-        feet="Theo. Duckbills +3",
+        feet="Theo. Duckbills +4",
         neck="Erra Pendant",
         ear1="Malignance Earring",
         ear2="Mani Earring",
@@ -666,7 +665,7 @@ function init_gear_sets()
         body="Cohort Cloak +1",
         hands="Regal Cuffs",
         legs="Chironic Hose",
-        feet="Theo. Duckbills +3",
+        feet="Theo. Duckbills +4",
         neck="Erra Pendant",
         ear1="Malignance Earring",
         ear2="Vor Earring",
@@ -688,7 +687,7 @@ function init_gear_sets()
         body="Crepuscular Cloak",
         hands="Raetic Bangles +1",
         legs="Th. Pant. +3",
-        feet="Theo. Duckbills +3",
+        feet="Theo. Duckbills +4",
         left_ring="Freke Ring",
         right_ring="Archon Ring",
         }
@@ -734,7 +733,7 @@ function init_gear_sets()
         --back="Moonlight Cape", --6/6
         waist="Carrier's Sash",
         }) 
-		--total 62+
+		--total 62+ DT
 		
     sets.idle.MEva = set_combine(sets.idle.DT, {
         main="Daybreak",
@@ -783,26 +782,26 @@ function init_gear_sets()
         main="Yagrush",
         sub="Genmei Shield",
         head="Bunzi's Hat",
-        body="Ayanmo Corazza +2",
+        body="Nyame Mail",
         hands="Bunzi's Gloves",
-        legs="Aya. Cosciales +2",
+        legs="Nyame Flanchard",
         feet="Nyame Sollerets",
         neck="Null Loop",
-        left_ear="Cessance Earring",
-        right_ear="Alabaster Earring",
+        left_ear="Alabaster Earring",
+		right_ear="Telos Earring",
         left_ring={name="Chirich Ring +1", bag="wardrobe2"},
         right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-        back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+        back="Null Shawl",
         waist="Windbuffet Belt +1",
         }
 
     sets.engaged.Acc = set_combine(sets.engaged, {
-        neck="Combatant's Torque",
-		left_ear="Mache Earring +1",
-		right_ear="Telos Earring",
-		hands="Gazu Bracelet +1",
-		left_ring="Cacoethic Ring +1",
-		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
+        --neck="Combatant's Torque",
+		--left_ear="Mache Earring +1",
+		--right_ear="Telos Earring",
+		hands="Gazu Bracelets +1",
+		--left_ring="Cacoethic Ring +1",
+		--right_ring={name="Chirich Ring +1", bag="wardrobe5"},
         waist="Grunfeld Rope",
         })
 
@@ -817,6 +816,8 @@ function init_gear_sets()
         --sub="Sindri",
         hands="Gazu Bracelet +1",
         })
+
+	sets.kclub = {main="Maxentius", Sub="Kraken Club",}
 
     sets.engaged.Aftermath = set_combine(sets.engaged, {
         right_ring={name="Chirich Ring +1", bag="wardrobe5"},

@@ -46,12 +46,12 @@ function get_sets()
 	}
 	
 	sets.ja['Meditate'] = {
-	head="Wakido Kabuto +3",
+	head="Wakido Kabuto +4",
 	hands="Sakonji Kote +3",
 	back="Smertrios's Mantle"
 	}
 	sets.ja['Sengikori'] = {feet="Kasuga Sune-Ate +3"}
-	sets.ja['Warding Circle'] = {head="Wakido Kabuto +3"}
+	sets.ja['Warding Circle'] = {head="Wakido Kabuto +4"}
 	sets.ja['Provoke'] = sets.enmity
 	sets.ja['Souleater'] = sets.enmity
 	sets.ja['Shikikoyo'] = {legs="Sakonji Haidate +3"}
@@ -68,7 +68,7 @@ function get_sets()
 	right_ear="Kasuga Earring +2",
 	body="Mpaca's Doublet",
 	--body="Tatenashi Haramaki +1",
-	hands="Wakido Kote +3",
+	hands="Wakido Kote +4",
 	--hands="Tatenashi Gote +1",
 	left_ring="Niqmaddu Ring",
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
@@ -81,7 +81,7 @@ function get_sets()
 	}
 	
 	sets.TP['Acc'] = set_combine(sets.TP['Standard'], {
-	head="Wakido Kabuto +3",
+	head="Wakido Kabuto +4",
 	body="Mpaca's Doublet",
 	right_ring="Regal Ring",
 	feet="Tatenashi Sune-ate +1"
@@ -90,7 +90,7 @@ function get_sets()
 	sets.TP['Hybrid'] = set_combine(sets.TP['Standard'], { --37dt
         head="Mpaca's Cap", --7pdt
         body="Mpaca's Doublet", --10pdt
-        hands="Wakido Kote +3",
+        hands="Wakido Kote +4",
         left_ring="Niqmaddu Ring", 
         right_ring="Murky Ring", --10dt
         --back=Smertrios.TP, 5dt
@@ -112,7 +112,6 @@ function get_sets()
 	sets.TP['Subtle DT'] = set_combine(sets.TP['Hybrid'], {
 		head="Kasuga Kabuto +3",
 		body="Kasuga Domaru +3",
-		hands="Nyame Gauntlets",
 		left_ring="Niqmaddu Ring",
 		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 		legs="Kasuga Haidate +3",
@@ -121,6 +120,8 @@ function get_sets()
 		
 	sets.TP['Subtle DT 2'] = set_combine(sets.TP['Subtle DT'], {
 		body="Dagon Breastplate", --10%
+		legs="Mpaca's Hose",
+		
 	})	
 		
 	sets.TP['MDT'] = set_combine(sets.TP['Standard'], {
@@ -221,6 +222,7 @@ function get_sets()
 	})
 	
 	sets.ws['Tachi: Mumei'] = set_combine(sets.ws.common, {
+	left_ear="Hoxne Earring",
 	--left_ring="Regal Ring",
 	waist="Kentarch Belt +1",
 	})
@@ -322,7 +324,7 @@ function get_sets()
 	
 	sets.stun = set_combine(sets.TP['MDT'], {
 	neck="Anu Torque",
-	left_ear="Dominance Earring +1",
+	--left_ear="Dominance Earring +1",
 	waist="Carrier's Sash",
 	})
 	
@@ -564,7 +566,7 @@ function aftercast(spell)
 		--if (spell.name == 'Seigan' and buffactive['Hasso']) or buffactive['Seigan'] then
 		--	equip({hands="Tatenashi Gote +1"})
 		--elseif spell.name == 'Hasso' or buffactive['Hasso'] then
-		--	equip({hands="Wakido Kote +3"})
+		--	equip({hands="Wakido Kote +4"})
 		--end
 	elseif (player.status == 'Idle' and (player.equipment.main ~= "Soboro Sukehiro" or player.equipment.main ~= "Quint Spear")) or player.status == "Idle" then
 		--enable('range','ammo','head','neck','left_ear','right_ear','body','hands','left_ring','right_ring','back','waist','legs','feet')
@@ -583,7 +585,7 @@ function aftercast(spell)
 		--if (spell.name == 'Seigan' and buffactive['Hasso']) or buffactive['Seigan'] then
 		--	equip({hands="Tatenashi Gote +1"})
 		--elseif spell.name == 'Hasso' or buffactive['Hasso'] then
-		--	equip({hands="Wakido Kote +3"})
+		--	equip({hands="Wakido Kote +4"})
 		--end
 	end
 	if player.equipment.range == 'empty' then
@@ -616,7 +618,7 @@ function status_change(new,old)
 	elseif new == 'Engaged' then
 		equip(sets.TP[sets.TP.index[TP_ind]])
 		--if buffactive['Hasso'] then
-		--	equip({hands="Wakido Kote +3"})
+		--	equip({hands="Wakido Kote +4"})
 		--elseif buffactive['Seigan'] then
 		--	equip({hands="Tatenashi Gote +1"})
 		--end
@@ -684,7 +686,7 @@ function self_command(command)
 		--if buffactive['Seigan'] then
 		--	equip({hands="Tatenashi Gote +1"})
 		--elseif buffactive['Hasso'] then
-		--	equip({hands="Wakido Kote +3"})
+		--	equip({hands="Wakido Kote +4"})
 		--end
 		if player.status == 'Idle' then
 			equip(sets.movement)
@@ -719,7 +721,7 @@ function self_command(command)
 		--if buffactive['Seigan'] then
 		--	equip({hands="Tatenashi Gote +1"})
 		--elseif buffactive['Hasso'] then
-		--	equip({hands="Wakido Kote +3"})
+		--	equip({hands="Wakido Kote +4"})
 		--end
 	end
 end

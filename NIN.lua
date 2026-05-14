@@ -274,7 +274,7 @@ function init_gear_sets()
         legs="Nyame Flanchard",
         feet="Nyame Sollerets",
         neck="Fotia Gorget",
-        ear1="Cessance Earring",
+        ear1="Alabaster Earring", --Wtf
         ear2="Moonshade Earring",
         left_ring="Ilabrat Ring",
         right_ring="Regal Ring",
@@ -593,7 +593,7 @@ function init_gear_sets()
         legs="Mochi. Hakama +3",
         feet="Danzo Sune-ate",
         neck="Ninja Nodowa +2",
-        ear1="Cessance Earring",
+        ear1="Alabaster Earring",
         ear2="Telos Earring",
         back=gear.NIN_TP_Cape,
         waist="Windbuffet Belt +1",
@@ -631,7 +631,7 @@ function init_gear_sets()
         legs="Ken. Hakama +1",
         --feet="Hiza. Sune-Ate +2", --8
         neck="Ninja Nodowa +2",
-        ear1="Cessance Earring",
+        ear1="Alabaster Earring",
         ear2="Suppanomimi", --5
         right_ring="Gere Ring", --left_ring
         left_ring="Epona's Ring", --right_ring
@@ -678,7 +678,7 @@ function init_gear_sets()
         legs="Ken. Hakama +1",
         feet="Ken. Sune-Ate +1",
         neck="Ninja Nodowa +2",
-        ear1="Cessance Earring",
+        ear1="Alabaster Earring",
         ear2="Suppanomimi", --5
         right_ring="Gere Ring", --R1
         left_ring="Epona's Ring", --R2
@@ -715,7 +715,7 @@ function init_gear_sets()
         legs="Ken. Hakama +1",
         feet="Ken. Sune-Ate +1",
         neck="Ninja Nodowa +2",
-        ear1="Cessance Earring",
+        ear1="Alabaster Earring",
         ear2="Suppanomimi", --5
         left_ring="Gere Ring",
         right_ring="Epona's Ring",
@@ -790,7 +790,7 @@ function init_gear_sets()
         legs="Ken. Hakama +1",	
         feet="Ken. Sune-Ate +1",
         neck="Ninja Nodowa +2",
-        ear1="Cessance Earring",
+        ear1="Alabaster Earring",
         ear2="Telos Earring",
         left_ring="Gere Ring",
         right_ring="Epona's Ring",
@@ -804,7 +804,7 @@ function init_gear_sets()
         })
 
     sets.engaged.MidAcc.MaxHaste = set_combine(sets.engaged.LowAcc.MaxHaste, {
-        ear1="Cessance Earring",
+        ear1="Alabaster Earring",
         left_ring="Chirich Ring +1",
         right_ring="Ilabrat Ring",
         })
@@ -817,7 +817,7 @@ function init_gear_sets()
 
     sets.engaged.STP.MaxHaste = set_combine(sets.engaged.MaxHaste, {
         legs="Samnuha Tights",
-        ear1="Dedition Earring",
+        ear1="Alabaster Earring",
         ear2="Telos Earring",
         left_ring="Chirich Ring +1",
         right_ring="Chirich Ring +1",

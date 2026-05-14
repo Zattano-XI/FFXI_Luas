@@ -133,11 +133,11 @@ function get_sets()
 	sets.midcast.enfeeble = set_combine(sets.midcast.conservemp, {
 	--main="Contemplator +1",
 	--sub="Khonsu",
-	head=empty,
+	head="Agwu's Cap",
 	neck="Incanter's Torque",
 	left_ear="Regal Earring",
 	right_ear="Malignance Earring",
-	body="Cohort Cloak +1",
+	body="Agwu's Robe",
 	hands="Agwu's Gages",
 	left_ring="Stikini Ring +1",
 	right_ring="Metamorph Ring +1",
@@ -176,11 +176,11 @@ function get_sets()
 	
 	sets.nuke['Free'] = {
 	ammo="Pemphredo Tathlum",
-	head=empty,
+	head="Agwu's Cap",
 	neck="Sibyl Scarf",
 	left_ear="Regal Earring",
 	right_ear="Malignance Earring",
-	body="Cohort Cloak +1",
+	body="Agwu's Robe",
 	hands="Agwu's Gages",
 	left_ring="Freke Ring",
 	right_ring="Metamorph Ring +1",
@@ -271,12 +271,12 @@ function get_sets()
 	
 	sets.idle['Refresh'] = {
 	ammo="Staunch Tathlum +1",
-	head="Volte Beret",
+	head="Null Masque",
 	neck="Loricate Torque +1",
-	left_ear="Etiolation Earring",
-	right_ear="Lugalbanda Earring",
-	body="Shamash Robe",
-	hands="Agwu's Gages",
+	left_ear="Alabaster Earring",
+	right_ear="Etiolation Earring",
+	body="Adamantite Armor",
+	hands="Nyame Gauntlets",
 	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
 	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	back="Solemnity Cape",
@@ -301,14 +301,14 @@ function get_sets()
 	
 	sets.TP['Melee'] = {
 	head="Nyame Helm",
-	neck="Combatant's Torque",
-	left_ear="Telos Earring",
-	right_ear="Mache Earring +1",
+	neck="Null Loop",
+	left_ear="Alabaster Earring",
+	right_ear="Telos Earring",
 	body="Nyame Mail",
-	hands="Nyame Gauntlets",
+	hands="Gazu Bracelets +1",
 	left_ring="Chirich Ring +1",
-	right_ring="Cacoethic Ring +1",
-	back="Aurist's Cape +1",
+	right_ring="Murky Ring",
+	back="Null Shawl",
 	waist="Null Belt",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
@@ -348,13 +348,17 @@ function get_sets()
 	sets.refresh = sets.idle['Refresh']
 	
 	sets.ws.common = {
+	ammo="Crepuscular Pebble",
 	head="Nyame Helm",
-	neck="Fotia Gorget",
+	neck="Rep. Plat. Medal",
+	ear1="Alabaster Earring",
+	Ear2="Hoxne Earring",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
+	left_ring="Cornelia's Ring",
 	right_ring="Epaminondas's Ring",
 	back="Taranus's Cape",
-	waist="Fotia Belt",
+	waist="Grunfeld Rope",
 	legs="Nyame Flanchard",
 	feet="Nyame Sollerets"
 	}
@@ -404,6 +408,7 @@ function get_sets()
 	waist=empty,
 	legs="Volte Brais",
 	feet="Medium's Sabots",
+	}
 	
 	sets.phalanx = {
 	ammo="Staunch Tathlum +1",

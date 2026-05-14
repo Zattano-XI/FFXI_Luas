@@ -129,7 +129,7 @@ function get_sets()
 	
 	sets.melee = sets.TP['Standard']
 	
-	sets.idle = {left_ring="Warp Ring",feet="Pillager's Poulaines +3"}
+	sets.idle = {left_ring="Warp Ring",feet="Pillager's Poulaines +4"}
 	
 	sets.refresh = set_combine(sets.idle, {
 	head="Rawhide Mask",
@@ -288,12 +288,12 @@ function get_sets()
 	sets.ja['Perfect Dodge'] = {hands="Plunderer's Armlets +3"}
 	sets.ja['Collaborator'] = {head="Skulker's Bonnet +3"}
     sets.ja['Accomplice'] = {head="Skulker's Bonnet +3"}
-    sets.ja['Flee'] = {feet="Pillager's Poulaines +3"}
+    sets.ja['Flee'] = {feet="Pillager's Poulaines +4"}
     sets.ja['Conspirator'] = {body="Skulker's Vest +3"}
 	sets.ja['Hide'] = {body="Pillager's Vest +3"}
-	sets.ja['Steal'] = set_combine(sets.THwhore, {ammo="Barathrum",head="Pluderer's Bonnet +3",neck="Pentalagus Charm",hands="Thief's Kote",feet="Pillager's Poulaines +3"}) --legs="Assassin's Culottes"
+	sets.ja['Steal'] = set_combine(sets.THwhore, {ammo="Barathrum",head="Pluderer's Bonnet +3",neck="Pentalagus Charm",hands="Thief's Kote",feet="Pillager's Poulaines +4"}) --legs="Assassin's Culottes"
 	sets.ja['Mug'] = set_combine(sets.THwhore, {head="Assassin's Bonnet"})
-	sets.ja['Flee'] = {feet="Pillager's Poulaines +3"}
+	sets.ja['Flee'] = {feet="Pillager's Poulaines +4"}
 	sets.ja['Despoil'] = set_combine(sets.THwhore, {ammo="Barathrum",legs="Skulker's Culottes +3",feet="Skulker's Poulaines +3",})
 	sets.ja['Feint'] = {legs="Plunderer's Culottes +3"}
 	

@@ -119,11 +119,11 @@ function init_gear_sets()
 	--neck="Baetyl Pendant",
     --waist="Witful Belt", --3 FC 3 QC
 	waist="Embla Sash",
-    left_ear="Loquac. Earring", --2 FC
-    right_ear="Etiolation Earring", --1 FC
-    right_ring="Kishar Ring", --4 FC
+    left_ear="Alabaster Earring", --10DT 150HP
+    right_ear="Loq. Earring", --1 FC
+    left_ring="Kishar Ring",
+	right_ring="Moonlight Ring", --5DT 110HP
     --right_ring="Lebeche Ring", --2 QC
-	left_ring="Rahab Ring",
     --back="Perimede Cape", --4 QC
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, --10 FC
 	}
@@ -143,10 +143,10 @@ function init_gear_sets()
     neck="Orunmila's Torque",
     --neck="Baetyl Pendant",
 	waist="Embla Sash",
-    left_ear="Etiolation Earring",
+    left_ear="Alabaster Earring", --10DT 150HP
     right_ear="Fili Earring +1",
-    left_ring="Rahab Ring",
-    right_ring="Kishar Ring",
+    left_ring="Kishar Ring",
+	right_ring="Moonlight Ring", --5DT 110HP
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 
 	}
@@ -292,8 +292,8 @@ function init_gear_sets()
 	--waist="Harfner's Sash", --5
     left_ear="Darkside Earring", --5
     right_ear="Gersemi Earring", --10
- 	left_ring={name="Stikini Ring +1", bag="wardrobe8"}, --8
-    right_ring={name="Stikini Ring +1", bag="wardrobe7"}, --8
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 	} --125 Total 64 Current
 	
 	sets.midcast["Foe Lullaby"] = {hands="Brioso Cuffs +3",range="Marsyas"}
@@ -351,8 +351,8 @@ function init_gear_sets()
     waist="Null Belt",
     left_ear="Regal Earring",
     right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
-	left_ring={name="Stikini Ring +1", bag="wardrobe8"}, --1
-    right_ring={name="Stikini Ring +1", bag="wardrobe7"}, --1
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
     back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 
@@ -407,8 +407,8 @@ function init_gear_sets()
     waist={ name="Shinjutsu-no-Obi +1", augments={'Path: A',}}, --15 ConMP
     left_ear="Gifted Earring", --3 ConMP
     right_ear="Calamitous Earring", --4 ConMP
-    left_ring="Lebeche Ring", --1 CP 1 CP2
-    right_ring="Mephitas's Ring +1", --15 ConMP
+    left_ring="Mephitas's Ring +1", --15 ConMP
+	right_ring="Moonlight Ring", --5DT 110HP
     back={ name="Fi Follet Cape +1", augments={'Path: A',}}, --5 ConMP
 	}
         
@@ -426,8 +426,8 @@ function init_gear_sets()
     waist="Embla Sash",
     left_ear="Mimir Earring",
     right_ear="Andoaa Earring",
-	left_ring={name="Stikini Ring +1", bag="wardrobe8"},
-    right_ring={name="Stikini Ring +1", bag="wardrobe7"},
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
     back={ name="Fi Follet Cape +1", augments={'Path: A',}},
 	}
 	
@@ -441,16 +441,23 @@ function init_gear_sets()
 		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
 		body="Brioso Justau. +3",
 		hands="Brioso Cuffs +3",
-		left_ring="Medada's Ring", --1
-		right_ring={name="Stikini Ring +1", bag="wardrobe7"}, --1
-		--right_ring="Kishar Ring",
+		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+		right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 		back="Null Shawl",
 		waist="Obstin. Sash",
 		legs="Fili Rhingrave +3",
 		feet="Brioso Slippers +3"
 		--feet="Uk'uxkaj Boots",
 		}
-		
+	
+	sets.midcast['Dia'] = set_combine(sets.midcast['Enfeebling Magic'], {
+	head="Volte Beret",
+	body="Volte Jupon",
+	Waist="Chaac Belt",
+	})
+
+	sets.midcast['Dia II'] = sets.midcast['Dia']
+	
 	sets.midcast.Absorb = set_combine (sets.midcast['Enfeebling Magic'], {
 	--ammo="Pemphredo Tathlum",
 	hands="Inyan. Dastanas +2",
@@ -531,6 +538,7 @@ function init_gear_sets()
     sets.idle = { --48 DT 18% Movement
 	--main="Daybreak",
     --sub="Genmei Shield",
+	range="Loughnashade",
 	head="Null Masuqe", --3regen/1Refresh/2regain/10DT
     body="Adamantite Armor",
 	--body="Annoint. Kalasiris", --Reraise
@@ -562,8 +570,8 @@ function init_gear_sets()
 	neck={ name="Loricate Torque +1", augments={'Path: A',}},
 	waist="Plat. Mog. Belt",
 	left_ear="Etiolation Earring",
-	left_ring={name="Stikini Ring +1", bag="wardrobe7"}, --1 Refresh
-	right_ring={name="Stikini Ring +1", bag="wardrobe8"}, --1 Refresh
+	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
+	right_ring={name="Stikini Ring +1", bag="wardrobe5"},
 		})
 	
     sets.idle.Town = {

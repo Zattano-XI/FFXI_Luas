@@ -42,15 +42,16 @@ function get_sets()
 	--ammo="Impatiens", --2 qm
 	head="Atrophy Chapeau +4", --16
 	--neck="Baetyl Pendant", --4
+	ear1="Alabaster Earring", 
 	--left_ear="Malignance Earring", --4
 	--right_ear="Loquacious Earring", --2
-	body="Vitiation Tabard +4", --15
-	--hands="Leyline Gloves", --5
+	body="Sworn Platemail", --9
+	hands="Sworn Gauntlets", --5
 	--left_ring="Kishar Ring", --4
 	right_ring="Lebeche Ring", --2 qm
 	back="Perimede Cape", --4 qm
-	waist="Witful Belt", --3 qm
-	legs="Volte Brais", --8
+	waist="Witful Belt", --3 fc/qm
+	legs={name="Sworn Brais",priority=15}, --8
 	feet="Carmine Greaves +1" --8
 	}
 	
@@ -68,7 +69,7 @@ function get_sets()
 	--neck="Magoraga Bead Necklace", --10
 	})
 	
-	sets.fc.impact = { --59
+	sets.fc.impact = set_combine(sets.fc.base, { --59
 	main="Crocea Mors", --20
 	sub="Chanter's Shield", --3
 	ammo="Sapience Orb", --2
@@ -77,14 +78,9 @@ function get_sets()
 	left_ear="Malignance Earring", --4
 	right_ear="Loquacious Earring", --2
 	body="Crepuscular Cloak",
-	hands="Leyline Gloves", --5
+	hands="Sworn Gauntlets", --5
 	left_ring="Kishar Ring", --4
-	right_ring="Lebeche Ring", --2 qm
-	back="Perimede Cape", --4 qm
-	waist="Witful Belt", --3/3 qm
-	legs="Volte Brais", --7
-	feet="Carmine Greaves +1" --8
-	}
+	})
 	
 	sets.midcast.conservemp = {
 	head="Vanya Hood", --6
@@ -261,7 +257,7 @@ function get_sets()
 	hands="Regal Cuffs",
 	right_ring="Kishar Ring",
 	back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
-	waist="Skrymir Cord",
+	waist="Skrymir Cord +1",
 	--waist="Obstinate Sash",
 	legs="Lethargy Fuseau +3",
 	feet="Lethargy Houseaux +3"
@@ -441,14 +437,14 @@ function get_sets()
 	sets.ja['Valiance'] = sets.enmity
 	sets.ja['Animated Flourish'] = sets.enmity
 	
-	sets.TP.index = {'Standard','EnSpell',}
+	sets.TP.index = {'Standard','EnSpell','Limbus'}
 	TP_ind = 1 --Standard set is the Default
 	
 	sets.TP['Standard'] = {
 	ammo="Coiste Bodhar",
 	head="Bunzi's Hat",
 	neck="Combatant's Torque",
-	left_ear="Sherida Earring",
+	left_ear="Alabaster Earring",
 	right_ear="Lethargy Earring +2",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
@@ -456,7 +452,7 @@ function get_sets()
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
 	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	waist="Reiki Yotai",
-	legs="Malignance Tights",
+	legs="Sworn Brais",
 	feet="Nyame Sollerets",
 	}
 	
@@ -466,13 +462,29 @@ function get_sets()
 	neck="Null Loop",
 	ear1="Sherida Earring",
 	ear2="Lethargy Earring +2",
-	body="Malignance Tabard",
+	body="Sworn Platemail",
 	hands="Aya. Manopolas +2",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 	right_ring="Ilabrat Ring",
 	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	waist="Orpheus's Sash",
-	legs="Malignance Tights",
+	legs={name="Sworn Brais",priority=15},
+	feet="Nyame Sollerets"
+	}
+	
+	sets.TP['Limbus'] = {
+	range="Ullr",
+	head="Bunzi's Hat",
+	neck="Null Loop",
+	ear1="Alabaster Earring",
+	ear2="Lethargy Earring +2",
+	body="Sworn Platemail",
+	hands="Sworn Gauntlets",
+	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
+	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
+	back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+	waist="Plat. Mog. Belt",
+	legs={name="Sworn Brais",priority=15},
 	feet="Nyame Sollerets"
 	}
 	
@@ -482,12 +494,11 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 		--head="Malignance Chapeau",
 		neck="Duelist's Torque +2",
 		right_ring="Hetairoi Ring",
-		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
-		legs="Carmine Cuisses +1",	
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},	
 		--feet="Malignance Boots"
 	})
 	
-	sets.subjobnin = {left_ear="Eabani Earring",legs="Carmine Cuisses +1"}
+	sets.subjobnin = {right_ear="Eabani Earring",legs="Reiki Yotai"}
 	sets.subjobdnc = set_combine(sets.subjobnin, {
 	--back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	})
@@ -497,7 +508,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	ammo="Coiste Bodhar",
 	head="Nyame Helm",
 	neck="Rep. Plat. Medal",
-	left_ear="Sherida Earring",
+	left_ear="Hoxne Earring",
 	right_ear="Lethargy Earring +2",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
@@ -520,7 +531,6 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	ammo="Crepuscular Pebble",
 	head="Nyame Helm",
 	neck="Duelist's Torque +2",
-	right_ear="Sherida Earring",
 	body="Nyame Mail",
 	hands="Nyame Gauntlets",
 	left_ring="Sroda Ring",
@@ -559,7 +569,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	ammo="Pemphredo Tathlum",
 	head="Nyame Helm",
 	neck="Sibyl Scarf",
-	right_ear="Malignance Earring",
+	left_ear="Malignance Earring",
 	body="Nyame Mail",
 	left_ring="Freke Ring",
 	waist="Orpheus's Sash",
@@ -586,7 +596,7 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	feet="Lethargy Houseaux +3"
 	})
 
-	sets.idle.index = {'Idle','Flans','DW'}
+	sets.idle.index = {'Idle','Flans','DW', 'Limbus'}
 	idle_ind = 1
 	
 	sets.idle['Idle'] = {
@@ -595,10 +605,10 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	ammo="Homiliary",
 	head="Vitiation Chapeau +4",
 	neck="Loricate Torque +1",
-	left_ear="Etiolation Earring",
-	right_ear="Dominance Earring +1",
+	ear1="Alabaster Earring",
+	ear2="Etiolation Earring",
 	body="Lethargy Sayon +3",
-	hands="Leth. Ganth. +3",
+	hands="Sworn Gauntlets",
 	left_ring={name="Stikini Ring +1", bag="wardrobe2"},
 	right_ring="Murky Ring",
 	back="Solemnity Cape",
@@ -611,16 +621,22 @@ sets.TP.zerodamage = set_combine(sets.TP['EnSpell'], {
 	
 	sets.idle['DW'] = sets.idle['Idle']
 	
+	sets.idle['Limbus'] = set_combine(sets.idle['Idle'], {
+	body="Sworn Platemail",
+	back="Moonbeam Cape",
+	waist="Plat. Mog. Belt",
+	})
+	
 	sets.resting = {}
 	
-	sets.main.index = {'Naegling', 'Caliburnus', 'Crocea Mors','Mpu Gandring','Maxentius',}
+	sets.main.index = {'Caliburnus', 'Crocea Mors','Mpu Gandring','Maxentius',}
 	main_ind = 1 --First weapon indicated above is the Default
 	
-	sets.main['Crocea Mors'] = {main="Crocea Mors"}
 	sets.main['Caliburnus'] = {main="Caliburnus"}
-	sets.main['Naegling'] = {main="Naegling"}
+	sets.main['Crocea Mors'] = {main="Crocea Mors"}
 	sets.main['Mpu Gandring'] = {main="Mpu Gandring"}
 	sets.main['Maxentius'] = {main="Maxentius"}
+	sets.main['Naegling'] = {main="Naegling"}
 	
 	sets.sub.index = {'Thibron', 'Gleti\'s Knife','Daybreak','Bunzi\'s Rod',} -- 'Crepuscular Knife'
 	sub_ind = 1 --Thibron is the Default
@@ -758,14 +774,18 @@ function precast(spell)
 				else
 					equip(sets.ws.common)
 				end
-			if (player.tp >= 1000 and player.tp < 2750) then
+			if (player.equipment.sub == "Fusetto +2" or player.equipment.sub == "Fusetto +3" or player.equipment.sub == "Centovente" or player.equipment.sub == "Thibron") then
+				if (player.tp >= 1000 and player.tp < 1750) then
+					equip({left_ear="Moonshade Earring",})
+				else
+					equip({left_ear="Hoxne Earring"})
+				end
+			elseif (player.tp >= 1000 and player.tp < 2750) then
 				equip({left_ear="Moonshade Earring"})  
 			elseif player.tp < 3000 then
-				equip({left_ear="Regal Earring"})
-			elseif spell.name == "Ruthless Stroke" then --or spell.name == "Savage Blade" 
-				equip({left_ear="Sherida Earring"})
+				equip({left_ear="Hoxne Earring"})
 			else
-				equip({left_ear="Regal Earring"})
+				equip({left_ear="Hoxne Earring"})
 			end
 		end
 	end
@@ -1027,14 +1047,13 @@ if player and player.index and windower.ffxi.get_mob_by_index(player.index) then
 end
 
 function updateRunspeedGear( value )
-
     if not value and not busy then
 		equip({legs=sets.idle.pants})
     else
 		if player.status == "Idle" and not busy then 
 			equip({legs="Carmine Cuisses +1",})
 		end
-    end
+   end
 end
 
 function self_command(command)
@@ -1063,20 +1082,20 @@ function self_command(command)
 		enable('main','sub','range')
 		equip(sets.main[sets.main.index[main_ind]])
 		if main_ind == 1 then
-			send_command('alias savage @input /ws "Savage Blade" <t>')
-			send_command('alias seraph @input /ws "Seraph Blade" <t>')
-		elseif main_ind == 2 then
 			send_command('alias savage @input /ws "Imperator" <t>')
+			send_command('alias seraph @input /ws "Sanguine Blade" <t>')
+		elseif main_ind == 2 then
+			send_command('alias savage @input /ws "Savage Blade" <t>')
 			send_command('alias seraph @input /ws "Seraph Blade" <t>')
 		elseif main_ind == 3 then
-			send_command('alias savage @input /ws "Savage Blade" <t>')
-			send_command('alias seraph @input /ws "Seraph Blade" <t>')
-		elseif main_ind == 4 then
 			send_command('alias savage @input /ws "Ruthless Stroke" <t>')
 			send_command('alias seraph @input /ws "Aeolian Edge" <t>')
-		elseif main_ind == 5 then
+		elseif main_ind == 4 then
 			send_command('alias savage @input /ws "Black Halo" <t>')
 			send_command('alias seraph @input /ws "Brainshaker" <t>')
+		elseif main_ind == 5 then
+			send_command('alias savage @input /ws "Savage Blade" <t>')
+			send_command('alias seraph @input /ws "Seraph Blade" <t>')
 		end
 	end
 	if command == 'toggle sub set' then

@@ -495,7 +495,7 @@ function init_gear_sets()
     sets.midcast.Dispelga = set_combine(sets.midcast.IntEnfeebles, {main="Daybreak", sub="Ammurapi Shield"})
 
     sets.midcast['Dark Magic'] = {
-		head="Musa",
+		main="Musa",
 		sub="Khonsu",
         ammo="Pemphredo Tathlum",
         head="Acad. Mortar. +3",

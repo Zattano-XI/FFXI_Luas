@@ -550,25 +550,25 @@ function precast(spell)
 				if (player.tp >= 1000 and player.tp < 1500) then
 					equip({left_ear="Moonshade Earring",})
 				else
-					equip({left_ear="Ishvara Earring"})
+					equip({left_ear="Hoxne Earring"})
 				end
 			elseif player.equipment.main == "Aeneas" then
 				if (player.tp >= 1000 and player.tp < 2500) then
 					equip({left_ear="Moonshade Earring",})
 				else
-					equip({left_ear="Ishvara Earring"})
+					equip({left_ear="Hoxne Earring"})
 				end
 			elseif (player.equipment.sub == "Fusetto +2" or player.equipment.sub == "Fusetto +3" or player.equipment.sub == "Centovente") then
 				if (player.tp >= 1000 and player.tp < 2000) then
 					equip({left_ear="Moonshade Earring",})
 				else
-					equip({left_ear="Ishvara Earring"})
+					equip({left_ear="Hoxne Earring"})
 				end
 			else
 				if (player.tp >= 1000 and player.tp < 3000) then
 					equip({left_ear="Moonshade Earring",})
 				else
-					equip({left_ear="Ishvara Earring"})
+					equip({left_ear="Hoxne Earring"})
 				end
 			end
 			if player.equipment.range == 'empty' then

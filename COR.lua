@@ -96,8 +96,8 @@ function get_sets()
 	sets.TP['Standard'] = {
 	head="Malignance Chapeau",
 	neck="Iskur gorget",
-	right_ear="Crepuscular Earring",
-	left_ear="Telos Earring",
+	right_ear="Telos Earring",
+	left_ear="Alabaster Earring",
 	body="Malignance Tabard",
 	hands="Adhemar Wristbands +1",
 	left_ring={name="Chirich Ring +1", bag="wardrobe2"},
@@ -244,7 +244,7 @@ sets.precast.RA.Flurry = set_combine(sets.precast.RA, { --45+10JP+15% Snapshot |
 	sets.QD['STP'] = {
 	head="Ikenga's Hat",
 	neck="Iskur Gorget",
-	left_ear="Crepuscular Earring",
+	left_ear="Alabaster Earring",
 	right_ear="Dedition Earring",
 	body="Malignance Tabard",
 	hands="Malignance Gloves",
@@ -666,7 +666,7 @@ function aftercast(spell)
 		if player.equipment.sub:contains('Shield') or player.equipment.sub:contains('Bulwark') or player.equipment.sub:contains('Buckler') or player.equipment.sub:contains('Grip') or player.equipment.sub == 'empty' then
 			equip({left_ear="Telos Earring",waist="Sailfi Belt +1"})
 		else
-			equip({left_ear="Suppanomimi",waist="Reiki Yotai"})
+			equip({right_ear="Suppanomimi",waist="Reiki Yotai"})
 		end
 	elseif player.status == 'Idle' then
 		equip(sets.TP[sets.TP.index[TP_ind]],sets.movement)
@@ -691,7 +691,7 @@ function status_change(new,old)
 		if player.equipment.sub:contains('Shield') or player.equipment.sub:contains('Bulwark') or player.equipment.sub:contains('Buckler') or player.equipment.sub:contains('Grip') or player.equipment.sub == 'empty' then
 			equip({left_ear="Telos Earring",waist="Sailfi Belt +1"})
 		else
-			equip({left_ear="Suppanomimi",waist="Reiki Yotai"})
+			equip({right_ear="Suppanomimi",waist="Reiki Yotai"})
 		end
 	end
 end
@@ -740,7 +740,7 @@ function self_command(command)
 		if player.equipment.sub:contains('Shield') or player.equipment.sub:contains('Bulwark') or player.equipment.sub:contains('Buckler') or player.equipment.sub:contains('Grip') or player.equipment.sub == 'empty' then
 			equip({left_ear="Telos Earring",waist="Grunfeld Rope"})
 		else
-			equip({left_ear="Suppanomimi",waist="Reiki Yotai"})
+			equip({right_ear="Suppanomimi",waist="Reiki Yotai"})
 		end
 	end
 	if command == 'toggle QD set' then

@@ -35,12 +35,12 @@ function get_sets()
 	left_ear="Loquac. Earring", --2
     right_ear="Etiolation Earring", --1
     body="Adamantite Armor",
-    hands="Leyline Gloves", --8
+    hands="Sworn Gauntlets", --8
 	left_ring="Kishar Ring", --4
     right_ring="Lebeche Ring",
 	back={ name="Fi Follet Cape +1", augments={'Path: A',}}, --10
 	waist="Witful Belt", --3
-    legs="Enif Cosciales", --8
+    legs="Sworn Brais", --8
     feet="Carmine Greaves +1", --8
 	}
 	
@@ -73,7 +73,7 @@ function get_sets()
 	hands="Adhemar Wristbands +1",
 	left_ring="Ilabrat Ring",
 	right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-	back="Null Cape",
+	back="Null Shawl",
 	waist="Reiki Yotai",
 	legs="Malignance Tights",
 	feet="Gleti's Boots",
@@ -97,7 +97,7 @@ function get_sets()
 		hands="Adhemar Wristbands +1",
 		left_ring={name="Chirich Ring +1", bag="wardrobe2"},
 		right_ring={name="Chirich Ring +1", bag="wardrobe5"},
-		back="Null Cape",
+		back="Null Shawl",
 		waist="Reiki Yotai",
 		legs="Malignance Tights",
 		feet="Nyame Sollerets",
@@ -166,7 +166,7 @@ function get_sets()
 	hands="Malignance Gloves",
 	left_ring="Stikini Ring +1",
 	right_ring="Metamorph Ring +1",
-	back="Null Cape",
+	back="Null Shawl",
 	waist="Null Belt",
 	legs="Malignance Tights",
 	feet="Malignance Boots"
@@ -186,7 +186,7 @@ function get_sets()
 	body="Hashishin Mintan +3",
 	left_ring="Shadow Ring",
 	waist="Null Belt",
-	legs="Carmine Cuisses +1",
+	legs="Carmine Cuisses +1o",
 	})
 	
 	sets.midcast.enhancing = {}
